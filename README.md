@@ -8,7 +8,7 @@ This repository contains the *minimal* configuration-files and folders you will 
 
 - [node.js](http://nodejs.org/)
 
-You may also consider [installing bem-tools locally to your environment](http://bem.info/tools/bem/installation/) for ease of use, though this is not required to use this project.
+You may also consider [installing bem-tools locally to your environment](http://bem.info/tools/bem/installation/) for [ease of use](#an-easier-more-beautiful-way), though it is **not required**
 
 ---
 
