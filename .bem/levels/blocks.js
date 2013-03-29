@@ -13,16 +13,11 @@ exports.getTechs = function() {
 
     return {
         'js'            : pjoin(BEMBL_TECHS, 'js.js'),
-        'css'           : 'css',
-        'ie.css'        : 'ie.css',
-        'ie6.css'       : 'ie6.css',
-        'ie7.css'       : 'ie7.css',
-        'ie8.css'       : 'ie8.css',
-        'ie9.css'       : 'ie9.css',
+        'less'          : pjoin(PRJ_TECHS, 'less.js'),
 
-        'bemhtml'       : pjoin(BEMBL_TECHS, 'bemhtml.js'),
+        'bemhtml'       : pjoin(BEMBL_TECHS, 'bemhtml.js')
     };
 
 };
 
-exports.defaultTechs = ['css', 'js', 'bemhtml'];
+exports.defaultTechs = ['less', 'js', 'bemhtml'];

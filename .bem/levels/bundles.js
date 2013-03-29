@@ -15,12 +15,8 @@ exports.getTechs = function() {
         'bemdecl.js'    : 'bemdecl.js',
         'deps.js'       : 'deps.js',
         'js'            : 'js-i',
+        'less'          : pjoin(PRJ_TECHS, 'less.js'),
         'css'           : 'css',
-        'ie.css'        : 'ie.css',
-        'ie6.css'       : 'ie6.css',
-        'ie7.css'       : 'ie7.css',
-        'ie8.css'       : 'ie8.css',
-        'ie9.css'       : 'ie9.css',
 
         'bemhtml'       : pjoin(PRJ_ROOT, 'bemhtml/.bem/techs/bemhtml.js'),
         'html'          : pjoin(PRJ_ROOT, 'bemhtml/.bem/techs/bemjson2html.js')
