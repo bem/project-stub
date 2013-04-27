@@ -5,7 +5,8 @@ var PATH = require('path'),
 
     PRJ_ROOT = presolve('../../'),
 
-    PRJ_TECHS = presolve('../techs/');
+    PRJ_TECHS = presolve('../techs/'),
+    BEMBL_TECHS = pjoin(PRJ_ROOT, 'bem-bl/blocks-common/i-bem/bem/techs');
 
 
 exports.getTechs = function() {
@@ -22,8 +23,8 @@ exports.getTechs = function() {
         'ie8.css'       : 'ie8.css',
         'ie9.css'       : 'ie9.css',
 
-        'bemhtml'       : pjoin(PRJ_ROOT, 'bemhtml/.bem/techs/bemhtml.js'),
-        'html'          : pjoin(PRJ_ROOT, 'bemhtml/.bem/techs/bemjson2html.js')
+        'bemhtml'       : pjoin(BEMBL_TECHS, 'bemhtml.js'),
+        'html'          : pjoin(BEMBL_TECHS, 'html.js')
     };
 
 };
