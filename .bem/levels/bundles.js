@@ -15,7 +15,7 @@ exports.getTechs = function() {
         'bemjson.js'    : pjoin(PRJ_TECHS, 'bemjson.js'),
         'bemdecl.js'    : 'bemdecl.js',
         'deps.js'       : 'deps.js',
-        'js'            : 'js-i',
+        'js'            : pjoin(BEMCORE_TECHS, 'browser.js.js'),
         'css'           : 'css',
         'ie.css'        : 'ie.css',
         'ie6.css'       : 'ie6.css',

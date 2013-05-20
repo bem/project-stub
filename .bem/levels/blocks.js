@@ -12,7 +12,7 @@ var PATH = require('path'),
 exports.getTechs = function() {
 
     return {
-        'js'            : pjoin(BEMCORE_TECHS, 'js.js'),
+        'js'            : pjoin(BEMCORE_TECHS, 'browser.js.js'),
         'css'           : 'css',
         'ie.css'        : 'ie.css',
         'ie6.css'       : 'ie6.css',
