@@ -3,7 +3,7 @@
 "use strict";
 
 //process.env.YENV = 'production';
-process.env.XJST_ASYNCIFY = 'yes';
+//process.env.XJST_ASYNCIFY = 'yes';
 
 MAKE.decl('Arch', {
 
