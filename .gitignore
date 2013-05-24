@@ -5,6 +5,7 @@ node_modules
 .idea
 .project
 .svn
+bench
 .bem/cache
 desktop.bundles/*/*.*
 !desktop.bundles/*/*.bemjson.js
