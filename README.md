@@ -16,13 +16,13 @@ You may also consider [installing bem-tools locally to your environment](http://
 
 So, how easy is it to get started with BEM?  *Super easy*.
 
-    It's as easy as...
+It's as easy as...
     
-    1 › git clone git://github.com/bem/project-stub.git
-    2 › cd project-stub
-    3 › make
+1. ›`git clone git://github.com/bem/project-stub.git`
+2. ›`cd project-stub`
+3. ›`make`
 
-    (hint: execute the above commands in your terminal)
+*(hint: execute the above commands in your terminal)*
 
 Now that `bem server` is running, check it out:
 
