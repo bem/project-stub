@@ -5,12 +5,10 @@ var PATH = require('path');
 
 //process.env.YENV = 'production';
 
-MAKE.decl('SeedNode', {
-    blocksLevelsRegexp: /^.+?\.blocks/,
-    bundlesLevelsRegexp: /^.+?\.bundles$/
-});
-
 MAKE.decl('Arch', {
+
+    blocksLevelsRegexp: /^.+?\.blocks/,
+    bundlesLevelsRegexp: /^.+?\.bundles$/,
 
     getLibraries: function() {
 
@@ -30,7 +28,7 @@ MAKE.decl('Arch', {
 MAKE.decl('BundleNode', {
 
     getTechs: function() {
-        
+
         if (PATH.basename(this.level.dir) === 'benchmark.bundles')  {
             return [
                 'bemjson.js',
