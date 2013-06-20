@@ -1,4 +1,5 @@
 /*global MAKE:true */
+var PATH = require('path');
 
 "use strict";
 
@@ -7,7 +8,6 @@
 MAKE.decl('Arch', {
 
     blocksLevelsRegexp: /^.+?\.blocks/,
-
     bundlesLevelsRegexp: /^.+?\.bundles$/,
 
     getLibraries: function() {
@@ -28,6 +28,16 @@ MAKE.decl('Arch', {
 MAKE.decl('BundleNode', {
 
     getTechs: function() {
+
+        if (PATH.basename(this.level.dir) === 'benchmark.bundles')  {
+            return [
+                'bemjson.js',
+                'bemdecl.js',
+                'deps.js',
+                'bemhtml'
+            ];
+        }
+
         return [
             'bemjson.js',
             'bemdecl.js',
@@ -42,6 +52,21 @@ MAKE.decl('BundleNode', {
             'ie9.css',
             'html'
         ];
+
+    },
+
+    getLevels: function(tech) {
+
+        if (PATH.basename(this.level.dir) === 'benchmark.bundles') {
+            return ['../bem-bl/blocks-common',
+                    '../bem-bl/blocks-desktop',
+                    '../common.blocks',
+                    '../desktop.blocks']
+                .map(PATH.resolve.bind(PATH, __dirname));
+        }
+
+        return this.__base(tech);
+
     }
 
 });
