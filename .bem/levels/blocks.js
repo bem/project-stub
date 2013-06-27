@@ -5,7 +5,6 @@ var PATH = require('path'),
 
     PRJ_ROOT = presolve('../../'),
 
-    PRJ_TECHS = presolve('../techs/'),
     BEMCORE_TECHS = pjoin(PRJ_ROOT, 'bem-core/.bem/techs');
 
 
@@ -20,7 +19,7 @@ exports.getTechs = function() {
         'ie8.css'       : 'ie8.css',
         'ie9.css'       : 'ie9.css',
 
-        'bemhtml'       : pjoin(BEMCORE_TECHS, 'bemhtml.js'),
+        'bemhtml'       : pjoin(BEMCORE_TECHS, 'bemhtml.js')
     };
 
 };
