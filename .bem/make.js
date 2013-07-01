@@ -5,22 +5,17 @@ var PATH = require('path');
 
 //process.env.YENV = 'production';
 
+require('./nodes/arch');
+
 MAKE.decl('Arch', {
 
     blocksLevelsRegexp: /^.+?\.blocks/,
     bundlesLevelsRegexp: /^.+?\.bundles$/,
 
-    getLibraries: function() {
-
-        return {
-            'bem-bl': {
-                type: 'git',
-                url: 'git://github.com/bem/bem-bl.git',
-                treeish: '0.3'
-            }
-        };
-
-    }
+    libraries: [
+        'bem-bl @ 0.3',
+        'bem-controls @ v1.0.0'
+    ]
 
 });
 

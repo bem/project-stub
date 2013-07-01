@@ -3,10 +3,11 @@ var PATH = require('path'),
     pjoin = PATH.join,
     presolve = PATH.resolve.bind(null, __dirname),
 
-    PRJ_ROOT = presolve('../../'),
+    environ = require('../environ'),
 
-    PRJ_TECHS = presolve('../techs/'),
-    BEMBL_TECHS = pjoin(PRJ_ROOT, 'bem-bl/blocks-common/i-bem/bem/techs');
+    PRJ_ROOT = environ.PRJ_ROOT,
+    PRJ_TECHS = pjoin(PRJ_ROOT, '.bem/techs'),
+    BEMBL_TECHS = environ.getLibPath('bem-bl', 'blocks-common/i-bem/bem/techs');
 
 
 exports.getTechs = function() {

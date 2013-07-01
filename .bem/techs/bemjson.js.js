@@ -10,13 +10,13 @@ exports.newFileContent = function (vars) {
         "    block: 'b-page',",
         "    title: '{{bemBlockName}}',",
         "    head: [",
-        "        { elem: 'css', url: '_{{bemBlockName}}.css', ie: false},",
-        "        { elem: 'css', url: '_{{bemBlockName}}', ie: true },",
-        "        { block: 'i-jquery', elem: 'core'},",
-        "        { elem: 'js', url:'_{{bemBlockName}}.js'},",
+        "        { elem: 'css', url: '_{{bemBlockName}}.css', ie: false },",
+        "        { elem: 'css', url: '_{{bemBlockName}}', ie: true }",
         "    ],",
         "    content: [",
         "        'block content'",
+        "        { block: 'i-jquery', mods: { version: '1.8.3' } },",
+        "        { elem: 'js', url:'_{{bemBlockName}}.js' },",
         "    ]",
         "})"], vars);
 };

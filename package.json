@@ -10,7 +10,7 @@
     "node": "0.6 | 0.8 | 0.10"
   },
   "dependencies": {
-    "bem" : "~0.6.2"
+    "bem" : "~0.6.4"
   },
   "devDependencies": {},
   "private": true

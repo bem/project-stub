@@ -15,7 +15,7 @@ all:: $(BEM) server
 	$(if $(findstring GNUmakefile,$@),,$(BEM) make $@ $(BEM_FLAGS))
 
 .PHONY: server
-server:: $(BEM)
+server:: $(BEM) libs
 	@$(BEM) server
 
 $(BEM):: $(NODE_MODULES)
