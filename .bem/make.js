@@ -62,7 +62,7 @@ MAKE.decl('BundleNode', {
                     '../bem-bl/blocks-desktop',
                     '../common.blocks',
                     '../desktop.blocks']
-                .map(PATH.resolve.bind(PATH, __dirname));
+                .map(function(path) { return PATH.resolve(__dirname, path) } );
         }
 
         return this.__base(tech);
