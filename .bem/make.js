@@ -17,6 +17,10 @@ MAKE.decl('Arch', {
                 type: 'git',
                 url: 'git://github.com/bem/bem-bl.git',
                 treeish: '0.3'
+            },
+            'bem-bl-bh': {
+                type: 'git',
+                url: 'git://github.yandex-team.ru/bh/bem-bl-bh.git'
             }
         };
 
@@ -34,7 +38,8 @@ MAKE.decl('BundleNode', {
                 'bemjson.js',
                 'bemdecl.js',
                 'deps.js',
-                'bemhtml'
+                'bemhtml',
+                'bh'
             ];
         }
 
@@ -60,6 +65,8 @@ MAKE.decl('BundleNode', {
         if (PATH.basename(this.level.dir) === 'benchmark.bundles') {
             return ['../bem-bl/blocks-common',
                     '../bem-bl/blocks-desktop',
+                    '../bem-bl-bh/blocks-common',
+                    '../bem-bl-bh/blocks-desktop',
                     '../common.blocks',
                     '../desktop.blocks']
                 .map(PATH.resolve.bind(PATH, __dirname));
