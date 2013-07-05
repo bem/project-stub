@@ -8,6 +8,7 @@ exports.getTechs = function() {
         'bemjson.js'    : PATH.resolve(__dirname, '../techs/bemjson.js'),
         'bemdecl.js'    : 'bemdecl.js',
         'deps.js'       : 'deps.js',
+        'bh'            : PATH.resolve(__dirname,'../techs/bh.js'),
         'bemhtml'       : PATH.resolve(__dirname, '../../bem-bl/blocks-common/i-bem/bem/techs/bemhtml.js')
     };
 
