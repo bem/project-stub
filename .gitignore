@@ -1,5 +1,5 @@
 bem-bl/
-bemhtml/
+*.blocks/*/_*.images.json
 node_modules/
 .DS_Store
 .idea

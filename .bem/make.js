@@ -1,5 +1,7 @@
 /*global MAKE:true */
-var PATH = require('path');
+var BEM = require('bem'),
+    Q = BEM.require('q'),
+    PATH = require('path');
 
 "use strict";
 
@@ -69,4 +71,22 @@ MAKE.decl('BundleNode', {
 
     }
 
+});
+
+MAKE.decl('BlockNode', {
+    make: function() {
+        var _this = this;
+
+        return Q.when(this.__base.apply(this, arguments))
+            .then(function() {
+                if (_this.item.suffix != '.images.json') return;
+
+                return require('borschik').api({
+                    input: require('path').join(_this.level.dir, _this.item.block,  _this.item.block + _this.item.suffix),
+                    output: require('path').join(_this.level.dir, _this.item.block,  '_' + _this.item.block + _this.item.suffix),
+                    tech: 'json-links'
+                });
+            }
+        );
+    }
 });
