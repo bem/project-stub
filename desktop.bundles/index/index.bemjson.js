@@ -5,8 +5,7 @@
     head: [
         { elem: 'css', url: '_index.css', ie: false },
         { elem: 'css', url: '_index', ie: true },
-        { elem: 'meta', attrs: { name: 'description', content: '' }},
-        { elem: 'meta', attrs: { name: 'keywords', content: '' }}
+        { elem: 'meta', attrs: { name: 'description', content: '' }}
     ],
     content:[
         {

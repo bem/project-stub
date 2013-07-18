@@ -1,5 +1,4 @@
-bem-bl/
-bem-controls/
+libs/
 node_modules/
 .DS_Store
 .idea
@@ -9,5 +8,3 @@ node_modules/
 *.bundles/*/*.*
 !*.bundles/*/*.bemjson.js
 !*.bundles/.bem/*
-*.bundles/.bem/cache/
-*.blocks/.bem/cache/

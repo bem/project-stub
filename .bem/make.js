@@ -1,11 +1,12 @@
-/*global MAKE:true */
-var PATH = require('path');
+/* jshint node:true */
+/* global MAKE */
 
-"use strict";
+require('bem-environ/lib/nodes');
+
+var PATH = require('path'),
+    environ = require('bem-environ');
 
 //process.env.YENV = 'production';
-
-require('./nodes/arch');
 
 MAKE.decl('Arch', {
 
@@ -14,7 +15,7 @@ MAKE.decl('Arch', {
 
     libraries: [
         'bem-bl @ 0.3',
-        'bem-controls @ v1.0.0'
+        'bem-controls @ v1'
     ]
 
 });
@@ -41,7 +42,6 @@ MAKE.decl('BundleNode', {
             'js',
             'css',
             'ie.css',
-            'ie6.css',
             'ie7.css',
             'ie8.css',
             'ie9.css',
@@ -53,11 +53,16 @@ MAKE.decl('BundleNode', {
     getLevels: function(tech) {
 
         if (PATH.basename(this.level.dir) === 'benchmark.bundles') {
-            return ['../bem-bl/blocks-common',
-                    '../bem-bl/blocks-desktop',
-                    '../common.blocks',
-                    '../desktop.blocks']
-                .map(function(path) { return PATH.resolve(__dirname, path) } );
+            return [
+                'bem-bl/blocks-common',
+                'bem-bl/blocks-desktop'
+                ]
+                .map(function(path) { return PATH.resolve(environ.LIB_ROOT, path); })
+                .concat([
+                    'common.blocks',
+                    'desktop.blocks'
+                ]
+                .map(function(path) { return PATH.resolve(environ.PRJ_ROOT, path); }));
         }
 
         return this.__base(tech);
