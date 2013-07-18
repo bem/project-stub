@@ -4,6 +4,7 @@
 require('bem-environ/lib/nodes');
 
 //process.env.YENV = 'production';
+//process.env.XJST_ASYNCIFY = 'yes';
 
 MAKE.decl('Arch', {
 
@@ -11,8 +12,8 @@ MAKE.decl('Arch', {
     bundlesLevelsRegexp: /^.+?\.bundles$/,
 
     libraries: [
-        'bem-bl @ 0.3',
-        'bem-controls @ v1'
+        'bem-core @ v1',
+        'bem-controls @ v2'
     ]
 
 });
@@ -27,7 +28,7 @@ MAKE.decl('BundleNode', {
             'bemdecl.js',
             'deps.js',
             'bemhtml',
-            'js',
+            'browser.js+bemhtml',
             'css',
             'ie.css',
             'ie7.css',
@@ -36,6 +37,12 @@ MAKE.decl('BundleNode', {
             'html'
         ];
 
+    },
+
+    'create-browser.js+bemhtml-optimizer-node': function(tech, sourceNode, bundleNode) {
+        sourceNode.getFiles().forEach(function(f) {
+            this['create-js-optimizer-node'](tech, this.ctx.arch.getNode(f), bundleNode);
+        }, this);
     }
 
 });
