@@ -20,7 +20,7 @@ It's as easy as...
     
 1. ›`git clone git://github.com/bem/project-stub.git`
 2. ›`cd project-stub`
-3. ›`make`
+3. ›`./node_modules/bem/bin/bem server`
 
 *(hint: execute the above commands in your terminal)*
 
@@ -40,7 +40,7 @@ Navigate to: http://localhost:8080/desktop.bundles/index/index.html
 
 ### Was that too easy?
 
-Here's the replay... that `make` command will:
+Here's the replay... that `bem server` command will:
 
 1. Install a **local copy** of all required dependencies from [npm](http://npmjs.org/) into the `./node_modules` directory. (specifically: [bem-tools](http://github.com/bem/bem-tools))
 2. Start a local `bem server` on port `8080`.
@@ -49,7 +49,7 @@ Here's the replay... that `make` command will:
 
 What do we mean by "a **local copy** of all required dependencies"?
 
-Well, when you run the `make` command for the first time, we install all of the required dependencies ([bem-tools](http://github.com/bem/bem-tools))
+Well, when you run the `bem make` / `bem server` command for the first time, we install all of the required dependencies ([bem-tools](http://github.com/bem/bem-tools))
 to the `./node_modules` directory within the **local project directory**.  This is *not* the same thing as
 [installing bem-tools locally to your environment](http://bem.info/tools/bem/installation/) - which, if you haven't
 done already, we strongly suggest that you do.  This is by far the easiest, quickest way to use
@@ -61,13 +61,8 @@ done already, we strongly suggest that you do.  This is by far the easiest, quic
 
 ### Start the Server:
 
-    › make
+    › ./node_modules/bem/bin/bem server
 
-Each subsiquent time you wish to start the server you may simply run the `make` command in your terminal.
-
-Alternatively you may opt to use the following command:
-
-    › ./node_modules/.bin/bem server
 
 This is the ugly way to run the `bem server` command.  If you think it's ugly too and wish for [a better way](#an-easier-more-beautiful-way) keep reading...
 
