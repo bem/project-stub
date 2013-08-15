@@ -20,7 +20,8 @@ It's as easy as...
     
 1. ›`git clone git://github.com/bem/project-stub.git`
 2. ›`cd project-stub`
-3. ›`./node_modules/bem/bin/bem server`
+3. >`npm install`
+4. ›`./node_modules/bem/bin/bem server`
 
 *(hint: execute the above commands in your terminal)*
 
