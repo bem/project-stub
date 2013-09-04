@@ -93,10 +93,10 @@ For a more permanent way to "easily" use the *local-to-this-project's* installat
 [bem-tools](http://github.com/bem/bem-tools) all you must do is ensure that the **path** to the `bem` executable
 (`./node_modules/.bin`) is included in your `PATH` environment variable.
 
-    > export PATH=./node_modules/.bin:$PATH
+    >  export PATH=/FULL_PATH_TO_PROJECT_DIRECTORY/node_modules/bem/bin/:$PATH
 
-Optionally you may also add `export PATH=PATH_TO_PROJECT_DIRECTORY/node_modules/.bin:$PATH` to your `.profile`
-(obviously replacing `PATH_TO_PROJECT_DIRECTORY` with the actual path to your project)
+Optionally you may also add `export PATH=/FULL_PATH_TO_PROJECT_DIRECTORY/node_modules/.bin:$PATH` to your `.profile`
+(obviously replacing `FULL_PATH_TO_PROJECT_DIRECTORY` with the actual full path to your project)
 
 ---
 
