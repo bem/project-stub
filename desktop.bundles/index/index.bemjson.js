@@ -26,7 +26,6 @@
                 'footer content goes here'
             ]
         },
-        { block: 'i-jquery', mods: { version: '1.8.3' } },
         { elem: 'js', url: '_index.js' }
     ]
 })
