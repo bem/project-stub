@@ -1,48 +1,101 @@
 /* jshint node:true */
-/* global MAKE */
 
-require('bem-environ/lib/nodes');
 
 //process.env.YENV = 'production';
 //process.env.XJST_ASYNCIFY = 'yes';
+//
+var PATH = require('path');
 
-MAKE.decl('Arch', {
+module.exports = function(make) {
+    make.levels(function(levels) {
+        levels
+            .useNpmModule('bem-techs-core')
+            .addLevel('*.bundles')
+                .addTechs(
+                    'bemjson.js',
+                    'bemdecl.js',
+                    'deps.js',
+                    {'js': 'v2/js-i'},
+                    'vanilla.js',
+                    'browser.js',
+                    'browser.js+bemhtml',
+                    'css',
+                    'ie.css',
+                    'ie6.css',
+                    'ie7.css',
+                    'ie8.css',
+                    'ie9.css',
+                    'bemhtml',
+                    'html'
+                )
+                .setDefaultTechs('bemjson.js')
+                .setBundleBuildLevels(
+                    PATH.resolve(__dirname, '../libs/bem-core/common.blocks'),
+                    PATH.resolve(__dirname, '../libs/bem-core/desktop.blocks'),
+                    PATH.resolve(__dirname, '../libs/bem-components/common.blocks'),
+                    PATH.resolve(__dirname, '../libs/bem-components/desktop.blocks'),
+                    PATH.resolve(__dirname, '../libs/desktop.blocks')
+                )
+            .addLevel('*.blocks')
+                .addTechs(
+                    {
+                        'title.txt': 'title.txt',
+                        'desc.wiki': '',
+                        'i18n.title.txt': '',
+                        'i18n.desc.wiki': ''
+                    },
+                    'deps.js',
+                    {'js': 'v2/js-i'},
+                    'css',
+                    'ie.css',
+                    'ie6.css',
+                    'ie7.css',
+                    'ie8.css',
+                    'ie9.css',
+                    'bemhtml',
+                    'vanilla.js',
+                    'browser.js'
+                )
+                .setDefaultTechs('css', 'js', 'bemhtml');
+    });
 
-    blocksLevelsRegexp: /^.+?\.blocks/,
-    bundlesLevelsRegexp: /^.+?\.bundles$/,
+    make.nodes(function(registry) {
+        require('bem-environ').extendMake(registry);
 
-    libraries: [
-        'bem-core @ 7584dfc71b5e971a45bf3a3571dcabd39a6a75f0',
-        'bem-components @ 231b03867325a51a33ae6bdd300b12946944a4de'
-    ]
+        registry.decl('Arch', {
 
-});
+            blocksLevelsRegexp: /^.+?\.blocks/,
+            bundlesLevelsRegexp: /^.+?\.bundles$/,
+        });
 
 
-MAKE.decl('BundleNode', {
+        registry.decl('BundleNode', {
 
-    getTechs: function() {
+            getTechs: function() {
 
-        return [
-            'bemjson.js',
-            'bemdecl.js',
-            'deps.js',
-            'bemhtml',
-            'browser.js+bemhtml',
-            'css',
-            'ie.css',
-            'ie7.css',
-            'ie8.css',
-            'ie9.css',
-            'html'
-        ];
+                return [
+                    'bemjson.js',
+                    'bemdecl.js',
+                    'deps.js',
+                    'bemhtml',
+                    'browser.js+bemhtml',
+                    'css',
+                    'ie.css',
+                    'ie7.css',
+                    'ie8.css',
+                    'ie9.css',
+                    'html'
+                ];
 
-    },
+            },
 
-    'create-browser.js+bemhtml-optimizer-node': function(tech, sourceNode, bundleNode) {
-        sourceNode.getFiles().forEach(function(f) {
-            this['create-js-optimizer-node'](tech, this.ctx.arch.getNode(f), bundleNode);
-        }, this);
-    }
+            'create-browser.js+bemhtml-optimizer-node': function(tech, sourceNode, bundleNode) {
+                sourceNode.getFiles().forEach(function(f) {
+                    this['create-js-optimizer-node'](tech, this.ctx.arch.getNode(f), bundleNode);
+                }, this);
+            }
 
-});
+        });
+    });
+};
+

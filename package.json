@@ -10,8 +10,9 @@
     "node": "0.6 | 0.8 | 0.10"
   },
   "dependencies": {
-    "bem" : "~0.6.4",
-    "bem-environ" : "~1.0.1"
+    "bem": "git://github.com/bem/bem-tools.git#74d408ef1bd2",
+    "bem-environ": "~1.3.1",
+    "bem-techs-core": "~0.2.1"
   },
   "devDependencies": {},
   "private": true
