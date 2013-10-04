@@ -24,4 +24,4 @@ exports.getTechs = function() {
 
 };
 
-exports.defaultTechs = ['css', 'js', 'bemhtml'];
+exports.defaultTechs = ['css', 'browser.js', 'bemhtml'];
