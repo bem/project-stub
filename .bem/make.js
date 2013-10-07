@@ -4,7 +4,8 @@
 //process.env.YENV = 'production';
 //process.env.XJST_ASYNCIFY = 'yes';
 //
-var PATH = require('path');
+var PATH = require('path'),
+    environ = require('bem-environ');
 
 module.exports = function(make) {
     make.levels(function(levels) {
@@ -29,13 +30,17 @@ module.exports = function(make) {
                     'html'
                 )
                 .setDefaultTechs('bemjson.js')
-                .setBundleBuildLevels(
-                    PATH.resolve(__dirname, '../libs/bem-core/common.blocks'),
-                    PATH.resolve(__dirname, '../libs/bem-core/desktop.blocks'),
-                    PATH.resolve(__dirname, '../libs/bem-components/common.blocks'),
-                    PATH.resolve(__dirname, '../libs/bem-components/desktop.blocks'),
-                    PATH.resolve(__dirname, '../libs/desktop.blocks')
-                )
+                .setBundleBuildLevels([
+                    'bem-core',
+                    'bem-components'
+                ].reduce(function(levels, lib) {
+                    return levels.concat([
+                        environ.getLibPath(lib, 'common.blocks'),
+                        environ.getLibPath(lib, 'desktop.blocks')
+                    ]);
+                }, []).concat(
+                    PATH.join(environ.PRJ_ROOT, 'desktop.blocks')
+                ))
             .addLevel('*.blocks')
                 .addTechs(
                     {
@@ -60,7 +65,7 @@ module.exports = function(make) {
     });
 
     make.nodes(function(registry) {
-        require('bem-environ').extendMake(registry);
+        environ.extendMake(registry);
 
         registry.decl('Arch', {
 
