@@ -27,7 +27,30 @@ module.exports = function(make) {
                     'ie8.css',
                     'ie9.css',
                     'bemhtml',
-                    'html'
+                    'html',
+                    'min.css',
+
+                    {
+                        'min.ie.css': {
+                            baseTechPath: 'v2/min',
+
+                            getSuffixes: function() {
+                                return ['ie.css'];
+                            },
+
+                            getDependencies: function() {
+                                return ['css', 'ie.css'];
+                            }
+                        },
+
+                        'min.js': {
+                            baseTechPath: 'v2/min.js.js',
+
+                            getDependecies: function() {
+                                return ['browser.js+bemhtml'];
+                            }
+                        }
+                    }
                 )
                 .setDefaultTechs('bemjson.js')
                 .setBundleBuildLevels([
@@ -89,16 +112,19 @@ module.exports = function(make) {
                     'ie7.css',
                     'ie8.css',
                     'ie9.css',
+                    'min.js',
+                    'min.css',
+                    'min.ie.css',
                     'html'
                 ];
 
             },
 
-            'create-browser.js+bemhtml-optimizer-node': function(tech, sourceNode, bundleNode) {
-                sourceNode.getFiles().forEach(function(f) {
-                    this['create-js-optimizer-node'](tech, this.ctx.arch.getNode(f), bundleNode);
-                }, this);
-            }
+            //'create-browser.js+bemhtml-optimizer-node': function(tech, sourceNode, bundleNode) {
+                //sourceNode.getFiles().forEach(function(f) {
+                    //this['create-js-optimizer-node'](tech, this.ctx.arch.getNode(f), bundleNode);
+                //}, this);
+            //}
 
         });
     });
