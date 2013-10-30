@@ -2,7 +2,7 @@
     "name": "bem-project-stub",
     "version": "0.0.1",
     "dependencies": {
-        "bem-core": "69698da02475fbd5be3c57511f40a2310c74a99f",
+        "bem-core": "9e5dc255421304fd652552c948cdf7af35dc8a68",
         "bem-components": "bem/bem-components#231b03867325a51a33ae6bdd300b12946944a4de"
     }
 }
