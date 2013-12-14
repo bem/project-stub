@@ -12,12 +12,12 @@ exports.getTechs = function() {
         'vanilla.js'    : join(BEMCORE_TECHS, 'vanilla.js.js'),
         'browser.js'    : join(BEMCORE_TECHS, 'browser.js.js'),
         'node.js'       : join(BEMCORE_TECHS, 'node.js.js'),
-        'css'           : 'css',
-        'ie.css'        : 'ie.css',
-        'ie6.css'       : 'ie6.css',
-        'ie7.css'       : 'ie7.css',
-        'ie8.css'       : 'ie8.css',
-        'ie9.css'       : 'ie9.css',
+        'css'           : 'v2/css',
+        'ie.css'        : 'v2/ie.css',
+        'ie6.css'       : 'v2/ie6.css',
+        'ie7.css'       : 'v2/ie7.css',
+        'ie8.css'       : 'v2/ie8.css',
+        'ie9.css'       : 'v2/ie9.css',
 
         'bemhtml'       : join(BEMCORE_TECHS, 'bemhtml.js')
     };

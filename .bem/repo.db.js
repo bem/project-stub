@@ -48,6 +48,10 @@ module.exports = {
         type     : 'git',
         url      : 'git://github.com/narqo/bem-pr.git'
     },
+    'bem-sets' : {
+        type     : 'git',
+        url      : 'git://github.com/bem/bem-sets.git'
+    },
     'bem-yana' : {
         type     : 'git',
         url      : 'git://github.com/narqo/bem-yana.git'
