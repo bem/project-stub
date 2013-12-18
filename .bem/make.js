@@ -1,9 +1,11 @@
 /* jshint node:true */
 /* global MAKE */
 
-require('bem-environ/lib/nodes');
-
 //process.env.YENV = 'production';
+//process.env.XJST_ASYNCIFY = 'yes';
+
+var environ = require('bem-environ')(__dirname);
+environ.extendMake(MAKE);
 
 MAKE.decl('Arch', {
 
@@ -12,7 +14,7 @@ MAKE.decl('Arch', {
 
     libraries: [
         'bem-bl @ 0.3',
-        'bem-controls @ v1'
+        'bem-components @ v1'
     ]
 
 });

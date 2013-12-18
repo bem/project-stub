@@ -4,7 +4,7 @@ var PATH = require('path'),
 
     PRJ_ROOT = environ.PRJ_ROOT,
     PRJ_TECHS = join(PRJ_ROOT, '.bem/techs'),
-    BEMBL_TECHS = environ.getLibPath('bem-bl', 'blocks-common/i-bem/bem/techs');
+    BEMBL_TECHS = environ.getLibPath('bem-bl', 'blocks-common/i-bem/bem/techs/v2');
 
 exports.getTechs = function() {
 
@@ -20,7 +20,7 @@ exports.getTechs = function() {
         'ie8.css'       : 'v2/ie8.css',
         'ie9.css'       : 'v2/ie9.css',
 
-        'bemhtml'       : join(BEMBL_TECHS, 'v2/bemhtml.js'),
+        'bemhtml'       : join(BEMBL_TECHS, 'bemhtml.js'),
         'html'          : join(BEMBL_TECHS, 'html.js')
     };
 
