@@ -13,7 +13,7 @@ MAKE.decl('Arch', {
     bundlesLevelsRegexp: /^.+?\.bundles$/,
 
     libraries: [
-        'bem-bl @ 0.3',
+        'bem-bl @ support/1.x',
         'bem-components @ v1'
     ]
 
