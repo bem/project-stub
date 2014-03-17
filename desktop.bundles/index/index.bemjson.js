@@ -3,11 +3,14 @@
     title: 'Title of the page',
     favicon: '/favicon.ico',
     head: [
-        { elem: 'css', url: '_index.css', ie: false },
-        { elem: 'css', url: '_index.ie.css', ie: 'gte IE 6' },
         { elem: 'meta', attrs: { name: 'description', content: '' }}
     ],
-    content:[
+    styles: [
+        { elem: 'css', url: '_index.css', ie: false },
+        { elem: 'css', url: '_index.ie.css', ie: 'IE' }
+    ],
+    scripts: [{ elem: 'js', url: '_index.js' }],
+    content: [
         {
             block: 'header',
             content: [
@@ -25,7 +28,6 @@
             content: [
                 'footer content goes here'
             ]
-        },
-        { elem: 'js', url: '_index.js' }
+        }
     ]
 })
