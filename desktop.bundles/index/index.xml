@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="index.html.xsl"?> -->
+<bem:page xmlns:bem="http://bem.info" xmlns:xi="http://www.w3.org/2001/XInclude" bem:name="index">
+<bem:b-page>
+    <bem:b-header bem:mod="val" param="param-val">
+        header content
+    </bem:b-header>
+    <bem:b-content>
+        <bem:some-elem>
+            some text
+        </bem:some-elem>
+    </bem:b-content>
+    <bem:b-footer/>
+</bem:b-page>
+
+</bem:page>

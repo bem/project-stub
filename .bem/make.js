@@ -25,16 +25,42 @@ MAKE.decl('BundleNode', {
     getTechs: function() {
 
         return [
+            'xml',
             'bemjson.js',
             'bemdecl.js',
             'deps.js',
-            'bemhtml',
+            'bemtree.xsl',
             'browser.js+bemhtml',
             'css',
             'ie.css',
+            'html.xsl',
             'html'
         ];
 
+    },
+
+    'create-bemjson.js-node': function(tech, bundleNode, magicNode) {
+
+        return this.setBemCreateNode(
+            tech,
+            this.level.resolveTech(tech),
+            bundleNode,
+            magicNode);
+    },
+
+    'create-xml-node': function(tech, bundleNode, magicNode) {
+
+        return this.setBemCreateNode(
+            tech,
+            this.level.resolveTech(tech),
+            bundleNode,
+            magicNode);
     }
 
+});
+
+MAKE.decl('BundlesLevelNode', {
+    getBundleSourceTechs: function() {
+        return ['xml', 'bemjson.js', 'bemdecl.js'];
+    }
 });

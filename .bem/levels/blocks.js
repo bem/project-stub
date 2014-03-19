@@ -9,6 +9,8 @@ var PATH = require('path'),
 exports.getTechs = function() {
 
     return {
+        'xsl'           : join(PRJ_TECHS, 'xsl.js'),
+        'bemtree.xsl'   : join(PRJ_TECHS, 'bemtree.xsl.js'),
         'vanilla.js'    : join(BEMCORE_TECHS, 'vanilla.js.js'),
         'browser.js'    : join(BEMCORE_TECHS, 'browser.js.js'),
         'node.js'       : join(BEMCORE_TECHS, 'node.js.js'),

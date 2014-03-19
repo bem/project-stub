@@ -6,5 +6,5 @@ node_modules/
 .svn
 .bem/cache/
 *.bundles/*/*.*
-!*.bundles/*/*.bemjson.js
+!*.bundles/*/*.xml
 !*.bundles/.bem/*
