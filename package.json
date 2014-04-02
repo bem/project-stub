@@ -1,18 +1,25 @@
 {
   "author": "",
   "name": "bem-project-stub",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/bem/project-stub.git"
   },
   "engines": {
-    "node": "0.6 | 0.8 | 0.10"
+    "node": ">=0.10"
   },
   "dependencies": {
-    "bem" : "0.8.0",
-    "bem-environ" : "~1.4.0"
+    "bem-environ": "~1.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bem": "0.8.0",
+    "bower": "~1.2.8",
+    "bower-npm-install": "~0.5.4"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower-npm-install --non-interactive",
+    "deps": "./node_modules/.bin/bower-npm-install --non-interactive"
+  },
   "private": true
 }
