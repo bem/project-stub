@@ -4,7 +4,12 @@ node_modules/
 .idea
 .project
 .svn
+
+# bem
 .bem/cache/
-*.bundles/*/*.*
-!*.bundles/*/*.bemjson.js
-!*.bundles/.bem/*
+*bundles*/*/*.*
+!*bundles*/*/*.bemjson.js
+!*bundles*/.bem/*
+*pages*/*/*.*
+!*pages*/*/*.bemjson.js
+!*pages*/.bem/*
