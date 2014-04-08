@@ -2,7 +2,7 @@
 
 This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
 
-## Installation Requirements
+## Installation requirements
 
 - [Node.js](http://nodejs.org) is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.
 
