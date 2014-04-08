@@ -1,12 +1,12 @@
 # Stub to start a new [BEM](http://bem.info) project
 
-The *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
+This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
 
-## Installation Requirements:
+## Installation Requirements
 
 - [Node.js](http://nodejs.org) is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.
 
-## Installation:
+## Installation
 
 So, how easy is it to get started with BEM?  *Super easy*.
 
@@ -16,14 +16,14 @@ It's as easy as...
     cd my-bem-project
     npm install
 
-## Usage:
+## Usage
 
 Now you can run any bem-tools commands from a `./node_modules/bem/bin/bem` directory.
 To be able to run bem-tools commands without typing a full path to an executable file (node_modules/bem/bin/bem), use bem-cli npm package: 
 
 `npm install -g bem-cli` or use an alternative method `export PATH=./node_modules/.bin:$PATH`
 
-So, how easy is it to get started with BEM?  *Super easy*.
+**Start the server:**
 
 ```bash
 bem server # bem server -p 8080 -v info|silly|debug|verbose|warn|error
@@ -37,11 +37,11 @@ Now that `bem server ` is running, check it out:
 
 Stopping the server is also easy, pressing `Ctrl` + `C` while the terminal is your active window will stop the server.
 
-**Add block**
+**Add block:**
 
     bem create -l desktop.blocks -b newBlock
 
-**Add page**
+**Add page:**
 
     bem create -l desktop.bundles -b page
 
@@ -51,7 +51,7 @@ echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
 echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 ```
 
-## Docs:
+## Docs
 
 - [Full stack quick start](http://bem.info/articles/start-with-project-stub/)
 - [Tutorial on BEMHTML](http://bem.info/libs/bem-core/2.0.0/bemhtml/reference/)
