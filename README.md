@@ -1,6 +1,13 @@
 # Stub to start a new [BEM](http://bem.info) project
 
-This repository contains the *minimal* configuration-files and folders you will need to create a [BEM](http://bem.info) project from *scratch*.
+Project-stub is a template project repository used for BEM projects creation. It contains the minimal configuration files and folders you will need for quick start from scratch. 
+
+There are two main BEM libraries are linked here by default:
+
+* [bem-core](https://github.com/bem/bem-core)  
+* [bem-components](https://github.com/bem/bem-components)
+
+Just try and taste BEM!
 
 ## Installation requirements
 
