@@ -8,6 +8,7 @@ var PATH = require('path'),
 
 exports.getTechs = function() {
     var techs = {
+        'roole'         : 'v2/roole',
         'css'           : 'v2/css',
         'ie.css'        : 'v2/ie.css',
         'ie6.css'       : 'v2/ie6.css',
@@ -22,10 +23,10 @@ exports.getTechs = function() {
     // use techs from project (.bem/techs)
     ['bemjson.js'].forEach(getTechResolver(techs, PRJ_TECHS));
 
-    // use techs from lib bem-core
-    ['bemhtml', 'vanilla.js', 'browser.js', 'node.js'].forEach(getTechResolver(techs, BEMCORE_TECHS));
+    // use techs from bem-core library
+    ['bemhtml', 'bemtree', 'vanilla.js', 'browser.js', 'node.js'].forEach(getTechResolver(techs, BEMCORE_TECHS));
 
     return techs;
 };
 
-exports.defaultTechs = ['css', 'browser.js', 'bemhtml'];
+exports.defaultTechs = ['roole', 'browser.js', 'bemhtml'];
