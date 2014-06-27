@@ -4,6 +4,7 @@ node_modules/
 .idea
 .project
 .svn
+npm-debug.log
 
 # bem
 .bem/cache/
