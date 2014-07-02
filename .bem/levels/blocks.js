@@ -8,7 +8,7 @@ var PATH = require('path'),
 
 exports.getTechs = function() {
     var techs = {
-        'roole'         : 'v2/roole',
+        'stylus'        : 'v2/styl',
         'css'           : 'v2/css',
         'ie.css'        : 'v2/ie.css',
         'ie6.css'       : 'v2/ie6.css',
@@ -29,4 +29,4 @@ exports.getTechs = function() {
     return techs;
 };
 
-exports.defaultTechs = ['roole', 'browser.js', 'bemhtml'];
+exports.defaultTechs = ['stylus', 'browser.js', 'bemhtml'];
