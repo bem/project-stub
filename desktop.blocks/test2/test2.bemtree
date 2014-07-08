@@ -1,0 +1,1 @@
+block('test2').content()('content of test2');

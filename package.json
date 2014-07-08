@@ -10,7 +10,8 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bem-environ": "~1.4.0"
+    "bem-environ": "~1.4.0",
+    "vow": "^0.3.13"
   },
   "devDependencies": {
     "bem": "0.8.1",

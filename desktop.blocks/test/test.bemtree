@@ -1,0 +1,14 @@
+block('test').content()(function() {
+    return this.doAsync(function() {
+        var defer = Vow.defer(),
+            promise = defer.promise();
+
+        setTimeout(function() {
+            defer.resolve({
+                block: 'test2' // gets content via its own bemtree template
+            });
+        }, 10);
+
+        return promise;
+    });
+});

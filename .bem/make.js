@@ -22,6 +22,7 @@ MAKE.decl('BundleNode', {
             'bemjson.js',
             'bemdecl.js',
             'deps.js',
+            'bemtree',
             'bemhtml',
             'browser.js+bemhtml',
             'stylus',
