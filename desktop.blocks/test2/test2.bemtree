@@ -1,1 +1,12 @@
-block('test2').content()('content of test2');
+block('test2').content()(function() {
+    return this.doAsync(function() {
+        var defer = Vow.defer(),
+            promise = defer.promise();
+
+        setTimeout(function() {
+            defer.resolve('content of test2');
+        }, 10);
+
+        return promise;
+    });
+});

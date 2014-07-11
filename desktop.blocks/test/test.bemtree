@@ -4,9 +4,9 @@ block('test').content()(function() {
             promise = defer.promise();
 
         setTimeout(function() {
-            defer.resolve({
+            defer.resolve(applyCtx({
                 block: 'test2' // gets content via its own bemtree template
-            });
+            }));
         }, 10);
 
         return promise;
