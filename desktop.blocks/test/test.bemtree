@@ -4,9 +4,16 @@ block('test').content()(function() {
             promise = defer.promise();
 
         setTimeout(function() {
-            defer.resolve(applyCtx({
+            var content = applyCtx({
                 block: 'test2' // gets content via its own bemtree template
-            }));
+            });
+
+            Vow.isPromise(content.content) ?
+                content.content.then(function(result) {
+                    content.content = result;
+                    defer.resolve(content);
+                }) : defer.resolve(content);
+
         }, 10);
 
         return promise;

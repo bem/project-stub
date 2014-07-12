@@ -15,6 +15,6 @@ vm.runInContext(BEMTREE, ctx);
 
 ctx.BEMTREE.apply({ block: 'test' }).then(function(bemjson) {
     console.log('bemjson', bemjson);
-    console.log('bemjson.content._value.content', bemjson.content._value.content);
+    bemjson.content._value && console.log('bemjson.content._value.content', bemjson.content._value.content);
     console.log('html', BEMHTML.apply(bemjson));
 });

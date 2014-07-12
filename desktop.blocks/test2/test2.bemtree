@@ -4,7 +4,7 @@ block('test2').content()(function() {
             promise = defer.promise();
 
         setTimeout(function() {
-            defer.resolve('content of test2');
+            defer.resolve(applyCtx({ block: 'test3' }));
         }, 10);
 
         return promise;
