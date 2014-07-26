@@ -4,4 +4,4 @@ node_js:
   - "0.10"
 
 script:
-  - "node_modules/.bin/enb make"
+  - "node_modules/.bin/bem make"
