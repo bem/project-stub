@@ -10,9 +10,15 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bem" : "0.8.1",
     "bem-environ" : "~1.4.0"
   },
-  "devDependencies": {},
-  "private": true
+  "devDependencies": {
+    "bem" : "0.8.1",
+    "bem-tools-autoprefixer": "0.0.3",
+    "bower-npm-install": "~0.5.4"
+  },
+  "scripts": {
+    "postinstall": "bower-npm-install",
+    "deps": "bower-npm-install --non-interactive"
+  }
 }
