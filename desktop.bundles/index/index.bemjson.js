@@ -101,7 +101,7 @@
                                     { tag : 'br' },
                                     {
                                         block : 'menu',
-                                        mods : { select : 'check', theme : 'normal', size : cell.size },
+                                        mods : { mode : 'check', theme : 'normal', size : cell.size },
                                         attrs : { style : 'border: 1px solid rgba(0, 0, 0, 0.1);' },
                                         content : [
                                             {
