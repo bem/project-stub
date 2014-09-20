@@ -55,7 +55,7 @@ bem server # bem server -p 8080 -v info|silly|debug|verbose|warn|error
 
 > **совет** Вы можете еще больше упростить работу с сервером, прописав альтернативные имена:
 
-```bash
+```
 echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
 echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 ```

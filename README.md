@@ -53,7 +53,8 @@ Stopping the server is also easy, pressing `Ctrl` + `C` while the terminal is yo
     bem create -l desktop.bundles -b page
 
 >  **hint:** you can add aliases for super easy use
-```bash
+
+```
 echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
 echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 ```
