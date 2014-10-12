@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "bem-core": "v2.3.0",
-    "bem-components": "3b41cd9d817f51b94bead414409a099913509299"
+    "bem-components": "5f3cefd5fa1c7e5205d51fa10b8e3b59c31529d2"
   },
   "resolutions": {
     "bem-core": "v2.3.0"
