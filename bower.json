@@ -9,10 +9,10 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "v2.3.0",
-    "bem-components": "5f3cefd5fa1c7e5205d51fa10b8e3b59c31529d2"
+    "bem-core": "f17058e50dfcceb0e785f848d1f3d3137878028e",
+    "bem-components": "bd18794cdf4532de84c94ce16726d9f534c6d108"
   },
   "resolutions": {
-    "bem-core": "v2.3.0"
+    "bem-core": "f17058e50dfcceb0e785f848d1f3d3137878028e"
   }
 }
