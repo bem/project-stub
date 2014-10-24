@@ -29,6 +29,8 @@ var tech = {
 };
 
 module.exports = function(config) {
+    var isProd = process.env.YENV === 'production';
+
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
             // essential
@@ -47,10 +49,10 @@ module.exports = function(config) {
             }],
 
             // bemtree
-            // [tech.bemtree, { devMode: process.env.YENV === 'development' }],
+            // [tech.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
             // bemhtml
-            [tech.bemhtml, { devMode: process.env.YENV === 'development' }],
+            [tech.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
             [tech.htmlFromBemjson],
 
             // client bemhtml
@@ -71,7 +73,7 @@ module.exports = function(config) {
             [tech.bemhtml, {
                 target: '?.browser.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
-                devMode: process.env.YENV === 'development'
+                devMode: process.env.BEMHTML_ENV === 'development'
             }],
 
             // js
@@ -80,24 +82,14 @@ module.exports = function(config) {
                 target: '?.pre.js',
                 sources: ['?.browser.bemhtml.js', '?.browser.js']
             }],
-            [tech.prependYm, { source: '?.pre.js' }]
+            [tech.prependYm, { source: '?.pre.js' }],
+
+            // borschik
+            [tech.borschik, { sourceTarget: '?.js', destTarget: '_?.js', freeze: true, minify: isProd }],
+            [tech.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true, minify: isProd }]
         ]);
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '_?.css', '_?.js']);
-
-        nodeConfig.mode('development', function() {
-            nodeConfig.addTechs([
-                [tech.fileCopy, { sourceTarget: '?.js', destTarget: '_?.js' }],
-                [tech.fileCopy, { sourceTarget: '?.css', destTarget: '_?.css' }]
-            ]);
-        });
-
-        nodeConfig.mode('production', function() {
-            nodeConfig.addTechs([
-                [tech.borschik, { sourceTarget: '?.js', destTarget: '_?.js' }],
-                [tech.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss' }]
-            ]);
-        });
     });
 };
 
