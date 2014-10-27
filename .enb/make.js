@@ -1,12 +1,12 @@
 var tech = {
     // essential
-    levels: require('enb-bem/techs/levels'),
+    levels: require('enb-bem-techs/techs/levels'),
     fileProvider: require('enb/techs/file-provider'),
     fileCopy: require('enb/techs/file-copy'),
-    bemdeclFromBemjson: require('enb-bem/techs/bemdecl-from-bemjson'),
-    deps: require('enb-bem/techs/deps-old'),
-    files: require('enb-bem/techs/files'),
-    bemdeclFromDepsByTech: require('enb-bem/techs/bemdecl-from-deps-by-tech'),
+    bemjsonToBemdecl: require('enb-bem-techs/techs/bemjson-to-bemdecl'),
+    deps: require('enb-bem-techs/techs/deps-old'),
+    files: require('enb-bem-techs/techs/files'),
+    depsByTechToBemdecl: require('enb-bem-techs/techs/deps-by-tech-to-bemdecl'),
     fileMerge: require('enb/techs/file-merge'),
 
     // optimization
@@ -36,7 +36,7 @@ module.exports = function(config) {
             // essential
             [tech.levels, { levels: getLevels(config) }],
             [tech.fileProvider, { target: '?.bemjson.js' }],
-            [tech.bemdeclFromBemjson],
+            [tech.bemjsonToBemdecl],
             [tech.deps],
             [tech.files],
 
@@ -56,17 +56,17 @@ module.exports = function(config) {
             [tech.htmlFromBemjson],
 
             // client bemhtml
-            [tech.bemdeclFromDepsByTech, {
+            [tech.depsByTechToBemdecl, {
                 target: '?.bemhtml.bemdecl.js',
                 sourceTech: 'js',
                 destTech: 'bemhtml'
             }],
             [tech.deps, {
                 target: '?.bemhtml.deps.js',
-                sourceDepsFile: '?.bemhtml.bemdecl.js'
+                bemdeclFile: '?.bemhtml.bemdecl.js'
             }],
             [tech.files, {
-                target: '?.bemhtml.deps.js',
+                depsFile: '?.bemhtml.deps.js',
                 filesTarget: '?.bemhtml.files',
                 dirsTarget: '?.bemhtml.dirs'
             }],
