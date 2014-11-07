@@ -28,7 +28,8 @@
     "enb-modules": "0.2.0",
     "enb-stylus": "1.1.5",
     "stylus": "^0.47.1",
-    "ym": "^0.1.0"
+    "ym": "^0.1.0",
+    "bemhtml-compat": "~0.1.2"
   },
   "scripts": {
     "start": "bem server",
