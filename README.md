@@ -8,8 +8,7 @@ npm i
 ```
 
 ## Requirenments
-1. Works just with `bem-tools` now
-2. Assumes there's vendor/php-bem-bh installed
+It assumes there's `vendor/php-bem-bh` installed
 
 ```bash
 mkdir vendor
@@ -21,6 +20,12 @@ cd ..
 ## Build
 ```bash
 ./node_modules/.bin/bem make
+```
+
+or
+
+```bash
+./node_modules/.bin/enb make
 ```
 
 ## Run
