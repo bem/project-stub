@@ -1,4 +1,4 @@
-# Stub to start a new [BEM](https://bem.info) project
+# Stub to start a new [BEM](https://bem.info) project with [bh-php][]
 
 Project-stub is a template project repository used for BEM projects creation. It contains the minimal configuration files and folders you will need for quick start from scratch.
 
@@ -7,10 +7,16 @@ There are two main BEM libraries are linked here by default:
 * [bem-core](https://en.bem.info/libs/bem-core/)
 * [bem-components](https://en.bem.info/libs/bem-components/)
 
+And also templates for [bh-php][]:
+
+* [bem-core-php](https://github.com/bem/bem-core-php/)
+* [bem-components-php](https://github.com/bem/bem-components-php/)
+
 ## Installation requirements
 
 * [Node.js 0.12+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications.
 * [Git Bash](http://msysgit.github.io/) if you use Windows OS.
+* [PHP 5.3+](http://php.net) is a for running PHP scripts.
 
 ## Supported browsers
 
@@ -153,3 +159,5 @@ This generator provides you the ability to get the base of BEM project in few mi
 
 - [BEM - Building 'em modular](https://www.youtube.com/watch?v=huQp7gr3WPE)
 - [BEM for JavaScript Talk on Camp JS](https://en.bem.info/talks/campjs-melbourne-2014/)
+
+[bh-php]: https://github.com/bem/bh-php

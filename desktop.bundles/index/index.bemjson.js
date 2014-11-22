@@ -56,92 +56,90 @@ module.exports = {
                             elem : 'row',
                             tag : 'tr',
                             content : [
-                                { elem : 'cell', tag : 'td', size : 's' },
-                                { elem : 'cell', tag : 'td', size : 'm' },
-                                { elem : 'cell', tag : 'td', size : 'l' },
-                                { elem : 'cell', tag : 'td', size : 'xl' }
-                            ].map(function(cell) {
-                                cell.attrs = { style : 'width: 25%; vertical-align: top;' };
-                                cell.content = [
-                                    {
-                                        block : 'menu',
-                                        mods : { theme : 'islands', size : cell.size },
-                                        attrs : { style : 'border: 1px solid rgba(0, 0, 0, 0.1);' },
-                                        content : [
-                                            {
-                                                block : 'menu-item',
-                                                content : 'New'
-                                            },
-                                            {
-                                                block : 'menu-item',
-                                                mods : { disabled : true },
-                                                content : 'Open Recent'
-                                            },
-                                            {
-                                                elem : 'group',
-                                                title : 'Save',
-                                                content : [
-                                                    {
-                                                        block : 'menu-item',
-                                                        content : 'Save as...'
-                                                    },
-                                                    {
-                                                        block : 'menu-item',
-                                                        content : 'Export'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                block : 'menu-item',
-                                                content : 'Close'
-                                            }
-                                        ]
-                                    },
-                                    { tag : 'br' },
-                                    {
-                                        block : 'menu',
-                                        mods : { mode : 'check', theme : 'islands', size : cell.size },
-                                        attrs : { style : 'border: 1px solid rgba(0, 0, 0, 0.1);' },
-                                        content : [
-                                            {
-                                                elem : 'group',
-                                                title : 'Automate',
-                                                content : [
-                                                    {
-                                                        block : 'menu-item',
-                                                        content : 'Batch'
-                                                    },
-                                                    {
-                                                        block : 'menu-item',
-                                                        content : 'Create Droplet'
-                                                    }
-                                                ]
-                                            },
-                                            {
-                                                elem : 'group',
-                                                content : [
-                                                    {
-                                                        block : 'menu-item',
-                                                        mods : { checked : true },
-                                                        content : [
-                                                            { block : 'icon', mods : { social : 'twitter' } },
-                                                            'Twitter'
-                                                        ]
-                                                    },
-                                                    {
-                                                        block : 'menu-item',
-                                                        content : [
-                                                            { block : 'icon', mods : { social : 'vk' } },
-                                                            'VK'
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ];
-                                return cell;
-                            })
+                                {
+                                    elem : 'cell',
+                                    tag : 'td',
+                                    style : 'width: 25%; vertical-align: top;',
+                                    content: [
+                                        {
+                                            block : 'menu',
+                                            mods : { theme : 'islands', size : 's' },
+                                            attrs : { style : 'border: 1px solid rgba(0, 0, 0, 0.1);' },
+                                            content : [
+                                                {
+                                                    block : 'menu-item',
+                                                    content : 'New'
+                                                },
+                                                {
+                                                    block : 'menu-item',
+                                                    mods : { disabled : true },
+                                                    content : 'Open Recent'
+                                                },
+                                                {
+                                                    elem : 'group',
+                                                    title : 'Save',
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            content : 'Save as...'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            content : 'Export'
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    block : 'menu-item',
+                                                    content : 'Close'
+                                                }
+                                            ]
+                                        },
+                                        { tag : 'br' },
+                                        {
+                                            block : 'menu',
+                                            mods : { mode : 'check', theme : 'islands', size : 's' },
+                                            attrs : { style : 'border: 1px solid rgba(0, 0, 0, 0.1);' },
+                                            content : [
+                                                {
+                                                    elem : 'group',
+                                                    title : 'Automate',
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            content : 'Batch'
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            content : 'Create Droplet'
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    elem : 'group',
+                                                    content : [
+                                                        {
+                                                            block : 'menu-item',
+                                                            mods : { checked : true },
+                                                            content : [
+                                                                { block : 'icon', mods : { social : 'twitter' } },
+                                                                'Twitter'
+                                                            ]
+                                                        },
+                                                        {
+                                                            block : 'menu-item',
+                                                            content : [
+                                                                { block : 'icon', mods : { social : 'vk' } },
+                                                                'VK'
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },

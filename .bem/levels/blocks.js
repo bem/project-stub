@@ -13,6 +13,7 @@ exports.getTechs = function() {
         'bemdecl.js' : 'v2/bemdecl.js',
         'deps.js'    : 'v2/deps.js',
         'bemjson.js' : PATH.join(PRJ_TECHS, 'bemjson.js.js'),
+        'bh.php'     : PATH.join(PRJ_TECHS, 'bh.php.js'),
         'bemhtml'    : PATH.join(BEMCORE_TECHS, 'bemhtml.js'),
         'bemtree'    : PATH.join(BEMCORE_TECHS, 'bemtree.js'),
         'vanilla.js' : PATH.join(BEMCORE_TECHS, 'vanilla.js.js'),
@@ -21,4 +22,4 @@ exports.getTechs = function() {
     };
 };
 
-exports.defaultTechs = ['css', 'browser.js'];
+exports.defaultTechs = ['css', 'browser.js', 'bh.php'];

@@ -9,6 +9,6 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "2.5.0"
+    "bem-components-php": "2.5.0"
   }
 }
