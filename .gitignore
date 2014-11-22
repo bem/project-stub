@@ -6,10 +6,17 @@ node_modules/
 .svn
 npm-debug.log
 
+vendor
+tmp/
+
 # bem
 .bem/cache/
 .enb/tmp/
 *bundles*/*/*.*
+
+!*bundles/*/*.php
+*bundles/*/*.bh.php
+
 !*bundles*/*/*.bemjson.js
 !*bundles*/.bem/*
 *pages*/*/*.*
