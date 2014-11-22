@@ -9,6 +9,7 @@
     "libs"
   ],
   "dependencies": {
+    "bem-core": "git@github.com:zxqfox/bem-core.git#feature/php-bh-templates@v2",
     "bem-components": "451bec8d7277ff9a39e6eecfefa1ae78fdaf6892"
   }
 }

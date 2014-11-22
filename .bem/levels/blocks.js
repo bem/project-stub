@@ -21,7 +21,7 @@ exports.getTechs = function() {
     };
 
     // use techs from project (.bem/techs)
-    ['bemjson.js'].forEach(getTechResolver(techs, PRJ_TECHS));
+    ['bemjson.js', 'bh.php'].forEach(getTechResolver(techs, PRJ_TECHS));
 
     // use techs from bem-core library
     ['bemhtml', 'bemtree', 'vanilla.js', 'browser.js', 'node.js'].forEach(getTechResolver(techs, BEMCORE_TECHS));
@@ -29,4 +29,4 @@ exports.getTechs = function() {
     return techs;
 };
 
-exports.defaultTechs = ['stylus', 'browser.js', 'bemhtml'];
+exports.defaultTechs = ['stylus', 'browser.js', 'bh.php'];
