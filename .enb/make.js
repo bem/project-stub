@@ -12,6 +12,10 @@ var techs = {
         // js
         browserJs: require('enb-js/techs/browser-js'),
 
+        // php
+        bhPhp: require('enb-bh-php/techs/bh-php'),
+        bemjsonToHtmlPhp: require('enb-bh-php/techs/bemjson-to-html'),
+
         // bemtree
         // bemtree: require('enb-bemxjst/techs/bemtree'),
 
@@ -61,6 +65,10 @@ module.exports = function(config) {
             // html
             [techs.bemjsonToHtml],
 
+            // bh-php
+            [techs.bhPhp],
+            [techs.bemjsonToHtmlPhp, { target: '?.bh-php.html' }],
+
             // client bemhtml
             [enbBemTechs.depsByTechToBemdecl, {
                 target: '?.bemhtml.bemdecl.js',
@@ -95,5 +103,8 @@ module.exports = function(config) {
         ]);
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
+
+        // bh-php
+        nodeConfig.addTargets(['?.bh.php', '?.bh-php.html']);
     });
 };
