@@ -27,7 +27,8 @@ module.exports = require('enb/lib/build-flow').create()
         var bhChunk = [
             '<?php',
             process.env.INCLUDE_PHP_BEM_BH === 'false' ? '' : 'require_once __DIR__ . "/../../vendor/php-bem-bh/index.php";',
-            '$bh = new BEM\\BH();'
+            '$bh = new BEM\\BH();',
+            '$bh->setOptions(["jsAttrName" => "data-bem", "jsAttrScheme" => "json"]);'
         ].join('\n');
 
         return [bhChunk].concat(sourceFiles.map(function (file) {
