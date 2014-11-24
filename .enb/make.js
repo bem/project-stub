@@ -17,9 +17,10 @@ var techs = {
         // bemtree
         // bemtree: require('enb-bemxjst/techs/bemtree-old'),
 
-        // bemhtml
-        bemhtml: require('enb-bemxjst/techs/bemhtml-old'),
-        htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson')
+        // bh
+        bh: require('enb-bh/techs/bh-server'),
+        bhClient: require('enb-bh/techs/bh-client'),
+        htmlFromBemjson: require('enb-bh/techs/html-from-bemjson')
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -56,36 +57,42 @@ module.exports = function(config) {
             // bemtree
             // [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
-            // bemhtml
-            [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
+            // bh
+            [techs.bh, {
+                jsAttrName: 'data-bem',
+                jsAttrScheme: 'json',
+                mimic: 'BEMHTML'
+            }],
             [techs.htmlFromBemjson],
 
-            // client bemhtml
+            // client bh
             [enbBemTechs.depsByTechToBemdecl, {
-                target: '?.bemhtml.bemdecl.js',
+                target: '?.bh.bemdecl.js',
                 sourceTech: 'js',
-                destTech: 'bemhtml'
+                destTech: 'bh'
             }],
             [enbBemTechs.deps, {
-                target: '?.bemhtml.deps.js',
-                bemdeclFile: '?.bemhtml.bemdecl.js'
+                target: '?.bh.deps.js',
+                bemdeclFile: '?.bh.bemdecl.js'
             }],
             [enbBemTechs.files, {
-                depsFile: '?.bemhtml.deps.js',
-                filesTarget: '?.bemhtml.files',
-                dirsTarget: '?.bemhtml.dirs'
+                depsFile: '?.bh.deps.js',
+                filesTarget: '?.bh.files',
+                dirsTarget: '?.bh.dirs'
             }],
-            [techs.bemhtml, {
-                target: '?.browser.bemhtml.js',
-                filesTarget: '?.bemhtml.files',
-                devMode: process.env.BEMHTML_ENV === 'development'
+            [techs.bhClient, {
+                target: '?.browser.bh.js',
+                filesTarget: '?.bh.files',
+                jsAttrName: 'data-bem',
+                jsAttrScheme: 'json',
+                mimic: 'BEMHTML'
             }],
 
             // js
             [techs.browserJs],
             [techs.fileMerge, {
                 target: '?.pre.js',
-                sources: ['?.browser.bemhtml.js', '?.browser.js']
+                sources: ['?.browser.bh.js', '?.browser.js']
             }],
             [techs.prependYm, { source: '?.pre.js' }],
 
