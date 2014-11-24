@@ -40,7 +40,7 @@ module.exports = require('enb/lib/build-flow').create()
             "module.exports = {",
             "    apply: function(bemjson, cb) {",
             "        bemjson = JSON.stringify(bemjson);",
-            "        bemjson = bemjson.replace(/\\n/g, '').replace(/\"/g, \"'\");",
+            "        bemjson = bemjson.replace(/\\n/g, '').replace(/[\\\\\"']/g, '\\\\$&').replace(/\\u0000/g, '\\\\0')",
             "        var php = spawn('php'),",
             "            html = '',",
             "            errs = '',",
