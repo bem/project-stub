@@ -25,7 +25,7 @@ module.exports = require('enb/lib/build-flow').create()
         var node = this.node;
 
         var bhChunk = [
-            process.env.INCLUDE_PHP_BEM_BH === 'false' ? '' : '                \'require_once __DIR__ . "/../../vendor/php-bem-bh/index.php";\',',
+            process.env.INCLUDE_PHP_BEM_BH === 'false' ? '' : '                \'require_once __DIR__ . "/../project-stub/vendor/php-bem-bh/index.php";\',',
             '                \'$bh = new BEM\\\\BH();\',',
             '                \'$bh->setOptions(["jsAttrName" => "data-bem", "jsAttrScheme" => "json"]);\''
         ].join('\n');
@@ -43,6 +43,7 @@ module.exports = require('enb/lib/build-flow').create()
             "        bemjson = bemjson.replace(/\\n/g, '').replace(/\"/g, \"'\");",
             "        var php = spawn('php'),",
             "            html = '',",
+            "            errs = '',",
             "            code = [",
             "                '<?php',",
                              bhChunk + ",",
@@ -54,10 +55,14 @@ module.exports = require('enb/lib/build-flow').create()
             "            html += data.toString();",
             "        });",
 
+            "        php.stderr.on('data', function(data) {",
+            "            errs += data.toString();",
+            "        });",
+
             "        php.on('close', function(code) {",
-            "            if (code !== 0) {",
-            "                console.log('php process exited with code ' + code);",
-            "                cb('php err code: ' + code);",
+            "            if (errs || code !== 0) {",
+            "                console.log('php process exited with code ' + code + (errs ? '\\n' + errs : ''));",
+            "                cb('php err code: ' + code + (errs ? '\\n' + errs : ''));",
             "            }",
             "            cb(null, html);",
             "        });",
