@@ -19,10 +19,10 @@ var techs = {
 
         // bemhtml
         bemhtml: require('enb-bemxjst/techs/bemhtml-old'),
-        // htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson')
+        htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson'),
 
         // php
-        bhPhp: require('./techs/bh.php')
+        bhPhp: require('enb-bh-php/techs/bh-php')
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -60,10 +60,10 @@ module.exports = function(config) {
             // [tech.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
             // bemhtml
-            // [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
-            // [techs.htmlFromBemjson],
+            [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
+            [techs.htmlFromBemjson],
 
-            [techs.bhPhp],
+            [techs.bhPhp, { phpBootstrap: "../../vendor/bem/bh/index.php", jsAttrName: "data-bem", jsAttrScheme: "json" }],
 
             // client bemhtml
             [enbBemTechs.depsByTechToBemdecl, {
@@ -99,6 +99,6 @@ module.exports = function(config) {
             [techs.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true, minify: isProd }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.bh.php', '_?.css', '_?.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', '?.html', */ '?.bh.php', '_?.css', '_?.js']);
     });
 };
