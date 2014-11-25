@@ -61,12 +61,11 @@ module.exports = function(config) {
 
             // bemhtml
             [techs.bemhtml, { sourceSuffixes: ['bemhtml', 'bemhtml.js'] }],
+            // bh-php
+            [techs.bhPhp, { phpBootstrap: "../../vendor/bem/bh/index.php", jsAttrName: "data-bem", jsAttrScheme: "json" }],
 
             // html
             [techs.bemjsonToHtml],
-
-            // bh-php
-            [techs.bhPhp],
             [techs.bemjsonToHtmlPhp, { target: '?.bh-php.html' }],
 
             // client bemhtml
@@ -102,9 +101,13 @@ module.exports = function(config) {
             [techs.borschik, { source: '?.css', target: '?.min.css', tech: 'cleancss', minify: isProd }]
         ]);
 
+<<<<<<< ae50341e77410ca02f064d545e4c8536c146c304
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
 
         // bh-php
         nodeConfig.addTargets(['?.bh.php', '?.bh-php.html']);
+=======
+        nodeConfig.addTargets([/* '?.bemtree.js', '?.html', */ '?.bh.php', '_?.css', '_?.js']);
+>>>>>>> upd enb-bh-php package
     });
 };
