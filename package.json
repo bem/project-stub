@@ -31,7 +31,7 @@
     "ym": "^0.1.0"
   },
   "scripts": {
-    "start": "bem server",
+    "start": "enb server",
     "postinstall": "bower-npm-install",
     "deps": "bower-npm-install --non-interactive"
   },
