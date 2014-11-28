@@ -1,4 +1,4 @@
-# Stub to start a new [BEM](http://bem.info) project
+# Stub to start a new [BEM](https://en.bem.info) project
 
 Project-stub is a template project repository used for BEM projects creation. It contains the minimal configuration files and folders you will need for quick start from scratch. 
 
@@ -58,9 +58,34 @@ Stopping the server is also easy, pressing `Ctrl` + `C` while the terminal is yo
 echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 </code></pre>
 
+## Generator of BEM projects for Yeoman
+
+This generator provides you the ability to get the base of BEM project in few minutes by answering the simple questions.
+- [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/)
+
 ## Docs
 
-- [Full stack quick start](http://bem.info/articles/start-with-project-stub/)
-- [Tutorial on BEMHTML](http://bem.info/libs/bem-core/2.0.0/bemhtml/reference/)
-- [Tutorial on bem-js](http://bem.info/tutorials/bem-js-tutorial/)
-- [Commands bem-tools](http://bem.info/tools/bem/bem-tools/commands/)
+- [Full stack quick start](https://en.bem.info/articles/start-with-project-stub/)
+- [Tutorial for BEMJSON template-engine](https://en.bem.info/technology/bemjson/current/bemjson/)
+- [Tutorial on BEMHTML](https://en.bem.info/libs/bem-core/2.0.0/bemhtml/reference/)
+- [Tutorial on i-bem.js](https://en.bem.info/tutorials/bem-js-tutorial/)
+- [JavaScript for BEM: main terms](https://en.bem.info/articles/bem-js-main-terms/)
+- [Commands bem-tools](https://en.bem.info/tools/bem/bem-tools/commands/)
+
+## Project-stub based projects
+
+- [Creating BEM application on Leaflet and 2GIS API](https://en.bem.info/tutorials/firm-card-story/)
+- [Creating a menu of geo objects collections with Yandex.Maps API and BEM](https://en.bem.info/tutorials/yamapsbem/)
+- [SSSR (Social Services Search Robot)](https://github.com/bem/sssr) — study app with BEM full-stack
+
+## Useful tools
+
+- [bem-cli](https://en.bem.info/blog/bem-cli/) — run bem-tools locally
+- [borschik](https://en.bem.info/tools/optimizers/borschik/) — borschik is a simple but powerful builder for text-based file formats
+
+## Videos
+- [BEM for JavaScript Talk on Camp JS](https://en.bem.info/talks/campjs-melbourne-2014/)
+
+## Working under Windows environment
+
+- [bemup-workshop-vagrant](https://github.com/dab/bemup-workshop-vagrant/blob/master/README.ru.md) — Provisions a clean VirtualBox Ubuntu server instance with all needed Node.js development tools 
