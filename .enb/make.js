@@ -54,7 +54,7 @@ module.exports = function(config) {
             }],
 
             // bemtree
-            // [tech.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
+            // [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
             // bemhtml
             [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
