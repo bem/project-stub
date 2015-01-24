@@ -23,7 +23,15 @@ exports.techMixin = {
     },
 
     getBuildResultChunk: function(relPath, path) {
+      //Development build
+      if(process.env.YENV !== 'production'){
         return '\n$fn = include __DIR__ . "/' + relPath + '"; $fn($bh);';
+      }
+      
+      //production build
+      var fileContent = FS.readFileSync(path).toString();
+      var trimmed = fileContent.replace(/<\?php(\r\n|\n|\r)return/,"\n$tpl =").replace(/\n/,'');
+      return "\n/*"+relPath+"*/\n"+trimmed+"$tpl($bh);\n";
     },
 
     getBhChunk : function() {
