@@ -2,11 +2,25 @@
 
 var FS = require('fs'),
     BEM = require('bem'),
-    Q = BEM.require('q');
+    Q = BEM.require('q'),
+    Template = require('bem/lib/template');
 
 exports.API_VER = 2;
 
 exports.techMixin = {
+    
+    getCreateResult: function(path, suffix, vars) {
+        vars.Selector = '"' + vars.BlockName +
+            (vars.ElemName? '__' + vars.ElemName : '') +
+            (vars.ModVal? '_' + vars.ModName + '_' + vars.ModVal : '') + '"';
+
+        return Template.process([
+            '<?php',
+            'return function ($bh) {',
+            ' $bh->match({{bemSelector}}, function ($ctx, $json){',
+            ' });',
+            '};'], vars);
+    },
 
     getBuildResultChunk: function(relPath, path) {
         return '\n$fn = include __DIR__ . "/' + relPath + '"; $fn($bh);';
