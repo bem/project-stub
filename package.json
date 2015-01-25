@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "enb server",
-    "postinstall": "bower-npm-install",
+    "postinstall": "[ \"$NODE_ENV\" != 'production' ] && bower-npm-install || true",
     "deps": "bower-npm-install --non-interactive"
   },
   "private": true
