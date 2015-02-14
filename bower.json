@@ -9,10 +9,6 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "git@github.com:zxqfox/bem-core.git#feature/php-bh-templates@v2",
-    "bem-components": "git@github.com:zxqfox/bem-components.git#feature/php-bh-templates@v2"
-  },
-  "resolutions": {
-    "bem-core": "feature/php-bh-templates@v2"
+    "bem-components-php": "v2.0.0"
   }
 }
