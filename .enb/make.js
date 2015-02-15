@@ -66,7 +66,12 @@ module.exports = function(config) {
             [techs.bemhtml, { sourceSuffixes: ['bemhtml', 'bemhtml.js'] }],
 
             // bh-php
-            [techs.bhPhp, { phpBootstrap: "../../vendor/bem/bh/index.php", jsAttrName: "data-bem", jsAttrScheme: "json" }],
+            [techs.bhPhp, {
+                phpBootstrap: "../../vendor/bem/bh/index.php",
+                devMode: process.env.BHPHP_ENV === 'development',
+                jsAttrName: "data-bem",
+                jsAttrScheme: "json"
+            }],
 
             // html
             [techs.bemjsonToHtml],
