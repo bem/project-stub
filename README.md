@@ -13,7 +13,7 @@ It assumes there's `vendor/php-bem-bh` installed
 ```bash
 mkdir vendor
 cd vendor
-git clone git@github.com:zxqfox/php-bem-bh.git
+git clone https://github.com/bem/bh-php.git
 cd ..
 ```
 
