@@ -66,7 +66,7 @@ module.exports = function(config) {
             // [techs.htmlFromBemjson],
 
             [enbBhPhp.bhPhp, {
-                phpBootstrap: "../../vendor/bem/bh/index.php",
+                phpBootstrap: "/../../vendor/bem/bh/index.php",
                 devMode: process.env.BHPHP_ENV === 'development',
                 jsAttrName: "data-bem",
                 jsAttrScheme: "json"
