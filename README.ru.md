@@ -1,16 +1,17 @@
 # Как начать работать с проектом
 
-[Project-stub](https://github.com/bem/project-stub) – это шаблонный репозиторий для создания БЭМ-проектов. Он содержит необходимый минимум конфигурационных файлов и папок, который позволяет быстро развернуть проект с нуля.  
-В project-stub по умолчанию подключены основные БЭМ-библиотеки:   
+[Project-stub](https://github.com/bem/project-stub) – это шаблонный репозиторий для создания БЭМ-проектов. Он содержит необходимый минимум конфигурационных файлов и папок, который позволяет быстро развернуть проект с нуля.
+В project-stub по умолчанию подключены основные БЭМ-библиотеки:
 
-* [bem-core](https://github.com/bem/bem-core)  
-* [bem-components](https://github.com/bem/bem-components)  
+* [bem-core](https://github.com/bem/bem-core)
+* [bem-components](https://github.com/bem/bem-components)
 
 Попробуй БЭМ на вкус!
 
 ## Требования к установке
 
-* [Node.js](http://nodejs.org) – это программная платформа, основанная на языке JavaScript и позволяющая легко создавать быстрые и масштабируемые сетевые приложения.
+* [Node.js 0.10+](http://nodejs.org) – это программная платформа, основанная на языке JavaScript и позволяющая легко создавать быстрые и масштабируемые сетевые приложения. Или [io.js](https://iojs.org/en/index.html), как альтернатива Node.js.
+* [Git Bash](http://msysgit.github.io/) – для пользователей операционной системы Windows.
 
 ## Установка
 
@@ -18,34 +19,101 @@
 
 Начнем...
 
-    git clone https://github.com/bem/project-stub.git -b bem-core my-bem-project  
-    cd my-bem-project      
-    npm install  
-
-## Практическое применение 
-
-Теперь вызов всех команд [bem-tools](https://ru.bem.info/tools/bem/bem-tools/) возможен так `./node_modules/bem/bin/bem`. Чтоб каждый раз не указывать путь к исполняемому файлу (./node_modules/bem/bin/bem), необходимо установить npm-пакет bem-cli:
-
-`npm install -g bem-cli` или использовать альтернативный метод `export PATH=./node_modules/.bin:$PATH`
-
-
-### Базовые команды
-
-**Старт сервера**
-
-```bash
-bem server # bem server -p 8080 -v info|silly|debug|verbose|warn|error
+```
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 my-bem-project
+cd my-bem-project
+npm install  # Не используйте права суперпользователя (`root`) при установке npm- и bower-зависимостей.
 ```
 
-> **подсказка** все команды необходимо выполнять в терминале локально
+bower-зависимости устанавливаются при выполнении npm postinstall в папку `libs`.
 
-На вашем компьютере запустился БЭМ-сервер, чтобы проверить это:
+## Практическое применение
 
-    Откройте в браузере http://localhost:8080/desktop.bundles/index/index.html
+Сборка проекта возможна с помощью [ENB](https://bem.info/tools/bem/enb-bem-techs/) или [bem-tools](https://ru.bem.info/tools/bem/bem-tools/). Результаты сборки в обоих случаях одинаковы.
 
-Остановить сервер также просто: комбинация клавиш `Ctrl` + `C` в активном окне терминала остановит сервер.
+Вызов всех команд `enb` возможен из папки `node_modules/.bin/enb`, а команд `bem-tools` из `./node_modules/bem/bin/bem`.
 
-**Создание блока**  
+### Сборка проекта с ENB
+
+```bash
+node_modules/.bin/enb make
+```
+
+Чтобы не указывать путь к исполняемому файлу (`node_modules/.bin/enb`) используйте:
+
+```
+export PATH=./node_modules/.bin:$PATH`
+```
+
+Теперь сборка доступна из любой точки проекта:
+
+```
+enb make
+```
+
+### Сборка проекта с bem-tools
+
+```
+./node_modules/bem/bin/bem make
+```
+
+Установите npm-пакет `bem-cli`, чтобы не указывать путь к исполняемому файлу (`./node_modules/bem/bin/bem`):
+
+```
+npm install -g bem-cli
+```
+
+Или используйте альтернативный метод:
+
+```
+export PATH=./node_modules/.bin:$PATH`
+```
+Теперь сборка доступна из любой точки проекта:
+
+```
+bem make
+```
+
+### Базовые команды для обоих сборщиков
+
+> **Подсказка** все команды необходимо выполнять в терминале локально
+
+Информация об основных командах для обоих сборщиков:
+
+```
+enb -h
+```
+и
+
+```
+bem -h
+```
+
+**Старт сервера с ENB**
+
+```bash
+node_modules/.bin/enb server
+```
+
+Команда `npm start` также запускает `enb server`, при этом нет необходимости указывать полный путь до `node_modules`.
+
+```bash
+npm start
+```
+
+**Старт сервера с bem-tools**
+
+```bash
+bem server
+```
+
+На вашем компьютере запустился сервер для разработки. Чтобы проверить это, откройте в браузере [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+
+**Остановка сервера**
+
+Комбинация клавиш `Ctrl` + `C` или `⌘` + `C` (для MAC) в активном окне терминала остановит сервер.
+
+**Создание блока**
 
     bem create -l desktop.blocks -b newBlock
 
@@ -53,7 +121,7 @@ bem server # bem server -p 8080 -v info|silly|debug|verbose|warn|error
 
     bem create -l desktop.bundles -b page
 
-> **совет** Вы можете еще больше упростить работу с сервером, прописав альтернативные имена:
+> **Совет** Вы можете еще больше упростить работу с сервером, прописав альтернативные имена:
 
 <pre><code class="lasso">echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
 echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
@@ -61,17 +129,17 @@ echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 
 ## Генератор БЭМ-проектов на Yeoman
 
-Если вам необходимо изменить конфигурацию заготовки проекта — воспользуйтесь инструментом 
-* [generator-bem-stub](https://ru.bem.info/tools/bem/bem-stub/)
-* Видео [генератор БЭМ-проектов на Yeoman](https://ru.bem.info/talks/bemup-moscow-2014/#Генератор-БЭМ-проектов-на-Yeoman-—-Евгений-Гаврюшин)
+`project-stub` – это универсальный проект-заготовка, покрывающий большинство стандартных задач БЭМ-проекта. Если вам необходимо создать оптимальную конфигурацию вашего проекта, воспользуйтесь инструментом [generator-bem-stub](https://ru.bem.info/tools/bem/bem-stub/).
 
+* Видео [генератор БЭМ-проектов на Yeoman](https://ru.bem.info/talks/bemup-moscow-2014/#Генератор-БЭМ-проектов-на-Yeoman-—-Евгений-Гаврюшин)
 
 ## Полезные ссылки
 
-* [Создаем свой проект на БЭМ](https://ru.bem.info/articles/start-with-project-stub/)  
+* [Создаем свой проект на БЭМ](https://ru.bem.info/articles/start-with-project-stub/)
+* [Собираем статическую страницу на БЭМ](https://ru.bem.info/tutorials/quick-start-static/)
 * [Справочное руководство по BEMJSON](https://ru.bem.info/technology/bemjson/current/bemjson/)
-* [Руководство пользователя по BEMHTML](https://ru.bem.info/libs/bem-core/current/bemhtml/reference/)  
-* [Пошаговое руководство по i-bem.js](https://ru.bem.info/tutorials/bem-js-tutorial/)  
+* [Руководство пользователя по BEMHTML](https://ru.bem.info/libs/bem-core/current/bemhtml/reference/)
+* [Пошаговое руководство по i-bem.js](https://ru.bem.info/tutorials/bem-js-tutorial/)
 * [Команды bem-tools](https://ru.bem.info/tools/bem/bem-tools/commands/)
 
 ## Примеры проектов на основе project-stub
