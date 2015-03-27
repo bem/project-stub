@@ -107,7 +107,7 @@ npm start
 bem server
 ```
 
-На вашем компьютере запустился сервер для разработки. Чтобы проверить это, откройте в браузере [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+На вашем компьютере запустился сервер для разработки. Чтобы проверить это, откройте в браузере `http://localhost:8080/desktop.bundles/index/index.html`.
 
 **Остановка сервера**
 

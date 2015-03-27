@@ -105,7 +105,7 @@ npm start
 bem server
 ```
 
-The `bem server ` is running. To check it out, navigate to [http://localhost:8080/desktop.bundles/index/index.html](http://localhost:8080/desktop.bundles/index/index.html).
+The `bem server ` is running. To check it out, navigate to `http://localhost:8080/desktop.bundles/index/index.html`.
 
 **Stop the server**
 
