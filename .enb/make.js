@@ -19,7 +19,10 @@ var techs = {
 
         // bemhtml
         bemhtml: require('enb-bemxjst/techs/bemhtml-old'),
-        htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson')
+        htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson'),
+
+        // html beautify
+        htmlBeautify: require('enb-beautify/techs/enb-beautify-html')
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -91,9 +94,13 @@ module.exports = function(config) {
 
             // borschik
             [techs.borschik, { sourceTarget: '?.js', destTarget: '_?.js', freeze: true, minify: isProd }],
-            [techs.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true, minify: isProd }]
+            [techs.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true, minify: isProd }],
+
+            // make html beauty 
+            //[techs.htmlBeautify, { sourceTarget: '?.html', destTarget: '?.tidy.html'}]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '_?.css', '_?.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', '?.tidy.html',*/ '?.html', '_?.css', '_?.js']);
+
     });
 };
