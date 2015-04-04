@@ -22,6 +22,8 @@ var techs = {
         htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson')
     },
     enbBemTechs = require('enb-bem-techs'),
+    depsByTechToFiles = require('./techs/deps-by-tech-to-files'),
+    depsPlusDepsByTechToFiles = require('./techs/deps+deps-by-tech-to-files'),
     levels = [
         { path: 'libs/bem-core/common.blocks', check: false },
         { path: 'libs/bem-core/desktop.blocks', check: false },
@@ -61,20 +63,6 @@ module.exports = function(config) {
             [techs.htmlFromBemjson],
 
             // client bemhtml
-            [enbBemTechs.depsByTechToBemdecl, {
-                target: '?.bemhtml.bemdecl.js',
-                sourceTech: 'js',
-                destTech: 'bemhtml'
-            }],
-            [enbBemTechs.deps, {
-                target: '?.bemhtml.deps.js',
-                bemdeclFile: '?.bemhtml.bemdecl.js'
-            }],
-            [enbBemTechs.files, {
-                depsFile: '?.bemhtml.deps.js',
-                filesTarget: '?.bemhtml.files',
-                dirsTarget: '?.bemhtml.dirs'
-            }],
             [techs.bemhtml, {
                 target: '?.browser.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
@@ -82,7 +70,7 @@ module.exports = function(config) {
             }],
 
             // js
-            [techs.browserJs],
+            [techs.browserJs, { filesTarget: '?.js.files' }],
             [techs.fileMerge, {
                 target: '?.pre.js',
                 sources: ['?.browser.bemhtml.js', '?.browser.js']
@@ -92,7 +80,7 @@ module.exports = function(config) {
             // borschik
             [techs.borschik, { sourceTarget: '?.js', destTarget: '_?.js', freeze: true, minify: isProd }],
             [techs.borschik, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true, minify: isProd }]
-        ]);
+        ].concat(depsByTechToFiles('js', 'bemhtml'), depsPlusDepsByTechToFiles('js')));
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '_?.css', '_?.js']);
     });
