@@ -7,16 +7,20 @@ There are two main BEM libraries are linked here by default:
 * [bem-core](https://github.com/bem/bem-core)
 * [bem-components](https://github.com/bem/bem-components)
 
-Just try and taste BEM!
-
 ## Installation requirements
 
 * [Node.js 0.10+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications. Or you could use [io.js](https://iojs.org/en/index.html) as an alternative platform to Node.js.
 * [Git Bash](http://msysgit.github.io/) if you use Windows OS.
 
+## Supported browsers
+
+The list of supported browsers depends on the [bem-core](https://github.com/bem/bem-core/blob/v2/README.md#supported-browsers) and [bem-components](https://github.com/bem/bem-components/blob/v2/README.md#supported-browsers) library versions.
+
+>**NB** Internet Explorer 8.0 is not supported by default. To support IE8 you must follow the [recomendations](https://en.bem.info/libs/bem-components/v2.1.0/#support-ie8) or use the alternative way — a [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/) that ensures an optimal config file for your project creation.
+
 ## Installation
 
-So, how easy is it to get started with BEM?  *Super easy*.
+So, how easy is it to get started with BEM? — *Super easy!*
 
 It's as easy as...
 
@@ -26,7 +30,7 @@ cd my-bem-project
 npm install # Do not use root rights to install npm and bower dependencies.
 ```
 
-bower dependencies are installed in the `libs` directory by npm postinstall.
+bower dependencies are installed in the `libs` directory by `npm postinstall`.
 
 ## Usage
 
@@ -74,7 +78,7 @@ bem make
 
 ### The basic commands
 
-> **hint:** execute the following commands in your terminal
+>Execute the following commands in your terminal.
 
 You could use help option to get information about the basic commands of `enb` and `bem-tools`:
 
@@ -113,21 +117,25 @@ Press `Ctrl` + `C` or `⌘` + `C` (for MAC devices) while the terminal is your a
 
 **Add a block**
 
-    bem create -l desktop.blocks -b newBlock
+```bash
+bem create -l desktop.blocks -b newBlock
+```
 
 **Add a page**
 
-    bem create -l desktop.bundles -b page
+```bash
+bem create -l desktop.bundles -b page
+```
 
->  **hint:** you can add aliases for super easy use
-
-<pre><code class="lasso">echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
+>You could add aliases for super easy use:<br>
+```
+echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
 echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
-</code></pre>
+```
 
 ## Generator of BEM projects for Yeoman
 
-`project-stub` is a multipurpose template project that covers the most common tasks of the BEM project. If you want to create the most suitable configuration to build your project, use the [generator-bem-stub](https://ru.bem.info/tools/bem/bem-stub/).
+`project-stub` is a multipurpose template project that covers the most common tasks of the BEM project. If you want to create the most suitable configuration to build your project, use the [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/).
 
 This generator provides you the ability to get the base of BEM project in few minutes by answering the simple questions.
 - [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/)
@@ -155,7 +163,3 @@ This generator provides you the ability to get the base of BEM project in few mi
 
 ## Videos
 - [BEM for JavaScript Talk on Camp JS](https://en.bem.info/talks/campjs-melbourne-2014/)
-
-## Working under Windows environment
-
-- [bemup-workshop-vagrant](https://github.com/dab/bemup-workshop-vagrant/blob/master/README.ru.md) — Provisions a clean VirtualBox Ubuntu server instance with all needed Node.js development tools
