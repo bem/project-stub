@@ -14,7 +14,7 @@ There are two main BEM libraries are linked here by default:
 
 ## Supported browsers
 
-The list of supported browsers depends on the [bem-core](https://github.com/bem/bem-core/blob/v2/README.md#supported-browsers) and [bem-components](https://github.com/bem/bem-components/blob/v2/README.md#supported-browsers) library versions.
+The list of supported browsers depends on the [bem-core](https://en.bem.info/libs/bem-core/current/#supported-browsers) and [bem-components](https://en.bem.info/libs/bem-components/current/#supported-browsers) library versions.
 
 >**NB** Internet Explorer 8.0 is not supported by default. To support IE8 you must follow the [recomendations](https://en.bem.info/libs/bem-components/v2.1.0/#support-ie8) or use the alternative way — a [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/) that ensures an optimal config file for your project creation.
 
