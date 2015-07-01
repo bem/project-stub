@@ -8,7 +8,7 @@ var FS = require('fs'),
 exports.API_VER = 2;
 
 exports.techMixin = {
-    
+
     getCreateResult: function(path, suffix, vars) {
         vars.Selector = '"' + vars.BlockName +
             (vars.ElemName? '__' + vars.ElemName : '') +
@@ -27,7 +27,7 @@ exports.techMixin = {
       if(process.env.YENV !== 'production'){
         return '\n$fn = include __DIR__ . "/' + relPath + '"; $fn($bh);';
       }
-      
+
       //production build
       var fileContent = FS.readFileSync(path).toString();
       var trimmed = fileContent.replace(/<\?php(\r\n|\n|\r)return/,"\n$tpl =").replace(/\n/,'');
@@ -37,7 +37,7 @@ exports.techMixin = {
     getBhChunk : function() {
         return [
             '<?php',
-            process.env.INCLUDE_PHP_BEM_BH === 'false' ? '' : 'require_once __DIR__ . "/../../vendor/php-bem-bh/index.php";',
+            process.env.INCLUDE_PHP_BEM_BH === 'false' ? '' : 'require_once __DIR__ . "../../vendor/bem/bh/index.php";',
             '$bh = new BEM\\BH();',
             '$bh->setOptions(["jsAttrName" => "data-bem", "jsAttrScheme" => "json"]);'
         ].join('\n');
