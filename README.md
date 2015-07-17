@@ -4,8 +4,8 @@ Project-stub is a template project repository used for BEM projects creation. It
 
 There are two main BEM libraries are linked here by default:
 
-* [bem-core](https://github.com/bem/bem-core)
-* [bem-components](https://github.com/bem/bem-components)
+* [bem-core](https://en.bem.info/libs/bem-core/)
+* [bem-components](https://en.bem.info/libs/bem-components/)
 
 ## Installation requirements
 
@@ -25,7 +25,7 @@ So, how easy is it to get started with BEM? — *Super easy!*
 It's as easy as...
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.1.0 my-bem-project
 cd my-bem-project
 npm install # Do not use root rights to install npm and bower dependencies.
 ```
@@ -34,46 +34,30 @@ bower dependencies are installed in the `libs` directory by `npm postinstall`.
 
 ## Usage
 
-You could use the following tools to build the project: [ENB](https://ru.bem.info/tools/bem/enb-bem-techs/)(only in Russian) or [bem-tools](https://bem.info/tools/bem/bem-tools/). The result files are the same in both cases.
+You could use the following tools to build the project: [ENB](https://ru.bem.info/tools/bem/enb-bem-techs/)(only in Russian) or [bem-tools](https://bem.info/tools/bem/bem-tools/). The result files are the same in both cases as `bem-tools` just calls `ENB` under the hood.
 
 You can run any `enb` commands from a `node_modules/.bin/enb` directory and the `bem-tools` commands from `node_modules/bem/bin/bem`.
 
-### Build the project with ENB
+### Build the project
 
 ```bash
 node_modules/.bin/enb make
 ```
+or 
+```bash
+node_modules/.bin/bem make
+```
 
-To be able to run `enb` commands without typing a full path to an executable file (`node_modules/.bin/enb`), use:
+To be able to run commands without typing a full path to an executable file (`node_modules/.bin/enb`), use:
 
 ```
 export PATH=./node_modules/.bin:$PATH`
 ```
 
-Now you can use `enb` from any point of your project.
+Now you can use `enb` or `bem` from any point of your project.
 
 ```
 enb make
-```
-
-### Build the project with bem-tools
-
-To be able to run bem-tools commands without typing a full path to an executable file (`node_modules/bem/bin/bem`), use `bem-cli` npm package:
-
-```
-npm install -g bem-cli
-```
-
-The alternative method:
-
-```
-export PATH=./node_modules/.bin:$PATH`
-```
-
-Now you can use `bem-tools` from any point of your project.
-
-```
-bem make
 ```
 
 ### The basic commands
@@ -85,28 +69,26 @@ You could use help option to get information about the basic commands of `enb` a
 ```
 enb -h
 ```
-и
+and
 
 ```
 bem -h
 ```
 
-**Start the server with ENB**
+**Start the dev server**
 
 ```bash
 node_modules/.bin/enb server
+```
+or 
+```bash
+node_modules/.bin/bem server
 ```
 
 You could use the `npm start` command to start the `enb server` without specifying the full path to the `node_modules`.
 
 ```bash
 npm start
-```
-
-**Start the server with bem-tools**
-
-```bash
-bem server
 ```
 
 The `bem server ` is running. To check it out, navigate to `http://localhost:8080/desktop.bundles/index/index.html`.
@@ -158,7 +140,6 @@ This generator provides you the ability to get the base of BEM project in few mi
 
 ## Useful tools
 
-- [bem-cli](https://en.bem.info/blog/bem-cli/) — run bem-tools locally
 - [borschik](https://en.bem.info/tools/optimizers/borschik/) — borschik is a simple but powerful builder for text-based file formats
 
 ## Videos

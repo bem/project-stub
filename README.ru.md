@@ -3,8 +3,8 @@
 [Project-stub](https://github.com/bem/project-stub) – это шаблонный репозиторий для создания БЭМ-проектов. Он содержит необходимый минимум конфигурационных файлов и папок, который позволяет быстро развернуть проект с нуля.
 В project-stub по умолчанию подключены основные БЭМ-библиотеки:
 
-* [bem-core](https://github.com/bem/bem-core)
-* [bem-components](https://github.com/bem/bem-components)
+* [bem-core](https://ru.bem.info/libs/bem-core/)
+* [bem-components](https://ru.bem.info/libs/bem-components/)
 
 ## Требования к установке
 
@@ -24,23 +24,27 @@
 Клонируем репозиторий и устанавливаем все необходимые зависимости:
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.0.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.1.0 my-bem-project
 cd my-bem-project
 npm install  # Не используйте права суперпользователя (`root`) при установке npm- и bower-зависимостей.
 ```
 
-bower-зависимости устанавливаются при выполнении `npm postinstall` в папку `libs`.
+bower-зависимости автоматически устанавливаются при выполнении `npm postinstall` в папку `libs`.
 
 ## Практическое применение
 
-Собрать проект можно с помощью [ENB](https://bem.info/tools/bem/enb-bem-techs/) или [bem-tools](https://ru.bem.info/tools/bem/bem-tools/). Результаты сборки в обоих случаях одинаковы.
+Собрать проект можно с помощью [ENB](https://bem.info/tools/bem/enb-bem-techs/) или [bem-tools](https://ru.bem.info/tools/bem/bem-tools/). Результаты сборки в обоих случаях одинаковы, т.к. `bem-tools` просто проксирует вызовы к `ENB`.
 
 Вызов всех команд `enb` возможен из папки `node_modules/.bin/enb`, а команд `bem-tools` из `./node_modules/bem/bin/bem`.
 
-### Сборка проекта с ENB
+### Сборка проекта
 
 ```bash
 node_modules/.bin/enb make
+```
+либо
+```
+./node_modules/bem/bin/bem make
 ```
 
 Чтобы не указывать путь к исполняемому файлу (`node_modules/.bin/enb`) используйте:
@@ -53,29 +57,6 @@ export PATH=./node_modules/.bin:$PATH`
 
 ```
 enb make
-```
-
-### Сборка проекта с bem-tools
-
-```
-./node_modules/bem/bin/bem make
-```
-
-Установите npm-пакет `bem-cli`, чтобы не указывать путь к исполняемому файлу (`./node_modules/bem/bin/bem`):
-
-```
-npm install -g bem-cli
-```
-
-Или используйте альтернативный метод:
-
-```
-export PATH=./node_modules/.bin:$PATH`
-```
-Теперь сборка доступна из любой точки проекта:
-
-```
-bem make
 ```
 
 ### Базовые команды для обоих сборщиков
@@ -93,22 +74,20 @@ enb -h
 bem -h
 ```
 
-**Старт сервера с ENB**
+**Старт сервера**
 
 ```bash
 node_modules/.bin/enb server
+```
+либо
+```bash
+bem server
 ```
 
 Команда `npm start` также запускает `enb server`, при этом нет необходимости указывать полный путь до `node_modules`.
 
 ```bash
 npm start
-```
-
-**Старт сервера с bem-tools**
-
-```bash
-bem server
 ```
 
 На вашем компьютере запустился сервер для разработки. Чтобы проверить это, откройте в браузере `http://localhost:8080/desktop.bundles/index/index.html`.
@@ -137,7 +116,7 @@ echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 
 ## Генератор БЭМ-проектов на Yeoman
 
-`project-stub` – это универсальный проект-заготовка, покрывающий большинство стандартных задач БЭМ-проекта. Если вам необходимо создать оптимальную конфигурацию вашего проекта, воспользуйтесь инструментом [generator-bem-stub](https://ru.bem.info/tools/bem/bem-stub/).
+`project-stub` – это универсальный проект-заготовка, покрывающий большинство стандартных задач БЭМ-проекта. Если вам необходимо создать уникальную конфигурацию вашего проекта, воспользуйтесь инструментом [generator-bem-stub](https://ru.bem.info/tools/bem/bem-stub/).
 
 * Видео [генератор БЭМ-проектов на Yeoman](https://ru.bem.info/talks/bemup-moscow-2014/#Генератор-БЭМ-проектов-на-Yeoman-—-Евгений-Гаврюшин)
 
@@ -159,7 +138,6 @@ echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 
 ## Полезные инструменты
 
-* [bem-cli](https://ru.bem.info/blog/bem-cli/) — запусти bem-tools локально
 * [borschik](https://ru.bem.info/tools/optimizers/borschik/) — простой, но мощный сборщик файлов текстовых форматов
 
 ## Видео
