@@ -50,7 +50,7 @@ module.exports = function(config) {
             [techs.cssAutoprefixer, {
                 sourceTarget: '?.noprefix.css',
                 destTarget: '?.css',
-                browserSupport: ['last 2 versions', 'ie 10', 'opera 12.16']
+                browserSupport: ['last 2 versions', 'ie 10', 'opera 12.1']
             }],
 
             // bemtree
