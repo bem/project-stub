@@ -1,32 +1,24 @@
 var PATH = require('path'),
-    environ = require('bem-environ'),
-    getTechResolver = environ.getTechResolver,
-
-    PRJ_ROOT = environ.PRJ_ROOT,
-    PRJ_TECHS = PATH.resolve(PRJ_ROOT, '.bem/techs'),
-    BEMCORE_TECHS = environ.getLibPath('bem-core', '.bem/techs');
+    PRJ_TECHS = PATH.resolve(__dirname, '..', 'techs'),
+    BEMCORE_TECHS = PATH.resolve(__dirname, '..', '..', 'libs', 'bem-core', '.bem', 'techs');
 
 exports.getTechs = function() {
-    var techs = {
-        'stylus'        : 'v2/styl',
-        'css'           : 'v2/css',
-        'ie.css'        : 'v2/ie.css',
-        'ie6.css'       : 'v2/ie6.css',
-        'ie7.css'       : 'v2/ie7.css',
-        'ie8.css'       : 'v2/ie8.css',
-        'ie9.css'       : 'v2/ie9.css',
-        'js'            : 'v2/js-i',
-        'bemdecl.js'    : 'v2/bemdecl.js',
-        'deps.js'       : 'v2/deps.js'
+    return {
+        'stylus'     : 'v2/styl',
+        'css'        : 'v2/css',
+        'ie.css'     : 'v2/ie.css',
+        'ie8.css'    : 'v2/ie8.css',
+        'ie9.css'    : 'v2/ie9.css',
+        'js'         : 'v2/js-i',
+        'bemdecl.js' : 'v2/bemdecl.js',
+        'deps.js'    : 'v2/deps.js',
+        'bemjson.js' : PATH.join(PRJ_TECHS, 'bemjson.js.js'),
+        'bemhtml'    : PATH.join(BEMCORE_TECHS, 'bemhtml.js'),
+        'bemtree'    : PATH.join(BEMCORE_TECHS, 'bemtree.js'),
+        'vanilla.js' : PATH.join(BEMCORE_TECHS, 'vanilla.js.js'),
+        'browser.js' : PATH.join(BEMCORE_TECHS, 'browser.js.js'),
+        'node.js'    : PATH.join(BEMCORE_TECHS, 'node.js.js')
     };
-
-    // use techs from project (.bem/techs)
-    ['bemjson.js'].forEach(getTechResolver(techs, PRJ_TECHS));
-
-    // use techs from bem-core library
-    ['bemhtml', 'bemtree', 'vanilla.js', 'browser.js', 'node.js'].forEach(getTechResolver(techs, BEMCORE_TECHS));
-
-    return techs;
 };
 
-exports.defaultTechs = ['stylus', 'browser.js', 'bemhtml'];
+exports.defaultTechs = ['css', 'browser.js'];

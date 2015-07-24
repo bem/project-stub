@@ -1,4 +1,4 @@
-({
+module.exports = {
     block : 'page',
     title : 'Title of the page',
     favicon : '/favicon.ico',
@@ -486,4 +486,4 @@
             ]
         }
     ]
-})
+};

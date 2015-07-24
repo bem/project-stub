@@ -1,16 +1,12 @@
 var PATH = require('path'),
-    environ = require('bem-environ'),
-    getTechResolver = environ.getTechResolver,
-
-    BEMCORE_TECHS = environ.getLibPath('bem-core', '.bem/techs');
+    BEMCORE_TECHS = PATH.resolve(__dirname, '..', 'libs', 'bem-core', '.bem', 'techs');
 
 exports.baseLevelPath = require.resolve('./blocks');
 
 exports.getTechs = function() {
     var techs = this.__base();
-
-    // Use techs from lib bem-core
-    ['browser.js+bemhtml', 'html'].forEach(getTechResolver(techs, BEMCORE_TECHS));
+    techs['browser.js+bemhtml'] = PATH.join(BEMCORE_TECHS, 'browser.js+bemhtml.js');
+    techs['html'] = PATH.join(BEMCORE_TECHS, 'html.js');
 
     return techs;
 };

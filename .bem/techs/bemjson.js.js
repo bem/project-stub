@@ -11,7 +11,7 @@ exports.techMixin = {
         if (vars.opts && vars.opts.content) return vars.opts.content;
 
         return Template.process([
-            "({",
+            "module.exports = {",
             "    block: 'page',",
             "    title: '{{bemBlockName}}',",
             "    head: [",
@@ -26,7 +26,7 @@ exports.techMixin = {
             "           ]",
             "       }",
             "    ]",
-            "})"], vars);
+            "};"], vars);
     }
 
 };
