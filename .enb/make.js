@@ -11,6 +11,7 @@ var techs = {
         cssAutoprefixer: require('enb-autoprefixer/techs/css-autoprefixer'),
 
         // js
+        vanillaJs: require('enb-diverse-js/techs/vanilla-js'),
         browserJs: require('enb-diverse-js/techs/browser-js'),
         prependYm: require('enb-modules/techs/prepend-modules'),
 
@@ -18,7 +19,7 @@ var techs = {
         // bemtree: require('enb-bemxjst/techs/bemtree-old'),
 
         // bh
-        bh: require('enb-bh/techs/bh-server'),
+        bh: require('enb-bh/techs/bh-server-include'),
         bhClient: require('enb-bh/techs/bh-client'),
         htmlFromBemjson: require('enb-bh/techs/html-from-bemjson')
     },
@@ -58,10 +59,20 @@ module.exports = function(config) {
             // [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
             // bh
+            [techs.vanillaJs],
             [techs.bh, {
+                target: '?.pure.bh.js',
                 jsAttrName: 'data-bem',
                 jsAttrScheme: 'json',
                 mimic: 'BEMHTML'
+            }],
+            [techs.fileMerge, {
+                target: '?.pre.bh.js',
+                sources: ['?.vanilla.js', '?.pure.bh.js']
+            }],
+            [techs.prependYm, {
+                target: '?.bh.js',
+                source: '?.pre.bh.js'
             }],
             [techs.htmlFromBemjson],
 
