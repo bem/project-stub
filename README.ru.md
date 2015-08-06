@@ -15,7 +15,7 @@
 
 Список поддерживаемых браузеров зависит от версий библиотек [bem-core](https://ru.bem.info/libs/bem-core/current/#Поддерживаемые-браузеры) и [bem-components](https://ru.bem.info/libs/bem-components/current/#supported-browsers).
 
->**Важно** Internet Explorer 8.0 не входит в перечень браузеров, поддерживаемых библиотеками по умолчанию. При необходимости можно [подключить IE8](https://ru.bem.info/libs/bem-components/v2.1.0/#Поддержка-ie8) в project-stub или использовать [generator-bem-stub](https://ru.bem.info/tools/bem/bem-stub/) для создания оптимального конфигурационного файла вашего БЭМ-проекта.
+>**Важно** Internet Explorer 8.0 не входит в перечень браузеров, поддерживаемых библиотеками по умолчанию. При необходимости можно [подключить IE8](https://ru.bem.info/libs/bem-components/current/#Поддержка-internet-explorer-8) в project-stub или использовать [generator-bem-stub](https://ru.bem.info/tools/bem/bem-stub/) для создания оптимального конфигурационного файла вашего БЭМ-проекта.
 
 ## Установка
 
@@ -24,7 +24,7 @@
 Клонируем репозиторий и устанавливаем все необходимые зависимости:
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.1.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.2.0 my-bem-project
 cd my-bem-project
 npm install  # Не используйте права суперпользователя (`root`) при установке npm- и bower-зависимостей.
 ```

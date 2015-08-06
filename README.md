@@ -25,7 +25,7 @@ So, how easy is it to get started with BEM? — *Super easy!*
 It's as easy as...
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.1.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.2.0 my-bem-project
 cd my-bem-project
 npm install # Do not use root rights to install npm and bower dependencies.
 ```
