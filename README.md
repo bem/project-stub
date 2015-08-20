@@ -9,14 +9,14 @@ There are two main BEM libraries are linked here by default:
 
 ## Installation requirements
 
-* [Node.js 0.10+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications. Or you could use [io.js](https://iojs.org/en/index.html) as an alternative platform to Node.js.
+* [Node.js 0.10+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications. Or you could use [io.js](https://iojs.org/en/) as an alternative platform to Node.js.
 * [Git Bash](http://msysgit.github.io/) if you use Windows OS.
 
 ## Supported browsers
 
 The list of supported browsers depends on the [bem-core](https://en.bem.info/libs/bem-core/current/#supported-browsers) and [bem-components](https://en.bem.info/libs/bem-components/current/#supported-browsers) library versions.
 
->**NB** Internet Explorer 8.0 is not supported by default. To support IE8 you must follow the [recomendations](https://en.bem.info/libs/bem-components/v2.1.0/#support-ie8) or use the alternative way — a [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/) that ensures an optimal config file for your project creation.
+>**NB** Internet Explorer 8.0 is not supported by default. To support IE8 you must follow the [recomendations](https://en.bem.info/libs/bem-components/current/#support-for-internet-explorer-8) or use the alternative way — a [generator-bem-stub](https://en.bem.info/tools/bem/bem-stub/) that ensures an optimal config file for your project creation.
 
 ## Installation
 
@@ -25,12 +25,12 @@ So, how easy is it to get started with BEM? — *Super easy!*
 It's as easy as...
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.2.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.0 my-bem-project
 cd my-bem-project
-npm install # Do not use root rights to install npm and bower dependencies.
+npm install # Do not use root privilege to install npm and bower dependencies.
 ```
 
-bower dependencies are installed in the `libs` directory by `npm postinstall`.
+`bower` dependencies are installed in the `libs` directory by `npm postinstall`.
 
 ## Usage
 

@@ -14,11 +14,11 @@ var techs = {
         prependYm: require('enb-modules/techs/prepend-modules'),
 
         // bemtree
-        // bemtree: require('enb-bemxjst/techs/bemtree-old'),
+        // bemtree: require('enb-bemxjst/techs/bemtree'),
 
         // bemhtml
-        bemhtml: require('enb-bemxjst/techs/bemhtml-old'),
-        htmlFromBemjson: require('enb-bemxjst/techs/html-from-bemjson')
+        bemhtml: require('enb-bemxjst/techs/bemhtml'),
+        bemjsonToHtml: require('enb-bemxjst/techs/bemjson-to-html')
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -57,7 +57,9 @@ module.exports = function(config) {
 
             // bemhtml
             [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
-            [techs.htmlFromBemjson],
+
+            // html
+            [techs.bemjsonToHtml],
 
             // client bemhtml
             [enbBemTechs.depsByTechToBemdecl, {
