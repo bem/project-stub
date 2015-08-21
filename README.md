@@ -51,7 +51,7 @@ node_modules/.bin/bem make
 To be able to run commands without typing a full path to an executable file (`node_modules/.bin/enb`), use:
 
 ```
-export PATH=./node_modules/.bin:$PATH`
+export PATH=./node_modules/.bin:$PATH
 ```
 
 Now you can use `enb` or `bem` from any point of your project.
