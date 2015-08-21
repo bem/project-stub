@@ -24,7 +24,7 @@
 Клонируем репозиторий и устанавливаем все необходимые зависимости:
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.1 my-bem-project
 cd my-bem-project
 npm install  # Не используйте права суперпользователя (`root`) при установке npm- и bower-зависимостей.
 ```
