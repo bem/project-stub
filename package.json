@@ -19,7 +19,7 @@
     "enb": "^0.17.2",
     "enb-bem-techs": "^2.0.0",
     "enb-bemxjst": "v2.0.0-rc",
-    "enb-borschik": "v2.0.0-beta1",
+    "enb-borschik": "^2.0.0",
     "enb-diverse-js": "^0.1.0",
     "enb-modules": "^0.2.0",
     "enb-stylus": "^2.0.0",
