@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "bem": "^0.10.0",
-    "borschik": "^1.4.1",
     "borschik-tech-cleancss": "^2.0.1",
     "enb": "^0.17.2",
     "enb-bem-techs": "^2.0.0",
