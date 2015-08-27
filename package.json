@@ -16,8 +16,10 @@
     "bem": "^0.10.0",
     "borschik-tech-cleancss": "^2.0.1",
     "enb": "^0.17.2",
+    "enb-bem-i18n": "^1.0.0-beta7",
     "enb-bem-techs": "^2.0.0",
     "enb-bemxjst": "^2.0.0",
+    "enb-bemxjst-i18n": "^1.0.0-beta2",
     "enb-borschik": "^2.0.0",
     "enb-js": "^1.0.0",
     "enb-stylus": "^2.0.0"

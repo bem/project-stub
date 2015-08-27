@@ -3,6 +3,9 @@ var techs = {
         fileProvider: require('enb/techs/file-provider'),
         fileMerge: require('enb/techs/file-merge'),
 
+        i18n: require('enb-bem-i18n/techs/i18n'),
+        keysets: require('enb-bem-i18n/techs/keysets'),
+
         // optimization
         borschik: require('enb-borschik/techs/borschik'),
 
@@ -16,7 +19,7 @@ var techs = {
         // bemtree: require('enb-bemxjst/techs/bemtree'),
 
         // bemhtml
-        bemhtml: require('enb-bemxjst/techs/bemhtml'),
+        bemhtml: require('enb-bemxjst-i18n/techs/bemhtml-i18n'),
         bemjsonToHtml: require('enb-bemxjst/techs/bemjson-to-html')
     },
     enbBemTechs = require('enb-bem-techs'),
@@ -33,6 +36,8 @@ var techs = {
 
 module.exports = function(config) {
     var isProd = process.env.YENV === 'production';
+
+    config.setLanguages(['en', 'ru']);
 
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
@@ -51,14 +56,26 @@ module.exports = function(config) {
                 }
             }],
 
+            // keyset files for each language
+            [techs.keysets, { lang: '{lang}' }],
+
+            // i18n files for each language
+            [techs.i18n, { lang: '{lang}' }],
+
             // bemtree
             // [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
             // bemhtml
-            [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
+            [techs.bemhtml, {
+                lang: '{lang}',
+                devMode: process.env.BEMHTML_ENV === 'development'
+            }],
 
             // html
-            [techs.bemjsonToHtml],
+            [techs.bemjsonToHtml, {
+                bemhtmlFile: '?.bemhtml.{lang}.js',
+                target: '?.{lang}.html'
+            }],
 
             // client bemhtml
             [enbBemTechs.depsByTechToBemdecl, {
@@ -76,7 +93,8 @@ module.exports = function(config) {
                 dirsTarget: '?.bemhtml.dirs'
             }],
             [techs.bemhtml, {
-                target: '?.browser.bemhtml.js',
+                lang: '{lang}',
+                target: '?.browser.{lang}.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
                 devMode: process.env.BEMHTML_ENV === 'development'
             }],
@@ -84,15 +102,16 @@ module.exports = function(config) {
             // js
             [techs.browserJs, { includeYM: true }],
             [techs.fileMerge, {
-                target: '?.js',
-                sources: ['?.browser.js', '?.browser.bemhtml.js']
+                target: '?.{lang}.js',
+                sources: ['?.lang.{lang}.js', '?.browser.{lang}.bemhtml.js', '?.browser.js'],
+                lang: '{lang}'
             }],
 
             // borschik
-            [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
+            [techs.borschik, { source: '?.{lang}.js', target: '?.{lang}.min.js', minify: isProd }],
             [techs.borschik, { source: '?.css', target: '?.min.css', tech: 'cleancss', minify: isProd }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.{lang}.html', '?.min.css', '?.{lang}.min.js']);
     });
 };
