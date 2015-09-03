@@ -33,7 +33,7 @@ bower-зависимости автоматически устанавливаю
 
 ## Практическое применение
 
-Собрать проект можно с помощью [ENB](https://bem.info/tools/bem/enb-bem-techs/) или [bem-tools](https://ru.bem.info/tools/bem/bem-tools/). Результаты сборки в обоих случаях одинаковы, т.к. `bem-tools` просто проксирует вызовы к `ENB`.
+Собрать проект можно с помощью [ENB](https://ru.bem.info/tools/bem/enb-bem-techs/) или [bem-tools](https://ru.bem.info/tools/bem/bem-tools/). Результаты сборки в обоих случаях одинаковы, т.к. `bem-tools` просто проксирует вызовы к `ENB`.
 
 Вызов всех команд `enb` возможен из папки `node_modules/.bin/enb`, а команд `bem-tools` из `./node_modules/bem/bin/bem`.
 
