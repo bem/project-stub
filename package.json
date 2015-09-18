@@ -19,10 +19,8 @@
     "enb-bem-techs": "^2.0.0",
     "enb-bemxjst": "^2.0.0",
     "enb-borschik": "^2.0.0",
-    "enb-diverse-js": "^0.1.0",
-    "enb-modules": "^0.2.0",
-    "enb-stylus": "^2.0.0",
-    "ym": "^0.1.2"
+    "enb-js": "^1.0.0",
+    "enb-stylus": "^2.0.0"
   },
   "scripts": {
     "start": "enb server",
