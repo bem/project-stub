@@ -10,8 +10,7 @@ var techs = {
         stylus: require('enb-stylus/techs/stylus'),
 
         // js
-        browserJs: require('enb-diverse-js/techs/browser-js'),
-        prependYm: require('enb-modules/techs/prepend-modules'),
+        browserJs: require('enb-js/techs/browser-js'),
 
         // bemtree
         // bemtree: require('enb-bemxjst/techs/bemtree'),
@@ -83,12 +82,11 @@ module.exports = function(config) {
             }],
 
             // js
-            [techs.browserJs],
+            [techs.browserJs, { includeYM: true }],
             [techs.fileMerge, {
-                target: '?.pre.js',
-                sources: ['?.browser.bemhtml.js', '?.browser.js']
+                target: '?.js',
+                sources: ['?.browser.js', '?.browser.bemhtml.js']
             }],
-            [techs.prependYm, { source: '?.pre.js' }],
 
             // borschik
             [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
