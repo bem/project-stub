@@ -12,6 +12,12 @@ var techs = {
         // js
         browserJs: require('enb-js/techs/browser-js'),
 
+        // bundle
+        cssChunks: require('enb-bembundle/techs/css-borschik-chunks'),
+        jsChunks: require('./techs/js-vanilla-chunks'),
+        jsBembundleComponent: require('./techs/js-bembundle-component'),
+        jsBembundlepage: require('enb-bembundle/techs/js-bembundle-page'),
+
         // bemtree
         // bemtree: require('enb-bemxjst/techs/bemtree'),
 
@@ -21,7 +27,7 @@ var techs = {
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
-        { path: 'libs/bem-core/common.blocks', check: false },
+        { path: 'libs/bem-core/common.blocks', check: true },
         { path: 'libs/bem-core/desktop.blocks', check: false },
         { path: 'libs/bem-components/common.blocks', check: false },
         { path: 'libs/bem-components/desktop.blocks', check: false },
@@ -50,6 +56,10 @@ module.exports = function(config) {
                     browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
                 }
             }],
+
+            [techs.cssChunks, { freeze: true }],
+            [techs.jsChunks],
+            [techs.jsBembundleComponent],
 
             // bemtree
             // [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
@@ -93,6 +103,7 @@ module.exports = function(config) {
             [techs.borschik, { source: '?.css', target: '?.min.css', tech: 'cleancss', minify: isProd }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js',
+            '?.css-chunks.js', '?.js-chunks.js', '?.bembundle.js']);
     });
 };
