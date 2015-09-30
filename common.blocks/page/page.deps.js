@@ -1,3 +1,3 @@
 ({
-    mustDeps: { block: 'i-bem', elem: 'i18n' }
+    mustDeps: ['i18n']
 })
