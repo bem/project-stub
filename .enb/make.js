@@ -103,7 +103,7 @@ module.exports = function(config) {
             [techs.browserJs, { includeYM: true }],
             [techs.fileMerge, {
                 target: '?.{lang}.js',
-                sources: ['?.lang.{lang}.js', '?.browser.{lang}.bemhtml.js', '?.browser.js'],
+                sources: ['?.browser.js', '?.lang.{lang}.js', '?.browser.{lang}.bemhtml.js'],
                 lang: '{lang}'
             }],
 
