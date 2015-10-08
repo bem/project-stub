@@ -36,31 +36,32 @@ module.exports = function(config) {
 
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
-            // essential
+            // get file list
             [enbBemTechs.levels, { levels: levels }],
             [techs.fileProvider, { target: '?.bemjson.js' }],
             [enbBemTechs.bemjsonToBemdecl],
             [enbBemTechs.deps],
             [enbBemTechs.files],
 
-            // css
+            // CSS
             [techs.stylus, {
                 target: '?.css',
+                compress: isProd,
                 autoprefixer: {
                     browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
                 }
             }],
 
-            // bemtree
+            // BEMTREE
             // [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
 
-            // bemhtml
+            // BEMHTML
             [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
 
-            // html
+            // HTML
             [techs.bemjsonToHtml],
 
-            // client bemhtml
+            // browser BEMHTML
             [enbBemTechs.depsByTechToBemdecl, {
                 target: '?.bemhtml.bemdecl.js',
                 sourceTech: 'js',
@@ -81,18 +82,14 @@ module.exports = function(config) {
                 devMode: process.env.BEMHTML_ENV === 'development'
             }],
 
-            // js
-            [techs.browserJs, { includeYM: true }],
+            // browser JS
+            [techs.browserJs, { includeYM: true, compress: isProd }],
             [techs.fileMerge, {
                 target: '?.js',
                 sources: ['?.browser.js', '?.browser.bemhtml.js']
-            }],
-
-            // borschik
-            [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
-            [techs.borschik, { source: '?.css', target: '?.min.css', tech: 'cleancss', minify: isProd }]
+            }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
+        nodeConfig.addTargets(['?.html', '?.css', '?.js'/*, '?.bemtree.js'*/]);
     });
 };
