@@ -10,7 +10,8 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bower": "^1.4.1"
+    "bower": "^1.4.1",
+    "mkdirp": "^0.5.1"
   },
   "devDependencies": {
     "bem": "^0.10.0",
