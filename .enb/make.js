@@ -46,16 +46,17 @@ module.exports = function(config) {
             // css
             [techs.stylus, {
                 target: '?.css',
+                sourcemap: !isProd,
                 autoprefixer: {
                     browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
                 }
             }],
 
             // bemtree
-            // [techs.bemtree, { devMode: process.env.BEMTREE_ENV === 'development' }],
+            // [techs.bemtree],
 
             // bemhtml
-            [techs.bemhtml, { devMode: process.env.BEMHTML_ENV === 'development' }],
+            [techs.bemhtml],
 
             // html
             [techs.bemjsonToHtml],
@@ -77,8 +78,7 @@ module.exports = function(config) {
             }],
             [techs.bemhtml, {
                 target: '?.browser.bemhtml.js',
-                filesTarget: '?.bemhtml.files',
-                devMode: process.env.BEMHTML_ENV === 'development'
+                filesTarget: '?.bemhtml.files'
             }],
 
             // js

@@ -9,7 +9,7 @@ There are two main BEM libraries are linked here by default:
 
 ## Installation requirements
 
-* [Node.js 0.10+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications. Or you could use [io.js](https://iojs.org/en/) as an alternative platform to Node.js.
+* [Node.js 0.10+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications.
 * [Git Bash](http://msysgit.github.io/) if you use Windows OS.
 
 ## Supported browsers
@@ -25,7 +25,7 @@ So, how easy is it to get started with BEM? — *Super easy!*
 It's as easy as...
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.1 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.2 my-bem-project
 cd my-bem-project
 npm install # Do not use root privilege to install npm and bower dependencies.
 ```
