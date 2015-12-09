@@ -25,7 +25,7 @@ So, how easy is it to get started with BEM? — *Super easy!*
 It's as easy as...
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.2 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.4.0 my-bem-project
 cd my-bem-project
 npm install # Do not use root privilege to install npm and bower dependencies.
 ```
@@ -36,7 +36,7 @@ npm install # Do not use root privilege to install npm and bower dependencies.
 
 You could use the following tools to build the project: [ENB](https://ru.bem.info/tools/bem/enb-bem-techs/)(only in Russian) or [bem-tools](https://bem.info/tools/bem/bem-tools/). The result files are the same in both cases as `bem-tools` just calls `ENB` under the hood.
 
-You can run any `enb` commands from a `node_modules/.bin/enb` directory and the `bem-tools` commands from `node_modules/bem/bin/bem`.
+You can run any `enb` commands via `node_modules/.bin/enb` and the `bem-tools` commands with `node_modules/bem/bin/bem`.
 
 ### Build the project
 
@@ -99,6 +99,14 @@ Press `Ctrl` + `C` or `⌘` + `C` (for MAC devices) while the terminal is your a
 
 **Add a block**
 
+If you want to use `bem-tools` to create new blocks, you should install additional dependencies:
+
+```bash
+npm i ym --save-dev
+```
+
+Now it's possible to create blocks with `bem create` command:
+
 ```bash
 bem create -l desktop.blocks -b newBlock
 ```
@@ -107,12 +115,6 @@ bem create -l desktop.blocks -b newBlock
 
 ```bash
 bem create -l desktop.bundles -b page
-```
-
->You could add aliases for super easy use:<br>
-```
-echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
-echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 ```
 
 ## Generator of BEM projects for Yeoman

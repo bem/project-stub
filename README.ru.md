@@ -24,7 +24,7 @@
 Клонируем репозиторий и устанавливаем все необходимые зависимости:
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.3.2 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.4.0 my-bem-project
 cd my-bem-project
 npm install  # Не используйте права суперпользователя (`root`) при установке npm- и bower-зависимостей.
 ```
@@ -35,7 +35,7 @@ bower-зависимости автоматически устанавливаю
 
 Собрать проект можно с помощью [ENB](https://ru.bem.info/tools/bem/enb-bem-techs/) или [bem-tools](https://ru.bem.info/tools/bem/bem-tools/). Результаты сборки в обоих случаях одинаковы, т.к. `bem-tools` просто проксирует вызовы к `ENB`.
 
-Вызов всех команд `enb` возможен из папки `node_modules/.bin/enb`, а команд `bem-tools` из `./node_modules/bem/bin/bem`.
+Вызов всех команд `ENB` возможен с помощью `node_modules/.bin/enb`, а команд `bem-tools` через `./node_modules/bem/bin/bem`.
 
 ### Сборка проекта
 
@@ -98,6 +98,13 @@ npm start
 
 **Создание блока**
 
+Если вы планируете использовать `bem-tools` для создания блоков, вам необходимо установить дополнительные зависимости:
+```bash
+npm i ym --save-dev
+```
+
+После этого можно создавать блоки с помощью команды `bem create`:
+
 ```bash
 bem create -l desktop.blocks -b newBlock
 ```
@@ -106,12 +113,6 @@ bem create -l desktop.blocks -b newBlock
 
 ```bash
 bem create -l desktop.bundles -b page
-```
-
->Можно упростить работу с сервером, прописав альтернативные имена:<br>
-```bash
-echo "alias 'bemblock'='bem create -l desktop.blocks -b'" >> ~/.bashrc
-echo "alias 'bempage'='bem create -l desktop.bundles -b'" >> ~/.bashrc
 ```
 
 ## Генератор БЭМ-проектов на Yeoman
