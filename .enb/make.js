@@ -53,10 +53,10 @@ module.exports = function(config) {
             }],
 
             // bemtree
-            // [techs.bemtree],
+            // [techs.bemtree, { sourceSuffixes: ['bemtree', 'bemtree.js'] }],
 
             // bemhtml
-            [techs.bemhtml],
+            [techs.bemhtml, { sourceSuffixes: ['bemhtml', 'bemhtml.js'] }],
 
             // html
             [techs.bemjsonToHtml],
@@ -78,7 +78,8 @@ module.exports = function(config) {
             }],
             [techs.bemhtml, {
                 target: '?.browser.bemhtml.js',
-                filesTarget: '?.bemhtml.files'
+                filesTarget: '?.bemhtml.files',
+                sourceSuffixes: ['bemhtml', 'bemhtml.js']
             }],
 
             // js
