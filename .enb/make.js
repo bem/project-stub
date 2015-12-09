@@ -46,7 +46,7 @@ module.exports = function(config) {
             // css
             [techs.stylus, {
                 target: '?.css',
-                sourcemap: !isProd,
+                sourcemap: false,
                 autoprefixer: {
                     browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
                 }
