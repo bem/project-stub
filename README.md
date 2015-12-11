@@ -8,13 +8,10 @@ npm i
 ```
 
 ## Requirenments
-It assumes there's `vendor/php-bem-bh` installed
+It assumes there's `vendor/bem/bh` installed
 
 ```bash
-mkdir vendor
-cd vendor
-git clone https://github.com/bem/bh-php.git
-cd ..
+git clone https://github.com/bem/bh-php.git ./vendor/bem/bh
 ```
 
 ## Build
