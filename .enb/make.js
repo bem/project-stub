@@ -39,8 +39,7 @@ module.exports = function(config) {
             // essential
             [enbBemTechs.levels, { levels: levels }],
             [techs.fileProvider, { target: '?.bemjson.js' }],
-            [enbBemTechs.bemjsonToBemdecl],
-            [enbBemTechs.deps],
+            [techs.fileProvider, { target: '?.deps.js' }],
             [enbBemTechs.files],
 
             // css

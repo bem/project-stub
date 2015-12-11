@@ -14,6 +14,9 @@
   },
   "devDependencies": {
     "bem": "^0.10.2",
+    "@bem/deps": "*",
+    "bemjson-to-decl": "0.0.1",
+    "stream-to-array": "^2.2.0",
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.1.0",
     "enb-bem-techs": "^2.1.0",
@@ -25,7 +28,9 @@
   "scripts": {
     "start": "enb server",
     "postinstall": "npm run deps",
-    "deps": "bower i"
+    "deps": "bower i",
+    "bem-deps": "node lib/generate-deps",
+    "make": "npm run bem-deps && enb make"
   },
   "private": true
 }
