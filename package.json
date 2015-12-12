@@ -36,6 +36,7 @@
     "stylus-loader": "^1.4.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
+    "ym": "^0.1.2",
     "ymodules-loader": "^1.0.2"
   },
   "scripts": {
