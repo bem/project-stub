@@ -19,10 +19,12 @@
     "borschik-tech-cleancss": "^2.1.0",
     "css-loader": "^0.23.0",
     "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
     "globby": "^4.0.0",
     "loader-utils": "^0.2.12",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.4.2",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.9"
   },
   "scripts": {

@@ -14,10 +14,24 @@ module.exports = {
     },
 
     module: {
-        loaders: [{
-            test: /\.bemjson.js?$/,
-            loader: ExtractTextPlugin.extract('style', 'css!stylus!loaders/bem-extractor?tech=styl!loaders/bemjson')
-        }]
+        loaders: [
+            // {
+            //     test: /\.bemjson.js?$/,
+            //     loader: ExtractTextPlugin.extract('style', 'css!stylus!loaders/bem-extractor?tech=styl!loaders/bemjson')
+            // }
+            {
+                test: /\.bemjson.js$/,
+                loader: 'loaders/bem-extractor?tech=styl!loaders/bemjson'
+            },
+            {
+                test: /\.styl$/,
+                loader: ExtractTextPlugin.extract('style', 'css!stylus')
+            },
+            {
+                test: /\.(gif|png|svg)$/,
+                loader: 'url'
+            }
+        ]
     },
 
     resolveLoader: {
