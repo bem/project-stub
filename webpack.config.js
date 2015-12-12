@@ -16,6 +16,10 @@ module.exports = {
     module: {
         loaders: [
             {
+                test: /\.js/,
+                loader: 'ymodules-loader'
+            },
+            {
                 test: /\.bemjson.js$/,
                 loader: 'loaders/bem-extractor?tech[]=bh.js&tech[]=js&tech[]=styl!loaders/bemjson'
             },
