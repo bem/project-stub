@@ -20,7 +20,7 @@ app
     .disable('x-powered-by')
     .enable('trust proxy')
     .use(morgan('combined'))
-    .use(serveStatic(path.join(rootDir, 'desktop.bundles', 'index')))
+    .use(serveStatic(path.join(rootDir, 'dist')))
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: true }))
     .use(require('cookie-parser')())

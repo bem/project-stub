@@ -9,7 +9,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         pathinfo: true,
-        filename: '[name].js'
+        filename: '[name].min.js'
     },
 
     module: {
@@ -46,6 +46,6 @@ module.exports = {
     },
 
     plugins: [
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('index.min.css')
     ]
 };
