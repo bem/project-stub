@@ -1,7 +1,6 @@
 'use strict';
 
-const bemNaming = require('bem-naming');
-const glob = require('globby');
+const bemdeclToFs = require('bemdecl-to-fs');
 const loaderUtils = require('loader-utils');
 const path = require('path');
 const vm = require('vm');
@@ -16,40 +15,6 @@ const levels = [
   '../../common.blocks',
   '../../desktop.blocks',
 ];
-
-/**
- * @param  {object} decl
- * @param  {string} decl.block
- * @param  {string} decl.elem
- * @param  {string} decl.modVal
- * @param  {string} decl.modName
- * @return {string}
- */
-function resolveDeps(decl) {
-  if (bemNaming.isElemMod(decl)) {
-    return path.join(decl.block, '__' + decl.elem, '_' + decl.modName, bemNaming.stringify(decl));
-  }
-
-  if (bemNaming.isElem(decl)) {
-    return path.join(decl.block, '__' + decl.elem);
-  }
-
-  if (bemNaming.isBlockMod(decl)) {
-    return path.join(decl.block, '_' + decl.modName, bemNaming.stringify(decl));
-  }
-
-  return path.join(decl.block, decl.block);
-}
-
-/**
- * @param  {boolean|string} modVal
- * @return {string}
- */
-function resolveModVal(modVal) {
-  return typeof modVal === 'string'
-    ? modVal
-    : 'yes';
-}
 
 /**
  * @param  {string} content
@@ -69,11 +34,7 @@ module.exports = function (content, map) {
   }
 
   const deps = vm.runInNewContext(content);
-  const pattern = deps.map(resolveDeps).reduce((total, decl) => {
-    return total.concat(levels.map(level => path.resolve(this.context, level, `${decl}.{${tech.join(',')}}`)));
-  }, []);
-
-  glob(pattern)
+  bemdeclToFs(deps, levels.map(level => path.resolve(this.context, level)), tech)
     .then(files => {
       const imports = files
         .map(file => {
