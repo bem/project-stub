@@ -24,6 +24,7 @@
   },
   "scripts": {
     "start": "enb server",
+    "build": "webpack",
     "postinstall": "npm run deps",
     "deps": "bower i"
   },
