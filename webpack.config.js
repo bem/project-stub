@@ -15,7 +15,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.bemjson.js?$/,
-            loader: 'loaders/bemjson'
+            loader: 'loaders/bem-extractor?tech=styl!loaders/bemjson'
         }]
     },
 

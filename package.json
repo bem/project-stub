@@ -14,8 +14,11 @@
   },
   "devDependencies": {
     "bem": "^0.10.2",
+    "bem-naming": "^0.5.1",
     "bemjson-to-decl": "0.0.1",
     "borschik-tech-cleancss": "^2.1.0",
+    "globby": "^4.0.0",
+    "loader-utils": "^0.2.12",
     "webpack": "^1.12.9"
   },
   "scripts": {
