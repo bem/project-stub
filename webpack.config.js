@@ -15,17 +15,13 @@ module.exports = {
 
     module: {
         loaders: [
-            // {
-            //     test: /\.bemjson.js?$/,
-            //     loader: ExtractTextPlugin.extract('style', 'css!stylus!loaders/bem-extractor?tech=styl!loaders/bemjson')
-            // }
             {
                 test: /\.bemjson.js$/,
                 loader: 'loaders/bem-extractor?tech=styl!loaders/bemjson'
             },
             {
                 test: /\.styl$/,
-                loader: ExtractTextPlugin.extract('style', 'css!stylus')
+                loader: ExtractTextPlugin.extract('style', 'css!postcss!stylus')
             },
             {
                 test: /\.(gif|png|svg)$/,
@@ -33,6 +29,10 @@ module.exports = {
             }
         ]
     },
+
+    postcss: [
+        require('autoprefixer')
+    ],
 
     resolveLoader: {
         modulesDirectories: ['./webpack', './node_modules']
