@@ -5,7 +5,7 @@ node_modules/
 .project
 .svn
 npm-debug.log
-build/
+dist/
 
 # bem
 .bem/cache/

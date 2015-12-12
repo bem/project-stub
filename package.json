@@ -40,7 +40,8 @@
   },
   "scripts": {
     "start": "enb server",
-    "build": "webpack",
+    "prebuild": "rm -rf dist",
+    "build": "webpack && node webpack/tools/build-html.js",
     "postinstall": "npm run deps",
     "deps": "bower i"
   },
