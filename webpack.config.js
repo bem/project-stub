@@ -3,14 +3,15 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        index: './desktop.bundles/index/index.bemjson.js'
+        //index: './desktop.bundles/index/index.bemjson.js',
+        blocks: './blocks.js'
     },
 
 
     output: {
         path: path.join(__dirname, 'build'),
         pathinfo: true,
-        filename: 'index.js'
+        filename: '[name].js'
     },
 
     module: {
@@ -26,6 +27,10 @@ module.exports = {
             {
                 test: /\.(gif|png|svg)$/,
                 loader: 'url'
+            },
+            {
+                test: /\.bh(\.js)?$/,
+                loader: 'loaders/bh'
             }
         ]
     },
