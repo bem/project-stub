@@ -7,7 +7,7 @@
     "url": "git://github.com/bem/project-stub.git"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">4.0.0"
   },
   "dependencies": {
     "bower": "^1.6.5"
@@ -17,8 +17,12 @@
     "bem-naming": "^0.5.1",
     "bemjson-to-decl": "0.0.1",
     "borschik-tech-cleancss": "^2.1.0",
+    "css-loader": "^0.23.0",
+    "extract-text-webpack-plugin": "^0.9.1",
     "globby": "^4.0.0",
     "loader-utils": "^0.2.12",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.4.2",
     "webpack": "^1.12.9"
   },
   "scripts": {

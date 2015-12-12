@@ -1,4 +1,5 @@
-var path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     entry: {
@@ -15,11 +16,15 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.bemjson.js?$/,
-            loader: 'loaders/bem-extractor?tech=styl!loaders/bemjson'
+            loader: ExtractTextPlugin.extract('style', 'css!stylus!loaders/bem-extractor?tech=styl!loaders/bemjson')
         }]
     },
 
     resolveLoader: {
         modulesDirectories: ['./webpack', './node_modules']
-    }
+    },
+
+    plugins: [
+        new ExtractTextPlugin('styles.css')
+    ]
 };

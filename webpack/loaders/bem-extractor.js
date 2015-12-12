@@ -70,13 +70,14 @@ module.exports = function (content, map) {
 
   glob(pattern)
     .then(files => {
-      const imports = files.map(file => `require('${path.relative(this.context, file)}')`)
+      const imports = files
+        .map(file => {
+          this.addDependency(file);
+          return `require('${loaderUtils.stringifyRequest(this, file)}');`
+        })
         .join('\n');
 
       callback(null, imports);
     })
     .catch(callback);
 };
-
-// this.addDependency
-// this.query
