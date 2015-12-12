@@ -59,13 +59,18 @@ module.exports = function (content, map) {
   const callback = this.async();
   const query = loaderUtils.parseQuery(this.query);
 
-  if (typeof query.tech !== 'string') {
+  if (!query.tech) {
     return void callback(new Error(`Should specify tech for ${path.basename(__filename)}`));
+  }
+
+  let tech = query.tech;
+  if (!Array.isArray(tech)) {
+    tech = [tech];
   }
 
   const deps = vm.runInNewContext(content);
   const pattern = deps.map(resolveDeps).reduce((total, decl) => {
-    return total.concat(levels.map(level => path.resolve(this.context, level, `${decl}.${query.tech}`)));
+    return total.concat(levels.map(level => path.resolve(this.context, level, `${decl}.{${tech.join(',')}}`)));
   }, []);
 
   glob(pattern)
