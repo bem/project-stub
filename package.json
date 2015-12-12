@@ -18,6 +18,7 @@
     "bem-walk": "^1.0.0-alpha1",
     "bemjson-to-decl": "0.0.1",
     "borschik-tech-cleancss": "^2.1.0",
+    "concat-stream": "^1.5.1",
     "del": "^2.2.0",
     "enb": "^1.1.0",
     "enb-bem-techs": "^2.1.0",
