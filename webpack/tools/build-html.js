@@ -26,8 +26,7 @@ function discover(bemjson) {
     return bemdeclToFs(deps, levels, 'bh.js');
 }
 
-var path = '../../desktop.bundles/index/index.bemjson';
-var bemjson = require(path);
+var bemjson = require('../../desktop.bundles/index/index.bemjson');
 
 discover(JSON.parse(JSON.stringify(bemjson))).then(files => {
     var bh = new (require('bh').BH);
