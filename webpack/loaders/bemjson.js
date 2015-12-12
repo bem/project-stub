@@ -1,4 +1,6 @@
+const bemjsonToDecl = require('bemjson-to-decl');
+
 module.exports = function(source) {
     var bemjson = require(this.resource);
-    return source;
+    return bemjsonToDecl.stringify(bemjson);
 };
