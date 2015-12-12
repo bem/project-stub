@@ -3,8 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        //index: './desktop.bundles/index/index.bemjson.js',
-        blocks: './blocks.js'
+        index: './desktop.bundles/index/index.bemjson.js'
     },
 
 
