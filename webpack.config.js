@@ -37,6 +37,8 @@ module.exports = {
         ]
     },
 
+    devtool: 'source-map',
+
     postcss: [
         require('autoprefixer')
     ],
