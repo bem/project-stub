@@ -73,7 +73,7 @@ module.exports = function (content, map) {
       const imports = files
         .map(file => {
           this.addDependency(file);
-          return `require('${loaderUtils.stringifyRequest(this, file)}');`
+          return `require(${loaderUtils.stringifyRequest(this, file)});`
         })
         .join('\n');
 
