@@ -6,7 +6,6 @@ module.exports = {
         index: './desktop.bundles/index/index.bemjson.js'
     },
 
-
     output: {
         path: path.join(__dirname, 'dist'),
         pathinfo: true,

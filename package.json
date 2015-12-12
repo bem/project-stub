@@ -40,7 +40,7 @@
     "ymodules-loader": "^1.0.2"
   },
   "scripts": {
-    "start": "enb server",
+    "start": "node app",
     "prebuild": "rm -rf dist",
     "build": "webpack && node webpack/tools/build-html.js",
     "postinstall": "npm run deps",
