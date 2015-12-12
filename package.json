@@ -14,13 +14,9 @@
   },
   "devDependencies": {
     "bem": "^0.10.2",
+    "bemjson-to-decl": "0.0.1",
     "borschik-tech-cleancss": "^2.1.0",
-    "enb": "^1.1.0",
-    "enb-bem-techs": "^2.1.0",
-    "enb-bemxjst": "^4.0.2",
-    "enb-borschik": "^2.1.0",
-    "enb-js": "^1.1.0",
-    "enb-stylus": "^2.2.0"
+    "webpack": "^1.12.9"
   },
   "scripts": {
     "start": "enb server",
