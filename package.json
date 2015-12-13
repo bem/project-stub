@@ -10,7 +10,10 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bower": "^1.6.5"
+    "bower": "^1.6.5",
+    "gulp-postcss": "^6.0.1",
+    "gulp-stylus": "^2.1.1",
+    "postcss-url": "^5.0.2"
   },
   "devDependencies": {
     "bem": "^0.10.2",

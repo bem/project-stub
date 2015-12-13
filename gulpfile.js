@@ -3,6 +3,9 @@ var gbem = require('./gulp-bem');
 var gconcat = require('gulp-concat');
 var gmerge = require('gulp-merge');
 var bemhtml = require('./gulp-bem/bemhtml');
+var stylus = require('gulp-stylus');
+var postcss = require('gulp-postcss');
+var postcssUrl = require('postcss-url');
 var path = require('path');
 
 var levelsConfig = {
@@ -10,6 +13,8 @@ var levelsConfig = {
     'libs/bem-core/desktop.blocks': {scheme: 'nested'},
     'libs/bem-components/common.blocks': {scheme: 'nested'},
     'libs/bem-components/desktop.blocks': {scheme: 'nested'},
+    'libs/bem-components/design/common.blocks': {scheme: 'nested'},
+    'libs/bem-components/design/desktop.blocks': {scheme: 'nested'},
     'common.blocks': {scheme: 'nested'},
     'desktop.blocks': {scheme: 'nested'}
 };
@@ -19,6 +24,8 @@ var levels = [
     'libs/bem-core/desktop.blocks',
     'libs/bem-components/common.blocks',
     'libs/bem-components/desktop.blocks',
+    'libs/bem-components/design/common.blocks',
+    'libs/bem-components/design/desktop.blocks',
     'common.blocks',
     'desktop.blocks'
 ];
@@ -47,8 +54,13 @@ gulp.task('build', function () {
             res.push(bem.src(Object.assign({}, opts, {tech: 'js'}))
                 .pipe(gconcat(bundleFile('js'))));
 
-            res.push(bem.src(Object.assign({}, opts, {tech: 'styl', extensions: ['css', 'styl']}))
-                .pipe(gconcat(bundleFile('css'))));
+            res.push(bem.src(Object.assign({}, opts, {tech: 'styl', extensions: ['styl']}))
+                .pipe(stylus())
+                .pipe(postcss([
+                    postcssUrl({ url: 'inline' })
+                ]))
+                .pipe(gconcat(bundleFile('css')))
+            );
 
             res.push(bem.src(Object.assign({}, opts, {tech: 'bemhtml.js', extensions: ['bemhtml.js', 'bemhtml']}))
                 .pipe(gconcat(bundleFile('bemhtml.js')))
