@@ -11,6 +11,8 @@ var walk = require('bem-walk');
 var bemDeps = require('@bem/deps');
 var toArray = require('stream-to-array');
 
+var gBemjsonToBemdecl = require('./bemjson2bemdecl');
+
 var lazypipe = require('lazypipe');
 
 var PluginError = gutil.PluginError;
@@ -35,16 +37,23 @@ ptp.src = function(opts) {
     // return walk(opts.levels || Object.keys(this.opts.levels), {
     //     levels: this.opts.levels,
     // });
+    var res = gulp.src(opts.decl);
+    if (!/bemjson.js$/.test(opts.decl)) {
+        res = res.pipe(gBemjsonToBemdecl());
+    }
+    // troubles here ←←←←←←←←←←←←←←←←←←←←←←←
+    // troubles here ←←←←←←←←←←←←←←←←←←←←←←←
+    // troubles here ←←←←←←←←←←←←←←←←←←←←←←←
 
-    return gulp.src(opts.decl)// '*.bundles/*/*.bemjson.js')
-//        .pipe(gBemjsonToBemdecl())
+    return res // '*.bundles/*/*.bemjson.js')
         .pipe(through.obj(function(file, enc, cb) {
+            console.log('zxczxc, zxczxc');
             toArray(bemDeps.load({levels: opts.levels || Object.keys(bem.levels)}), function(err, relations) {
                 if (err) {
                     return cb(err);
                 }
                 var deps = bemDeps.resolve(file.data, relations);
-console.log('zxcxz');
+
                 // todo: redundand introspec
                 toArray(walk(opts.levels || Object.keys(this.opts.levels), { levels: bem.levels }), function(err, fsEntities) {
                     if (err) {

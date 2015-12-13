@@ -14,6 +14,7 @@ module.exports = function(opts) {
 
         // reading twice?
         requireOrEval(file.path).then(function(res) {
+            console.log('zxczxc');
             newFile.data = bemjsonToDecl.convert(res);
             cb(null, newFile);
         });
