@@ -8,20 +8,29 @@ var fs = require('fs');
 var gBemjsonToBemdecl = require('./bemjson2bemdecl');
 
 function BEM(opts) {
-    this.levels = opts.levels || {};
-
-    // buggy here: looks like we should pass only needed levels here
-    // this.deps = toArray(bemDeps.load({levels: Object.keys(opts.levels)}));
+    this.levels = opts.levels || [];
+    this.levelsConfig = opts.levelsConfig || {};
+    this.levelsCache = null;
 }
+
+BEM.prototype.init = function(levels) {
+    levels = levels || this.levels;
+    return toArray(walk(levels, {levels: this.levelsConfig}))
+        .then(levelsCache => this.levelsCache = levelsCache);
+};
 
 BEM.prototype.src = function(opts) {
     opts = opts || {};
+    var levels = opts.levels || this.levels;
+    var extensions = opts.extensions || [opts.tech];
+
     if (!opts.tech) {
-        throw new Error('You should pass tech property to bem.src');
+        throw new Error('You should pass tech property to bem.src()');
     }
 
-    opts.levels = opts.levels || Object.keys(bem.levels);
-    opts.extensions = opts.extensions || [opts.tech];
+    if (!this.levelsCache) {
+        throw new Error('You should call bem.init() method first');
+    }
 
     var bem = this;
     var res = gulp.src(opts.decl);
@@ -32,33 +41,27 @@ BEM.prototype.src = function(opts) {
 
     return res.pipe(through.obj(function(file, enc, cb) {
         var self = this;
-        toArray(bemDeps.load({levels: opts.levels || Object.keys(bem.levels)}), function(err, relations) {
+        toArray(bemDeps.load({levels: levels}), function(err, relations) {
             if (err) {
                 return cb(err);
             }
 
             var deps = bemDeps.resolve(file.data, relations);
             // todo: redundand introspec
-            toArray(walk(opts.levels, { levels: bem.levels }), function(err, fsEntities) {
+            filterDeps(deps.entities, bem.levelsCache, extensions, function(err, sourceFiles) {
                 if (err) {
                     return cb(err);
                 }
 
-                filterDeps(deps.entities, fsEntities, opts.extensions, function(err, sourceFiles) {
-                    if (err) {
-                        return cb(err);
-                    }
+                sourceFiles
+                    .forEach(function(p) {
+                        var file = new File({path: p.path});
+                        // file.contents = fs.createReadStream(p.path);
+                        file.contents = fs.readFileSync(p.path);
+                        self.push(file);
+                    });
 
-                    sourceFiles
-                        .forEach(function(p) {
-                            var file = new File({path: p.path});
-                            // file.contents = fs.createReadStream(p.path);
-                            file.contents = fs.readFileSync(p.path);
-                            self.push(file);
-                        });
-
-                    cb();
-                });
+                cb();
             });
         });
     }));
