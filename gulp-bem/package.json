@@ -1,0 +1,37 @@
+{
+  "name": "gulp-bem",
+  "version": "0.0.1",
+  "description": "Gulp bemifier adaptorrre",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gulp-bem/gulp-bem.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "bem"
+  ],
+  "author": "Alexey Yaroshevich <zxqfox@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gulp-bem/gulp-bem/issues"
+  },
+  "homepage": "https://github.com/gulp-bem/gulp-bem#readme",
+  "dependencies": {
+    "@bem/deps": "0.0.9",
+    "bem-walk": "0.0.4",
+    "bemjson-to-decl": "0.0.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "lazypipe": "^1.0.1",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
+}
