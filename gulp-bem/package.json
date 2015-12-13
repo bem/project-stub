@@ -26,6 +26,7 @@
     "bem-xjst": "^4.2.7",
     "bemjson-to-decl": "0.0.1",
     "enb-require-or-eval": "^1.0.2",
+    "gulp-clone": "^1.0.0",
     "stream-to-array": "^2.2.0",
     "through2": "^2.0.0",
     "vinyl": "^1.1.0"
