@@ -1,15 +1,4 @@
-var gulp = require('gulp');
-var gbem = require('./gulp-bem');
-var gconcat = require('gulp-concat');
-var gmerge = require('gulp-merge');
-var bemhtml = require('./gulp-bem/bemhtml');
-var stylus = require('gulp-stylus');
-var postcss = require('gulp-postcss');
-var postcssUrl = require('postcss-url');
-var path = require('path');
-var through = require('through2');
-
-var levelsConfig = {
+var bemconfig = {
     'libs/bem-core/common.blocks': {scheme: 'nested'},
     'libs/bem-core/desktop.blocks': {scheme: 'nested'},
     'libs/bem-components/common.blocks': {scheme: 'nested'},
@@ -20,50 +9,55 @@ var levelsConfig = {
     'desktop.blocks': {scheme: 'nested'}
 };
 
-var bemConfig = {
-    levelsConfig: levelsConfig,
-    levels: Object.keys(levelsConfig),
-};
+/////////
+
+var path = require('path');
+var gulp = require('gulp');
+var project = require('./gulp-bem')({
+    bemconfig: bemconfig
+});
+var concat = require('gulp-concat');
+var merge = require('gulp-merge');
+var bemhtml = require('./gulp-bem/bemhtml');
+var stylus = require('gulp-stylus');
+var postcss = require('gulp-postcss');
+var postcssUrl = require('postcss-url');
+var through = require('through2');
 
 // building one bundle with waiting for completing all substreams
 gulp.task('jscss', function () {
-    var bemProject = new gbem(bemConfig);
+    var bundle = project.bundle({
+        path: 'desktop.bundles/index',
+        decl: 'index.bemjson.js',
+        // levels: []
+    });
 
-    return bemProject.init()
-        .then(function() {
-            var bem = bemProject.bundle({
-                name: 'index',
-                path: 'desktop.bundles/index',
-                decl: 'desktop.bundles/index/index.bemjson.js'
-            });
+    return merge(
+        merge(
+            gulp.src('node_modules/ym/modules.js'),
+            bundle.src({tech: 'js', extensions: ['.js', '.vanilla.js', '.browser.js']})
+        )
+        .pipe(concat(`${bundle.name()}.js`)),
 
-            return gmerge(
-                gmerge(
-                    gulp.src('node_modules/ym/modules.js'),
-                    bem.src({tech: 'js', extensions: ['js', 'vanilla.js', 'browser.js']})
-                )
-                .pipe(gconcat(bem.name('js'))),
+        bundle.src({tech: 'css', extensions: ['.css', '.styl']})
+            .pipe(stylus())
+            .pipe(postcss([
+                postcssUrl({ url: 'inline' })
+            ]))
+            .pipe(concat(`${bundle.name()}.css`)),
 
-                bem.src({tech: 'styl', extensions: ['css', 'styl']})
-                    .pipe(stylus())
-                    .pipe(postcss([
-                        postcssUrl({ url: 'inline' })
-                    ]))
-                    .pipe(gconcat(bem.name('css'))),
-
-                bem.src({tech: 'bemhtml', extensions: ['bemhtml.js', 'bemhtml']})
-                    .pipe(through.obj(function(file, enc, cb) {
-                        if (path.basename(file.path) === 'i-bem.bemhtml') {
-                            return cb(null);
-                        }
-                        cb(null, file);
-                    }))
-                    //.pipe(bemxjstCompile) // for 1.x
-                    .pipe(gconcat(bem.name('bemhtml.js')))
-                    .pipe(bemhtml())
-            )
-            .pipe(gulp.dest('build/desktop.bundles/index'));
-        });
+        bundle.src({tech: 'bemhtml.js', extensions: ['.bemhtml.js', '.bemhtml']})
+            .pipe(through.obj(function(file, enc, cb) {
+                if (path.basename(file.path) === 'i-bem.bemhtml') {
+                    return cb(null);
+                }
+                cb(null, file);
+            }))
+            //.pipe(bundlexjstCompile) // for 1.x
+            .pipe(concat(`${bundle.name()}.bemhtml.js`))
+            .pipe(bemhtml())
+    )
+    .pipe(gulp.dest('build/desktop.bundles/index'));
 });
 
 gulp.task('html', function() {

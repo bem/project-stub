@@ -1,3 +1,6 @@
+var fs = require('fs');
+var path = require('path');
+
 var gulp = require('gulp');
 var clone = require('gulp-clone');
 var through = require('through2');
@@ -5,8 +8,8 @@ var walk = require('bem-walk');
 var bemDeps = require('@bem/deps');
 var toArray = require('stream-to-array');
 var File = require('vinyl');
-var fs = require('fs');
-var gBemjsonToBemdecl = require('./bemjson2bemdecl');
+
+var bemjsonToBemdecl = require('./bemjson2bemdecl');
 
 var DUMP = through.obj(function(file, enc, cb) {
     console.log(file.path);
@@ -14,18 +17,16 @@ var DUMP = through.obj(function(file, enc, cb) {
 });
 
 function BEMProject(opts) {
-    this.levels = opts.levels || [];
-    this.levelsConfig = opts.levelsConfig || {};
-    this.levelsCache = null;
+    this.levelsConfig = opts.bemconfig || {};
+    this.levels = Object.keys(this.levelsConfig);
+
+    this.introspection = _walk(this.levels, {levels: this.levelsConfig});
 }
 
-BEMProject.prototype.init = function(levels) {
-    levels = levels || this.levels;
-
-    return toArray(walk(levels, {levels: this.levelsConfig}))
-        .then(levelsCache => {
-            this.levelsCache = levelsCache;
-            levelsCache.sort((a, b) => {
+function _walk(levels, conf) {
+    return toArray(walk(levels, conf))
+        .then(result => {
+            result.sort((a, b) => {
                 a = a.path.replace(/(.*.blocks).*/, '$1');
                 b = b.path.replace(/(.*.blocks).*/, '$1');
 
@@ -34,61 +35,79 @@ BEMProject.prototype.init = function(levels) {
 
                 return a - b;
             });
+
+            return result;
         });
-};
+}
 
-BEMProject.prototype.src = function(opts) {
-    opts = opts || {};
-    var levels = opts.levels || this.levels;
-    var extensions = opts.extensions || [opts.tech];
-
-    if (!opts.tech) {
-        throw new Error('You should pass tech property to bem.src()');
-    }
-
-    if (!this.levelsCache) {
-        throw new Error('You should call bem.init() method first');
-    }
-
-    var bem = this;
-    var res = gulp.src(opts.decl);
-
-    if (/\.bemjson\.js$/.test(opts.decl)) {
-        res = res.pipe(gBemjsonToBemdecl());
-    }
-
-    return res.pipe(through.obj(function(file, enc, cb) {
-        var self = this;
-        toArray(bemDeps.load({levels: levels}), function(err, relations) {
-            if (err) {
-                return cb(err);
-            }
-
-            var deps = bemDeps.resolve(file.data, relations);
-            // todo: redundand introspec
-            filterDeps(deps.entities, bem.levelsCache, extensions, function(err, sourceFiles) {
-                if (err) {
-                    return cb(err);
-                }
-
-                sourceFiles
-                    .forEach(function(p) {
-                        var file = new File({path: p.path});
-                        // file.contents = fs.createReadStream(p.path);
-                        file.contents = fs.readFileSync(p.path);
-                        self.push(file);
-                    });
-
-                cb();
-            });
-        });
-    }));
-};
-
+// BEMProject.prototype.src = function(opts) {
+//     opts = opts || {};
+//     var levels = opts.levels || this.levels;
+//     var extensions = opts.extensions || [opts.tech];
+//
+//     if (!opts.tech) {
+//         throw new Error('You should pass tech property to bem.src()');
+//     }
+//
+//     if (!this.levelsCache) {
+//         throw new Error('You should call bem.init() method first');
+//     }
+//
+//     var bem = this;
+//     var res = gulp.src(opts.decl);
+//
+//     if (/\.bemjson\.js$/.test(opts.decl)) {
+//         res = res.pipe(gBemjsonToBemdecl());
+//     }
+//
+//     return res.pipe(through.obj(function(file, enc, cb) {
+//         var self = this;
+//         toArray(bemDeps.load({levels: levels}), function(err, relations) {
+//             if (err) {
+//                 return cb(err);
+//             }
+//
+//             var deps = bemDeps.resolve(file.data, relations);
+//             // todo: redundand introspec
+//             filterDeps(deps.entities, bem.levelsCache, extensions, function(err, sourceFiles) {
+//                 if (err) {
+//                     return cb(err);
+//                 }
+//
+//                 sourceFiles
+//                     .forEach(function(p) {
+//                         var file = new File({path: p.path});
+//                         // file.contents = fs.createReadStream(p.path);
+//                         file.contents = fs.readFileSync(p.path);
+//                         self.push(file);
+//                     });
+//
+//                 cb();
+//             });
+//         });
+//     }));
+// };
+//
 BEMProject.prototype.bundle = function (opts) {
     opts || (opts = {});
-    opts.levels || (opts.levels = this.levels);
-    opts.levelsCache || (opts.levelsCache = this.levelsCache);
+
+    // if (opts.levels && (
+    //     opts.levels.length !== this.levels.length ||
+    //     opts.levels !== this.levels // <----------- TODO <----------
+    // )) {
+    //     opts.introspection = this.introspection.then(function(levels) {
+    //         // filtrrrrr <----------- TODO <------------
+    //         return levels;
+    //     });
+    // } else {
+        opts.levels = this.levels;
+        opts.introspection = this.introspection;
+        // .then(function(res) {
+        //     console.log(res);
+        //     return res;
+        // });
+    // }
+
     return new BEMBundle(Object.assign({}, this.opts, opts));
 };
 
@@ -104,7 +123,7 @@ function filterDeps(decl, fsEntities, extensions, cb) {
 
     decl.forEach(function(entity) {
         var ewt = fsEntities.filter(function(file) {
-            if(extensions.indexOf(file.tech) === -1) return;
+            if(extensions.indexOf('.' + file.tech) === -1) return;
             if(file.entity.block !== entity.block) return;
             if(file.entity.elem !== entity.elem) return;
             if(file.entity.modName !== entity.modName) return;
@@ -123,32 +142,34 @@ function filterDeps(decl, fsEntities, extensions, cb) {
 }
 
 /**
- * [BEMBundle description]
+ * BEMBundle
  * @param {Object} opts
- * @param {String} opts.name
+ * @param {?String} opts.name
+ * @param {String} opts.path
  * @param {String} opts.decl
  * @param {String[]} opts.levels
- * @param {?String} opts.path
+ * @param {Promise<FileEntity[]>} opts.introspection
  */
 function BEMBundle(opts) {
     opts = opts || {};
 
     // todo: make it asserts
-    if (!opts.name) throw new Error('Bundle requires `name` property');
+    if (!opts.path) throw new Error('Bundle requires `path` property');
     if (!opts.decl) throw new Error('Bundle requires `decl` property with bemjson.js or bemdecl.js file');
     if (!opts.levels || !Array.isArray(opts.levels)) throw new Error('`levels` property should be an array');
-    this._name = opts.name;
-    this._decl = opts.decl;
+    if (!opts.introspection) throw new Error('Oh my dear');
+
+    this._name = opts.name || path.basename(opts.path);
+    this._path = opts.path;
+    this._decl = path.resolve(opts.path, opts.decl);
     this._levels = opts.levels;
-    this._levelsCache = opts.levelsCache;
+    this._introspection = opts.introspection;
 
-    this._path = opts.path || './build';
+    var declStream = gulp.src(this._decl);
 
-    var declStream = gulp.src(opts.decl);
-
-    if (/\.bemjson\.js$/.test(opts.decl)) {
+    if (/\.bemjson\.js$/.test(this._decl)) {
         this._bemjson = declStream;
-        this._bemdecl = declStream.pipe(clone()).pipe(gBemjsonToBemdecl());
+        this._bemdecl = declStream.pipe(clone()).pipe(bemjsonToBemdecl());
     } else {
         this._bemdecl = declStream;
     }
@@ -173,11 +194,17 @@ BEMBundle.prototype.src = function(opts) {
     return this.bemdecl().pipe(through.obj(function(file, enc, cb) {
         var self = this;
 
-        bundle._deps.then(function(relations) {
+        Promise.all([
+            bundle._introspection,
+            bundle._deps
+        ])
+        .then(function(res) {
+            var introspection = res[0];
+            var relations = res[1];
+
             var deps = bemDeps.resolve(file.data, relations);
 
-            // todo: redundand introspec
-            filterDeps(deps.entities, bundle._levelsCache, extensions, function(err, sourceFiles) {
+            filterDeps(deps.entities, introspection, extensions, function(err, sourceFiles) {
                 if (err) {
                     return cb(err);
                 }
@@ -192,15 +219,18 @@ BEMBundle.prototype.src = function(opts) {
 
                 cb();
             });
-        }).catch(cb);
+        })
+        .catch(cb);
     }));
 };
 
 BEMBundle.prototype.dest = function (path) {
     return gulp.dest(this._path);
 };
-BEMBundle.prototype.name = function (tech) {
-    return `${this._name}.${tech}`;
+BEMBundle.prototype.name = function () {
+    return this._name;
 };
 
-module.exports = BEMProject;
+module.exports = function (opts) {
+    return new BEMProject(opts);
+};
