@@ -2,6 +2,7 @@
 
 const vm = require('vm');
 const fs = require('fs');
+const path =require('path');
 const bemjsonToDecl = require('bemjson-to-decl');
 const bemdeclToFs = require('bemdecl-to-fs');
 
@@ -14,7 +15,9 @@ const levels = [
     'libs/bem-components/design/desktop.blocks',
     'common.blocks',
     'desktop.blocks'
-];
+].map(function(level) {
+    return path.join(__dirname, '../..', level);
+});
 
 
 /**
@@ -30,8 +33,14 @@ var bemjson = require('../../desktop.bundles/index/index.bemjson');
 
 discover(JSON.parse(JSON.stringify(bemjson))).then(files => {
     var bh = new (require('bh').BH);
+    bh.setOptions({
+        jsAttrName: 'data-bem',
+        jsAttrScheme: 'json'
+    });
+
     files.forEach(file => {
         require(file)(bh);
     });
+
     fs.writeFileSync('./dist/index.html', bh.apply(bemjson), 'utf-8')
 });
