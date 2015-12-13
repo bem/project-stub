@@ -7,6 +7,7 @@ var stylus = require('gulp-stylus');
 var postcss = require('gulp-postcss');
 var postcssUrl = require('postcss-url');
 var path = require('path');
+var through = require('through2');
 
 var levelsConfig = {
     'libs/bem-core/common.blocks': {scheme: 'nested'},
@@ -25,7 +26,7 @@ var bemConfig = {
 };
 
 // building one bundle with waiting for completing all substreams
-gulp.task('build', function () {
+gulp.task('build-the-rest', function () {
     var bemProject = new gbem(bemConfig);
 
     return bemProject.init()
@@ -38,9 +39,12 @@ gulp.task('build', function () {
 //                levels: Object.levels
             });
 
-            res.push(bem.src({tech: 'js'})
-                // .on('error', console.error.bind(console))
-                .pipe(gconcat(bem.name('js'))));
+            res.push(gmerge(
+                gulp.src('node_modules/ym/modules.js'),
+                bem.src({tech: 'js', extensions: ['js', 'vanilla.js', 'browser.js']}))
+                    .pipe(gconcat(bem.name('js'))));
+
+            res.push(bem.bemdecl());
 
             res.push(bem.src({tech: 'styl', extensions: ['css', 'styl']})
                 .pipe(stylus())
@@ -50,6 +54,12 @@ gulp.task('build', function () {
                 .pipe(gconcat(bem.name('css'))));
 
             var template = bem.src({tech: 'bemhtml', extensions: ['bemhtml.js', 'bemhtml']})
+                .pipe(through.obj(function(file, enc, cb) {
+                    if (path.basename(file.path) === 'i-bem.bemhtml') {
+                        return cb(null);
+                    }
+                    cb(null, file);
+                }))
                 //.pipe(bemxjstCompile) // for 1.x
                 .pipe(gconcat(bem.name('bemhtml.js')))
                 .pipe(bemhtml());
@@ -60,6 +70,17 @@ gulp.task('build', function () {
             return gmerge.apply(null, res)
                 .pipe(gulp.dest('build/desktop.bundles/index'));
         });
+});
+
+gulp.task('build', function() {
+    var bemjson = require('./desktop.bundles/index/index.bemjson.js');
+    var bemhtml = require('./build/desktop.bundles/index/index.bemhtml.js');
+
+    require('fs').writeFileSync(
+        './build/desktop.bundles/index/index.html',
+        bemhtml.apply(bemjson).replace(/\.min\./g, '.'), {encoding: 'utf-8'});
+
+    return Promise.resolve();
 });
 
 // .pipe(through.obj(function(file, enc, cb) {
