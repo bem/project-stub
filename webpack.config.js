@@ -41,6 +41,7 @@ module.exports = {
         extensions: [
             'bh.js',
             'js',
+            'vanilla.js',
             'styl'
         ],
         levels: [
