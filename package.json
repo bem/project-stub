@@ -47,7 +47,7 @@
   "scripts": {
     "start": "node app",
     "prebuild": "rm -rf dist",
-    "build": "webpack && node webpack/tools/build-html.js",
+    "build": "webpack",
     "postinstall": "npm run deps",
     "deps": "bower i"
   },

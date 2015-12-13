@@ -1,3 +1,4 @@
+const BHRenderPlugin = require('./webpack/plugins/bh-render-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
@@ -67,6 +68,7 @@ module.exports = {
     },
 
     plugins: [
+        new BHRenderPlugin('index.html'),
         new ExtractTextPlugin('index.min.css')
     ]
 };
