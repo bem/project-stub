@@ -4,6 +4,8 @@ var requireOrEval = require('enb-require-or-eval');
 
 module.exports = function(opts) {
     return through.obj(function(file, enc, cb) {
+        console.log('inside thru bemjson-to-decl');
+        debugger;
         if (file.isNull()) {
             cb(null, file);
         }
@@ -14,7 +16,6 @@ module.exports = function(opts) {
 
         // reading twice?
         requireOrEval(file.path).then(function(res) {
-            console.log('zxczxc');
             newFile.data = bemjsonToDecl.convert(res);
             cb(null, newFile);
         });

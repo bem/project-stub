@@ -3,22 +3,26 @@ var gbem = require('./gulp-bem');
 var gconcat = require('gulp-concat');
 var gmerge = require('gulp-merge');
 
+var File = require('vinyl');
+var path = require('path');
+var through = require('through2');
+
 var bem = new gbem({
     levels: {
-        'lib/bem-core/common.blocks': {scheme: 'nested'},
-        'lib/bem-core/desktop.blocks': {scheme: 'nested'},
-        'lib/bem-components/common.blocks': {scheme: 'nested'},
-        'lib/bem-components/desktop.blocks': {scheme: 'nested'},
+        'libs/bem-core/common.blocks': {scheme: 'nested'},
+        'libs/bem-core/desktop.blocks': {scheme: 'nested'},
+        'libs/bem-components/common.blocks': {scheme: 'nested'},
+        'libs/bem-components/desktop.blocks': {scheme: 'nested'},
         'common.blocks': {scheme: 'nested'},
         'desktop.blocks': {scheme: 'nested'}
     }
 });
 
 var levels = [
-    'lib/bem-core/common.blocks',
-    'lib/bem-core/desktop.blocks',
-    'lib/bem-components/common.blocks',
-    'lib/bem-components/desktop.blocks',
+    'libs/bem-core/common.blocks',
+    'libs/bem-core/desktop.blocks',
+    'libs/bem-components/common.blocks',
+    'libs/bem-components/desktop.blocks',
     'common.blocks',
     'desktop.blocks',
 ];
@@ -27,25 +31,36 @@ var levels = [
 gulp.task('build', function () {
     var res = [];
     var name = 'index';
-    var bundlePath = tech => `desktop.bundles/index${tech? `/${name}.${tech}` : ''}`;
+    var bundlePath = tech => `desktop.bundles/${name}/${tech? `${name}.${tech}` : ''}`;
+    var bundleFile = tech => ({path: path.resolve(bundlePath(tech))});
     var opts = {
-        decl: bundlePath('bemdecl.js'),
+        decl: bundlePath('bemjson.js'),
         levels: levels
     };
 
-    res.push(bem.src(Object.assign({}, opts, {tech: 'css'}))
-        .pipe(gconcat(`${name}.css`)));
-
+    console.log(path.resolve(process.cwd(), bundlePath('js')));
     res.push(bem.src(Object.assign({}, opts, {tech: 'js'}))
-        .pipe(gconcat(`${name}.js`)));
+        // .pipe(through.obj(function(file, enc, cb) {
+        //     console.log(file.path);
+        //     cb(null, file);
+        // }))
+        .pipe(gconcat(bundleFile('js'))))
+        // .pipe(through.obj(function(file, enc, cb) {
+        //     console.log(file.path);
+        //     cb(null, file);
+        // }))
 
-    res.push(bem.src(Object.assign({}, opts, {tech: 'bemhtml.js'}))
-        .pipe(gconcat(`${name}.bemhtml.js`)))
+    res.push(bem.src(Object.assign({}, opts, {tech: 'styl', extensions: ['css', 'styl']}))
+        .pipe(gconcat(bundleFile('css'))));
+
+    res.push(bem.src(Object.assign({}, opts, {tech: 'bemhtml', extensions: ['bemhtml.js', 'bemhtml']}))
+        //.pipe()
+        .pipe(gconcat(bundleFile('bemhtml'))))
 //        .pipe(apply(gulp.src(bundlePath('bemjson.js'))))
 //        .pipe(gRename(`${name}.html`)));
 
     return gmerge.apply(null, res)
-        .pipe(gulp.dest(bundlePath()));
+        .pipe(gulp.dest('build'));
 });
 
 // gulp.task('default', ['build']);
