@@ -40,7 +40,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "ym": "^0.1.2",
-    "ymodules-loader": "^1.0.2"
+    "ymodules-loader": "^1.0.2",
+    "lodash.get": "latest"
   },
   "scripts": {
     "start": "node app",

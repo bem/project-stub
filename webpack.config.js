@@ -20,7 +20,7 @@ module.exports = {
             },
             {
                 test: /\.bemjson.js$/,
-                loader: 'bemdecl-to-fs!loaders/bemjson'
+                loader: 'bemdecl-to-fs!loaders/deps!loaders/bemjson'
             },
             {
                 test: /\.styl$/,
