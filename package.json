@@ -28,7 +28,6 @@
     "bemjson-loader": "0.0.1",
     "bemjson-to-decl": "just-boris/bemjson-to-decl",
     "bh": "^4.1.3",
-    "borschik-tech-cleancss": "^2.1.0",
     "css-loader": "^0.23.0",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
