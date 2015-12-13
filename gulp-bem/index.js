@@ -22,7 +22,18 @@ function BEMProject(opts) {
 BEMProject.prototype.init = function(levels) {
     levels = levels || this.levels;
     return toArray(walk(levels, {levels: this.levelsConfig}))
-        .then(levelsCache => this.levelsCache = levelsCache);
+        .then(levelsCache => {
+            this.levelsCache = levelsCache;
+            levelsCache.sort((a, b) => {
+                a = a.path.replace(/(.*.blocks).*/, '$1');
+                b = b.path.replace(/(.*.blocks).*/, '$1');
+
+                a = levels.indexOf(a);
+                b = levels.indexOf(b);
+
+                return a - b;
+            });
+        });
 };
 
 BEMProject.prototype.src = function(opts) {
@@ -82,15 +93,15 @@ BEMProject.prototype.bundle = function (opts) {
 
 /**
  * map bem-deps by bem-walk-entities
- * @param  {Array} deps        – bem-deps [{ block, elem, modName, modVal }, ...]
+ * @param  {Array} decl        – bem-deps [{ block, elem, modName, modVal }, ...]
  * @param  {Array} fsEntities  – bem-walk [{ entity: { block, elem, modName, modVal }, tech }, ...]
  * @param  {String[]} tech     - tech name: 'js' || 'css' || 'bemhtml' || ...
- * @param  {Function} cb       - callback with filtred deps with files
+ * @param  {Function} cb       - callback with filtred decls with files
  */
-function filterDeps(deps, fsEntities, extensions, cb) {
+function filterDeps(decl, fsEntities, extensions, cb) {
     var entitiesWithTech = [];
 
-    deps.forEach(function(entity) {
+    decl.forEach(function(entity) {
         var ewt = fsEntities.filter(function(o) {
             if(extensions.indexOf(o.tech) === -1) return;
             if(o.block !== entity.block) return;
@@ -159,9 +170,9 @@ BEMBundle.prototype.src = function(opts) {
 
         bundle._deps.then(function(relations) {
             var deps = bemDeps.resolve(file.data, relations);
+console.log(deps);
 
             // todo: redundand introspec
-            console.log(extensions);
             filterDeps(deps.entities, bundle._levelsCache, extensions, function(err, sourceFiles) {
                 if (err) {
                     return cb(err);
