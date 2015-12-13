@@ -5,9 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const bemjsonToDecl = require('bemjson-to-decl');
 const bemdeclToFs = require('bemdecl-to-fs');
-
-var bemDeps = require('@bem/deps'),
-    toArray = require('stream-to-array');
+const flattenDeps = require('./flatten-deps');
 
 const levels = [
     'libs/bem-core/common.blocks',
@@ -29,17 +27,8 @@ function discover(bemjson) {
     let json = JSON.parse(JSON.stringify(bemjson));
     const content = bemjsonToDecl.stringify(json);
     const depsPartial = vm.runInNewContext(content);
-
-    return new Promise(function(resolve) {
-        toArray(bemDeps.load({ levels: levels }), function(err, relations) {
-            var declaration = depsPartial,
-                res = bemDeps.resolve(declaration, relations, { tech: 'bh.js' });
-
-            bemdeclToFs(res.entities, levels, 'bh.js')
-                .then(function(files) {
-                    resolve(files);
-                });
-        });
+    return flattenDeps(depsPartial, levels, ['bh.js']).then(deps => {
+        return bemdeclToFs(deps, levels, 'bh.js')
     });
 }
 
