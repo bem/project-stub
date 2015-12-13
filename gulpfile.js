@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gbem = require('./gulp-bem');
 var gconcat = require('gulp-concat');
 var gmerge = require('gulp-merge');
+var bemhtml = require('./gulp-bem/bemhtml');
 var path = require('path');
 
 var bem = new gbem({
@@ -46,8 +47,9 @@ gulp.task('build', function () {
     res.push(bem.src(Object.assign({}, opts, {tech: 'styl', extensions: ['css', 'styl']}))
         .pipe(gconcat(bundleFile('css'))));
 
-    res.push(bem.src(Object.assign({}, opts, {tech: 'bemhtml', extensions: ['bemhtml.js', 'bemhtml']}))
-        .pipe(gconcat(bundleFile('bemhtml'))));
+    res.push(bem.src(Object.assign({}, opts, {tech: 'bemhtml.js', extensions: ['bemhtml.js', 'bemhtml']}))
+        .pipe(gconcat(bundleFile('bemhtml.js')))
+        .pipe(bemhtml()));
 
     return gmerge.apply(null, res)
         .pipe(gulp.dest('build'));
