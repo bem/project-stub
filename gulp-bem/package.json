@@ -22,7 +22,7 @@
   "homepage": "https://github.com/gulp-bem/gulp-bem#readme",
   "dependencies": {
     "@bem/deps": "^0.0.10",
-    "bem-walk": "0.0.4",
+    "bem-walk": "^1.0.0-alpha1",
     "bem-xjst": "^4.2.7",
     "bemjson-to-decl": "0.0.1",
     "enb-require-or-eval": "^1.0.2",

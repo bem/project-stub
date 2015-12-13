@@ -21,6 +21,7 @@ function BEMProject(opts) {
 
 BEMProject.prototype.init = function(levels) {
     levels = levels || this.levels;
+
     return toArray(walk(levels, {levels: this.levelsConfig}))
         .then(levelsCache => {
             this.levelsCache = levelsCache;
@@ -102,12 +103,16 @@ function filterDeps(decl, fsEntities, extensions, cb) {
     var entitiesWithTech = [];
 
     decl.forEach(function(entity) {
-        var ewt = fsEntities.filter(function(o) {
-            if(extensions.indexOf(o.tech) === -1) return;
-            if(o.block !== entity.block) return;
-            if(o.elem !== entity.elem) return;
-            if(o.modName !== entity.modName) return;
-            if(o.modVal !== entity.modVal) return;
+        var ewt = fsEntities.filter(function(file) {
+            if(extensions.indexOf(file.tech) === -1) return;
+            if(file.entity.block !== entity.block) return;
+            if(file.entity.elem !== entity.elem) return;
+            if(file.entity.modName !== entity.modName) return;
+            // True modifiers are truly outrageous.
+            if(file.entity.modVal === true && !entity.hasOwnProperty('modVal')) return true;
+            if(entity.modVal === true && !file.entity.hasOwnProperty('modVal')) return true;
+
+            if(file.entity.modVal !== entity.modVal) return;
             return true;
         });
 
@@ -170,7 +175,6 @@ BEMBundle.prototype.src = function(opts) {
 
         bundle._deps.then(function(relations) {
             var deps = bemDeps.resolve(file.data, relations);
-console.log(deps);
 
             // todo: redundand introspec
             filterDeps(deps.entities, bundle._levelsCache, extensions, function(err, sourceFiles) {
