@@ -2,10 +2,7 @@ var gulp = require('gulp');
 var gbem = require('./gulp-bem');
 var gconcat = require('gulp-concat');
 var gmerge = require('gulp-merge');
-
-var File = require('vinyl');
 var path = require('path');
-var through = require('through2');
 
 var bem = new gbem({
     levels: {
@@ -24,7 +21,7 @@ var levels = [
     'libs/bem-components/common.blocks',
     'libs/bem-components/desktop.blocks',
     'common.blocks',
-    'desktop.blocks',
+    'desktop.blocks'
 ];
 
 // building one bundle with waiting for completing all substreams
@@ -38,26 +35,19 @@ gulp.task('build', function () {
         levels: levels
     };
 
-    console.log(path.resolve(process.cwd(), bundlePath('js')));
+    // .pipe(through.obj(function(file, enc, cb) {
+    //     console.log(file.path);
+    //     cb(null, file);
+    // }))
+
     res.push(bem.src(Object.assign({}, opts, {tech: 'js'}))
-        // .pipe(through.obj(function(file, enc, cb) {
-        //     console.log(file.path);
-        //     cb(null, file);
-        // }))
-        .pipe(gconcat(bundleFile('js'))))
-        // .pipe(through.obj(function(file, enc, cb) {
-        //     console.log(file.path);
-        //     cb(null, file);
-        // }))
+        .pipe(gconcat(bundleFile('js'))));
 
     res.push(bem.src(Object.assign({}, opts, {tech: 'styl', extensions: ['css', 'styl']}))
         .pipe(gconcat(bundleFile('css'))));
 
     res.push(bem.src(Object.assign({}, opts, {tech: 'bemhtml', extensions: ['bemhtml.js', 'bemhtml']}))
-        //.pipe()
-        .pipe(gconcat(bundleFile('bemhtml'))))
-//        .pipe(apply(gulp.src(bundlePath('bemjson.js'))))
-//        .pipe(gRename(`${name}.html`)));
+        .pipe(gconcat(bundleFile('bemhtml'))));
 
     return gmerge.apply(null, res)
         .pipe(gulp.dest('build'));

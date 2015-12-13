@@ -24,14 +24,13 @@
     "@bem/deps": "0.0.9",
     "bem-walk": "0.0.4",
     "bemjson-to-decl": "0.0.1",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^1.5.1",
-    "gulp-util": "^3.0.7",
-    "lazypipe": "^1.0.1",
-    "through2": "^2.0.0"
+    "enb-require-or-eval": "^1.0.2",
+    "stream-to-array": "^2.2.0",
+    "through2": "^2.0.0",
+    "vinyl": "^1.1.0"
   },
   "devDependencies": {
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "mocha": "^2.3.4"
   }
 }

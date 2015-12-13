@@ -13,7 +13,6 @@
     "bower": "^1.6.5"
   },
   "devDependencies": {
-    "@bem/deps": "0.0.5",
     "bem": "^0.10.2",
     "bem-walk": "^1.0.0-alpha1",
     "bemjson-to-decl": "0.0.1",
@@ -28,6 +27,7 @@
     "enb-stylus": "^2.2.0",
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
     "gulp-concat": "^2.6.0",
+    "gulp-merge": "^0.1.1",
     "gulp-postcss": "^6.0.1",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
@@ -35,12 +35,13 @@
     "stream-to-array": "^2.2.0",
     "through2": "^2.0.0",
     "through2-filter": "^2.0.0",
-    "through2-map": "^2.0.0"
+    "through2-map": "^2.0.0",
+    "vinyl": "^1.1.0"
   },
   "scripts": {
     "start": "enb server",
     "postinstall": "npm run deps",
-    "deps": "bower i"
+    "deps": "bower i && cd gulp-bem && npm i"
   },
   "private": true
 }
