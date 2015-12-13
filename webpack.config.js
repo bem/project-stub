@@ -20,7 +20,7 @@ module.exports = {
             },
             {
                 test: /\.bemjson.js$/,
-                loader: 'loaders/bem-extractor?tech[]=bh.js&tech[]=js&tech[]=styl!loaders/bemjson'
+                loader: 'bemdecl-to-fs!loaders/bemjson'
             },
             {
                 test: /\.styl$/,
@@ -34,6 +34,24 @@ module.exports = {
                 test: /\.bh(\.js)?$/,
                 loader: 'loaders/bh'
             }
+        ]
+    },
+
+    bem: {
+        extensions: [
+            'bh.js',
+            'js',
+            'styl'
+        ],
+        levels: [
+            'libs/bem-core/common.blocks',
+            'libs/bem-core/desktop.blocks',
+            'libs/bem-components/common.blocks',
+            'libs/bem-components/desktop.blocks',
+            'libs/bem-components/design/common.blocks',
+            'libs/bem-components/design/desktop.blocks',
+            'common.blocks',
+            'desktop.blocks',
         ]
     },
 
