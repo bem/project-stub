@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/gulp-bem/gulp-bem#readme",
   "dependencies": {
-    "@bem/deps": "0.0.9",
+    "@bem/deps": "^0.0.10",
     "bem-walk": "0.0.4",
     "bem-xjst": "^4.2.7",
     "bemjson-to-decl": "0.0.1",
