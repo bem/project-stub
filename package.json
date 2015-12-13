@@ -19,7 +19,7 @@
     "serve-static": "latest"
   },
   "devDependencies": {
-    "@bem/deps": "0.0.9",
+    "@bem/deps": "0.0.10",
     "autoprefixer": "^6.1.2",
     "bem": "^0.10.2",
     "bem-naming": "^0.5.1",
