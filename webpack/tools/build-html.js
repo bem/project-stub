@@ -2,9 +2,12 @@
 
 const vm = require('vm');
 const fs = require('fs');
-const path =require('path');
+const path = require('path');
 const bemjsonToDecl = require('bemjson-to-decl');
 const bemdeclToFs = require('bemdecl-to-fs');
+
+var bemDeps = require('@bem/deps'),
+    toArray = require('stream-to-array');
 
 const levels = [
     'libs/bem-core/common.blocks',
@@ -19,14 +22,25 @@ const levels = [
     return path.join(__dirname, '../..', level);
 });
 
-
 /**
  * @param  {Object} bemjson
  */
 function discover(bemjson) {
-    const content = bemjsonToDecl.stringify(bemjson);
-    const deps = vm.runInNewContext(content);
-    return bemdeclToFs(deps, levels, 'bh.js');
+    let json = JSON.parse(JSON.stringify(bemjson));
+    const content = bemjsonToDecl.stringify(json);
+    const depsPartial = vm.runInNewContext(content);
+
+    return new Promise(function(resolve) {
+        toArray(bemDeps.load({ levels: levels }), function(err, relations) {
+            var declaration = depsPartial,
+                res = bemDeps.resolve(declaration, relations, { tech: 'bh.js' });
+
+            bemdeclToFs(res.entities, levels, 'bh.js')
+                .then(function(files) {
+                    resolve(files);
+                });
+        });
+    });
 }
 
 var bemjson = require('../../desktop.bundles/index/index.bemjson');
