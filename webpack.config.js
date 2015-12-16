@@ -21,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.bemjson.js$/,
-                loader: 'bemdecl-to-fs!loaders/deps!bemjson?stringify=false'
+                loader: 'bemdecl-to-fs!deps!bemjson?stringify=false'
             },
             {
                 test: /\.styl$/,
