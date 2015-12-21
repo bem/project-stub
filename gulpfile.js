@@ -13,7 +13,7 @@ var bemconfig = {
 
 var path = require('path');
 var gulp = require('gulp');
-var project = require('./gulp-bem')({
+var project = require('@bem/gulp')({
     bemconfig: bemconfig
 });
 var concat = require('gulp-concat');

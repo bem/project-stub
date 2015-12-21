@@ -17,6 +17,7 @@
     "ym": "^0.1.2"
   },
   "devDependencies": {
+    "@bem/gulp": "0.0.2",
     "bem": "^0.10.2",
     "bem-walk": "^1.0.0-alpha1",
     "bemjson-to-decl": "0.0.1",
