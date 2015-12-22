@@ -93,6 +93,11 @@ npm start
 
 The `bem server ` is running. To check it out, navigate to `http://localhost:8080/desktop.bundles/index/index.html`.
 
+You may also specify different port if `8080` is already taken by some other service:
+```bash
+npm start -- --port=8181
+```
+
 **Stop the server**
 
 Press `Ctrl` + `C` or `⌘` + `C` (for MAC devices) while the terminal is your active window to stop the server.
