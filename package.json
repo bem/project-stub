@@ -10,22 +10,44 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bower": "^1.6.5"
+    "bower": "^1.6.5",
+    "gulp-postcss": "^6.0.1",
+    "gulp-stylus": "^2.1.1",
+    "postcss-url": "^5.0.2",
+    "ym": "^0.1.2"
   },
   "devDependencies": {
+    "@bem/gulp": "0.0.2",
     "bem": "^0.10.2",
+    "bem-walk": "^1.0.0-alpha1",
+    "bemjson-to-decl": "0.0.1",
     "borschik-tech-cleancss": "^2.1.0",
+    "concat-stream": "^1.5.1",
+    "del": "^2.2.0",
     "enb": "^1.1.0",
     "enb-bem-techs": "^2.1.0",
     "enb-bemxjst": "^4.0.2",
     "enb-borschik": "^2.1.0",
     "enb-js": "^1.1.0",
-    "enb-stylus": "^2.2.0"
+    "enb-stylus": "^2.2.0",
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-merge": "^0.1.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "lazypipe": "^1.0.1",
+    "stream-to-array": "^2.2.0",
+    "through2": "^2.0.0",
+    "through2-filter": "^2.0.0",
+    "through2-map": "^2.0.0",
+    "vinyl": "^1.1.0"
   },
   "scripts": {
     "start": "enb server",
     "postinstall": "npm run deps",
-    "deps": "bower i"
+    "deps": "bower i && cd gulp-bem && npm i",
+    "make": "gulp build-the-rest && gulp build"
   },
   "private": true
 }
