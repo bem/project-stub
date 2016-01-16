@@ -15,10 +15,10 @@
   "devDependencies": {
     "bem": "^0.10.2",
     "borschik-tech-cleancss": "^2.1.0",
-    "enb": "^1.1.0",
+    "enb": "^1.1.1",
     "enb-bem-techs": "^2.1.0",
-    "enb-bemxjst": "^4.0.2",
-    "enb-borschik": "^2.1.0",
+    "enb-bemxjst": "^4.0.3",
+    "enb-borschik": "^2.2.1",
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.2.0"
   },
