@@ -18,6 +18,7 @@
     "enb": "^1.1.2",
     "enb-bem-techs": "^2.2.1",
     "enb-bemxjst": "^4.1.0",
+    "enb-bh": "^1.1.0",
     "enb-borschik": "^2.3.0",
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.2.0"

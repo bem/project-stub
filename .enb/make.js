@@ -15,9 +15,9 @@ var techs = {
         // bemtree
         // bemtree: require('enb-bemxjst/techs/bemtree'),
 
-        // bemhtml
-        bemhtml: require('enb-bemxjst/techs/bemhtml'),
-        bemjsonToHtml: require('enb-bemxjst/techs/bemjson-to-html')
+        // bh
+        bh: require('enb-bh/techs/bh-bundle'),
+        bemjsonToHtml: require('enb-bh/techs/bemjson-to-html')
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -55,13 +55,19 @@ module.exports = function(config) {
             // bemtree
             // [techs.bemtree, { sourceSuffixes: ['bemtree', 'bemtree.js'] }],
 
-            // bemhtml
-            [techs.bemhtml, { sourceSuffixes: ['bemhtml', 'bemhtml.js'] }],
+            // bh
+            [techs.bh, {
+                bhOptions: {
+                    jsAttrName: 'data-bem',
+                    jsAttrScheme: 'json'
+                },
+                mimic: 'BEMHTML'
+            }],
 
             // html
             [techs.bemjsonToHtml],
 
-            // client bemhtml
+            // client bh
             [enbBemTechs.depsByTechToBemdecl, {
                 target: '?.bemhtml.bemdecl.js',
                 sourceTech: 'js',
@@ -76,10 +82,14 @@ module.exports = function(config) {
                 filesTarget: '?.bemhtml.files',
                 dirsTarget: '?.bemhtml.dirs'
             }],
-            [techs.bemhtml, {
+            [techs.bh, {
                 target: '?.browser.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
-                sourceSuffixes: ['bemhtml', 'bemhtml.js']
+                bhOptions: {
+                    jsAttrName: 'data-bem',
+                    jsAttrScheme: 'json'
+                },
+                mimic: 'BEMHTML'
             }],
 
             // js
