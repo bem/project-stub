@@ -9,7 +9,7 @@ There are two main BEM libraries are linked here by default:
 
 ## Installation requirements
 
-* [Node.js 0.10+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications.
+* [Node.js 0.12+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications.
 * [Git Bash](http://msysgit.github.io/) if you use Windows OS.
 
 ## Supported browsers
@@ -25,7 +25,7 @@ So, how easy is it to get started with BEM? — *Super easy!*
 It's as easy as...
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.4.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.5.0 my-bem-project
 cd my-bem-project
 npm install # Do not use root privilege to install npm and bower dependencies.
 ```
@@ -43,7 +43,7 @@ You can run any `enb` commands via `node_modules/.bin/enb` and the `bem-tools` c
 ```bash
 node_modules/.bin/enb make
 ```
-or 
+or
 ```bash
 node_modules/.bin/bem make
 ```
@@ -80,7 +80,7 @@ bem -h
 ```bash
 node_modules/.bin/enb server
 ```
-or 
+or
 ```bash
 node_modules/.bin/bem server
 ```
@@ -150,4 +150,6 @@ This generator provides you the ability to get the base of BEM project in few mi
 - [borschik](https://en.bem.info/tools/optimizers/borschik/) — borschik is a simple but powerful builder for text-based file formats
 
 ## Videos
+
+- [BEM - Building 'em modular](https://www.youtube.com/watch?v=huQp7gr3WPE)
 - [BEM for JavaScript Talk on Camp JS](https://en.bem.info/talks/campjs-melbourne-2014/)

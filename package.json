@@ -1,7 +1,7 @@
 {
   "author": "",
   "name": "bem-project-stub",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/bem/project-stub.git"
@@ -10,15 +10,15 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bower": "^1.6.5"
+    "bower": "^1.7.7"
   },
   "devDependencies": {
     "bem": "^0.10.2",
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.1.2",
-    "enb-bem-techs": "^2.1.1",
-    "enb-bemxjst": "^4.0.5",
-    "enb-borschik": "^2.2.1",
+    "enb-bem-techs": "^2.2.1",
+    "enb-bemxjst": "^4.1.0",
+    "enb-borschik": "^2.3.0",
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.2.0"
   },
