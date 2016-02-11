@@ -43,21 +43,23 @@ module.exports = function(config) {
         nodeConfig.addTechs([
             // essential
             [enbBemTechs.levels, { levels: levels }],
-            [techs.fileProvider, { target: '?.bemjson.js' }],
-            [enbBemTechs.bemjsonToBemdecl],
-            [enbBemTechs.deps],
-            [enbBemTechs.files],
+            [techs.fileProvider, { target: '?.{lang}.bemjson.js' }],
+            [enbBemTechs.bemjsonToBemdecl, { source: '?.{lang}.bemjson.js', target: '?.{lang}.bemdecl.js' }],
+            [enbBemTechs.deps, { target: '?.{lang}.deps.js', bemdeclFile: '?.{lang}.bemdecl.js' }],
+            [enbBemTechs.files, { filesTarget: '?.{lang}.files', dirsTarget: '?.{lang}.dirs', depsFile: '?.{lang}.deps.js' }],
 
             // css
             [techs.stylus, {
-                target: '?.css',
+                filesTarget: '?.{lang}.files',
+                target: '?.{lang}.css',
                 autoprefixer: {
                     browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
                 }
             }],
 
+
             // keyset files for each language
-            [techs.keysets, { lang: '{lang}' }],
+            [techs.keysets, { lang: '{lang}', filesTarget: '?.{lang}.files', dirsTarget: '?.{lang}.dirs' }],
 
             // i18n files for each language
             [techs.i18n, { lang: '{lang}' }],
@@ -67,51 +69,54 @@ module.exports = function(config) {
 
             // bemhtml
             [techs.bemhtml, {
+                filesTarget: '?.{lang}.files',
                 lang: '{lang}',
                 devMode: process.env.BEMHTML_ENV === 'development'
             }],
 
             // html
             [techs.bemjsonToHtml, {
+                bemjsonFile: '?.{lang}.bemjson.js',
                 bemhtmlFile: '?.bemhtml.{lang}.js',
                 target: '?.{lang}.html'
             }],
 
             // client bemhtml
             [enbBemTechs.depsByTechToBemdecl, {
-                target: '?.bemhtml.bemdecl.js',
+                filesTarget: '?.{lang}.files',
+                target: '?.{lang}.bemhtml.bemdecl.js',
                 sourceTech: 'js',
                 destTech: 'bemhtml'
             }],
             [enbBemTechs.deps, {
-                target: '?.bemhtml.deps.js',
-                bemdeclFile: '?.bemhtml.bemdecl.js'
+                target: '?.{lang}.bemhtml.deps.js',
+                bemdeclFile: '?.{lang}.bemhtml.bemdecl.js'
             }],
             [enbBemTechs.files, {
-                depsFile: '?.bemhtml.deps.js',
-                filesTarget: '?.bemhtml.files',
-                dirsTarget: '?.bemhtml.dirs'
+                depsFile: '?.{lang}.bemhtml.deps.js',
+                filesTarget: '?.{lang}.bemhtml.files',
+                dirsTarget: '?.{lang}.bemhtml.dirs'
             }],
             [techs.bemhtml, {
                 lang: '{lang}',
                 target: '?.browser.{lang}.bemhtml.js',
-                filesTarget: '?.bemhtml.files',
+                filesTarget: '?.{lang}.bemhtml.files',
                 devMode: process.env.BEMHTML_ENV === 'development'
             }],
 
             // js
-            [techs.browserJs, { includeYM: true }],
+            [techs.browserJs, { includeYM: true, filesTarget: '?.{lang}.files', target: '?.{lang}.browser.js' }],
             [techs.fileMerge, {
                 target: '?.{lang}.js',
-                sources: ['?.browser.js', '?.lang.{lang}.js', '?.browser.{lang}.bemhtml.js'],
+                sources: ['?.{lang}.browser.js', '?.lang.{lang}.js', '?.browser.{lang}.bemhtml.js'],
                 lang: '{lang}'
             }],
 
             // borschik
             [techs.borschik, { source: '?.{lang}.js', target: '?.{lang}.min.js', minify: isProd }],
-            [techs.borschik, { source: '?.css', target: '?.min.css', tech: 'cleancss', minify: isProd }]
+            [techs.borschik, { source: '?.{lang}.css', target: '?.{lang}.min.css', tech: 'cleancss', minify: isProd }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.{lang}.html', '?.min.css', '?.{lang}.min.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.{lang}.html', '?.{lang}.min.css', '?.{lang}.min.js']);
     });
 };

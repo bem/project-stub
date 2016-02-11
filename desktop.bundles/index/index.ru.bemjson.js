@@ -5,10 +5,11 @@ module.exports = {
     head : [
         { elem : 'meta', attrs : { name : 'description', content : '' } },
         { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
-        { elem : 'css', url : 'index.min.css' }
+        { elem : 'css', url : 'index.min.css', i18n: true }
     ],
     scripts: [
         { elem : 'js', url : 'index.min.js', i18n: true }
     ],
-    mods : { theme : 'islands' }
+    mods : { theme : 'islands' },
+    content : "Золотой"
 };
