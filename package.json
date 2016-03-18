@@ -10,7 +10,17 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "bower": "^1.7.7"
+    "@bem/gulp": "0.0.5",
+    "@bem/gulp-bh": "gulp-bem/gulp-bh",
+    "autoprefixer": "^6.3.3",
+    "bower": "^1.7.7",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-enb-comment": "Yeti-or/gulp-enb-comment",
+    "gulp-postcss": "^6.1.0",
+    "gulp-stylus": "^2.3.1",
+    "merge2": "^1.0.1",
+    "postcss-url": "^5.1.1"
   },
   "devDependencies": {
     "bem": "^0.10.2",
