@@ -56,8 +56,8 @@ gulp.task('css', function() {
 			}
 		})
 	]))
-	.pipe(comment(bundle.path()))
-	.pipe(concat(bundle.name() + '.min.css'))
+	.pipe(comment.css(bundle.path()))
+	.pipe(concat(bundle.name() + '.css'))
 	.pipe(gulp.dest(bundle.path()));
 });
 
@@ -68,9 +68,9 @@ gulp.task('js', function() {
 			tech: 'js',
 			extensions: ['.js', '.vanilla.js', '.browser.js']
 		})
-		.pipe(comment(bundle.path()))
+		.pipe(comment.js(bundle.path()))
 	)
-	.pipe(concat(bundle.name() + '.min.js'))
+	.pipe(concat(bundle.name() + '.js'))
 	.pipe(gulp.dest(bundle.path()));
 });
 
@@ -82,7 +82,7 @@ gulp.task('bh', function() {
     .pipe(bhEngine.match());
 });
 
-gulp.task('html', gulp.series('bh', function example() {
+gulp.task('html', gulp.series('bh', function apply() {
     return bundle.bemjson()
         .pipe(bhEngine.apply(bundle.name() + '.html'))
         .pipe(gulp.dest(bundle.path()));
