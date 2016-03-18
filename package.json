@@ -13,6 +13,9 @@
     "bower": "^1.7.7"
   },
   "devDependencies": {
+    "@bem/gulp": "0.0.5",
+    "@bem/gulp-bh": "gulp-bem/gulp-bh",
+    "autoprefixer": "^6.3.3",
     "bem": "^0.10.2",
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.1.2",
@@ -20,7 +23,15 @@
     "enb-bemxjst": "^6.2.0",
     "enb-borschik": "^2.3.0",
     "enb-js": "^1.1.0",
-    "enb-stylus": "^2.2.0"
+    "enb-stylus": "^2.2.0",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-enb-comment": "^0.0.2",
+    "gulp-postcss": "^6.1.0",
+    "gulp-stylus": "^2.3.1",
+    "merge2": "^1.0.1",
+    "postcss-url": "^5.1.1",
+    "ym": "^0.1.2"
   },
   "scripts": {
     "start": "enb server",
