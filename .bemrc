@@ -10,4 +10,4 @@ module.exports = {
         "common.blocks": { "scheme": "nested" },
         "desktop.blocks": { "scheme": "nested" }
     }
-}
+};
