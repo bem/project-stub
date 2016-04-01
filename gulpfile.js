@@ -1,36 +1,25 @@
+var Config = require('bem-config');
 var bem = require('@bem/gulp');
 var gulp = require('gulp');
 var path = require('path');
 var concat = require('gulp-concat');
 var comment = require('gulp-enb-comment');
 
-//css
+// css
 var stylus = require('gulp-stylus');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var postcssUrl = require('postcss-url');
 
-//js
+// js
 var merge = require('merge2');
 
-//bh
+// bh
 var bhEngine = require('@bem/gulp-bh')({'jsAttrName': 'data-bem', 'jsAttrScheme': 'json'});
 
 
-var bemconfig = {
-    'libs/bem-core/common.blocks': {scheme: 'nested'},
-    'libs/bem-core/desktop.blocks': {scheme: 'nested'},
-    'libs/bem-components/common.blocks': {scheme: 'nested'},
-    'libs/bem-components/desktop.blocks': {scheme: 'nested'},
-    'libs/bem-components/design/common.blocks': {scheme: 'nested'},
-    'libs/bem-components/design/desktop.blocks': {scheme: 'nested'},
-    'common.blocks': {scheme: 'nested'},
-    'desktop.blocks': {scheme: 'nested'}
-};
-
-var project = bem({
-	bemconfig: bemconfig
-});
+var conf = new Config();
+var project = bem({ bemconfig: conf.merged.levels });
 
 var bundle = project.bundle({
 	path: 'desktop.bundles/index',
