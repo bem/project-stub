@@ -17,6 +17,7 @@
     "@bem/gulp-bh": "gulp-bem/gulp-bh",
     "autoprefixer": "^6.3.3",
     "bem": "^0.10.2",
+    "bem-config": "bem-contrib/bem-config#wip-new-with-rc",
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.1.2",
     "enb-bem-techs": "^2.2.1",
