@@ -1,25 +1,22 @@
-var Config = require('bem-config');
-var bem = require('@bem/gulp');
-var gulp = require('gulp');
-var path = require('path');
-var concat = require('gulp-concat');
-var comment = require('gulp-enb-comment');
-
-// css
-var stylus = require('gulp-stylus');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var postcssUrl = require('postcss-url');
-
-// js
-var merge = require('merge2');
+var Config = require('bem-config'),
+    bem = require('@bem/gulp'),
+    gulp = require('gulp'),
+    path = require('path'),
+    concat = require('gulp-concat'),
+    stylus = require('gulp-stylus'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    postcssUrl = require('postcss-url'),
+    merge = require('merge2');
 
 // bh
-var bhEngine = require('@bem/gulp-bh')({'jsAttrName': 'data-bem', 'jsAttrScheme': 'json'});
+var bhEngine = require('@bem/gulp-bh')({
+    jsAttrName: 'data-bem',
+    jsAttrScheme: 'json'
+});
 
-
-var conf = new Config();
-var project = bem({ bemconfig: conf.merged.levels });
+var conf = new Config(),
+    project = bem({ bemconfig: conf.merged.levels });
 
 var bundle = project.bundle({
 	path: 'desktop.bundles/index',
@@ -45,7 +42,6 @@ gulp.task('css', function() {
 			}
 		})
 	]))
-	.pipe(comment.css(bundle.path()))
 	.pipe(concat(bundle.name() + '.css'))
 	.pipe(gulp.dest(bundle.path()));
 });
@@ -57,7 +53,6 @@ gulp.task('js', function() {
 			tech: 'js',
 			extensions: ['.js', '.vanilla.js', '.browser.js']
 		})
-		.pipe(comment.js(bundle.path()))
 	)
 	.pipe(concat(bundle.name() + '.js'))
 	.pipe(gulp.dest(bundle.path()));
