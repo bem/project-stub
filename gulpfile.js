@@ -13,6 +13,7 @@ var csso = require('gulp-csso');
 
 // js
 var merge = require('merge2');
+var uglify = require('gulp-uglify');
 
 // bh
 var bhEngine = require('@bem/gulp-bh')({'jsAttrName': 'data-bem', 'jsAttrScheme': 'json'});
@@ -57,6 +58,7 @@ gulp.task('js', function() {
             extensions: ['.js', '.vanilla.js', '.browser.js']
         })
     )
+    .pipe(uglify())
     .pipe(concat(bundle.name() + '.min.js'))
     .pipe(gulp.dest(bundle.path()));
 });
