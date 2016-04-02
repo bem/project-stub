@@ -7,6 +7,7 @@ var Config = require('bem-config'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     postcssUrl = require('postcss-url'),
+    csso = require('gulp-csso'),
     merge = require('merge2');
 
 // bh
@@ -42,7 +43,8 @@ gulp.task('css', function() {
             }
         })
     ]))
-    .pipe(concat(bundle.name() + '.css'))
+    .pipe(csso())
+    .pipe(concat(bundle.name() + '.min.css'))
     .pipe(gulp.dest(bundle.path()));
 });
 
