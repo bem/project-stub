@@ -20,43 +20,45 @@ var conf = new Config();
 var project = bem({ bemconfig: conf.merged.levels });
 
 var bundle = project.bundle({
-	path: 'desktop.bundles/index',
-	decl: 'index.bemjson.js'
+    path: 'desktop.bundles/index',
+    decl: 'index.bemjson.js'
 });
 
 gulp.task('css', function() {
-	return bundle.src({
-		tech: 'css',
-		extensions: ['.css', '.styl']
-	})
-	.pipe(stylus())
-	.pipe(postcss([
-		autoprefixer({
-			browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
-		}),
-		postcssUrl({
-			url: function(url, decl, from) {
-				return path.relative(
-					path.resolve(process.cwd(), bundle.path()),
-					path.resolve(from, url)
-				);
-			}
-		})
-	]))
-	.pipe(concat(bundle.name() + '.min.css'))
-	.pipe(gulp.dest(bundle.path()));
+<<<<<<< 66885cc7dbf9335713d698b65a0c7492880bfffc
+gulp.task('js', function() {
+    return bundle.src({
+        tech: 'css',
+        extensions: ['.css', '.styl']
+    })
+    .pipe(stylus())
+    .pipe(postcss([
+        autoprefixer({
+            browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
+        }),
+        postcssUrl({
+            url: function(url, decl, from) {
+                return path.relative(
+                    path.resolve(process.cwd(), bundle.path()),
+                    path.resolve(from, url)
+                );
+            }
+        })
+    ]))
+    .pipe(concat(bundle.name() + '.min.css'))
+    .pipe(gulp.dest(bundle.path()));
 });
 
 gulp.task('js', function() {
-	return merge(
-		gulp.src(require.resolve('ym')),
-		bundle.src({
-			tech: 'js',
-			extensions: ['.js', '.vanilla.js', '.browser.js']
-		})
-	)
-	.pipe(concat(bundle.name() + '.min.js'))
-	.pipe(gulp.dest(bundle.path()));
+    return merge(
+        gulp.src(require.resolve('ym')),
+        bundle.src({
+            tech: 'js',
+            extensions: ['.js', '.vanilla.js', '.browser.js']
+        })
+    )
+    .pipe(concat(bundle.name() + '.min.js'))
+    .pipe(gulp.dest(bundle.path()));
 });
 
 gulp.task('bh', function() {
