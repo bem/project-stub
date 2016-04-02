@@ -9,6 +9,7 @@ var stylus = require('gulp-stylus');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var postcssUrl = require('postcss-url');
+var csso = require('gulp-csso');
 
 // js
 var merge = require('merge2');
@@ -25,8 +26,6 @@ var bundle = project.bundle({
 });
 
 gulp.task('css', function() {
-<<<<<<< 66885cc7dbf9335713d698b65a0c7492880bfffc
-gulp.task('js', function() {
     return bundle.src({
         tech: 'css',
         extensions: ['.css', '.styl']
@@ -45,6 +44,7 @@ gulp.task('js', function() {
             }
         })
     ]))
+    .pipe(csso())
     .pipe(concat(bundle.name() + '.min.css'))
     .pipe(gulp.dest(bundle.path()));
 });
