@@ -1,7 +1,8 @@
 libs/
 node_modules/
 .DS_Store
-.idea
+.idea/
+*.iml
 .project
 .svn
 npm-debug.log
