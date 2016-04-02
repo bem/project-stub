@@ -1,4 +1,4 @@
-{
+module.exports = {
     "root": true,
     "levels": {
         "libs/bem-core/common.blocks": { "scheme": "nested" },
