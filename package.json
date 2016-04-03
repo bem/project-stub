@@ -25,6 +25,8 @@
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.3.2",
     "gulp": "gulpjs/gulp#4.0",
+    "gulp-bem-xjst": "^1.1.0",
+    "gulp-clone": "^1.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^1.1.0",
     "gulp-postcss": "^6.1.0",
@@ -32,6 +34,7 @@
     "gulp-uglify": "^1.5.3",
     "merge2": "^1.0.1",
     "postcss-url": "^5.1.1",
+    "through2": "^2.0.1",
     "ym": "^0.1.2"
   },
   "scripts": {
