@@ -20,7 +20,7 @@
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.1.2",
     "enb-bem-techs": "^2.2.1",
-    "enb-bemxjst": "^5.0.0",
+    "enb-bemxjst": "^6.2.0",
     "enb-borschik": "^2.3.0",
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.2.0",
@@ -33,6 +33,9 @@
     "merge2": "^1.0.1",
     "postcss-url": "^5.1.1",
     "through2": "^2.0.1",
+    "gulp-csso": "^1.1.0",
+    "gulp-uglify": "^1.5.3",
+    "postcss-url": "^5.1.1",
     "ym": "^0.1.2"
   },
   "scripts": {
