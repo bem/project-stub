@@ -32,6 +32,12 @@ var bundle = project.bundle({
     decl: 'index.bemjson.js'
 });
 
+var isProd = process.env.YENV === 'production';
+
+function skip() {
+    return through.obj();
+}
+
 gulp.task('css', function() {
     return bundle.src({
         tech: 'css',
@@ -51,7 +57,7 @@ gulp.task('css', function() {
             }
         })
     ]))
-    .pipe(csso())
+    .pipe(isProd ? csso() : skip())
     .pipe(concat(bundle.name() + '.min.css'))
     .pipe(gulp.dest(bundle.path()));
 });
@@ -64,7 +70,7 @@ gulp.task('js', function() {
             extensions: ['.js', '.vanilla.js', '.browser.js']
         })
     )
-    .pipe(uglify())
+    .pipe(isProd ? uglify() : skip())
     .pipe(concat(bundle.name() + '.min.js'))
     .pipe(gulp.dest(bundle.path()));
 });
