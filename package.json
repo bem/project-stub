@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "@bem/gulp": "0.0.5",
-    "@bem/gulp-bh": "gulp-bem/gulp-bh",
     "autoprefixer": "^6.3.3",
     "bem": "^0.10.2",
     "bem-config": "bem-contrib/bem-config#wip-new-with-rc",
@@ -26,11 +25,14 @@
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.2.0",
     "gulp": "gulpjs/gulp#4.0",
+    "gulp-bem-xjst": "voischev/gulp-bem-xjst#d48bfd049cc7357a5da533619ed09f1c561d14c2",
+    "gulp-clone": "^1.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.1.0",
     "gulp-stylus": "^2.3.1",
     "merge2": "^1.0.1",
     "postcss-url": "^5.1.1",
+    "through2": "^2.0.1",
     "ym": "^0.1.2"
   },
   "scripts": {

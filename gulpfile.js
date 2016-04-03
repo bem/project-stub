@@ -7,16 +7,16 @@ var Config = require('bem-config'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     postcssUrl = require('postcss-url'),
-    merge = require('merge2');
+    merge = require('merge2'),
+    clone = require('gulp-clone'),
+    rename = require('gulp-rename'),
+    through = require('through2');
 
-// bh
-var bhEngine = require('@bem/gulp-bh')({
-    jsAttrName: 'data-bem',
-    jsAttrScheme: 'json'
-});
+// bemhtml
+var bemxjst = require('gulp-bem-xjst');
 
 var conf = new Config(),
-    project = bem({ bemconfig: conf.merged.levels });
+    project = bem({ bemconfig: conf.levels });
 
 var bundle = project.bundle({
 	path: 'desktop.bundles/index',
@@ -58,18 +58,20 @@ gulp.task('js', function() {
 	.pipe(gulp.dest(bundle.path()));
 });
 
-gulp.task('bh', function() {
-    return bundle.src({
-        tech: 'bh.js',
-        extensions: ['.bh.js']
-    })
-    .pipe(bhEngine.match());
-});
+gulp.task('html', function() {
+    var tmpl = bundle.src({ tech: 'bemhtml.js', extensions: ['.bemhtml.js', '.bemhtml'] })
+        .pipe(through.obj(function(file, enc, cb) {
+            if (path.basename(file.path) === 'i-bem.bemhtml') {
+                return cb(null);
+            }
+            cb(null, file);
+        }))
+        .pipe(concat(bundle.name()))
+        .pipe(bemxjst.bemhtml());
 
-gulp.task('html', gulp.series('bh', function apply() {
-    return bundle.bemjson()
-        .pipe(bhEngine.apply(bundle.name() + '.html'))
-        .pipe(gulp.dest(bundle.path()));
-}));
+        return bundle.bemjson()
+            .pipe(bemxjst.toHtml(tmpl.pipe(clone())))
+            .pipe(gulp.dest(bundle.path()));
+});
 
 gulp.task('default', gulp.parallel('css', 'js', 'html'));
