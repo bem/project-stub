@@ -9,10 +9,6 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components-php": "2.3.1"
-  },
-  "resolutions": {
-    "bem-components": "2.4.0",
-    "bem-core": "2.8.0"
+    "bem-components-php": "2.5.0"
   }
 }
