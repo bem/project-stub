@@ -6,10 +6,17 @@
 * [bem-core](https://ru.bem.info/libs/bem-core/)
 * [bem-components](https://ru.bem.info/libs/bem-components/)
 
+а также библиотеки с шаблонами для [bh-php][]:
+
+* [bem-core-php](https://github.com/bem/bem-core-php/)
+* [bem-components-php](https://github.com/bem/bem-components-php/)
+
 ## Требования к установке
 
 * [Node.js 0.10+](http://nodejs.org) – это программная платформа, основанная на языке JavaScript и позволяющая легко создавать быстрые и масштабируемые сетевые приложения.
 * [Git Bash](http://msysgit.github.io/) – для пользователей операционной системы Windows.
+* [PHP 5.4+](http://php.net) — популярный общецелевой скриптовый язык, особенно подходящий для веб-разработки.
+* [Composer](https://getcomposer.org/) — Менеджер Зависимостей для PHP.
 
 ## Поддерживаемые браузеры
 
@@ -24,12 +31,13 @@
 Клонируем репозиторий и устанавливаем все необходимые зависимости:
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.5.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch bem-core-php my-bem-project
 cd my-bem-project
-npm install  # Не используйте права суперпользователя (`root`) при установке npm- и bower-зависимостей.
+npm install  # Не используйте права суперпользователя (`root`) при установке npm-, bower- и composer-зависимостей.
 ```
 
-bower-зависимости автоматически устанавливаются при выполнении `npm postinstall` в папку `libs`.
+`bower`-зависимости автоматически устанавливаются при выполнении `npm postinstall` в папку `libs`.
+`composer`-зависимости — в папку `vendor`.
 
 ## Практическое применение
 
@@ -147,3 +155,5 @@ bem create -l desktop.bundles -b page
 * [Мастер-класс: разрабатываем сайт с нуля на полном стеке БЭМ-технологий](https://ru.bem.info/talks/bemup-minsk-2014/#Мастер-класс:-разрабатываем-сайт-с-нуля-на-полном-стеке-БЭМ-технологий-—-Жека-Константинов,-Дима-Белицкий-и-Слава-Аристов)
 * [Мастер-класс наоборот: вы пишете БЭМ-проект, а мы подсказываем](https://ru.bem.info/talks/bemup-spb-2014/#Мастер-класс-наоборот:-вы-пишете-БЭМ-проект,-а-мы-подсказываем-—-Евгений-Константинов,-Дима-Белицкий,-Яндекс)
 * [Инструменты фронтенд-разработчика](https://ru.bem.info/talks/bemup-moscow-2014/#Инструменты-фронтенд-разработчика-—-Владимир-Гриненко)
+
+[bh-php]: https://github.com/bem/bh-php

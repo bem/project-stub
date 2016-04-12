@@ -26,7 +26,7 @@
   "scripts": {
     "start": "enb server",
     "postinstall": "npm run deps",
-    "deps": "bower i --allow-root"
+    "deps": "bower i --allow-root; composer install"
   },
   "private": true
 }

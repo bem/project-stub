@@ -16,7 +16,8 @@ And also templates for [bh-php][]:
 
 * [Node.js 0.12+](http://nodejs.org) is a platform built on Chrome JavaScript runtime for easily building fast, scalable network applications.
 * [Git Bash](http://msysgit.github.io/) if you use Windows OS.
-* [PHP 5.3+](http://php.net) is a for running PHP scripts.
+* [PHP 5.4+](http://php.net) is a popular general-purpose scripting language that is especially suited to web development.
+* [Composer](https://getcomposer.org/) is a Dependency Manager for PHP.
 
 ## Supported browsers
 
@@ -31,12 +32,13 @@ So, how easy is it to get started with BEM? — *Super easy!*
 It's as easy as...
 
 ```
-git clone https://github.com/bem/project-stub.git --depth 1 --branch v1.5.0 my-bem-project
+git clone https://github.com/bem/project-stub.git --depth 1 --branch bem-core-php my-bem-project
 cd my-bem-project
-npm install # Do not use root privilege to install npm and bower dependencies.
+npm install # Do not use root privilege to install npm, bower and composer dependencies.
 ```
 
 `bower` dependencies are installed in the `libs` directory by `npm postinstall`.
+While `composer` dependencies in the `vendor` directory.
 
 ## Usage
 
