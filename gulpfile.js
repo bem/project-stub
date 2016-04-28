@@ -76,18 +76,19 @@ gulp.task('js', () =>
 
 gulp.task('html', () => {
     let tmpl = bundle.src({ tech: 'bemhtml.js', extensions: ['.bemhtml.js', '.bemhtml'] })
-        .pipe(thru.obj(function(file, enc, cb) {
-            if (path.basename(file.path) === 'i-bem.bemhtml') {
-                return cb(null);
-            }
-            cb(null, file);
-        }))
-        .pipe(concat(bundle.name()))
-        .pipe(bemxjst.bemhtml());
+            .pipe(thru.obj(function(file, enc, cb) {
+                if (path.basename(file.path) === 'i-bem.bemhtml') return cb(null);
+                cb(null, file);
+            }))
+            .pipe(concat(bundle.name()))
+            .pipe(bemxjst.bemhtml()),
 
-    let html = bundle.bemjson().pipe(bemxjst.toHtml(tmpl.pipe(clone())));
+        html = bundle.bemjson().pipe(bemxjst.toHtml(tmpl.pipe(clone())));
 
-    return merge(html, tmpl.pipe(clone()))
+    return merge(
+            html,
+            tmpl.pipe(clone())
+        )
         .pipe(gulp.dest(bundle.path()))
         .pipe(debug());
 });
