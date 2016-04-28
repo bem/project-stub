@@ -1,55 +1,44 @@
 'use strict';
 
-var Config = require('bem-config');
-var bem = require('@bem/gulp');
-var gulp = require('gulp');
-var path = require('path');
-var concat = require('gulp-concat');
-var clone = require('gulp-clone');
-var debug = require('gulp-debug');
-var co = require('co');
-var toArray = require('stream-to-array');
+const config = require('bem-config')();
+const bem = require('@bem/gulp');
+const gulp = require('gulp');
+const path = require('path');
+const concat = require('gulp-concat');
+const clone = require('gulp-clone');
+const debug = require('gulp-debug');
+const merge = require('merge2');
 
 // css
-var stylus = require('gulp-stylus');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var postcssUrl = require('postcss-url');
-var csso = require('gulp-csso');
+const stylus = require('gulp-stylus');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const postcssUrl = require('postcss-url');
+const csso = require('gulp-csso');
 
 // js
-var merge = require('merge2');
-var uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify');
 
-// bh
-var bhEngine = require('@bem/gulp-bh')({'jsAttrName': 'data-bem', 'jsAttrScheme': 'json'});
-
-var thru = require('through2');
+const thru = require('through2');
 
 // bemhtml
-var bemxjst = require('gulp-bem-xjst');
+const bemxjst = require('gulp-bem-xjst');
 
-var config = Config();
-var projectPlz = config.get().then(function(conf) {
-    return bem({ bemconfig: conf.levels });
-});
-var bundlePlz = projectPlz.then(function(project) {
-    return project.bundle({
-        path: 'desktop.bundles/index',
-        decl: 'index.bemjson.js'
-    });
-});
+// uglification flag
+const isProd = process.env.YENV === 'production';
 
-var isProd = process.env.YENV === 'production';
+const project = bem({ bemconfig: config.getSync().levels });
+const bundle = project.bundle({
+    path: 'desktop.bundles/index',
+    decl: 'index.bemjson.js'
+});
 
 function skip() {
     return thru.obj();
 }
 
-gulp.task('css', () => co(function*() {
-    let bundle = yield bundlePlz;
-
-    yield toArray(bundle.src({
+gulp.task('css', () =>
+    bundle.src({
         tech: 'css',
         extensions: ['.css', '.styl']
     })
@@ -59,38 +48,34 @@ gulp.task('css', () => co(function*() {
             browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
         }),
         postcssUrl({
-            url: function(url, decl, from) {
-                return path.relative(
+            url: (url, decl, from) =>
+                path.relative(
                     path.resolve(process.cwd(), bundle.path()),
-                    path.resolve(from, url)
-                );
-            }
+                    path.resolve(from, url))
         })
     ]))
-    .pipe(isProd ? csso() : skip())
     .pipe(concat(bundle.name() + '.min.css'))
-    .pipe(gulp.dest(bundle.path())));
-}));
+    .pipe(isProd ? csso() : skip())
+    .pipe(gulp.dest(bundle.path()))
+    .pipe(debug())
+);
 
-gulp.task('js', () => co(function*() {
-    let bundle = yield bundlePlz;
-
-    yield toArray(merge(
+gulp.task('js', () =>
+    merge(
         gulp.src(require.resolve('ym')),
         bundle.src({
             tech: 'js',
             extensions: ['.js', '.vanilla.js', '.browser.js']
         })
     )
-    .pipe(isProd ? uglify() : skip())
     .pipe(concat(bundle.name() + '.min.js'))
-    .pipe(gulp.dest(bundle.path())));
-}));
+    .pipe(isProd ? uglify() : skip())
+    .pipe(gulp.dest(bundle.path()))
+    .pipe(debug())
+);
 
-gulp.task('html', () => co(function*() {
-    let bundle = yield bundlePlz;
-
-    var tmpl = bundle.src({ tech: 'bemhtml.js', extensions: ['.bemhtml.js', '.bemhtml'] })
+gulp.task('html', () => {
+    let tmpl = bundle.src({ tech: 'bemhtml.js', extensions: ['.bemhtml.js', '.bemhtml'] })
         .pipe(thru.obj(function(file, enc, cb) {
             if (path.basename(file.path) === 'i-bem.bemhtml') {
                 return cb(null);
@@ -100,10 +85,11 @@ gulp.task('html', () => co(function*() {
         .pipe(concat(bundle.name()))
         .pipe(bemxjst.bemhtml());
 
-    yield toArray(bundle.bemjson()
-        .pipe(bemxjst.toHtml(tmpl))
+    let html = bundle.bemjson().pipe(bemxjst.toHtml(tmpl.pipe(clone())));
+
+    return merge(html, tmpl.pipe(clone()))
         .pipe(gulp.dest(bundle.path()))
-        .pipe(debug()));
-}));
+        .pipe(debug());
+});
 
 gulp.task('default', gulp.parallel('css', 'js', 'html'));
