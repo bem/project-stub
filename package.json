@@ -13,13 +13,30 @@
     "bower": "^1.7.9"
   },
   "devDependencies": {
+    "@bem/gulp": "^0.0.7",
+    "autoprefixer": "^6.3.3",
     "bem": "^0.10.2",
+    "bem-config": "^1.1.0",
+    "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.2.0",
     "enb-bem-techs": "^2.2.1",
     "enb-bemxjst": "^6.4.0",
     "enb-borschik": "^2.4.0",
     "enb-js": "^1.1.0",
-    "enb-stylus": "^2.3.2"
+    "enb-stylus": "^2.3.2",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-bem-xjst": "^1.1.0",
+    "gulp-clone": "^1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.1.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-postcss": "^6.1.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "merge2": "^1.0.1",
+    "postcss-url": "^5.1.1",
+    "through2": "^2.0.1",
+    "ym": "^0.1.2"
   },
   "scripts": {
     "start": "enb server",
