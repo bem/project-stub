@@ -13,10 +13,10 @@
     "bower": "^1.7.9"
   },
   "devDependencies": {
-    "@bem/gulp": "0.0.6",
+    "@bem/gulp": "^0.0.7",
     "autoprefixer": "^6.3.3",
     "bem": "^0.10.2",
-    "bem-config": "1.1.0",
+    "bem-config": "^1.1.0",
     "borschik-tech-cleancss": "^2.1.0",
     "enb": "^1.2.0",
     "enb-bem-techs": "^2.2.1",
