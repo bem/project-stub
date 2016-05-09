@@ -9,6 +9,11 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "2.5.1"
+    "bem-components": "2.5.1",
+    "bem-forms": "v1.0.0"
+  },
+  "resolutions": {
+    "bem-components": "2.5.1",
+    "bem-core": "2.9.1"
   }
 }
