@@ -131,7 +131,7 @@ This generator provides you the ability to get the base of BEM project in few mi
 
 ## Docs
 
-- [Full stack quick start](https://en.bem.info/articles/start-with-project-stub/)
+- [Full stack quick start](https://en.bem.info/tutorials/start-with-project-stub/)
 - [Static quick-start](https://en.bem.info/tutorials/quick-start-static/)
 - [Tutorial for BEMJSON template-engine](https://en.bem.info/technology/bemjson/current/bemjson/)
 - [Tutorial on BEMHTML](https://en.bem.info/libs/bem-core/2.0.0/bemhtml/reference/)
