@@ -123,7 +123,7 @@ bem create -l desktop.bundles -b page
 
 ## Полезные ссылки
 
-* [Создаем свой проект на БЭМ](https://ru.bem.info/articles/start-with-project-stub/)
+* [Создаем свой проект на БЭМ](https://ru.bem.info/tutorials/start-with-project-stub/)
 * [Собираем статическую страницу на БЭМ](https://ru.bem.info/tutorials/quick-start-static/)
 * [Справочное руководство по BEMJSON](https://ru.bem.info/technology/bemjson/current/bemjson/)
 * [Руководство пользователя по BEMHTML](https://ru.bem.info/libs/bem-core/current/bemhtml/reference/)
