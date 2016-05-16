@@ -1,6 +1,6 @@
 {
   "name": "bem-project-stub",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "BEM project stub",
   "bugs": "https://github.com/bem/project-stub/issues",
   "ignore": [
@@ -9,6 +9,6 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "2.5.1"
+    "bem-components": "3.0.0"
   }
 }
