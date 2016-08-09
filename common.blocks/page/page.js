@@ -19,6 +19,8 @@ provide(BEMDOM.decl(this.name, {
                 ]).then(function() {
                     console.info('test1 scripts loaded');
 
+                    BEMHTML.compile(runtimeTemplates);
+
                     modules.require('i-bem__dom_init', function() {
                         var pageBemhtml = { block : 'test1', content : 'test1' },
                             pageHtml = BEMHTML.apply(pageBemhtml),
