@@ -99,4 +99,32 @@ module.exports = function(config) {
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
     });
+
+    config.includeConfig('enb-bem-specs');
+
+    var examples = config.module('enb-bem-specs').createConfigurator('specs');
+
+    examples.configure({
+        destPath: 'desktop.specs',
+        levels: ['common.blocks'],
+        jsSuffixes: ['vanilla.js', 'browser.js', 'js'],
+        scripts: ['https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js'],
+        sourceLevels: [
+            { path: 'libs/bem-core/common.blocks', check: false },
+            { path: 'libs/bem-core/desktop.blocks', check: false },
+            { path: 'libs/bem-components/common.blocks', check: false },
+            { path: 'libs/bem-components/desktop.blocks', check: false },
+            { path: 'libs/bem-components/design/common.blocks', check: false },
+            { path: 'libs/bem-components/design/desktop.blocks', check: false },
+            { path: 'libs/bem-pr/spec.blocks', check: false },
+            'common.blocks'
+        ],
+        templateEngine: {
+            bemtreeTemplateTech: require('enb-bemxjst/techs/bemtree'),
+            templateTech: require('enb-bemxjst/techs/bemhtml'),
+            templateOptions: { sourceSuffixes: ['bemhtml', 'bemhtml.js'] },
+            htmlTech: require('enb-bemxjst/techs/bemjson-to-html'),
+            htmlTechOptionNames: { bemjsonFile: 'bemjsonFile', templateFile: 'bemhtmlFile' }
+        }
+    });
 };

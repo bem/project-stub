@@ -8,6 +8,7 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "3.1.2"
+    "bem-components": "3.1.2",
+    "bem-pr": "^0.13.0"
   }
 }
