@@ -19,7 +19,8 @@
     "enb-bemxjst": "^6.4.1",
     "enb-borschik": "^2.4.0",
     "enb-js": "^1.1.0",
-    "enb-stylus": "^2.3.2"
+    "enb-stylus": "^2.3.2",
+    "sharps": "^3.0.3"
   },
   "scripts": {
     "start": "enb server",
