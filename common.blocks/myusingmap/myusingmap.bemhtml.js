@@ -1,0 +1,3 @@
+block('myusingmap')(
+    js()(true)
+);
