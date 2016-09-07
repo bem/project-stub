@@ -6,9 +6,9 @@ modules.define('myusingmap', ['i-bem-dom', 'BEMHTML', 'map'], function (provide,
             'js': {
                 'inited': function () {
                     Promise.all([this._getHeatmapData(), this._getCompetitorsData()])
-                        .then(function (pData) {
-                            var heatmapData = pData[0],
-                                competitorsData = pData[1],
+                        .then(function (resolvedData) {
+                            var heatmapData = resolvedData[0],
+                                competitorsData = resolvedData[1],
                                 hItems = heatmapData.items,
                                 cItems = competitorsData.items;
                             var data = {
@@ -113,9 +113,7 @@ modules.define('myusingmap', ['i-bem-dom', 'BEMHTML', 'map'], function (provide,
                     }
                 ]
             };
-            return new Promise(function (resolve, reject) {
-                resolve(data);
-            });
+            return Promise.resolve(data);
         },
 
         _getCompetitorsData: function () {
@@ -139,9 +137,7 @@ modules.define('myusingmap', ['i-bem-dom', 'BEMHTML', 'map'], function (provide,
                     {"lat":53.1141,"lon":30.012,"names":[{"value":"Какой-то еще конкурент","locale":"ru"}]}
                 ]
             };
-            return new Promise(function (resolve, reject) {
-                resolve(data);
-            });
+            return Promise.resolve(data);
         }
     }))
 });

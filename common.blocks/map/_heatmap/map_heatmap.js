@@ -3,45 +3,47 @@ modules.define(
     ['ymaps__heatmap'],
     function(provide, ymapsHeatmap, Map) {
 
-    provide(Map.declMod({ modName: 'heatmap', modVal: true }, {
+provide(Map.declMod({ modName: 'heatmap', modVal: true }, {
 
-        /**
-         * Initialize new map
-         * @return {Promise}
-         */
-        init: function () {
-            return this.__base()
-                .then(function (map) {
-                    var params = this.params,
-                        options = params.options,
-                        isArray = Array.isArray;
-                    this._heatmap = new ymapsHeatmap(this.params.data);
+    /**
+     * Initialize new map
+     * @return {Promise}
+     */
+    init: function () {
+        return this.__base.apply(this, arguments)
+            .then(function (map) {
+                var params = this.params,
+                    options = params.options;
 
-                    for (var index in options) {
-                        this._heatmap.options.set(index, options[index]);
-                    }
-                    this._heatmap.setMap(map);
+                this._heatmap = new ymapsHeatmap(params.data);
+
+                options && Object.keys(options).forEach(function (index) {
+                    this._heatmap.options.set(index, options[index]);
                 }.bind(this));
-        },
 
-        getHeatmap: function () {
-            if (this._heatmap) {
-                return Promise.resolve(this._heatmap);
-            }
+                this._heatmap.setMap(map);
 
-            return this.init();
-        },
+                return this._heatmap;
+            }.bind(this));
+    },
 
-        setData: function (data) {
-            this.getHeatmap()
-                .then(function (heatmap) {
-                    heatmap.setData(data);
-                });
+    getHeatmap: function () {
+        if (this._heatmap) {
+            return Promise.resolve(this._heatmap);
         }
 
-    }, {
-        lazyInit: true
-    }));
+        return this.init();
+    },
 
+    setData: function (data) {
+        this.getHeatmap()
+            .then(function (heatmap) {
+                heatmap.setData(data);
+            });
     }
-);
+
+}, {
+    lazyInit: true
+}));
+
+});
