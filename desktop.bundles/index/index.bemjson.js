@@ -12,22 +12,22 @@ module.exports = {
     content : [
         {
             block: 'myusingmap',
-            content: {
-                block: 'map',
-                mods: { heatmap: true },
-                js: {
-                    center: [37.782551, -122.445368],
-                    points: [{
-                        coords: [37.782551, -122.445368],
-                        opts: { draggable: true, preset: 'islands#blueStretchyIcon' }
-                    }],
-                    options: {
-                        opacity: 1
-                    },
-                    data: [[37.782551, -122.445368], [37.782745, -122.444586]],
-                    controls: ['rulerControl', 'typeSelector', 'zoomControl', 'fullscreenControl']
-                }
-            }
+            // content: {
+            //     block: 'map',
+            //     mods: { heatmap: true },
+            //     js: {
+            //         center: [37.782551, -122.445368],
+            //         points: [{
+            //             coords: [37.782551, -122.445368],
+            //             opts: { draggable: true, preset: 'islands#blueStretchyIcon' }
+            //         }],
+            //         options: {
+            //             opacity: 1
+            //         },
+            //         data: [[37.782551, -122.445368], [37.782745, -122.444586]],
+            //         controls: ['rulerControl', 'typeSelector', 'zoomControl', 'fullscreenControl']
+            //     }
+            // }
         }
     ]
 };

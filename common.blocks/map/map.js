@@ -18,7 +18,7 @@ provide(bemDom.declBlock(this.name, {
 
                 this._map = new this.YMaps.Map(this.domElem.get(0), {
                     center: center,
-                    zoom: params.zoom || 14,
+                    zoom: params.zoom || 7,
                     behaviors: params.behaviors,
                     controls: params.controls
                 });

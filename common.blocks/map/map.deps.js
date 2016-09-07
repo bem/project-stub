@@ -1,5 +1,5 @@
 ({
-    mustDeps: ['i-bem', 'i-bem-dom'],
+    mustDeps: ['i-bem', 'i-bem-dom', 'i18n'],
     shouldDeps: [
         'ymaps'
     ]

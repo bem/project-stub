@@ -17,7 +17,11 @@ var techs = {
 
         // bemhtml
         bemhtml: require('enb-bemxjst/techs/bemhtml'),
-        bemjsonToHtml: require('enb-bemxjst/techs/bemjson-to-html')
+        bemjsonToHtml: require('enb-bemxjst/techs/bemjson-to-html'),
+
+        // i18n
+        keysets: require('enb-bem-i18n/techs/keysets'),
+        i18n: require('enb-bem-i18n/techs/i18n'),
     },
     enbBemTechs = require('enb-bem-techs'),
     levels = [
@@ -34,6 +38,7 @@ var techs = {
 module.exports = function(config) {
     var isProd = process.env.YENV === 'production';
 
+    config.setLanguages(['en', 'ru']);
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
             // essential
@@ -84,7 +89,8 @@ module.exports = function(config) {
                 target: '?.browser.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
                 sourceSuffixes: ['bemhtml', 'bemhtml.js'],
-                elemJsInstances: true
+                elemJsInstances: true,
+                forceBaseTemplates: true
             }],
 
             // js
@@ -96,9 +102,16 @@ module.exports = function(config) {
 
             // borschik
             [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
-            [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }]
+            [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }],
+
+            //i18n
+            [techs.keysets, { lang: '{lang}' }],
+            [techs.i18n, {
+                exports: { ym: true, commonJS: true },
+                lang: '{lang}'
+            }],
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js', '?.lang.{lang}.js']);
     });
 };
