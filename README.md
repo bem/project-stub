@@ -9,7 +9,7 @@ There are two main BEM libraries are linked here by default:
 
 ## Installation requirements
 
-* [Node.js 0.12+](https://nodejs.org) is a platform built on JavaScript runtime for easily building fast, scalable network applications.
+* [Node.js 4+](https://nodejs.org) is a platform built on JavaScript runtime for easily building fast, scalable network applications.
 * [Git Bash](https://git-for-windows.github.io/) if you use Windows OS.
 
 **Note:** If your operating system is Windows, you must run the following commands in Git Bash with administrator rights. Make sure that you launch Git Bash as an administrator.
