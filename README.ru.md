@@ -43,6 +43,10 @@ npm install
 ```bash
 ./node_modules/.bin/enb make
 ```
+или
+```bash
+./node_modules/.bin/gulp
+```
 
 Чтобы не указывать путь к исполняемому файлу (`./node_modules/.bin/enb`) используйте:
 
@@ -54,6 +58,10 @@ export PATH=./node_modules/.bin:$PATH
 
 ```bash
 enb make
+```
+или
+```bash
+gulp
 ```
 
 ### Базовые команды ENB
