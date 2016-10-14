@@ -51,8 +51,8 @@ gulp.task('build', () => {
                         }),
                         postcssUrl({ url: 'inline' })
                     ]))
-                    .pipe(csso())
-                    .pipe(concat(bundle.name + '.min.css')),
+                    .pipe(concat(bundle.name + '.min.css'))
+                    .pipe(csso()),
             js: bundle =>
                 merge(
                     gulp.src(require.resolve('ym')),
