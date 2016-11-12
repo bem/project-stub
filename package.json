@@ -19,6 +19,7 @@
     "enb-bem-techs": "^2.2.1",
     "enb-bemxjst": "^6.4.1",
     "enb-borschik": "^2.4.0",
+    "enb-closure-compiler-js": "^1.0.0",
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.3.2",
     "gulp": "gulpjs/gulp#4.0",

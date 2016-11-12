@@ -5,6 +5,7 @@ var techs = {
 
         // optimization
         borschik: require('enb-borschik/techs/borschik'),
+        closure: require('enb-closure-compiler-js/techs/closure-compiler'),
 
         // css
         stylus: require('enb-stylus/techs/stylus'),
@@ -93,9 +94,11 @@ module.exports = function(config) {
             }],
 
             // borschik
-            [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
+            [techs.borschik, { source: '?.js', target: (isProd ? '?.borschik.js' : '?.min.js'), minify: false }],
             [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }]
         ]);
+
+        isProd && nodeConfig.addTech([techs.closure, { source: '?.borschik.js', target: '?.min.js' }]);
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
     });
