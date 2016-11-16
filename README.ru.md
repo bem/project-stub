@@ -103,13 +103,33 @@ npm i ym --save-dev
 После этого можно создавать блоки с помощью команды `bem create`:
 
 ```bash
-bem create -l desktop.blocks -b newBlock
+bem create new-block
 ```
 
 #### Создание страницы
 
 ```bash
-bem create -l desktop.bundles -b page
+touch desktop.bundles/page/page.bemjson.js
+```
+
+Со следующим содержанием:
+```js
+module.exports = {
+    block: 'page',
+    title: 'page',
+    head: [
+        { elem: 'css', url: 'page.min.css' }
+    ],
+    scripts: [{ elem: 'js', url: 'page.min.js' }],
+    content: [
+       {
+           block: 'new-block',
+           content: [
+               'new block content'
+           ]
+       }
+    ]
+};
 ```
 
 ## Полезные ссылки

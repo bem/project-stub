@@ -1,0 +1,26 @@
+module.exports = {
+    root: true,
+
+    levels: {
+        'common.blocks': {
+            default: true
+        },
+        'desktop.blocks': {},
+        'desktop.bundles': {}
+    },
+
+    modules: {
+        'bem-tools': {
+            plugins: {
+                create: {
+                    techs: ['css', 'js'],
+                    levels: {
+                        'common.blocks': {
+                            default: true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
