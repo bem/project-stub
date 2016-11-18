@@ -29,7 +29,7 @@
     "gulp-csso": "^2.0.0",
     "gulp-debug": "^2.1.2",
     "gulp-postcss": "^6.1.1",
-    "gulp-stylus": "^2.5.0",
+    "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^2.0.0",
     "merge2": "^1.0.2",
     "postcss-url": "^5.1.2",
