@@ -20,7 +20,7 @@
     "enb-bemxjst": "^7.5.0",
     "enb-borschik": "^2.4.0",
     "enb-js": "^1.1.0",
-    "enb-stylus": "^2.3.2",
+    "enb-stylus": "^2.3.3",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-bem-bundle-builder": "^0.1.0",
     "gulp-bem-bundler-fs": "^0.0.6",
