@@ -69,11 +69,11 @@ module.exports = {
                                         attrs: { style: 'border: 1px solid rgba(0, 0, 0, 0.1);' },
                                         content: [
                                             {
-                                                block: 'menu-item',
+                                                elem: 'item',
                                                 content: 'New'
                                             },
                                             {
-                                                block: 'menu-item',
+                                                elem: 'item',
                                                 mods: { disabled: true },
                                                 content: 'Open Recent'
                                             },
@@ -82,17 +82,17 @@ module.exports = {
                                                 title: 'Save',
                                                 content: [
                                                     {
-                                                        block: 'menu-item',
+                                                        elem: 'item',
                                                         content: 'Save as...'
                                                     },
                                                     {
-                                                        block: 'menu-item',
+                                                        elem: 'item',
                                                         content: 'Export'
                                                     }
                                                 ]
                                             },
                                             {
-                                                block: 'menu-item',
+                                                elem: 'item',
                                                 content: 'Close'
                                             }
                                         ]
@@ -108,11 +108,11 @@ module.exports = {
                                                 title: 'Automate',
                                                 content: [
                                                     {
-                                                        block: 'menu-item',
+                                                        elem: 'item',
                                                         content: 'Batch'
                                                     },
                                                     {
-                                                        block: 'menu-item',
+                                                        elem: 'item',
                                                         content: 'Create Droplet'
                                                     }
                                                 ]
@@ -121,7 +121,7 @@ module.exports = {
                                                 elem: 'group',
                                                 content: [
                                                     {
-                                                        block: 'menu-item',
+                                                        elem: 'item',
                                                         mods: { checked: true },
                                                         content: [
                                                             { block: 'icon', mods: { social: 'twitter' } },
@@ -129,7 +129,7 @@ module.exports = {
                                                         ]
                                                     },
                                                     {
-                                                        block: 'menu-item',
+                                                        elem: 'item',
                                                         content: [
                                                             { block: 'icon', mods: { social: 'vk' } },
                                                             'VK'
