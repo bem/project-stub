@@ -8,6 +8,6 @@
     "libs"
   ],
   "dependencies": {
-    "bem-components": "3.1.2"
+    "bem-components": "#v5"
   }
 }
