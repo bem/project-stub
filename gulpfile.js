@@ -3,14 +3,11 @@ const bundler = require('gulp-bem-bundler-fs');
 const gulp = require('gulp');
 const path = require('path');
 const postcss = require('gulp-postcss');
-const postcssUrl = require('postcss-url');
-const autoprefixer = require('autoprefixer');
 const debug = require('gulp-debug');
 const csso = require('gulp-csso');
 const filter = require('through2-filter').obj;
 const merge = require('merge2');
 const concat = require('gulp-concat');
-const stylus = require('gulp-stylus');
 const uglify = require('gulp-uglify');
 const bemhtml = require('gulp-bem-xjst').bemhtml;
 const toHtml = require('gulp-bem-xjst').toHtml;
@@ -29,7 +26,7 @@ const builder = Builder({
     techMap: {
         bemhtml: ['bemhtml.js'],
         js: ['vanilla.js', 'browser.js', 'js'],
-        css: ['styl', 'css']
+        css: ['post.css', 'css']
     }
 });
 
@@ -44,12 +41,19 @@ gulp.task('build', () => {
             //     .pipe(concat(bundle.name + '.bemhtml.deps.js')),
             css: bundle =>
                 bundle.src('css')
-                    .pipe(stylus())
+                    .pipe(require('gulp-one-of')())
                     .pipe(postcss([
-                        autoprefixer({
+                        require('postcss-import')(),
+                        require('postcss-each'),
+                        require('postcss-for'),
+                        require('postcss-simple-vars')(),
+                        require('postcss-calc')(),
+                        require('postcss-nested'),
+                        require('rebem-css'),
+                        require('postcss-url')({ url: 'inline' }),
+                        require('autoprefixer')({
                             browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
-                        }),
-                        postcssUrl({ url: 'inline' })
+                        })
                     ]))
                     .pipe(concat(bundle.name + '.min.css'))
                     .pipe(csso()),
