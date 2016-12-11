@@ -23,7 +23,7 @@
     "enb-stylus": "^2.3.2",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-bem-bundle-builder": "^0.1.0",
-    "gulp-bem-bundler-fs": "^0.0.6",
+    "gulp-bem-bundler-fs": "^0.0.7",
     "gulp-bem-xjst": "^2.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^2.0.0",
