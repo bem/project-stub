@@ -28,7 +28,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^2.0.0",
     "gulp-debug": "^3.0.0",
-    "gulp-one-of": "^1.0.0",
+    "gulp-one-of": "^1.0.1",
     "gulp-postcss": "^6.2.0",
     "gulp-uglify": "^2.0.0",
     "merge2": "^1.0.2",
