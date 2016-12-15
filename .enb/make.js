@@ -19,7 +19,8 @@ var techs = {
             require('postcss-url')({ url: 'inline' }),
             require('autoprefixer')({
                 browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
-            })
+            }),
+            require('postcss-reporter')()
         ],
 
         // js
