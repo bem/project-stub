@@ -69,7 +69,8 @@ module.exports = function(config) {
             // bemhtml
             [techs.bemhtml, {
                 sourceSuffixes: ['bemhtml', 'bemhtml.js'],
-                forceBaseTemplates: true
+                forceBaseTemplates: true,
+                engineOptions : { elemJsInstances : true }
             }],
 
             // html
@@ -93,7 +94,8 @@ module.exports = function(config) {
             [techs.bemhtml, {
                 target: '?.browser.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
-                sourceSuffixes: ['bemhtml', 'bemhtml.js']
+                sourceSuffixes: ['bemhtml', 'bemhtml.js'],
+                elemJsInstances : true
             }],
 
             // js
