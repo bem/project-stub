@@ -95,7 +95,7 @@ module.exports = function(config) {
                 target: '?.browser.bemhtml.js',
                 filesTarget: '?.bemhtml.files',
                 sourceSuffixes: ['bemhtml', 'bemhtml.js'],
-                elemJsInstances : true
+                engineOptions : { elemJsInstances : true }
             }],
 
             // js
