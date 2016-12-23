@@ -2,6 +2,12 @@
   "author": "",
   "name": "bem-project-stub",
   "version": "2.0.0",
+  "browserslist": [
+    "ie >= 10",
+    "opera 12.1",
+    "> 2%",
+    "last 2 versions"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/bem/project-stub.git"
