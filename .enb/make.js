@@ -17,9 +17,7 @@ var techs = {
             require('postcss-nested'),
             require('rebem-css'),
             require('postcss-url')({ url: 'inline' }),
-            require('autoprefixer')({
-                browsers: ['ie >= 10', 'last 2 versions', 'opera 12.1', '> 2%']
-            }),
+            require('autoprefixer')(),
             require('postcss-reporter')()
         ],
 
