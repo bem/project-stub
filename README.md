@@ -30,7 +30,7 @@ cd my-bem-project
 npm install
 ```
 
-**Note:** Do not use `root` rights to install npm and bower dependencies. bower dependencies are installed in the `libs` directory by `npm postinstall`.
+**Note:** Do not use `root` rights to install `npm` dependencies.
 
 ## Usage
 

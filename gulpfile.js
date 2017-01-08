@@ -14,12 +14,12 @@ const toHtml = require('gulp-bem-xjst').toHtml;
 
 const builder = Builder({
     levels: [
-        'libs/bem-core/common.blocks',
-        'libs/bem-core/desktop.blocks',
-        'libs/bem-components/common.blocks',
-        'libs/bem-components/desktop.blocks',
-        'libs/bem-components/design/common.blocks',
-        'libs/bem-components/design/desktop.blocks',
+        'node_modules/bem-core/common.blocks',
+        'node_modules/bem-core/desktop.blocks',
+        'node_modules/bem-components/common.blocks',
+        'node_modules/bem-components/desktop.blocks',
+        'node_modules/bem-components/design/common.blocks',
+        'node_modules/bem-components/design/desktop.blocks',
         'common.blocks',
         'desktop.blocks'
     ],
