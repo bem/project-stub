@@ -58,6 +58,7 @@ module.exports = function(config) {
             // css
             [techs.postcss, {
                 target: '?.css',
+                oneOfSourceSuffixes: ['post.css', 'css'],
                 plugins: techs.postcssPlugins
             }],
 
