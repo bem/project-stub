@@ -13,8 +13,16 @@ module.exports = {
         'bem-tools': {
             plugins: {
                 create: {
+                    templates: {
+                        'bemjson.js': '../../../.bem/templates/bemjson.js',
+                    },
                     techs: ['css', 'js'],
                     levels: {
+                        'desktop.bundles': {
+                            techs: [
+                                'bemjson.js',
+                            ],
+                        },
                         'common.blocks': {
                             default: true
                         }
