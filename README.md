@@ -1,5 +1,7 @@
 # Stub to start a new BEM project
 
+[![Build Status](https://travis-ci.org/bem/project-stub.svg?branch=master)](https://travis-ci.org/bem/project-stub)
+
 Project-stub is a template project repository used for BEM projects creation. It contains the minimal configuration files and folders you will need for quick start from scratch.
 
 There are two main BEM libraries are linked here by default:
