@@ -68,7 +68,7 @@ gulp.task('build', () => {
             tmpls: bundle =>
                 bundle.src('bemhtml')
                     .pipe(concat('any.bemhtml.js'))
-                    .pipe(bemhtml())
+                    .pipe(bemhtml({ elemJsInstances: true }))
                     .pipe(concat(bundle.name + '.bemhtml.js')),
             html: bundle => {
                 const bemhtmlApply = () => toHtml(bundle.target('tmpls'));
