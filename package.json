@@ -52,7 +52,8 @@
   },
   "scripts": {
     "test": "enb make && enb make clean && gulp",
-    "start": "enb server"
+    "start": "enb server",
+    "build": "enb make"
   },
   "private": true
 }
