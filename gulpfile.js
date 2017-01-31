@@ -1,5 +1,6 @@
 const Builder = require('gulp-bem-bundle-builder');
 const bundler = require('gulp-bem-bundler-fs');
+const bundlerMerged = require('gulp-bem-bundler-merged');
 const gulp = require('gulp');
 const path = require('path');
 const postcss = require('gulp-postcss');
@@ -31,7 +32,13 @@ const builder = Builder({
 });
 
 gulp.task('build', () => {
-    return bundler('*.bundles/*')
+    return merge(
+            bundler(['*.bundles/*', '!*.bundles/common' ]),
+            bundler(['*.bundles/*', '!*.bundles/common' ]).pipe(bundlerMerged({
+                name: 'common',
+                path: 'desktop.bundles/common/common.bemdecl.js'
+            }))
+        )
         .pipe(builder({
             // cssdeps: bundle => bundle.src('css', {deps: true})
             //     .pipe(concat(bundle.name + '.css.deps.js')),
