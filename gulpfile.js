@@ -1,16 +1,21 @@
+const path = require('path');
+
 const Builder = require('gulp-bem-bundle-builder');
 const bundler = require('gulp-bem-bundler-fs');
 const gulp = require('gulp');
-const path = require('path');
 const postcss = require('gulp-postcss');
 const debug = require('gulp-debug');
 const csso = require('gulp-csso');
 const filter = require('through2-filter').obj;
 const merge = require('merge2');
 const concat = require('gulp-concat');
+const gulpif = require('gulp-if');
 const uglify = require('gulp-uglify');
 const bemhtml = require('gulp-bem-xjst').bemhtml;
 const toHtml = require('gulp-bem-xjst').toHtml;
+
+const YENV = process.env.YENV || 'development';
+const isProd = YENV === 'production';
 
 const builder = Builder({
     levels: [
@@ -55,16 +60,16 @@ gulp.task('build', () => {
                         require('postcss-reporter')()
                     ]))
                     .pipe(concat(bundle.name + '.min.css'))
-                    .pipe(csso()),
+                    .pipe(gulpif(isProd, csso())),
             js: bundle =>
                 merge(
                     gulp.src(require.resolve('ym')),
                     bundle.src('js').pipe(filter(f => ~['vanilla.js', 'browser.js', 'js'].indexOf(f.tech))),
                     bundle.src('js').pipe(filter(file => file.tech === 'bemhtml.js'))
-                        .pipe(concat('browser.bemhtml.js')).pipe(bemhtml())
+                        .pipe(concat('browser.bemhtml.js')).pipe(bemhtml({ elemJsInstances: true }))
                 )
-                    .pipe(uglify())
-                    .pipe(concat(bundle.name + '.min.js')),
+                    .pipe(concat(bundle.name + '.min.js'))
+                    .pipe(gulpif(isProd, uglify())),
             tmpls: bundle =>
                 bundle.src('bemhtml')
                     .pipe(concat('any.bemhtml.js'))
