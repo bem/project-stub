@@ -1,0 +1,103 @@
+@font-face {
+    font-family: icomoon;
+    src: url(../fonts/icomoon.eot);
+    src: url(../fonts/icomoon.eot?#iefix) format('embedded-opentype'), url(../fonts/icomoon.woff) format('woff'), url(../fonts/icomoon.ttf) format('truetype'), url(../fonts/icomoon.svg#icomoon) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Phenomena-Light;
+    src: local('Phenomena Thin'), local('Phenomena-Light'), url(../fonts/Phenomenathin.woff2) format('woff2'), url(../fonts/Phenomenathin.woff) format('woff'), url(../fonts/Phenomenathin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Phenomena-ExtraLight;
+    src: local('Phenomena ExtraLight'), local('Phenomena-ExtraLight'), url(../fonts/Phenomenaextralight.woff2) format('woff2'), url(../fonts/Phenomenaextralight.woff) format('woff'), url(../fonts/Phenomenaextralight.ttf) format('truetype');
+    font-weight: 200;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Phenomena-Light;
+    src: local('Phenomena Light'), local('Phenomena-Light'), url(../fonts/Phenomenalight.woff2) format('woff2'), url(../fonts/Phenomenalight.woff) format('woff'), url(../fonts/Phenomenalight.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Phenomena-Regular;
+    src: local('Phenomena'), local('Phenomena-Regular'), url(../fonts/Phenomena.woff2) format('woff2'), url(../fonts/Phenomena.woff) format('woff'), url(../fonts/Phenomena.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Phenomena-Bold;
+    src: local('Phenomena Bold'), local('Phenomena-Bold'), url(../fonts/Phenomenabold.woff2) format('woff2'), url(../fonts/Phenomenabold.woff) format('woff'), url(../fonts/Phenomenabold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Phenomena-ExtraBold;
+    src: local('Phenomena ExtraBold'), local('Phenomena-ExtraBold'), url(../fonts/Phenomenaextrabold.woff2) format('woff2'), url(../fonts/Phenomenaextrabold.woff) format('woff'), url(../fonts/Phenomenaextrabold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Phenomena-Black;
+    src: local('Phenomena Black'), local('Phenomena-Black'), url(../fonts/Phenomenablack.woff2) format('woff2'), url(../fonts/Phenomenablack.woff) format('woff'), url(../fonts/Phenomenablack.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Russia;
+    src: url(../fonts/Russia.eot);
+    src: url(../fonts/Russia.eot?#iefix) format("embedded-opentype"), url(../fonts/Russia.woff) format("woff"), url(../fonts/Russia.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Russia Bold";
+    src: url(../fonts/Russia-Bold.eot);
+    src: url(../fonts/Russia-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/Russia-Bold.woff) format("woff"), url(../fonts/Russia-Bold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Russia Light";
+    src: url(../fonts/Russia-Light.eot);
+    src: url(../fonts/Russia-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/Russia-Light.woff) format("woff"), url(../fonts/Russia-Light.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Russia Medium";
+    src: url(../fonts/Russia-Medium.eot);
+    src: url(../fonts/Russia-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/Russia-Medium.woff) format("woff"), url(../fonts/Russia-Medium.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    src: url("../fonts/fontawesome-webfont.eot");
+    src: url(../fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/fontawesome.otf) format("otf"), url(../fonts/fontawesome-webfont.woff) format("woff"), url(../fonts/fontawesome-webfont.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'OpenGostTypeB';
+    src: local('OpenGost Type B TT Regular'), local('OpenGostTypeBTT-Regular'), url('opengosttypebttregular.woff2') format('woff2'), url('opengosttypebttregular.woff') format('woff'), url('opengosttypebttregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,79 @@
+@import "../../../_bufer/mq.post.css"
+
+.menu__link {
+    padding: 0 15px
+    display: inline-block
+    position: relative
+    box-sizing: border-box
+    outline: none
+    -webkit-tap-highlight-color: transparent
+    font-family: Russia, sans-serif
+    text-decoration: none
+    color: #333
+    font-size: 22px
+    line-height: 2.5
+
+    &::before {
+        width: 100%
+        height: 0
+        background-color: #f0f8fe
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        transition: .4s
+        z-index: -2
+        backface-visibility: hidden
+
+    }
+
+    &::after {
+        width: 100%
+        height: 2px
+        background-color: #68bdf8
+        position: absolute
+        bottom: 0
+        left: 0
+        content: ''
+        transition: .4s
+        transform: scale3d(0, 1, 1)
+        backface-visibility: hidden
+        z-index: -1
+    }
+}
+.menu__link.link_hovered {
+
+    &::before {
+        height: 100%
+    }
+
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.menu__link.link_focused {
+    outline none!important
+    &::before {
+        height: 100%
+    }
+
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.menu__link.link_disabled {
+    color: #777
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+@media (--small-only), (--xsmall-only) {
+    .header__menu .menu__link {
+        display none
+    }
+}
+//
+
