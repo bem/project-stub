@@ -93,7 +93,7 @@ npm start -- --port=8181
 
 #### Stop the server
 
-Press `Ctrl` + `C` or `⌘` + `C` (for MAC devices) while the terminal is your active window to stop the server.
+Press `Ctrl` + `C` while the terminal is your active window to stop the server.
 
 #### Add a block
 
