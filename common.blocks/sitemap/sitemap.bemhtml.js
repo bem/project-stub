@@ -1,0 +1,20 @@
+block('sitemap')(
+    tag()('nav'),
+    elem('section')(
+        tag()('section')
+    ),
+    elem('title')(
+        tag()('h1')
+    ),
+    elem('tree')(
+        tag()('ul')
+    ),
+    elem('item')(
+        tag()('li')
+    ),
+    elem('wrap')(
+        block('image')(
+            tag()('a')
+        )
+    )
+);

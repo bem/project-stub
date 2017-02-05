@@ -1,0 +1,52 @@
+@import "../../../_bufer/mq.post.css"
+
+
+.sitemap__breadcrumbs {
+    padding-left 30px
+    flex-grow 1
+    background-color #f0f8fe
+    border-left 2px solid #333
+    border-right 2px solid #333
+}
+
+.breadcrumbs__content
+    margin-left 30px
+    padding: 0 15px
+    font-family: Russia, sans-serif
+    font-size: 22px
+    text-decoration: none
+    color: #333
+
+@media (--xlarge-only) {
+    .breadcrumbs__content {
+        font-size: 20px
+    }
+}
+
+@media (--large-only) {
+    .breadcrumbs__content {
+        font-size: 16px
+    }
+}
+
+@media (--medium-only) {
+    .sitemap__breadcrumbs {
+        padding-left 10px
+    }
+    .breadcrumbs__content {
+        margin-left 0
+        font-size: 16px
+    }
+}
+
+@media (--small-only) {
+    .sitemap__breadcrumbs {
+        display none
+    }
+}
+
+@media (--xsmall-only) {
+    .sitemap__breadcrumbs {
+        display none
+    }
+}

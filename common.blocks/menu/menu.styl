@@ -1,0 +1,379 @@
+@import "../../_bufer/mq.post.css"
+
+.menu {
+    max-height: 150px
+    width: 900px
+    display: flex
+    flex-direction: column
+    outline none!important
+    z-index 1
+}
+
+.menu__list
+    margin 0
+    padding 0
+    position relative
+    display: flex
+    justify-content space-between
+    align-items center
+    outline none!important
+
+.menu__list_type_down
+    margin-top 5px
+    display: flex
+    align-items flex-end
+
+.menu__item
+    display inline-block
+    outline none!important
+
+
+
+
+@media (--xlarge-only) {
+    .menu {
+        max-height: 135px
+        width: 805px
+    }
+    .menu__list_type_down {
+        margin-top 10px
+    }
+}
+@media (--large-only) {
+    .menu {
+        max-height: 120px
+        width: 650px
+    }
+    .menu__list_type_down {
+        margin-top 10px
+    }
+}
+@media (--medium-only) {
+    .menu {
+        height: 85px
+        width: 650px
+    }
+    .menu__list_type_down {
+        margin-top 5px
+    }
+}
+@media (--small-only) {
+    .menu {
+        max-height 80px
+        width auto
+    }
+    .menu__list {
+        margin 0
+        padding 0
+    }
+}
+
+@media (--xsmall-only) {
+    .menu {
+        width: auto
+    }
+    
+    .menu__list {
+        margin 0
+        padding 0
+    }
+
+    .link_type_1lvl {
+        display none
+    }
+}
+.menu__button {
+    font-size: 0
+    line-height: 0
+    margin 0
+    padding 0 15px
+    display: block
+    position: relative
+    box-sizing: border-box
+    outline: none!important
+    -webkit-tap-highlight-color: transparent
+    transition: .3s
+    height 55px
+    width: 122px
+    
+    &:after {
+        width: 100%
+        height: 2px
+        background-color: #68bdf8
+        position: absolute
+        bottom: 0
+        left: 0
+        content: ''
+        transition: .4s
+        transform: scale3d(0, 1, 1)
+        backface-visibility: hidden
+        z-index: -1
+    }
+    
+    &:before {
+        width: 100%
+        height: 0
+        background-color: #f0f8fe
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        transition: .4s
+        z-index: -2
+        backface-visibility: hidden
+    }
+    
+    & strong {
+        display: inline-block
+        vertical-align: middle
+        font: 22px "Russia", sans-serif
+        color: #333
+        margin-left: 12px
+        transition: .3s
+    }
+    
+    & span {
+        width: 100%
+        display: block
+        position: absolute
+        height: 2px
+        background: #333
+        transition: .3s
+    }
+    
+    & span:nth-of-type(1) {
+        top: 0
+        left: 0
+    }
+    
+    & span:nth-of-type(2) {
+        bottom: 0
+        left: 0
+    }
+    & b {
+        font-size: 0
+        line-height: 0
+        width: 22px
+        height: 15px
+        display: inline-block
+        vertical-align: middle
+        position: relative
+        transition: .3s
+
+        &:after {
+            position: absolute
+            content: ''
+            width: 100%
+            height: 2px
+            background: #333
+            left: 0
+            top: 50%
+            transition: .3s
+            backface-visibility: hidden
+            margin-top: -1px
+        }
+
+        &:before {
+            position: absolute
+            content: ''
+            width: 100%
+            backface-visibility: hidden
+            height: 2px
+            background: #333
+            left: 0
+            top: 50%
+            transition: .3s
+            margin-top: -1px
+        }
+
+    }
+}
+
+.button_hovered {
+
+    &::before {
+        height: 100%
+    }
+
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.button_focused {
+    &::before {
+        height: 100%
+    }
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.button_checked {
+    border-color: transparent
+    & span {
+        background: #fff
+    }
+    & strong {
+        color: #fff
+    }
+    &:after {
+        transform: scale3d(1, 1, 1)
+        height: 100%
+    }
+    & b:after {
+        transform: rotate(45deg)
+        background: #fff
+    }
+    & b:before {
+        transform: rotate(-45deg)
+        background: #fff
+    }
+    & span:nth-of-type(1) {
+        transform: translateY(-10px)
+        opacity: 0
+    }
+    & span:nth-of-type(2) {
+        transform: translateY(10px)
+        opacity: 0
+    }
+}
+
+
+@media (--xlarge-only) {
+    .menu__button {
+        height 50px
+        width: 116px
+        & strong {
+            font-size 20px
+            margin-left: 12px
+        }
+        & b {
+            width: 20px
+            height: 14px
+        }
+    }
+}
+
+@media (--large-only) {
+    .menu__button {
+        padding 0 12px
+        height 40px
+        width: 98px
+        & strong {
+            font-size 16px
+            margin-left: 10px
+        }
+        & b {
+            width: 18px
+            height: 10px
+        }
+    }
+}
+
+@media (--medium-only) {
+    .menu__button {
+        padding 0 12px
+        height 32px
+        width: 98px
+        & strong {
+            font-size 16px
+            margin-left: 10px
+        }
+        & b {
+            width: 18px
+            height: 10px
+        }
+    }
+}
+
+@media (--small-only) {
+    .menu {
+        align-self flex-end
+    }
+    .menu__button {
+        padding 0 15px
+        height auto
+        width: 100px
+        & strong {
+            font-size 14px
+            line-height 2.5
+            margin-left: 10px
+        }
+        & b {
+            width: 20px
+            height: 14px
+        }
+    }
+
+}
+
+@media (--xsmall-only) {
+    .menu .menu__button {
+        padding 0
+        margin 0
+        height 30px
+        width: 30px
+        & strong {
+            margin 0
+            display none
+        }
+        & b {
+            padding 0
+            margin 0
+            width: 30px
+            height: 23px
+
+            &:after {
+                height: 4px
+            }
+
+            &:before {
+                height: 4px
+            }
+        }
+        & span {
+            height: 4px;
+        }
+    }
+    .button_hovered {
+
+        &::before {
+            height: 0
+        }
+
+        &::after {
+            transform: scale3d(0, 1, 1)
+        }
+    }
+    .button_focused {
+        &::before {
+            height: 0
+        }
+        &::after {
+            transform: scale3d(0, 1, 1)
+        }
+    }
+    .button_checked {
+        &::before {
+            background-color #68bdf8
+            height: 100%
+        }
+        & span:nth-of-type(1) {
+            transform: translateY(-1px)
+            z-index -2
+        }
+        & span:nth-of-type(2) {
+            transform: translateY(1px)
+            z-index -2
+        }
+    }
+    .menu__list_type_down {
+        display inline-flex
+    }
+}
+
+
+.popup {
+    position absolute
+}

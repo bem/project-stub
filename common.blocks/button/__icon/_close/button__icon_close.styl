@@ -1,0 +1,86 @@
+@import "../../../../_bufer/mq.post.css"
+
+.button__icon_close {
+    margin 0
+    position: relative;
+    width: 50px;
+    height: 2px;
+    content: '';
+    cursor: pointer;
+    background-color transparent
+    transition: all .3s ease-in-out;
+}
+
+.button__icon_close:after, .button__icon_close:before {
+    position: absolute;
+    left -25px
+    width: 50px;
+    height: 2px;
+    content: '';
+    cursor: pointer;
+    background: #333
+    transition: all .3s ease-in-out;
+}
+
+.button__icon_close:before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.button__icon_close:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+
+@media (--medium-only) {
+    .button__icon_close::after, .button__icon_close::before {
+        left -10px
+        width: 30px;
+    }
+    .button__icon_close {
+        padding 5px
+    }
+    .button__icon_close::before {
+        top : 13px;
+    }
+    .button__icon_close::after {
+        bottom: 12px;
+    }
+}
+
+@media (--small-only) {
+    .button__icon_close {
+        padding 5px
+        width: 20px;
+    }
+    .button__icon_close::after, .button__icon_close::before {
+        margin 0 5px
+        left -10px
+        width: 20px;
+    }
+    .button__icon_close::before {
+        top : 13px;
+    }
+    .button__icon_close::after {
+        bottom: 12px;
+    }
+}
+
+@media (--xsmall-only) {
+    .button__icon_close::after, .button__icon_close::before {
+        left -11px
+        margin 0 8px
+        width: 18px;
+    }
+    .button__icon_close {
+        padding 5px
+        width: 15px;
+    }
+    .button__icon_close::before {
+        top : 13px;
+    }
+    .button__icon_close::after {
+        bottom: 12px;
+    }
+}

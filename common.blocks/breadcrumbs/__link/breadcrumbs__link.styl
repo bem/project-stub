@@ -1,0 +1,81 @@
+.breadcrumbs__link {
+    padding: 0 15px
+    display: inline-block
+    position: relative
+    box-sizing: border-box
+    outline: none
+    -webkit-tap-highlight-color: transparent
+    font-family: Russia, sans-serif
+    text-decoration: none
+    color: #333
+    font-size: 22px
+    line-height: 2.5
+    z-index 1
+    &::before {
+        width: 100%
+        height: 0
+        background-color: #fff
+        position: absolute
+        top: 0
+        left: 0
+        content: ''
+        transition: .4s
+        z-index: -1
+        backface-visibility: hidden
+
+    }
+
+    &::after {
+        width: 100%
+        height: 2px
+        background-color: #68bdf8
+        position: absolute
+        bottom: 0
+        left: 0
+        content: ''
+        transition: .4s
+        transform: scale3d(0, 1, 1)
+        backface-visibility: hidden
+        z-index: 0
+    }
+}
+
+.breadcrumbs__link.link_hovered {
+
+    &::before {
+        height: 100%
+    }
+
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.breadcrumbs__link.link_focused {
+    outline none!important
+    &::before {
+        height: 100%
+    }
+
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.breadcrumbs__link.link_disabled {
+    color: #777
+    &::after {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+
+.breadcrumbs__item::before {
+    margin-right 11px
+    content '/'
+    color #333
+}
+    
+.breadcrumbs__item:first-child::before {
+    display none
+}

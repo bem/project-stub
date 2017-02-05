@@ -1,0 +1,35 @@
+/*
+* XSMALL DISPLAYS:
+*/
+@custom-media --xsmall screen;
+@custom-media --xsmall-only screen and (max-width: 40em);
+
+/*
+* SMALL DISPLAYS:
+*/
+@custom-media --small screen and (min-width: 40.001em);
+@custom-media --small-only screen and (min-width: 40.001em) and (max-width: 60em);
+
+/*
+* MEDIUM DISPLAYS:
+*/
+@custom-media --medium screen and (min-width: 40.001em);
+@custom-media --medium-only screen and (min-width: 60.001em) and (max-width: 75em);
+
+/*
+* LARGE DISPLAYS:
+*/
+@custom-media --large screen and (min-width: 75.001em);
+@custom-media --large-only screen and (min-width: 75.001em) and (max-width: 90em);
+
+/*
+* XLARGE DISPLAYS:
+*/
+@custom-media --xlarge screen and (min-width: 90.001em);
+@custom-media --xlarge-only screen and (min-width: 90.001em) and (max-width: 120em);
+
+/*
+* XXLARGE DISPLAYS:
+*/
+@custom-media --xxlarge screen and (min-width: 120.001em);
+@custom-media --xxlarge-only screen and (min-width: 120.001em) and (max-width: 99999999em);
