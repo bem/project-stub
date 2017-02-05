@@ -1,8 +1,8 @@
 # Stub to start a new BEM project
 
-[![Build Status](https://travis-ci.org/bem/project-stub.svg?branch=master)](https://travis-ci.org/bem/project-stub)
-
 Project-stub is a template project repository used for BEM projects creation. It contains the minimal configuration files and folders you will need for quick start from scratch.
+
+[![Build Status](https://travis-ci.org/bem/project-stub.svg?branch=master)](https://travis-ci.org/bem/project-stub)
 
 There are two main BEM libraries are linked here by default:
 
@@ -36,7 +36,7 @@ npm install
 
 ## Usage
 
-You could use [ENB](https://en.bem.info/toolbox/enb/) to build the project.
+You may use [ENB](https://en.bem.info/toolbox/enb/) or `gulp` to build the project.
 
 You can run `enb` commands via `./node_modules/.bin/enb`.
 
@@ -56,7 +56,7 @@ To be able to run commands without typing a full path to an executable file (`./
 export PATH=./node_modules/.bin:$PATH
 ```
 
-Now you can use `enb` or `gulp` from any point of your project.
+Now you can use `enb` or `gulp` from the root of your project.
 
 ```bash
 enb make
