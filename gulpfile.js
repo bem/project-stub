@@ -2,20 +2,37 @@ const path = require('path');
 
 const Builder = require('gulp-bem-bundle-builder');
 const bundler = require('gulp-bem-bundler-fs');
+
 const gulp = require('gulp');
-const postcss = require('gulp-postcss');
 const debug = require('gulp-debug');
-const csso = require('gulp-csso');
 const filter = require('through2-filter').obj;
 const merge = require('merge2');
 const concat = require('gulp-concat');
 const gulpif = require('gulp-if');
+const gulpOneOf = require('gulp-one-of');
 const uglify = require('gulp-uglify');
-const bemhtml = require('gulp-bem-xjst').bemhtml;
-const toHtml = require('gulp-bem-xjst').toHtml;
+
+const bemxjst = require('gulp-bem-xjst');
+const bemhtml = bemxjst.bemhtml;
+const toHtml = bemxjst.toHtml;
+
+const postcss = require('gulp-postcss');
+const postcssImport = require('postcss-import');
+const postcssEach = require('postcss-each');
+const postcssFor = require('postcss-for');
+const postcssSimpleVars = require('postcss-simple-vars');
+const postcssCalc = require('postcss-calc');
+const postcssNested = require('postcss-nested');
+const rebemCss = require('rebem-css');
+const postcssUrl = require('postcss-url');
+const autoprefixer = require('autoprefixer');
+const postcssReporter = require('postcss-reporter');
+const csso = require('gulp-csso');
 
 const YENV = process.env.YENV || 'development';
 const isProd = YENV === 'production';
+
+const pathToYm = require.resolve('ym');
 
 const builder = Builder({
     levels: [
@@ -46,24 +63,24 @@ gulp.task('build', () => {
             //     .pipe(concat(bundle.name + '.bemhtml.deps.js')),
             css: bundle =>
                 bundle.src('css')
-                    .pipe(require('gulp-one-of')())
+                    .pipe(gulpOneOf())
                     .pipe(postcss([
-                        require('postcss-import')(),
-                        require('postcss-each'),
-                        require('postcss-for'),
-                        require('postcss-simple-vars')(),
-                        require('postcss-calc')(),
-                        require('postcss-nested'),
-                        require('rebem-css'),
-                        require('postcss-url')({ url: 'inline' }),
-                        require('autoprefixer')(),
-                        require('postcss-reporter')()
+                        postcssImport(),
+                        postcssEach,
+                        postcssFor,
+                        postcssSimpleVars(),
+                        postcssCalc(),
+                        postcssNested,
+                        rebemCss,
+                        postcssUrl({ url: 'inline' }),
+                        autoprefixer(),
+                        postcssReporter()
                     ]))
                     .pipe(concat(bundle.name + '.min.css'))
                     .pipe(gulpif(isProd, csso())),
             js: bundle =>
                 merge(
-                    gulp.src(require.resolve('ym')),
+                    gulp.src(pathToYm),
                     bundle.src('js').pipe(filter(f => ~['vanilla.js', 'browser.js', 'js'].indexOf(f.tech))),
                     bundle.src('js').pipe(filter(file => file.tech === 'bemhtml.js'))
                         .pipe(concat('browser.bemhtml.js')).pipe(bemhtml({ elemJsInstances: true }))
