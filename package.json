@@ -32,7 +32,7 @@
     "gulp-bem-bundler-fs": "^0.0.10",
     "gulp-bem-xjst": "^2.0.0",
     "gulp-concat": "^2.6.0",
-    "gulp-csso": "^2.0.0",
+    "gulp-csso": "^3.0.0",
     "gulp-debug": "^3.0.0",
     "gulp-if": "^2.0.2",
     "gulp-one-of": "^1.0.0",
