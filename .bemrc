@@ -2,9 +2,7 @@ module.exports = {
     root: true,
 
     levels: {
-        'common.blocks': {
-            default: true
-        },
+        'common.blocks': {},
         'desktop.blocks': {},
         'desktop.bundles': {}
     },
@@ -14,7 +12,7 @@ module.exports = {
             plugins: {
                 create: {
                     templates: {
-                        'bemjson.js': '../../../.bem/templates/bemjson.js',
+                        'bemjson.js': '.bem/templates/bemjson.js',
                     },
                     techs: ['css', 'js'],
                     levels: {
