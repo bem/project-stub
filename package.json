@@ -16,7 +16,7 @@
     "node": ">=4"
   },
   "devDependencies": {
-    "autoprefixer": "^6.6.0",
+    "autoprefixer": "^7.1.1",
     "bem": "^2.0.0",
     "bem-components": "^6.0.0",
     "bem-core": "^4.2.0",
