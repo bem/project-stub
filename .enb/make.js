@@ -1,4 +1,4 @@
-var techs = {
+const techs = {
         // essential
         fileProvider: require('enb/techs/file-provider'),
         fileMerge: require('enb/techs/file-merge'),
@@ -44,7 +44,7 @@ var techs = {
     ];
 
 module.exports = function(config) {
-    var isProd = process.env.YENV === 'production';
+    const isProd = process.env.YENV === 'production';
 
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
