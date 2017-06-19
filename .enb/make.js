@@ -111,4 +111,25 @@ module.exports = function(config) {
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
     });
+
+
+    // Docs
+    config.includeConfig('enb-bem-examples'); // Подключаем модуль `enb-bem-examples`.
+
+    var examples = config.module('enb-bem-examples') // Создаём конфигуратор сетов
+        .createConfigurator('examples');             //  в рамках `examples`-таска.
+
+    examples.configure({
+        destPath: 'set.examples',
+        levels: ['blocks'],
+        inlineBemjson: true
+    });
+
+
+    var docs = config.module('enb-bem-docs').createConfigurator('docs', 'examples');
+    docs.configure({
+        destPath: 'set.docs',
+        levels: levels,
+        exampleSets: ['set.examples']
+    });
 };
