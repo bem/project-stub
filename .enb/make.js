@@ -62,6 +62,8 @@ module.exports = function(config) {
                 plugins: techs.postcssPlugins
             }],
 
+            [require('enb-css-hash'), { minimize: isProd }],
+
             // bemtree
             // [techs.bemtree, { sourceSuffixes: ['bemtree', 'bemtree.js'] }],
 
@@ -109,6 +111,6 @@ module.exports = function(config) {
             [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }]
         ]);
 
-        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
+        nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js', 'css.json']);
     });
 };
