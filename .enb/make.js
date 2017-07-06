@@ -16,7 +16,7 @@ const techs = {
             require('postcss-calc')(),
             require('postcss-nested'),
             require('rebem-css'),
-            require('postcss-url')({ url: 'inline' }),
+            require('postcss-url')({ url: 'rebase' }),
             require('autoprefixer')(),
             require('postcss-reporter')()
         ],

@@ -72,7 +72,7 @@ gulp.task('build', () => {
                         postcssCalc(),
                         postcssNested,
                         rebemCss,
-                        postcssUrl({ url: 'inline' }),
+                        postcssUrl({ url: 'rebase' }),
                         autoprefixer(),
                         postcssReporter()
                     ]))
