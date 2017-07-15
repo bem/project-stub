@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const techs = {
         // essential
         fileProvider: require('enb/techs/file-provider'),
@@ -29,6 +31,7 @@ const techs = {
 
         // bemhtml
         bemhtml: require('enb-bemxjst/techs/bemhtml'),
+        htmlToBemjson: require('enb-html-to-bemjson/techs/html-to-bemjson'),
         bemjsonToHtml: require('enb-bemxjst/techs/bemjson-to-html')
     },
     enbBemTechs = require('enb-bem-techs'),
@@ -47,10 +50,23 @@ module.exports = function(config) {
     const isProd = process.env.YENV === 'production';
 
     config.nodes('*.bundles/*', function(nodeConfig) {
+        const ext = '.bem.html';
+        const nodePath = nodeConfig.getNodePath();
+        const bundleName = path.basename(nodePath);
+        const hasHtmlSource = fs.existsSync(path.join(nodePath, bundleName) + ext);
+
+        hasHtmlSource && nodeConfig.addTech([techs.htmlToBemjson, {
+            source: '?.bem.html',
+            target: '?.bemjson.js',
+            opts: {
+                naming: 'react'
+            }
+        }]);
+
         nodeConfig.addTechs([
             // essential
             [enbBemTechs.levels, { levels: levels }],
-            [techs.fileProvider, { target: '?.bemjson.js' }],
+            [techs.fileProvider, { target: hasHtmlSource ? '?' + ext : '?.bemjson.js' }],
             [enbBemTechs.bemjsonToBemdecl],
             [enbBemTechs.deps],
             [enbBemTechs.files],
@@ -69,7 +85,12 @@ module.exports = function(config) {
             [techs.bemhtml, {
                 sourceSuffixes: ['bemhtml', 'bemhtml.js'],
                 forceBaseTemplates: true,
-                engineOptions : { elemJsInstances : true }
+                engineOptions : {
+                    elemJsInstances : true,
+                    naming: {
+                        elem: '-'
+                    }
+                }
             }],
 
             // html

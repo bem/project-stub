@@ -11,6 +11,7 @@ module.exports = {
         'bem-tools': {
             plugins: {
                 create: {
+                    naming: 'react',
                     templates: {
                         'bemjson.js': '.bem/templates/bemjson.js',
                     },
