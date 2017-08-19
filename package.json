@@ -16,6 +16,7 @@
     "node": ">=4"
   },
   "devDependencies": {
+    "bem-guidelines": "git://github.com/bemdesign/bem-guidelines.git"
     "autoprefixer": "^7.1.1",
     "bem": "^2.0.0",
     "bem-components": "^6.0.1",
