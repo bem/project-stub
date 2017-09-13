@@ -33,7 +33,7 @@ module.exports = {
             },
             {
                 test: /\.bh(\.js)?$/,
-                loader: 'loaders/bh'
+                loader: 'bh'
             }
         ]
     },
