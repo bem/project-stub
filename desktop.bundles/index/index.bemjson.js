@@ -74,7 +74,7 @@ module.exports = {
                                             },
                                             {
                                                 elem: 'item',
-                                                mods: { disabled: true },
+                                                elemMods: { disabled: true },
                                                 content: 'Open Recent'
                                             },
                                             {
@@ -122,7 +122,7 @@ module.exports = {
                                                 content: [
                                                     {
                                                         elem: 'item',
-                                                        mods: { checked: true },
+                                                        elemMods: { checked: true },
                                                         content: [
                                                             { block: 'icon', mods: { social: 'twitter' } },
                                                             'Twitter'
