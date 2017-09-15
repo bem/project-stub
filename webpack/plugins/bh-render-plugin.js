@@ -13,9 +13,15 @@ BHRenderPlugin.prototype.apply = function (compiler) {
   var resources = [];
 
   compiler.plugin('compilation', function (compilation, callback) {
-    compilation.plugin('normal-module-loader', function (loaderContext) {
-      if (/\.bh\.js$/i.test(loaderContext.resource)) {
-        resources.push(loaderContext.resource);
+    compilation.plugin('normal-module-loader', function (loaderContext, module) {
+      if (module) {
+          if (/\.bh\.js$/i.test(module.resource)) {
+            resources.push(module.resource);
+          }
+      } else  {
+          if (/\.bh\.js$/i.test(loaderContext.resource)) {
+            resources.push(loaderContext.resource);
+          }
       }
     });
   });
