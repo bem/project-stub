@@ -21,6 +21,7 @@
     "bem-components": "^6.0.1",
     "bem-core": "^4.2.1",
     "bem-icons": "^1.0.0",
+    "bem-layouts": "^1.0.0",
     "bem-logos": "^1.0.0",
     "bem-tools-create": "^2.1.0",
     "bem-typo": "^1.0.0",
