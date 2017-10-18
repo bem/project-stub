@@ -1,0 +1,8 @@
+.demo__item {
+	width: 600px;
+	height: 506px;
+	background: url('grid.png');
+	background-size: 600px;
+	margin-top: $space-xl;
+	margin-bottom: $space-xs;
+}

@@ -1,0 +1,6 @@
+.demo {
+	&__example {
+		background-color: #fcfcfc;
+		padding: $space-xxl;
+	}
+}

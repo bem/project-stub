@@ -1,0 +1,6 @@
+.demo__section {
+  margin-bottom: 96px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
