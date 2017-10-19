@@ -1,5 +1,4 @@
 .demo__content {
-	padding-top: calc($space-xxl + $space-xxxl);
 	margin: auto;
 	width: 1140px;
 	&_size {

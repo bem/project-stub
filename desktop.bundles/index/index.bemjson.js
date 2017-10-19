@@ -12,9 +12,8 @@ module.exports = {
       block: 'theme',
       mods: { color: 'default', space: 'default', size: 'default' }
   },
-
   scripts: [{ elem: 'js', url: 'index.min.js' }],
-  mods: { theme: 'islands', 'vertical-align': 'center' },
+  mods: { type: 'full-screen', theme: 'islands', 'vertical-align': 'center' },
   content: [
     {
       block: 'demo',

@@ -8,4 +8,9 @@
       justify-content: center;
     }
   }
+  &_type {
+  	&_full-screen {
+  		min-height: 100vh !important;
+  	}
+  }
 }
