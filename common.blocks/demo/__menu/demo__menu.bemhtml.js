@@ -55,7 +55,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Михаил Колосков, Юлия Музафарова'
                             }
                           ]
                         }
@@ -91,7 +91,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Михаил Колосков'
                             }
                           ]
                         }
@@ -127,7 +127,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Кирилл Федотов, Юлия Музафарова'
                             }
                           ]
                         }
@@ -163,7 +163,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Савелий Бобов, Юлия Музафарова'
                             }
                           ]
                         }
@@ -199,7 +199,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Лера Железова'
                             }
                           ]
                         }
@@ -235,7 +235,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Михаил Колосков'
                             }
                           ]
                         }
@@ -271,7 +271,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Кирилл Федотов, Ксения Лушникова'
                             }
                           ]
                         }
@@ -307,7 +307,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Юлия Музафарова'
                             }
                           ]
                         }
@@ -348,7 +348,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Прототип'
+                              content: 'Документация'
                             }
                           ]
                         },
@@ -358,7 +358,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Михаил Колосков'
                             }
                           ]
                         }
@@ -376,7 +376,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://'
+                                'href': 'https://github.com/bemdesign/bem-acticles/blob/master/icons.md'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Гайд по иконкам'
@@ -384,7 +384,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Прототип'
+                              content: 'Документация'
                             }
                           ]
                         },
@@ -394,7 +394,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Кирилл Федотов'
                             }
                           ]
                         }
@@ -412,7 +412,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://'
+                                'href': 'https://github.com/bemdesign/bem-acticles/blob/master/vectors.md'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Гайд по векторам'
@@ -420,7 +420,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Прототип'
+                              content: 'Документация'
                             }
                           ]
                         },
@@ -430,7 +430,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Савелий Бобов'
                             }
                           ]
                         }
@@ -448,7 +448,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://'
+                                'href': 'https://koloskof.github.io/bemxjstdemo/'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Шаблонизация'
@@ -456,7 +456,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Прототип'
+                              content: 'Демо'
                             }
                           ]
                         },
@@ -466,7 +466,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Мейнтейнер'
+                              content: 'Вячеслав Олиянчук'
                             }
                           ]
                         }
@@ -484,7 +484,6 @@ block('demo').elem('menu')(
                     },
                     {
                       elem: 'menu-item',
-                      attrs: { 'active' : '' },
                       content: [
                         {
                           elem: 'menu-item-row',
@@ -494,7 +493,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://'
+                                'href': 'https://dribbble.com/shots/2984399-Maybach-6-Vision'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Maybach 6 Vision'
@@ -512,7 +511,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Yuriy Yegorov'
+                              content: 'Юрий Егоров'
                             }
                           ]
                         }
@@ -520,7 +519,6 @@ block('demo').elem('menu')(
                     },
                     {
                       elem: 'menu-item',
-                      attrs: { 'active' : '' },
                       content: [
                         {
                           elem: 'menu-item-row',
@@ -530,7 +528,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://'
+                                'href': 'https://dribbble.com/shots/2947385-Interview-magazine-Desiigner'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Interview magazine'
@@ -548,7 +546,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Mikhail Koloskov'
+                              content: 'Михаил Колосков'
                             }
                           ]
                         }
@@ -556,7 +554,6 @@ block('demo').elem('menu')(
                     },
                     {
                       elem: 'menu-item',
-                      attrs: { 'active' : '' },
                       content: [
                         {
                           elem: 'menu-item-row',
@@ -566,7 +563,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://'
+                                'href': 'https://dribbble.com/julia_miocene'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Upcoming'
@@ -584,7 +581,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Julia Muzafarova'
+                              content: 'Юлия Музафарова'
                             }
                           ]
                         }

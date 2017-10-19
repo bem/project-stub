@@ -1,6 +1,6 @@
 module.exports = {
   block: 'page',
-  title: 'Title of the page',
+  title: 'BEM Design',
   favicon: '/favicon.ico',
   head: [
       { elem: 'meta', attrs: { name: 'description', content: '' } },
@@ -12,8 +12,9 @@ module.exports = {
       block: 'theme',
       mods: { color: 'default', space: 'default', size: 'default' }
   },
+
   scripts: [{ elem: 'js', url: 'index.min.js' }],
-  mods: { theme: 'islands' },
+  mods: { theme: 'islands', 'vertical-align': 'center' },
   content: [
     {
       block: 'demo',
@@ -34,7 +35,7 @@ module.exports = {
               elem: 'face-text',
               content: [
                 {
-                  elem: 'bitbucket',
+                  elem: 'github',
                   tag: 'a',
                   attrs: {
                     href: 'https://github.com/bemdesign'
