@@ -13,6 +13,7 @@ const techs = {
             require('postcss-each'),
             require('postcss-for'),
             require('postcss-simple-vars')(),
+            require('postcss-color-function')(),
             require('postcss-calc')(),
             require('postcss-nested'),
             require('rebem-css'),
