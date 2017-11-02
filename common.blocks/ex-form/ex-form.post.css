@@ -1,0 +1,7 @@
+.ex-form {
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}

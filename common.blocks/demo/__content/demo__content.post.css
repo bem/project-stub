@@ -1,6 +1,8 @@
 .demo__content {
 	margin: auto;
 	width: 1140px;
+	padding-top: 72px;
+	padding-bottom: 72px;
 	&_size {
 		&_l {
 			width: 1140px;

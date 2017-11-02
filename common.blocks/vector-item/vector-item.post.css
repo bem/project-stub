@@ -1,0 +1,21 @@
+.vector-list {
+  display: flex;
+  flex-wrap: wrap;
+  .vector-item {
+    padding: 20px 0;
+    display: block;
+    width: 208px;
+    margin-right: $space-l;
+    margin-bottom: 20px;;
+    &__view {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: $space-s;
+    }
+    &__name {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+}

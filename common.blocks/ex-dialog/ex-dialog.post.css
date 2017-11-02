@@ -1,0 +1,10 @@
+.ex-dialog {
+  text-align: center;
+  &__status {
+    display: inline-block;
+    background-image: url('searching.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-bottom: var(--space-s);
+  }
+}

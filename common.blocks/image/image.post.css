@@ -1,0 +1,34 @@
+.image {
+  &_view {
+    &_block-scheme {
+      background-image: url('block-scheme.png');
+      background-size: 100%;
+      height: 380px;
+      width: 100%;
+    }
+    &_icon-grid {
+      background-image: url('icon-grid.png');
+      height: 300px;
+      width: 100%;
+      background-position: 50% 50%;
+    }
+    &_icon-form {
+      background-image: url('icon-form.png');
+      height: 180px;
+      width: 100%;
+      background-position: 50% 50%;
+    }
+    &_icon-size {
+      background-image: url('icon-size.png');
+      height: 140px;
+      width: 100%;
+      background-position: 50% 50%;
+    }
+    &_icon-sizes {
+      background-image: url('icon-sizes.png');
+      height: 520px;
+      width: 100%;
+      background-position: 50% 50%;
+    }
+  }
+}

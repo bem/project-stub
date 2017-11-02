@@ -1,0 +1,15 @@
+.icon-item {
+  padding: 20px 0;
+  width: 142px;
+  margin-right: $space-l;
+  margin-bottom: $space-l;
+  background-color: var(--color-ghost);
+  &__view {
+    width: 16px;
+    margin: 0 auto 12px;
+  }
+  &__name {
+    font-size: 15px;
+    text-align: center;
+  }
+}
