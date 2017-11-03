@@ -55,12 +55,12 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Михаил Колосков, Юлия Музафарова'
+                              content: '@koloskof, @miocene'
                             }
                           ]
                         }
                       ]
-                    }, 
+                    },
                     {
                       elem: 'menu-item',
                       attrs: { 'active' : '' },
@@ -91,7 +91,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Михаил Колосков'
+                              content: '@koloskof'
                             }
                           ]
                         }
@@ -127,79 +127,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Кирилл Федотов, Юлия Музафарова'
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      elem: 'menu-item',
-                      attrs: { 'active' : '' },
-                      content: [
-                        {
-                          elem: 'menu-item-row',
-                          content: [
-                            {
-                              block: 'text',
-                              mods: { view: 'inverse', size: 'l' },
-                              tag: 'a',
-                              attrs: {
-                                'href': 'https://github.com/bemdesign/bem-vectors'
-                              },
-                              mix: { block: 'demo', elem: 'menu-item-link' },
-                              content: 'Векторы'
-                            },
-                            {
-                              block: 'text',
-                              mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Библиотека'
-                            }
-                          ]
-                        },
-                        {
-                          elem: 'menu-item-row',
-                          content: [
-                            {
-                              block: 'text',
-                              mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Савелий Бобов, Юлия Музафарова'
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      elem: 'menu-item',
-                      attrs: { 'active' : '' },
-                      content: [
-                        {
-                          elem: 'menu-item-row',
-                          content: [
-                            {
-                              block: 'text',
-                              mods: { view: 'inverse', size: 'l' },
-                              tag: 'a',
-                              attrs: {
-                                'href': 'https://github.com/bemdesign/bem-illustrations'
-                              },
-                              mix: { block: 'demo', elem: 'menu-item-link' },
-                              content: 'Иллюстрации'
-                            },
-                            {
-                              block: 'text',
-                              mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Библиотека'
-                            }
-                          ]
-                        },
-                        {
-                          elem: 'menu-item-row',
-                          content: [
-                            {
-                              block: 'text',
-                              mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Лера Железова'
+                              content: '@kirillback, @miocene'
                             }
                           ]
                         }
@@ -235,7 +163,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Михаил Колосков'
+                              content: '@koloskof'
                             }
                           ]
                         }
@@ -271,7 +199,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Кирилл Федотов, Ксения Лушникова'
+                              content: '@kirillback'
                             }
                           ]
                         }
@@ -307,7 +235,79 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Юлия Музафарова'
+                              content: '@miocene'
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      elem: 'menu-item',
+                      attrs: { 'active' : '' },
+                      content: [
+                        {
+                          elem: 'menu-item-row',
+                          content: [
+                            {
+                              block: 'text',
+                              mods: { view: 'inverse', size: 'l' },
+                              // tag: 'a',
+                              // attrs: {
+                              //   'href': 'https://github.com/bemdesign/bem-illustrations'
+                              // },
+                              mix: { block: 'demo', elem: 'menu-item-link' },
+                              content: 'Иллюстрации'
+                            },
+                            {
+                              block: 'text',
+                              mods: { 'view': 'inverse', 'size': 'm' },
+                              content: 'Библиотека'
+                            }
+                          ]
+                        },
+                        {
+                          elem: 'menu-item-row',
+                          content: [
+                            {
+                              block: 'text',
+                              mods: { 'view': 'inverse', 'size': 'm' },
+                              content: '@lerazhelezova'
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      elem: 'menu-item',
+                      attrs: { 'active' : '' },
+                      content: [
+                        {
+                          elem: 'menu-item-row',
+                          content: [
+                            {
+                              block: 'text',
+                              mods: { view: 'inverse', size: 'l' },
+                              // tag: 'a',
+                              // attrs: {
+                              //   'href': 'https://github.com/bemdesign/bem-vectors'
+                              // },
+                              mix: { block: 'demo', elem: 'menu-item-link' },
+                              content: 'Векторы'
+                            },
+                            {
+                              block: 'text',
+                              mods: { 'view': 'inverse', 'size': 'm' },
+                              content: 'Библиотека'
+                            }
+                          ]
+                        },
+                        {
+                          elem: 'menu-item-row',
+                          content: [
+                            {
+                              block: 'text',
+                              mods: { 'view': 'inverse', 'size': 'm' },
+                              content: '@dandycolor, @miocene'
                             }
                           ]
                         }
@@ -358,7 +358,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Михаил Колосков'
+                              content: '@koloskof'
                             }
                           ]
                         }
@@ -394,7 +394,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Кирилл Федотов'
+                              content: '@kirillback'
                             }
                           ]
                         }
@@ -430,7 +430,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Савелий Бобов'
+                              content: '@dandycolor'
                             }
                           ]
                         }
@@ -448,7 +448,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://koloskof.github.io/bemxjstdemo/'
+                                'href': 'https://@koloskof.github.io/bemxjstdemo/'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Шаблонизация'
@@ -466,7 +466,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Вячеслав Олиянчук'
+                              content: '@mirioiruni'
                             }
                           ]
                         }
@@ -511,7 +511,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Юрий Егоров'
+                              content: '@codensleep'
                             }
                           ]
                         }
@@ -546,7 +546,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Михаил Колосков'
+                              content: '@koloskof'
                             }
                           ]
                         }
@@ -581,7 +581,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Юлия Музафарова'
+                              content: '@miocene'
                             }
                           ]
                         }
