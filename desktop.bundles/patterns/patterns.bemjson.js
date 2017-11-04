@@ -28,7 +28,7 @@ module.exports = {
       content: [
         {
           elem: 'content',
-          elemMods: { size: 'm' },
+          // elemMods: { size: 'm' },
           content: [
             {
               block: 'text',
@@ -40,7 +40,7 @@ module.exports = {
               block: 'text',
               mods: { size: 'xxl', view: 'primary' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Паттерн&nbsp;&mdash; каркас для блоков. Если блоки преимущественно<br/> отвечают за&nbsp;смысл, то&nbsp; Паттерны за&nbsp;их&nbsp;представление. <br/>Паттерны примиксовываются к&nbsp;блокам и&nbsp;их&nbsp;элементам, <br/>позволяя быстро &laquo;сгенерить&raquo; нужное <br/>визуальное представление.'
+              content: 'Паттерн — каркас для блоков. Если блоки преимущественно отвечают за смысл, то Паттерны за их представление. Паттерны примиксовываются к блокам и их элементам, позволяя быстро сгенерить нужное визуальное представление.'
             },
             /* PT-TABLE */
             {

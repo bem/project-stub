@@ -1,0 +1,12 @@
+.animation-item {
+  margin-bottom: calc(2 * $space-xl);
+  &__view {
+    width: 364px;
+    height: 240px;
+    background-color: var(--color-ghost);
+    margin-bottom: $space-l;
+  }
+  &__name {
+
+  }
+}

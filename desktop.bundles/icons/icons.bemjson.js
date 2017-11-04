@@ -28,7 +28,6 @@ module.exports = {
       content: [
         {
           elem: 'content',
-          elemMods: { display: 'flex' },
           content: [
             {
               block: 'text',
@@ -37,11 +36,10 @@ module.exports = {
               content: 'Иконки'
             },
             {
-              block: 'control-panel',
-              content: [
-              {
-                block: 'search'
-              }]
+              block: 'text',
+              mods: { size: 'xxl', view: 'primary' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+              content: 'Для того, чтобы централизованно менять библиотеки иконок и избегать такой ситуации, когда повторяющиеся иконки лежат по разным мы вынесли все иконки в блок .icon'
             },
             {
               block: 'icon-list',

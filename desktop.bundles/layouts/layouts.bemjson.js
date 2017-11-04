@@ -36,6 +36,13 @@ module.exports = {
               content: 'Шаблоны'
             },
             {
+              block: 'text',
+              mods: { size: 'xxl', view: 'primary' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+              content: 'Шаблоны помогают структурировать пространство и подготовить каркас для интеграции блоков. «Структурируя при помощи модульной сетки плоскости и пространство, дизайнер получает возможность организовать тексты, фотографии и графические изображения по принципам объективности и функциональности. Сокращается число форматов для изобразительных элементов»'
+            },
+            /* 32-8-4 */
+            {
               block : 'layout-list',
               content : [
                 {
@@ -43,12 +50,7 @@ module.exports = {
                   content : [
                     {
                       elem : 'view',
-                      content : [
-                        {
-                          block : 'layout',
-                          mods : { 'functional' : 'slide'}
-                        }
-                      ]
+                      elemMods: { type: '32-8-4', ver: '1' }
                     },
                     {
                       elem : 'name',
@@ -56,12 +58,228 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "slide"
+                          content: "32(4x8)_1"
                         }
                       ]
                     }
                   ]
                 },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '32-8-4', ver: '2'  }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "32(4x8)_2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '32-8-4', ver: '3'  }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "32(4x8)_3"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '32-8-4', ver: '4'  }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "32(4x8)_4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '32-8-4', ver: '5'  }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "32(4x8)_5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '32-8-4', ver: 'default' }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Add your template"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+
+            /* 24-4-6 */
+            {
+              block : 'layout-list',
+              content : [
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '24-4-6', ver: '1' }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "24(4x6)_1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '24-4-6', ver: '2' }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "24(4x6)_2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '24-4-6', ver: '3' }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "24(4x6)_3"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '24-4-6', ver: '4' }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "24(4x6)_4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '24-4-6', ver: '5' }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "24(4x6)_5"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'layout-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { type: '24-4-6', ver: 'default' }
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Add your template"
+                        }
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]

@@ -33,7 +33,13 @@ module.exports = {
               block: 'text',
               mods: { size: 'xxxl', weight: 'bold' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Инимация'
+              content: 'Анимация'
+            },
+            {
+              block: 'text',
+              mods: { size: 'xxl', view: 'primary' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+              content: 'Анимация — последовательное изменение свойств блока по какому-либо событию. Она мотивирует к действию, вовлекает в процесс, вызвает восторг'
             },
             {
               block : 'animation-list',
@@ -44,9 +50,51 @@ module.exports = {
                     {
                       elem : 'view',
                       content : [
+
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
                         {
-                          block : 'layout',
-                          mods : { 'functional' : 'slide'}
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Overlay side show"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'animation-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Accordion toggle"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'animation-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                        {
+                          block : 'illustration',
+
                         }
                       ]
                     },
@@ -56,7 +104,67 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "slide"
+                          content: "Block scroll show"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'animation-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Modal fade"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'animation-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Grid coloumn break"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'animation-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Block hover inverse"
                         }
                       ]
                     }

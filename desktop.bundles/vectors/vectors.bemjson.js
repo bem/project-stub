@@ -36,6 +36,12 @@ module.exports = {
               content: 'Векторные изображения'
             },
             {
+              block: 'text',
+              mods: { size: 'xxl', view: 'primary' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+              content: 'Векторные изображения...'
+            },
+            {
               block : 'vector-list',
               content : [
                 {

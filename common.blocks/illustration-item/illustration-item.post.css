@@ -1,0 +1,12 @@
+.illustration-item {
+  margin-bottom: calc(2 * $space-xl);
+  &__view {
+    width: 552px;
+    height: 380px;
+    background-color: var(--color-ghost);
+    margin-bottom: $space-l;
+  }
+  &__name {
+
+  }
+}

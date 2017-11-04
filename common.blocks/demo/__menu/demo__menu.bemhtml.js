@@ -55,7 +55,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: '@koloskof, @miocene'
+                              content: '@miocene, @koloskof'
                             }
                           ]
                         }
