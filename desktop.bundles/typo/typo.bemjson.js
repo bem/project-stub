@@ -828,88 +828,88 @@ module.exports = {
                 {
                   block : 'row',
                   content : [
-                    {
-                      elem : 'col',
-                      elemMods : { sw : 4 },
-                      content : [
-                        {
-                          block : 'typography',
-                          content : [
-                            {
-                              elem : 'item',
-                              content : [
-                                {
-                                  elem : 'view',
-                                  content : [
-                                    {
-                                      block : 'text',
-                                      mods : { size : 'xxxl', weight : 'thin' },
-                                      content : 'Typography'
-                                    }
-                                  ]
-                                },
-                                {
-                                  elem : 'text',
-                                  content : [
-                                    {
-                                      block : 'text',
-                                      mods : { size : 'm', weight : 'bold' },
-                                      content : " mods : { weight : 'thin' } "
-                                    },
-                                    {
-                                      block : 'text',
-                                      mods : { size : 'm' },
-                                      content : 'weight: thin'
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      elem : 'col',
-                      elemMods : { sw : 4 },
-                      content : [
-                        {
-                          block : 'typography',
-                          content : [
-                            {
-                              elem : 'item',
-                              content : [
-                                {
-                                  elem : 'view',
-                                  content : [
-                                    {
-                                      block : 'text',
-                                      mods : { size : 'xxxl', weight : 'light' },
-                                      content : 'Typography'
-                                    }
-                                  ]
-                                },
-                                {
-                                  elem : 'text',
-                                  content : [
-                                    {
-                                      block : 'text',
-                                      mods : { size : 'm', weight : 'bold' },
-                                      content : " mods : { weight : 'light' } "
-                                    },
-                                    {
-                                      block : 'text',
-                                      mods : { size : 'm' },
-                                      content : 'weight: light'
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
+                      // {
+                      //   elem : 'col',
+                      //   elemMods : { sw : 4 },
+                      //   content : [
+                      //     {
+                      //       block : 'typography',
+                      //       content : [
+                      //         {
+                      //           elem : 'item',
+                      //           content : [
+                      //             {
+                      //               elem : 'view',
+                      //               content : [
+                      //                 {
+                      //                   block : 'text',
+                      //                   mods : { size : 'xxxl', weight : 'thin' },
+                      //                   content : 'Typography'
+                      //                 }
+                      //               ]
+                      //             },
+                      //             {
+                      //               elem : 'text',
+                      //               content : [
+                      //                 {
+                      //                   block : 'text',
+                      //                   mods : { size : 'm', weight : 'bold' },
+                      //                   content : " mods : { weight : 'thin' } "
+                      //                 },
+                      //                 {
+                      //                   block : 'text',
+                      //                   mods : { size : 'm' },
+                      //                   content : 'weight: thin'
+                      //                 }
+                      //               ]
+                      //             }
+                      //           ]
+                      //         }
+                      //       ]
+                      //     }
+                      //   ]
+                      // },
+                      // {
+                      //   elem : 'col',
+                      //   elemMods : { sw : 4 },
+                      //   content : [
+                      //     {
+                      //       block : 'typography',
+                      //       content : [
+                      //         {
+                      //           elem : 'item',
+                      //           content : [
+                      //             {
+                      //               elem : 'view',
+                      //               content : [
+                      //                 {
+                      //                   block : 'text',
+                      //                   mods : { size : 'xxxl', weight : 'light' },
+                      //                   content : 'Typography'
+                      //                 }
+                      //               ]
+                      //             },
+                      //             {
+                      //               elem : 'text',
+                      //               content : [
+                      //                 {
+                      //                   block : 'text',
+                      //                   mods : { size : 'm', weight : 'bold' },
+                      //                   content : " mods : { weight : 'light' } "
+                      //                 },
+                      //                 {
+                      //                   block : 'text',
+                      //                   mods : { size : 'm' },
+                      //                   content : 'weight: light'
+                      //                 }
+                      //               ]
+                      //             }
+                      //           ]
+                      //         }
+                      //       ]
+                      //     }
+                      //   ]
+                      // },
 
                     {
                       elem : 'col',
