@@ -58,7 +58,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "32(4x8)_1"
+                          content: "32(4x8)-1"
                         }
                       ]
                     }
@@ -77,7 +77,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "32(4x8)_2"
+                          content: "32(4x8)-2"
                         }
                       ]
                     }
@@ -96,7 +96,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "32(4x8)_3"
+                          content: "32(4x8)-3"
                         }
                       ]
                     }
@@ -115,7 +115,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "32(4x8)_4"
+                          content: "32(4x8)-4"
                         }
                       ]
                     }
@@ -134,7 +134,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "32(4x8)_5"
+                          content: "32(4x8)-5"
                         }
                       ]
                     }
@@ -179,7 +179,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "24(4x6)_1"
+                          content: "24(4x6)-1"
                         }
                       ]
                     }
@@ -198,7 +198,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "24(4x6)_2"
+                          content: "24(4x6)-2"
                         }
                       ]
                     }
@@ -217,7 +217,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "24(4x6)_3"
+                          content: "24(4x6)-3"
                         }
                       ]
                     }
@@ -236,7 +236,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "24(4x6)_4"
+                          content: "24(4x6)-4"
                         }
                       ]
                     }
@@ -255,7 +255,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "24(4x6)_5"
+                          content: "24(4x6)-5"
                         }
                       ]
                     }

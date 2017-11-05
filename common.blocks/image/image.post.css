@@ -8,27 +8,31 @@
     }
     &_icon-grid {
       background-image: url('icon-grid.png');
-      height: 300px;
+      height: 340px;
       width: 100%;
       background-position: 50% 50%;
+      background-size: 100%;
     }
     &_icon-form {
       background-image: url('icon-form.png');
-      height: 180px;
+      height: 240px;
       width: 100%;
       background-position: 50% 50%;
+      background-size: 100%;
     }
     &_icon-size {
       background-image: url('icon-size.png');
-      height: 140px;
+      height: 180px;
       width: 100%;
       background-position: 50% 50%;
+      background-size: 100%;
     }
     &_icon-sizes {
       background-image: url('icon-sizes.png');
-      height: 520px;
+      height: 620px;
       width: 100%;
       background-position: 50% 50%;
+      background-size: 100%;
     }
   }
 }

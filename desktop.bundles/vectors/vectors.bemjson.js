@@ -50,10 +50,10 @@ module.exports = {
                     {
                       elem : 'view',
                       content : [
-                        {
-                          block : 'vector',
-                          mods : { '1' : 'm-primary'}
-                        }
+                        // {
+                        //   block : 'vector',
+                        //   mods : { '1' : 'm-primary'}
+                        // }
                       ]
                     },
                     {

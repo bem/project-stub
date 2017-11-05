@@ -251,10 +251,10 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { view: 'inverse', size: 'l' },
-                              // tag: 'a',
-                              // attrs: {
-                              //   'href': 'https://github.com/bemdesign/bem-illustrations'
-                              // },
+                              tag: 'a',
+                              attrs: {
+                                'href': 'https://github.com/bemdesign/bem-illustrations'
+                              },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Иллюстрации'
                             },
@@ -287,10 +287,10 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { view: 'inverse', size: 'l' },
-                              // tag: 'a',
-                              // attrs: {
-                              //   'href': 'https://github.com/bemdesign/bem-vectors'
-                              // },
+                              tag: 'a',
+                              attrs: {
+                                'href': 'https://github.com/bemdesign/bem-vectors'
+                              },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Векторы'
                             },
@@ -340,10 +340,10 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://'
+                                'href': 'https://habrahabr.ru/company/yamoney/blog/341028/'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
-                              content: 'CSS гайды'
+                              content: 'Процес прототипирования'
                             },
                             {
                               block: 'text',
@@ -376,10 +376,46 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
+                                'href': 'https://github.com/bemdesign/bem-acticles/blob/master/vectors.md'
+                              },
+                              mix: { block: 'demo', elem: 'menu-item-link' },
+                              content: 'Вступить в БЭМ Дизайн'
+                            },
+                            {
+                              block: 'text',
+                              mods: { 'view': 'inverse', 'size': 'm' },
+                              content: 'Документация'
+                            }
+                          ]
+                        },
+                        {
+                          elem: 'menu-item-row',
+                          content: [
+                            {
+                              block: 'text',
+                              mods: { 'view': 'inverse', 'size': 'm' },
+                              content: '@miocene @koloskof'
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      elem: 'menu-item',
+                      attrs: { 'active' : '' },
+                      content: [
+                        {
+                          elem: 'menu-item-row',
+                          content: [
+                            {
+                              block: 'text',
+                              mods: { view: 'inverse', size: 'l' },
+                              tag: 'a',
+                              attrs: {
                                 'href': 'https://github.com/bemdesign/bem-acticles/blob/master/icons.md'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
-                              content: 'Гайд по иконкам'
+                              content: 'Как рисовать иконки'
                             },
                             {
                               block: 'text',
@@ -412,42 +448,6 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://github.com/bemdesign/bem-acticles/blob/master/vectors.md'
-                              },
-                              mix: { block: 'demo', elem: 'menu-item-link' },
-                              content: 'Гайд по векторам'
-                            },
-                            {
-                              block: 'text',
-                              mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Документация'
-                            }
-                          ]
-                        },
-                        {
-                          elem: 'menu-item-row',
-                          content: [
-                            {
-                              block: 'text',
-                              mods: { 'view': 'inverse', 'size': 'm' },
-                              content: '@dandycolor'
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      elem: 'menu-item',
-                      attrs: { 'active' : '' },
-                      content: [
-                        {
-                          elem: 'menu-item-row',
-                          content: [
-                            {
-                              block: 'text',
-                              mods: { view: 'inverse', size: 'l' },
-                              tag: 'a',
-                              attrs: {
                                 'href': 'https://@koloskof.github.io/bemxjstdemo/'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
@@ -456,7 +456,7 @@ block('demo').elem('menu')(
                             {
                               block: 'text',
                               mods: { 'view': 'inverse', 'size': 'm' },
-                              content: 'Демо'
+                              content: 'Документация'
                             }
                           ]
                         },

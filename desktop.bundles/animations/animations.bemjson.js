@@ -6,6 +6,7 @@ module.exports = {
       { elem: 'meta', attrs: { name: 'description', content: '' } },
       { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
       { elem: 'css', url: 'animations.min.css' },
+      { elem: 'css', url: 'https://rsms.me/inter/inter-ui.css' },
       { elem: 'js', url: 'https://code.jquery.com/jquery-3.2.1.js' },
   ],
   mix: {
@@ -170,10 +171,33 @@ module.exports = {
                     }
                   ]
                 },
+                {
+                  block : 'animation-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "Form slide"
+                        }
+                      ]
+                    }
+                  ]
+                },
+
+
               ]
             }
           ]
         }
+
       ]
     },
   ]

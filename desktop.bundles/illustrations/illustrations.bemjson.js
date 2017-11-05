@@ -39,7 +39,7 @@ module.exports = {
               block: 'text',
               mods: { size: 'xxl', view: 'primary' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Иллюстрации используются для передачи эмоциональной атмосферы художественного произведения, визуализации героев повествования, демонстрации объектов, описываемых в книге (ботаническая иллюстрация), отображения пошаговых инструкций в технической документации (техническая иллюстрация)'
+              content: 'Иллюстрации используются для передачи эмоциональной атмосферы, визуализации персонажей, демонстрации объектов'
             },
             {
               block : 'illustration-list',
@@ -135,6 +135,30 @@ module.exports = {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "BEM Night"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'illustration-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                        {
+                          block : 'illustration',
+
+                        }
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "BEM Army"
                         }
                       ]
                     }
