@@ -217,7 +217,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/anomations/animations.html'
+                                'href': 'https://bemdesign.github.io/bem-design/animations/animations.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Анимация'
