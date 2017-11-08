@@ -37,7 +37,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/themes/themes.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/themes/themes.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Темы'
@@ -73,7 +73,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/typo/typo.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/typo/typo.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Типографика'
@@ -109,7 +109,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/icons/icons.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/icons/icons.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Иконки'
@@ -217,7 +217,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/animations/animations.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/animations/animations.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Анимация'
@@ -253,7 +253,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/illustations/illustations.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/illustations/illustations.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Иллюстрации'
@@ -289,7 +289,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/vectors/vectors.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/vectors/vectors.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Векторы'
@@ -376,7 +376,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/opensource/opensource.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/opensource/opensource.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Вступить в БЭМ Дизайн'
@@ -412,7 +412,7 @@ block('demo').elem('menu')(
                               mods: { view: 'inverse', size: 'l' },
                               tag: 'a',
                               attrs: {
-                                'href': 'https://bemdesign.github.io/bem-design/article-icons/article-icons.html'
+                                'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/article-icons/article-icons.html'
                               },
                               mix: { block: 'demo', elem: 'menu-item-link' },
                               content: 'Как рисовать иконки'
