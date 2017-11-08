@@ -1,0 +1,35 @@
+.opensource-item {
+  box-shadow: 0 20px 20px rgba(0,0,0,.08);
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: var(--space-xxl);
+    padding-right: var(--space-xxl);
+    padding-top: var(--space-xxl);
+  }
+  &__content {
+    padding: var(--space-xl) var(--space-xxl);
+  }
+  &__action {
+    padding-left: var(--space-xxl);
+    padding-right: var(--space-xxl);
+    padding-bottom: var(--space-xxl);
+    display: flex;
+  }
+  &__event {
+    margin-right: var(--space-m);
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+  &__level-list {
+    display: flex;
+  }
+  &__level-item {
+    margin-right: var(--space-xxs);
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
