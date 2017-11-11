@@ -57,6 +57,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/JWNLLO',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "32(4x8)-1"
                         }
@@ -76,6 +81,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/zZwjrR',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "32(4x8)-2"
                         }
@@ -95,6 +105,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/MpmGJE',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "32(4x8)-3"
                         }
@@ -114,6 +129,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/oZWdGV',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "32(4x8)-4"
                         }
@@ -133,6 +153,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/oZWdGV',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "32(4x8)-5"
                         }
@@ -152,6 +177,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/Rochet/full/zPwYao/',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "Add your template"
                         }
@@ -178,6 +208,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/mWmLYP',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "24(4x6)-1"
                         }
@@ -197,6 +232,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/qrmKdW',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "24(4x6)-2"
                         }
@@ -216,6 +256,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/BWRVRm',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "24(4x6)-3"
                         }
@@ -235,6 +280,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/mWmjJx',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "24(4x6)-4"
                         }
@@ -254,6 +304,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/yegorov/full/EWmpWZ/',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "24(4x6)-5"
                         }
@@ -273,6 +328,11 @@ module.exports = {
                       content : [
                         {
                           block: 'text',
+                          tag: 'a',
+                          attrs: { 
+                            href: 'https://codepen.io/Rochet/full/NwjWOZ/',
+                            target: '_blank'
+                          },
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
                           content: "Add your template"
                         }
