@@ -1,0 +1,64 @@
+.demo {
+	&__header {
+		position: fixed;
+		top: $space-xl;
+		right: $space-xl;
+		width: $space-l;
+		height: $space-l;
+		z-index: 9999;
+		cursor: pointer;
+	}
+
+	&__menu-icon {
+		position: absolute;
+		top: 2px;
+		right: 0px;
+		width: $space-l;
+		height: 3px;
+		transform-origin: 2px 4px;
+		transition: .3s ease;
+
+		&:before {
+			content: '';
+			height: 3px;
+			width: 100%;
+			position: absolute;
+			top: 6px;
+			transition: .3s ease;
+		}
+		&:after {
+			content: '';
+			height: 3px;
+			width: 100%;
+			position: absolute;
+			top: $space-s;
+			transition: .3s ease;
+		}
+
+		&_state_open {
+			transform: rotate(0deg);
+			background: var(--color-inverse);
+
+			&:before {
+				background: var(--color-inverse);
+			}
+			&:after {
+				transform: rotate(0deg) translate(0px);
+				background: var(--color-inverse);
+			}
+		}
+
+		&_state_close {
+			transform: rotate(45deg);
+			background: var(--color-default);
+
+			&:before {
+				background: transparent;
+			}
+			&:after {
+				transform: rotate(-90deg) translate(12px); 
+				background: var(--color-default);
+			}
+		}
+	}
+}

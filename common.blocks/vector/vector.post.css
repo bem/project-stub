@@ -1,0 +1,134 @@
+.vector {
+  &_size {
+    &_s {
+      width: 46px;
+      height: 54px;
+    }
+  }
+  &_view {
+    &_add-card {
+      background-image: url('lib/add-card.svg');
+    }
+    &_bank {
+      background-image: url('lib/bank.svg');
+    }
+    &_bank-outline {
+      background-image: url('lib/bank-outline.svg');
+    }
+    &_bank-comp {
+      background-image: url('lib/bank-comp.svg');
+    }
+    &_calc {
+      background-image: url('lib/calendar.svg');
+    }
+    &_calc_percent {
+      background-image: url('lib/compact-mode.svg');
+    }
+    &_doc-1 {
+      background-image: url('lib/doc-1.svg');
+    }
+    &_doc-2 {
+      background-image: url('lib/doc-2.svg');
+    }
+    &_download {
+      background-image: url('lib/download.svg');
+    }
+    &_export {
+      background-image: url('lib/export.svg');
+    }
+    &_fave-1 {
+      background-image: url('lib/fave-1.svg');
+    }
+    &_fave-2 {
+      background-image: url('lib/fave-2.svg');
+    }
+    &_forward {
+      background-image: url('lib/forward.svg');
+    }
+    &_full-mode {
+      background-image: url('lib/full-mode.svg');
+    }
+    &_hint {
+      background-image: url('lib/hint.svg');
+    }
+    &_information-1 {
+      background-image: url('lib/information-1.svg');
+    }
+    &_information-2 {
+      background-image: url('lib/information-2.svg');
+    }
+    &_letter {
+      background-image: url('lib/letter.svg');
+    }
+    &_mail-1 {
+      background-image: url('lib/mail-1.svg');
+    }
+    &_mail-2 {
+      background-image: url('lib/mail-2.svg');
+    }
+    &_mail-3 {
+      background-image: url('lib/mail-3.svg');
+    }
+    &_mail-4 {
+      background-image: url('lib/mail-4.svg');
+    }
+    &_mail-forward {
+      background-image: url('lib/mail-forward.svg');
+    }
+    &_phone-1 {
+      background-image: url('lib/phone-1.svg');
+    }
+    &_phone-2 {
+      background-image: url('lib/phone-2.svg');
+    }
+    &_phone-3 {
+      background-image: url('lib/phone-3.svg');
+    }
+    &_portal-action {
+      background-image: url('lib/portal-action.svg');
+    }
+    &_qua {
+      background-image: url('lib/qua.svg');
+    }
+    &_repeat {
+      background-image: url('lib/repeat.svg');
+    }
+    &_save-1 {
+      background-image: url('lib/save-1.svg');
+    }
+    &_save-2 {
+      background-image: url('lib/save-2.svg');
+    }
+    &_share {
+      background-image: url('lib/share.svg');
+    }
+    &_support-1 {
+      background-image: url('lib/support-1.svg');
+    }
+    &_support-2 {
+      background-image: url('lib/support-2.svg');
+    }
+    &_terminal {
+      background-image: url('lib/terminal.svg');
+    }
+    &_time {
+      background-image: url('lib/time.svg');
+    }
+    &_timeline {
+      background-image: url('lib/timeline.svg');
+    }
+    &_user {
+      background-image: url('lib/user.svg');
+    }
+    &_wait-1 {
+      background-image: url('lib/wait-1.svg');
+    }
+    &_wait-2 {
+      background-image: url('lib/wait-2.svg');
+    }
+    &_wait-3 {
+      background-image: url('lib/wait-3.svg');
+    }
+  }
+
+}

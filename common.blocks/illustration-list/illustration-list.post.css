@@ -1,0 +1,9 @@
+.illustration-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: calc(2 * $space-xxxl);
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}

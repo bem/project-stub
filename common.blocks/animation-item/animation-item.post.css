@@ -1,0 +1,41 @@
+.animation-item {
+	margin-bottom: calc(2 * $space-xl);
+
+	&__view {
+		position: relative;
+		width: 364px;
+		height: 240px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+		background-color: var(--color-ghost);
+		margin-bottom: $space-l;
+		overflow: hidden;
+	}
+
+	&__name {
+
+	}
+
+	&__paranja {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0, 0, 0, .5);
+	}
+
+	&__modal {
+		position: absolute;
+		top: 25%;
+		left: 25%;
+		height: 50%;
+		width: 50%;
+		background: var(--color-default);
+		border-radius: 4px;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, .12);
+	}
+}

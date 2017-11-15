@@ -1,0 +1,21 @@
+.icon-service-list {
+  display: flex;
+  flex-wrap: wrap;
+  .icon-service-item {
+    display: block;
+    margin-right: $space-m;
+    margin-bottom: 40px;
+    &__view {
+      width: 265px;
+      height: 167px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+    &__name {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+:root {
+  --color-yota: #00aad9;
+  --color-seven-sky: #a5115e;
+}
+
+.ex-card {
+  border-radius: 4px;
+  &_view {
+    &_yota {
+      background: var(--color-yota);
+      .button2 {
+        &_theme {
+          &_action {
+            &::before {
+              background: var(--color-default);
+            }
+            .button2__text {
+              color: var(--color-yota);
+            }
+            &:active {
+              &::before {
+                background: var(--color-default);
+              }
+            }
+          }
+        }
+      }
+    }
+    &_seven-sky {
+      background: var(--color-seven-sky);
+      .button2 {
+        &_theme {
+          &_action {
+            &::before {
+              background: var(--color-default);
+            }
+            .button2__text {
+              color: var(--color-seven-sky);
+            }
+            &:active {
+              &::before {
+                background: var(--color-default);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+}
