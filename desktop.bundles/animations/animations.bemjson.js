@@ -6,7 +6,7 @@ module.exports = {
       { elem: 'meta', attrs: { name: 'description', content: '' } },
       { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
       { elem: 'css', url: 'animations.min.css' },
-      { elem: 'css', url: 'https://rsms.me/inter/inter-ui.css' },
+      { elem: 'css', url: '../../assets/ibm-type/css/ibm-type.css' },
       { elem: 'js', url: 'https://code.jquery.com/jquery-3.2.1.js' },
   ],
   mix: {
