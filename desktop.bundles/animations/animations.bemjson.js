@@ -17,188 +17,276 @@ module.exports = {
   mods: { theme: 'islands' },
   content: [
     {
-      block: 'demo',
-      mix: [
-        { block: 'b-page', elem: 'content' },
-        { block: 'theme' }
-      ],
-      params: {
-        menusection: 'tools',
-        pagename: 'animations',
+    block: 'demo',
+    mix: [
+      { block: 'b-page', elem: 'content' },
+      { block: 'theme' }
+    ],
+    params: {
+      menusection: 'tools',
+      pagename: 'animations',
+    },
+    content: [
+    {
+      elem: 'content',
+      content: [
+      {
+        block: 'text',
+        mods: { size: 'xxxl', weight: 'bold' },
+        mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+        content: 'Анимация'
       },
-      content : [
+      {
+        block: 'text',
+        mods: { size: 'xxl', view: 'primary' },
+        mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+        content: 'Анимация — последовательное изменение свойств блока по какому-либо событию. Она мотивирует к действию, вовлекает в процесс, вызвает восторг'
+      },
+      {
+        block: 'text',
+        mods: { size: 'xl', view: 'primary', weight: 'bold' },
+        mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+        content: 'Появление'
+      },
+      {
+        block: 'animation-list',
+        content: [
         {
-          elem: 'content',
+          block: 'animation-item',
           content: [
+          {
+            elem: 'view',
+            mix: [{ block: 'js-paranja' }],
+            content: [
+            'click here',
+            {
+              elem: 'paranja',
+              mix: { block: 'animation', mods: { 'fade': 'out' } },
+            }]
+          },
+          {
+            elem: 'name',
+            content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Анимация'
+              mods: { size: 'm', view: 'primary', weight: 'bold' },
+              content: "Fade In / Fade Out"
             },
             {
               block: 'text',
-              mods: { size: 'xxl', view: 'primary' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Анимация — последовательное изменение свойств блока по какому-либо событию. Она мотивирует к действию, вовлекает в процесс, вызвает восторг'
+              mods: { size: 's', view: 'primary' },
+              content: "mods: { 'fade': 'in' }   /   mods: { 'fade': 'out' }"
+            }]
+          }]
+        },
+        {
+          block: 'animation-item',
+          content: [
+          {
+            elem: 'view',
+            mix: [{ block: 'js-modal-top' }],
+            content: [
+            'click here',
+            {
+              elem: 'modal',
+              attrs: { style: 'display: none;' },
+              mix: { block: 'animation', mods: { to: 'bottom' } },
+            }]
+          },
+          {
+            elem: 'name',
+            content: [
+            {
+              block: 'text',
+              mods: { size: 'm', view: 'primary', weight: 'bold' },
+              content: "From top to bottom"
             },
             {
-              block : 'animation-list',
-              content : [
+              block: 'text',
+              mods: { size: 's', view: 'primary' },
+              content: "mods: { 'from': 'top' }   /   mods: { 'to': 'bottom' }"
+            }]
+          }]
+        },
+        {
+          block: 'animation-item',
+          content: [
+          {
+            elem: 'view',
+            mix: [{ block: 'js-modal-bottom' }],
+            content: [
+            'click here',
+            {
+              elem: 'modal',
+              attrs: { style: 'display: none;' },
+              mix: { block: 'animation', mods: { to: 'top' } },
+            }]
+          },
+          {
+            elem: 'name',
+            content: [
+            {
+              block: 'text',
+              mods: { size: 'm', view: 'primary', weight: 'bold' },
+              content: "From bottom to top"
+            },
+            {
+              block: 'text',
+              mods: { size: 's', view: 'primary' },
+              content: "mods: { 'from': 'bottom' }   /   mods: { 'to': 'top' }"
+            }]
+          }]
+        },
+        {
+          block: 'animation-item',
+          content: [
+          {
+            elem: 'view',
+            mix: [{ block: 'js-modal-right' }],
+            content: [
+            'click here',
+            {
+              elem: 'modal',
+              attrs: { style: 'display: none;' },
+              mix: { block: 'animation', mods: { to: 'left' } },
+            }]
+          },
+          {
+            elem: 'name',
+            content: [
+            {
+              block: 'text',
+              mods: { size: 'm', view: 'primary', weight: 'bold' },
+              content: "From right to left"
+            },
+            {
+              block: 'text',
+              mods: { size: 's', view: 'primary' },
+              content: "mods: { 'from': 'right' }   /   mods: { 'to': 'left' }"
+            }]
+          }]
+        },
+        {
+          block: 'animation-item',
+          content: [
+          {
+            elem: 'view',
+            mix: [{ block: 'js-modal-left' }],
+            content: [
+            'click here',
+            {
+              elem: 'modal',
+              attrs: { style: 'display: none;' },
+              mix: { block: 'animation', mods: { to: 'right' } },
+            }]
+          },
+          {
+            elem: 'name',
+            content: [
+            {
+              block: 'text',
+              mods: { size: 'm', view: 'primary', weight: 'bold' },
+              content: "From left to right"
+            },
+            {
+              block: 'text',
+              mods: { size: 's', view: 'primary' },
+              content: "mods: { 'from': 'left' }   /   mods: { 'to': 'right' }"
+            }]
+          }]
+        },
+        {
+          block: 'animation-item',
+          content: [
+          {
+            elem: 'view',
+            content: [
+            {
+              block: 'e-accordion',
+              content: [
+              {
+                elem: 'item',
+                content: [
                 {
-                  block : 'animation-item',
-                  content : [
-                    {
-                      elem : 'view',
-                      content : [
-
-                      ]
-                    },
-                    {
-                      elem : 'name',
-                      content : [
-                        {
-                          block: 'text',
-                          mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "Overlay side show"
-                        }
-                      ]
-                    }
-                  ]
+                  elem: 'short',
+                  mix: { block: 'decorator', mods: { 'space-a': 'm' } },
+                  content: { 
+                    block: 'text',
+                    mods: { size: 'm', view: 'link' },
+                    content: 'click me!'
+                  }
                 },
                 {
-                  block : 'animation-item',
-                  content : [
-                    {
-                      elem : 'view',
-                      content : [
-
-                      ]
-                    },
-                    {
-                      elem : 'name',
-                      content : [
-                        {
-                          block: 'text',
-                          mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "Accordion toggle"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  block : 'animation-item',
-                  content : [
-                    {
-                      elem : 'view',
-                      content : [
-                        {
-                          block : 'illustration',
-
-                        }
-                      ]
-                    },
-                    {
-                      elem : 'name',
-                      content : [
-                        {
-                          block: 'text',
-                          mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "Block scroll show"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  block : 'animation-item',
-                  content : [
-                    {
-                      elem : 'view',
-                      content : [
-                      ]
-                    },
-                    {
-                      elem : 'name',
-                      content : [
-                        {
-                          block: 'text',
-                          mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "Modal fade"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  block : 'animation-item',
-                  content : [
-                    {
-                      elem : 'view',
-                      content : [
-                      ]
-                    },
-                    {
-                      elem : 'name',
-                      content : [
-                        {
-                          block: 'text',
-                          mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "Grid coloumn break"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  block : 'animation-item',
-                  content : [
-                    {
-                      elem : 'view',
-                      content : [
-                      ]
-                    },
-                    {
-                      elem : 'name',
-                      content : [
-                        {
-                          block: 'text',
-                          mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "Block hover inverse"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  block : 'animation-item',
-                  content : [
-                    {
-                      elem : 'view',
-                      content : [
-                      ]
-                    },
-                    {
-                      elem : 'name',
-                      content : [
-                        {
-                          block: 'text',
-                          mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "Form slide"
-                        }
-                      ]
-                    }
-                  ]
-                },
-
-
-              ]
-            }
-          ]
-        }
-
-      ]
+                  elem: 'more',
+                  mix: { block: 'decorator', mods: { 'space-a': 'm' } },
+                  content: { 
+                    block: 'text',
+                    mods: { size: 'm', view: 'primary' },
+                    content: 'here I am!'
+                  }
+                }]
+              }]
+            }]
+          },
+          {
+            elem: 'name',
+            content: [
+            {
+              block: 'text',
+              mods: { size: 'm', view: 'primary', weight: 'bold' },
+              content: "Accordion toggle"
+            },
+            {
+              block: 'text',
+              mods: { size: 's', view: 'primary' },
+              content: "block: 'e-accordion'   /   elem: 'short'   /   elem: 'more'"
+            }]
+          }]
+        },
+        {
+          block: 'animation-item',
+          content: [
+          {
+            elem: 'view',
+            content: [
+            { 
+              block: 'decorator',
+              mods: { 'indent-a': 's' },
+              content: {
+                block: 'button',
+                mods: { size: 'm', theme: 'normal' },
+                mix: [{ block: 'animation' }, { block: 'js-shake-horizontal' }],
+                content: 'Shake me horizontal!'
+              }
+            },
+            { 
+              block: 'decorator',
+              mods: { 'indent-a': 's' },
+              content: {
+                block: 'button',
+                mods: { size: 'm', theme: 'normal' },
+                mix: [{ block: 'animation' }, { block: 'js-shake-radial' }],
+                content: 'Shake me radial!'
+              }
+            }]
+          },
+          {
+            elem: 'name',
+            content: [
+            {
+              block: 'text',
+              mods: { size: 'm', view: 'primary', weight: 'bold' },
+              content: "Shake"
+            },
+            {
+              block: 'text',
+              mods: { size: 's', view: 'primary' },
+              content: "mods: { shake: 'horizontal' }   /   mods: { shake: 'radial' }"
+            }]
+          }]
+        }]
+      }]
+    }]
     },
   ]
 };
