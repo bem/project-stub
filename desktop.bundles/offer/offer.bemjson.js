@@ -21,9 +21,8 @@ module.exports = {
   content: [
     {
       block: 'offer',
-      attrs: { style: 'height: 496px; margin: 100px auto;' },
+      attrs: { style: 'height: 456px; margin: 100px auto;' },
       mix: { block: 'pt-card', mods: { view: 'default' } },
-      mods: { view: 'nike' },
       content: [
         {
           elem: 'show',
@@ -36,18 +35,18 @@ module.exports = {
               elem: 'price-centralized',
               content: [
                 {
-                  elem: 'price',
+                  elem: 'goods-price',
                   content: '$299'
                 }
               ]
             },
             {
-              elem: 'item',
+              elem: 'item'
             }
           ]
         },
         {
-          elem: 'info',
+          elem: 'goods-info',
           mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-v': 'xxl' } },
           content: [
             {
@@ -74,6 +73,51 @@ module.exports = {
             },
             {
               elem: 'border-bottom'
+            }
+          ]
+        }
+      ]
+    },
+
+
+
+
+    {
+      block: 'offer',
+      attrs: { style: 'height: 456px; margin: 100px auto;' },
+      mix: { block: 'pt-card', mods: { view: 'inverse' } },
+      content: [
+        {
+          elem: 'title',
+          mix: { block: 'pt-card', elem: 'header', mods: { 'space-h': 'xxl' } },
+          content: [
+            {
+              block: 'text',
+              mods: { view: 'inverse', size: 'l', transform: 'uppercase', align: 'center' },
+              content: 'Brabus'
+            }
+          ]
+        },
+        {
+          elem: 'brand-info',
+          mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-v': 'xxl' } },
+          content: [
+            {
+              block: 'text',
+              mix: { block: 'decorator', mods: { 'indent-b': 'xs' } },
+              mods: { view: 'inverse', size: 'xl' },
+              content: 'Luxury and comfort never comprised. The BRABUS GLE 700 Coupe will lead to an unforgettable journey'
+            }
+          ]
+        },
+        {
+          elem: 'price',
+          mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
+          content: [
+            {
+              block: 'text',
+              mods: { view: 'inverse', size: 'm', weight: 'semibold' },
+              content: 'Shop Now'
             }
           ]
         }
