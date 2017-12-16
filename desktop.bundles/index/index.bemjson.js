@@ -161,10 +161,10 @@ module.exports = {
 											mix: { block: 'promo-cards', elem: 'offer-goods-price'},
 											content: '$299'
 										},
-				            {
-				              elem: 'item',
+										{
+											elem: 'item',
 											mix: { block: 'promo-cards', elem: 'offer-item'}
-				            }
+										}
 									]
 								},
 								{
@@ -188,12 +188,60 @@ module.exports = {
 								},
 								{
 									elem: 'action',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
+									mix: [
+										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
+										{ block: 'promo-cards', elem: 'offer-action'},
+									],
 									content: [
 										{
 											block: 'text',
 											mods: { view: 'secondary', size: 'm', align: 'center', weight: 'semibold' },
 											content: 'Shop Now'
+										}
+									]
+								}
+							]
+						},
+						{
+							block: 'offer',
+							mods: { view: 'brabus'},
+							mix: { block: 'pt-card', mods: { view: 'inverse' } },
+							content: [
+								{
+									elem: 'title',
+									mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-v': 'xxl' } },
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'inverse', size: 'l', transform: 'uppercase', align: 'center' },
+											content: 'Brabus'
+										}
+									]
+								},
+								{
+									elem: 'service-info',
+									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
+									content: [
+										{
+											block: 'text',
+											mix: { block: 'decorator', mods: { 'indent-b': 'xl'} },
+											mods: { view: 'inverse', size: 'm', weight: 'semibold' },
+											content: 'Luxury and comfort never comprised. The BRABUS GLE 700 Coupe will lead to an unforgettable journey'
+										},
+										{
+											elem: 'price',
+											content: [
+												{
+													block: 'text',
+													mods: { view: 'inverse', size: 's', style: 'italic' },
+													content: 'from'
+												},
+												{
+													block: 'text',
+													mods: { view: 'inverse', size: 'xxxl', weight: 'semibold' },
+													content: '$299'
+												}
+											]
 										}
 									]
 								}

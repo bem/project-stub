@@ -177,7 +177,35 @@
 
 					&-background {
 						transform: scale(1);
-						transition: transform .4s cubic-bezier(0.75,-0.5, 0.25, 1);
+						opacity: 1;
+						transition: transform .4s cubic-bezier(0.75,-0.5, 0.25, 1) .2s;
+					}
+					&-goods-price {
+						transform: translateX(-50%);
+						opacity: 1;
+						transition: transform .4s .2s, opacity .3s .3s;
+					}
+
+					&-item {
+						transform: translateX(0);
+						opacity: 1;
+						transition: transform .4s .25s, opacity .3s .35s;
+					}
+
+					&-title {
+						transform: translateX(0);
+						opacity: 1;
+						transition: transform .4s .3s, opacity .3s .4s;
+					}
+					&-desc {
+						transform: translateX(0);
+						opacity: 1;
+						transition: transform .4s .35s, opacity .3s .45s;
+					}
+
+					&-action {
+						transform: translateY(0);
+						transition: transform .4s .6s;
 					}
 				}
 
