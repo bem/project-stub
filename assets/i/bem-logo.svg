@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="158" height="50" viewBox="0 0 158 50">
+  <g fill-rule="evenodd">
+    <rect width="49" height="23"/>
+    <rect width="49" height="14" x="54"/>
+    <rect width="14" height="50" x="108"/>
+    <rect width="14" height="50" x="126"/>
+    <rect width="14" height="50" x="144"/>
+    <rect width="49" height="14" x="54" y="18"/>
+    <rect width="49" height="14" x="54" y="36"/>
+    <rect width="49" height="23" y="27"/>
+  </g>
+</svg>
