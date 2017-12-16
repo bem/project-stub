@@ -48,10 +48,11 @@ module.exports = {
         },
         {
           elem: 'info',
-          mix: { block: 'pt-card', elem: 'content' },
+          mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-v': 'xxl' } },
           content: [
             {
               block: 'text',
+              mix: { block: 'decorator', mods: { 'indent-b': 'xs' } },
               mods: { view: 'primary', size: 'xl', align: 'center', transform: 'uppercase', spacing: 's' },
               content: 'Nike Gyakusou Gaiter Boot'
             },
@@ -63,16 +64,16 @@ module.exports = {
           ]
         },
         {
-          elem: 'title',
-          mix: { block: 'pt-card', elem: 'footer' },
-        },
-        {
           elem: 'action',
+          mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
           content: [
             {
               block: 'text',
-              mods: { view: 'secondary', size: 'm' },
+              mods: { view: 'secondary', size: 'm', align: 'center', weight: 'semibold' },
               content: 'Shop Now'
+            },
+            {
+              elem: 'border-bottom'
             }
           ]
         }

@@ -1,23 +1,27 @@
 .offer {
   width: 296px;
   overflow: hidden;
+  border-radius: 12px;
   &__show {
     overflow: hidden;
     position: relative;
     height: 280px;
-    margin-bottom: var(--space-l);
   }
   &__background {
     position: absolute;
     width: 220px;
     height: 220px;
+    margin-left: -110px;
+    left: 50%;
+    top: var(--space-xl);
     border-radius: 999em;
     background: var(--color-inverse);
   }
   &__price-centralized {
     width: 480px;
     position: absolute;
-    margin-left: -112px;
+    margin-left: -240px;
+    left: 50%;
     text-align: center;
   }
   &__price {
@@ -30,11 +34,17 @@
   &__item {
     position: absolute;
     left: 12px;
-    top: 133px;
+    top: 120px;
     width: 264px;
     height: 150px;
     background-size: 264px;
     background-image: url('nike.png');
     background-repeat: no-repeat;
+  }
+  &__border-bottom {
+    width: 60px;
+    height: 2px;
+    margin: var(--space-xxs) auto 0;
+    background-color: var(--color-ghost);
   }
 }
