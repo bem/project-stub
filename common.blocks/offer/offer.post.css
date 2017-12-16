@@ -68,11 +68,11 @@
 
    &:hover {
     & .offer__action::after {
-     background-color: var(--color-typo-letter);
-     transform: translateX(-50%) scaleX(1.3);
-     transition: transform .35s cubic-bezier(0.25, 0.1, 0, 3), background-color .2s;
+      background-color: var(--color-typo-letter);
+      transform: translateX(-50%) scaleX(1.3);
+      transition: transform .35s cubic-bezier(0.25, 0.1, 0, 3), background-color .2s;
     }
-   }
+  }
 
   &__item {
     position: absolute;
@@ -115,7 +115,7 @@
     z-index: 1;
   }
 
-  &__brand-info {
+  &__service-info {
     z-index: 1;
   }
 

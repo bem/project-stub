@@ -80,17 +80,12 @@ module.exports = {
     },
 
 
-
-
     {
       block: 'offer',
       mods: { view: 'brabus'},
       attrs: { style: 'height: 456px; margin: 100px auto;' },
       mix: { block: 'pt-card', mods: { view: 'inverse' } },
       content: [
-        // {
-        //   elem: 'fade'
-        // },
         {
           elem: 'title',
           mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-v': 'xxl' } },
@@ -103,7 +98,7 @@ module.exports = {
           ]
         },
         {
-          elem: 'brand-info',
+          elem: 'service-info',
           mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
           content: [
             {
@@ -127,6 +122,51 @@ module.exports = {
                 }
               ]
             }
+          ]
+        }
+      ]
+    },
+
+    {
+      block: 'offer',
+      attrs: { style: 'height: 456px; margin: 100px auto;' },
+      mix: { block: 'pt-card', mods: { view: 'default' } },
+      content: [
+        {
+          elem: 'show',
+          mix: { block: 'pt-card', elem: 'header' },
+          content: [
+            {
+              elem: 'item'
+            }
+          ]
+        },
+        {
+          elem: 'goods-info',
+          mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-v': 'xxl' } },
+          content: [
+            {
+              block: 'text',
+              mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', spacing: 's' },
+              content: 'Magic For All'
+            },
+            {
+              elem: 'logo',
+              content: [
+
+              ]
+            }
+          ]
+        },
+        {
+          elem: 'action',
+          mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
+          content: [
+            {
+              block: 'text',
+              mods: { view: 'secondary', size: 'm', align: 'center', weight: 'semibold' },
+              content: 'Shop Now'
+            },
           ]
         }
       ]
