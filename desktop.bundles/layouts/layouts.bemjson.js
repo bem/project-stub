@@ -32,15 +32,15 @@ module.exports = {
           content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold' },
+              mods: { size: 'xxxl', weight: 'bold', width: 'default' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
               content: 'Шаблоны'
             },
             {
               block: 'text',
-              mods: { size: 'xxl', view: 'primary' },
+              mods: { size: 'xxl', view: 'primary', width: 'default' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Шаблоны помогают структурировать пространство и подготовить каркас для интеграции блоков. «Структурируя при помощи модульной сетки плоскости и пространство, дизайнер получает возможность организовать тексты, фотографии и графические изображения по принципам объективности и функциональности. Сокращается число форматов для изобразительных элементов»'
+              content: 'Шаблоны помогают структурировать пространство и подготовить каркас для интеграции блоков. «Структурируя при помощи модульной сетки плоскости и пространство, дизайнер получает возможность организовать тексты и графические изображения по принципам объективности и функциональности»'
             },
             /* 32-8-4 */
             {
@@ -59,7 +59,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/JWNLLO',
                             target: '_blank'
                           },
@@ -83,7 +83,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/zZwjrR',
                             target: '_blank'
                           },
@@ -107,7 +107,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/MpmGJE',
                             target: '_blank'
                           },
@@ -131,7 +131,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/oZWdGV',
                             target: '_blank'
                           },
@@ -155,7 +155,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/oZWdGV',
                             target: '_blank'
                           },
@@ -179,7 +179,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/Rochet/full/zPwYao/',
                             target: '_blank'
                           },
@@ -210,7 +210,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/mWmLYP',
                             target: '_blank'
                           },
@@ -234,7 +234,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/qrmKdW',
                             target: '_blank'
                           },
@@ -258,7 +258,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/BWRVRm',
                             target: '_blank'
                           },
@@ -282,7 +282,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/mWmjJx',
                             target: '_blank'
                           },
@@ -306,7 +306,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/yegorov/full/EWmpWZ/',
                             target: '_blank'
                           },
@@ -330,7 +330,7 @@ module.exports = {
                         {
                           block: 'text',
                           tag: 'a',
-                          attrs: { 
+                          attrs: {
                             href: 'https://codepen.io/Rochet/full/NwjWOZ/',
                             target: '_blank'
                           },

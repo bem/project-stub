@@ -39,7 +39,7 @@ module.exports = {
             },
             {
               block: 'text',
-              mods: { size: 'xxl', view: 'primary' },
+              mods: { size: 'xxl', view: 'primary', width: 'default' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
               content: 'Переменные позволяют гибко кастомизировать и масштабировать интерфейс, сохраняя консистентность блоков'
             },

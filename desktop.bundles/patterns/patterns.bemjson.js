@@ -39,7 +39,7 @@ module.exports = {
             },
             {
               block: 'text',
-              mods: { size: 'xxl', view: 'primary' },
+              mods: { size: 'xxl', view: 'primary', width: 'default' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
               content: 'Паттерн — каркас для блоков. Если блоки преимущественно отвечают за смысл, то Паттерны за их представление. Паттерны примиксовываются к блокам и их элементам, позволяя быстро сгенерить нужное визуальное представление'
             },

@@ -3,17 +3,21 @@
   display: block;
   margin-right: $space-l;
   margin-bottom: 20px;
+  &:nth-child(4n) {
+    margin-right: 0px;
+  }
   &__view {
-    width: 208px;
+    width: 270px;
     height: 148px;
-    background: var(--color-ghost);
+    /*background: var(--color-ghost);*/
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: $space-s;
   }
   &__name {
     font-size: 15px;
-/*    text-align: center;*/
+    text-align: center;
   }
 }

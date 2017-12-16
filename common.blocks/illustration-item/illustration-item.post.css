@@ -5,6 +5,17 @@
     height: 380px;
     background-color: var(--color-ghost);
     margin-bottom: $space-l;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_view {
+      &_default {
+        background-color: var(--color-default);
+      }
+      &_inverse {
+        background-color: #000;
+      }
+    }
   }
   &__name {
 

@@ -38,7 +38,7 @@ module.exports = {
             },
             {
               block: 'text',
-              mods: { size: 'xxl', view: 'primary' },
+              mods: { size: 'xxl', view: 'primary', width: 'default' },
               mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
               content: 'Векторные изображения...'
             },
@@ -51,10 +51,10 @@ module.exports = {
                     {
                       elem : 'view',
                       content : [
-                        // {
-                        //   block : 'vector',
-                        //   mods : { '1' : 'm-primary'}
-                        // }
+                        {
+                          block : 'vector',
+                          mods : { 'bus' : 'm-primary'}
+                        }
                       ]
                     },
                     {
@@ -63,7 +63,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 1: 'm-primary' }"
+                          content: "mods: { bus: 'm-primary' }"
                         }
                       ]
                     }
@@ -77,7 +77,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '2' : 'm-primary'}
+                          mods : { 'chats' : 'm-primary'}
                         }
                       ]
                     },
@@ -87,7 +87,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 2: 'm-primary' }"
+                          content: "mods: { chats: 'm-primary' }"
                         }
                       ]
                     }
@@ -101,7 +101,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '3' : 'm-primary'}
+                          mods : { 'error-bug' : 'm-primary'}
                         }
                       ]
                     },
@@ -111,7 +111,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 3: 'm-primary' }"
+                          content: "mods: { 'error-bug': 'm-primary' }"
                         }
                       ]
                     }
@@ -125,7 +125,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '4' : 'm-primary'}
+                          mods : { 'filing-cabinet' : 'm-primary'}
                         }
                       ]
                     },
@@ -135,7 +135,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 4: 'm-primary' }"
+                          content: "mods: { 'filing-cabinet': 'm-primary' }"
                         }
                       ]
                     }
@@ -149,7 +149,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '5' : 'm-primary'}
+                          mods : { 'controller' : 'm-primary'}
                         }
                       ]
                     },
@@ -159,7 +159,32 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 5: 'm-primary' }"
+                          content: "mods: { 'controller': 'm-primary' }"
+                        }
+                      ]
+                    }
+                  ]
+                },
+
+                {
+                  block : 'vector-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                        {
+                          block : 'vector',
+                          mods : { 'hamburger' : 'm-primary'}
+                        }
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "mods: { 'hamburger': 'm-primary' }"
                         }
                       ]
                     }
@@ -173,7 +198,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '6' : 'm-primary'}
+                          mods : { 'image-folder' : 'm-primary'}
                         }
                       ]
                     },
@@ -183,7 +208,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 6: 'm-primary' }"
+                          content: "mods: { 'image-folder': 'm-primary' }"
                         }
                       ]
                     }
@@ -197,7 +222,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '7' : 'm-primary'}
+                          mods : { 'luxury' : 'm-primary'}
                         }
                       ]
                     },
@@ -207,7 +232,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 7: 'm-primary' }"
+                          content: "mods: { luxury: 'm-primary' }"
                         }
                       ]
                     }
@@ -221,7 +246,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '8' : 'm-primary'}
+                          mods : { 'map-marker' : 'm-primary'}
                         }
                       ]
                     },
@@ -231,7 +256,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 8: 'm-primary' }"
+                          content: "mods: { 'map-marker': 'm-primary' }"
                         }
                       ]
                     }
@@ -245,7 +270,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '9' : 'm-primary'}
+                          mods : { 'message-app' : 'm-primary'}
                         }
                       ]
                     },
@@ -255,7 +280,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 9: 'm-primary' }"
+                          content: "mods: { 'message-app': 'm-primary' }"
                         }
                       ]
                     }
@@ -269,7 +294,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '10' : 'm-primary'}
+                          mods : { 'paint-bucket' : 'm-primary'}
                         }
                       ]
                     },
@@ -279,7 +304,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 10: 'm-primary' }"
+                          content: "mods: { 'paint-bucket': 'm-primary' }"
                         }
                       ]
                     }
@@ -293,7 +318,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '11' : 'm-primary'}
+                          mods : { 'play-movie' : 'm-primary'}
                         }
                       ]
                     },
@@ -303,7 +328,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: {11: 'm-primary' }"
+                          content: "mods: { 'play-movie': 'm-primary' }"
                         }
                       ]
                     }
@@ -317,7 +342,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '12' : 'm-primary'}
+                          mods : { 'polaroid' : 'm-primary'}
                         }
                       ]
                     },
@@ -327,7 +352,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 12: 'm-primary' }"
+                          content: "mods: { 'polaroid': 'm-primary' }"
                         }
                       ]
                     }
@@ -341,7 +366,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '13' : 'm-primary'}
+                          mods : { 'read-email' : 'm-primary'}
                         }
                       ]
                     },
@@ -351,7 +376,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 13: 'm-primary' }"
+                          content: "mods: { 'read-email': 'm-primary' }"
                         }
                       ]
                     }
@@ -365,7 +390,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '14' : 'm-primary'}
+                          mods : { 'safe' : 'm-primary'}
                         }
                       ]
                     },
@@ -375,7 +400,7 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 14: 'm-primary' }"
+                          content: "mods: { 'safe': 'm-primary' }"
                         }
                       ]
                     }
@@ -389,7 +414,7 @@ module.exports = {
                       content : [
                         {
                           block : 'vector',
-                          mods : { '15' : 'm-primary'}
+                          mods : { 'shopping-bag' : 'm-primary'}
                         }
                       ]
                     },
@@ -399,7 +424,79 @@ module.exports = {
                         {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold' },
-                          content: "mods: { 15: 'm-primary' }"
+                          content: "mods: { 'shopping-bag': 'm-primary' }"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'vector-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                        {
+                          block : 'vector',
+                          mods : { 'shopping' : 'm-primary'}
+                        }
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "mods: { shopping: 'm-primary' }"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'vector-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                        {
+                          block : 'vector',
+                          mods : { 'spacecraft' : 'm-primary'}
+                        }
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "mods: { spacecraft: 'm-primary' }"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'vector-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      content : [
+                        {
+                          block : 'vector',
+                          mods : { 'umbrella' : 'm-primary'}
+                        }
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold' },
+                          content: "mods: { umbrella: 'm-primary' }"
                         }
                       ]
                     }

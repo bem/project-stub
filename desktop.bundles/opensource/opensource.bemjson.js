@@ -40,7 +40,7 @@ module.exports = {
 						},
 						{
 							block: 'text',
-							mods: { size: 'xxl', view: 'primary' },
+							mods: { size: 'xxl', view: 'primary', width: 'default' },
 							mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
 							content: 'Стань частью BEM DESIGN'
 						},

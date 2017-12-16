@@ -32,13 +32,13 @@ module.exports = {
       content: [
       {
         block: 'text',
-        mods: { size: 'xxxl', weight: 'bold' },
+        mods: { size: 'xxxl', weight: 'bold', width: 'default' },
         mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
         content: 'Анимация'
       },
       {
         block: 'text',
-        mods: { size: 'xxl', view: 'primary' },
+        mods: { size: 'xxl', view: 'primary', width: 'default' },
         mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
         content: 'Анимация — последовательное изменение свойств блока по какому-либо событию. Она мотивирует к действию, вовлекает в процесс, вызвает восторг'
       },
@@ -210,7 +210,7 @@ module.exports = {
                 {
                   elem: 'short',
                   mix: { block: 'decorator', mods: { 'space-a': 'm' } },
-                  content: { 
+                  content: {
                     block: 'text',
                     mods: { size: 'm', view: 'link' },
                     content: 'click me!'
@@ -219,7 +219,7 @@ module.exports = {
                 {
                   elem: 'more',
                   mix: { block: 'decorator', mods: { 'space-a': 'm' } },
-                  content: { 
+                  content: {
                     block: 'text',
                     mods: { size: 'm', view: 'primary' },
                     content: 'here I am!'
@@ -249,7 +249,7 @@ module.exports = {
           {
             elem: 'view',
             content: [
-            { 
+            {
               block: 'decorator',
               mods: { 'indent-a': 's' },
               content: {
@@ -259,7 +259,7 @@ module.exports = {
                 content: 'Shake me horizontal!'
               }
             },
-            { 
+            {
               block: 'decorator',
               mods: { 'indent-a': 's' },
               content: {
