@@ -88,7 +88,7 @@
 
   &__action {
     position: relative;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -120,4 +120,3 @@
   }
 
 }
-
