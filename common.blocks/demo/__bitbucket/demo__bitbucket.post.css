@@ -2,13 +2,18 @@
 	margin-bottom: 92px;
 	font-size: 24px;
 	font-weight: bold;
-	opacity: 0.3;
-	color: var(--color-typo-primary);
+	color: var(--color-typo-ghost);
 	display: block;
 	text-decoration: none;
 	transition-duration: 0.3s;
-	&:hover {
-		color: rgb(7, 71, 166);
-		opacity: 1;
+
+	& > a {
+		text-decoration: none;
+		color: var(--color-typo-ghost);
+		transition: .3s ease;
+
+		&:hover {
+			color: var(--color-typo-alert);
+		}
 	}
 }

@@ -1,114 +1,222 @@
 module.exports = {
-  block: 'page',
-  title: 'BEM Design',
-  favicon: '/favicon.ico',
-  head: [
-      { elem: 'meta', attrs: { name: 'description', content: '' } },
-      { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
-      { elem: 'css', url: 'index.min.css' },
-      // { elem: 'css', url: '../../assets/ibm-type/css/ibm-type.css' },
-      { elem: 'js', url: 'https://code.jquery.com/jquery-3.2.1.js' },
-  ],
-  mix: {
-      block: 'theme',
-      mods: { color: 'default', space: 'default', size: 'default' }
-  },
-  scripts: [{ elem: 'js', url: 'index.min.js' }],
-  mods: { type: 'full-screen', theme: 'islands', 'vertical-align': 'center' },
-  content: [
-    {
-      block: 'demo',
-      mix : {
-        block : 'theme',
-        mods : { color : 'default', space : 'default', size : 'default' }
-      },
-      params: {
-        menusection: 'base',
-        pagename: 'prototype',
-      },
-      content : [
+	block: 'page',
+	title: 'BEM Design',
+	favicon: '/favicon.ico',
+	head: [
+		{ elem: 'meta', attrs: { name: 'description', content: '' } },
+		{ elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
+		{ elem: 'css', url: 'index.min.css' },
+		{ elem: 'css', url: '../../assets/ibm-type/css/ibm-type.css' },
+		{ elem: 'js', url: 'https://code.jquery.com/jquery-3.2.1.js' },
+	],
+	mix: {
+		block: 'theme',
+		mods: { color: 'default', space: 'default', size: 'default' }
+	},
+	scripts: [{ elem: 'js', url: 'index.min.js' }],
+	mods: { type: 'full-screen', theme: 'islands' },
+	content: [
+	{
+		block: 'demo',
+		mix: {
+		block: 'theme',
+		mods: { color: 'default', space: 'default', size: 'default' }
+		},
+		content: [
+		// {
+		// 	elem: 'layout',
+		// 	elemMods: { view: 'default' },
+		// 	content: [
+		// 	{
+		// 		elem: 'content',
+		// 		content: [
+		// 		{
+		// 			block: 'text',
+		// 			mods: { size: 'xxl', view: 'ghost', weight: 'bold' },
+		// 			content: [
+		// 			'Yamoney Design',
+		// 			{
+		// 				tag: 'a',
+		// 				block: 'text',
+		// 				mods: { view: 'link' },
+		// 				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
+		// 				attrs: { href: 'https://bitbucket-public.yamoney.ru/users/meeq/repos/prototype/browse' },
+		// 				content: 'на Bitbucket'
+		// 			},
+		// 			{
+		// 				tag: 'a',
+		// 				block: 'text',
+		// 				mods: { view: 'link' },
+		// 				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
+		// 				attrs: { href: 'https://t.me/bemdesign' },
+		// 				content: 'в Telegram'
+		// 			}]
+		// 		},
+		// 		{
+		// 			elem: 'slogan',
+		// 			content: 'Масштабируемая'
+		// 		},
+		// 		{
+		// 			elem: 'slogan',
+		// 			content: 'дизайн-система'
+		// 		},
+		// 		{
+		// 			elem: 'slogan',
+		// 			content: 'на основе БЭМ'
+		// 		}]
+		// 	}]
+		// },
+		{
+			block: 'promo-cards',
+			mods: { view: 'ghost', slide: 'first' },
+			content: [
+			{
+				elem: 'theme-name',
+				// elemMods: { position: 'center' },
+				content: 'Product'
+			},
+			{
+				elem: 'content',
+				content: [
 				{
-					elem: 'plug',
+					elem: 'card',
+					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
 					content: [
-						{
-							elem: 'plug-header',
-							content: [
-								{
-									elem: 'plug-bem-logo',
-									content: {
-										html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158 50"><g fill-rule="evenodd"><rect width="49" height="23"/><rect width="49" height="14" x="54"/><rect width="14" height="50" x="108"/><rect width="14" height="50" x="126"/><rect width="14" height="50" x="144"/><rect width="49" height="14" x="54" y="18"/><rect width="49" height="14" x="54" y="36"/><rect width="49" height="23" y="27"/></g></svg>'
-									}
-								},
-								{
-									elem: 'plug-slogan',
-									tag: 'h1',
-									content: 'Масштабируемая дизайн-система на основе БЭМ'
-								},
-							]
+					{
+						block: 'media',
+						attrs: {
+							style: 'width: 296px; height: 456px; border-radius: 12px;'
 						},
+						mix: { block: 'pt-card', mods: { view: 'inverse' } },
+						content: [
 						{
-							elem: 'plug-content',
+							elem: 'video',
 							content: [
-
 								{
-									elem: 'plug-description',
-									tag: 'p',
-									content: 'Для использования системы зайдите на сайт с компьютера. Почитать документацию можно на Github. Задать вопросы можно в соцсетях'
-								},
-								{
-									elem: 'plug-action',
-									content: [
-										{
-											elem: 'plug-button',
-											tag: 'a',
-											attrs: { 'href': 'https://github.com/bemdesign'},
-											content: 'Репозиторий на Github'
-										},
-										{
-											elem: 'plug-soclink',
-											elemMods: { icon: 'telegram'},
-											tag: 'a',
-											attrs: { 'href': 'https://t.me/dotmus'},
-											content: 'Телеграм'
-										},
-										{
-											elem: 'plug-soclink',
-											elemMods: { icon: 'twitter'},
-											tag: 'a',
-											attrs: { 'href': 'https://twitter.com/bem_design'},
-											content: 'Твиттер'
-										},
-									]
+									elem: 'play'
 								}
 							]
 						},
-
-					]
+						{
+							elem: 'title',
+							mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } },
+							content: [
+								{
+									block: 'text',
+									mods: { view: 'inverse', size: 'xxl' },
+									content: 'Mad Lib Theater with John Cena'
+								}
+							]
+						},
+						{
+							elem: 'footer',
+							mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } },
+							content: [
+								{
+									block: 'pt-icon-plus',
+									mods: { 'vertical-align': 'center' }, 
+									content: [
+										{
+											elem: 'icon',
+											elemMods: { 'indent-right': 'xs' },
+											content: [
+												{
+													block: 'media',
+													elem: 'channel-logo'
+												}
+											]
+										},
+										{
+											elem: 'block',
+											content: [
+												{
+													block: 'text',
+													mods: { view: 'inverse', size: 's' },
+													content: 'The Tonight Show…'
+												}
+											]
+										}
+									]
+								},
+								{
+									elem: 'view',
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'inverse', size: 's' },
+											content: '512K views'
+										}
+									]
+								}
+							]
+						}]
+					}]
 				},
-        {
-          elem: 'content',
-          elemMods: { display: 'flex' },
-          content: [
-            {
-              elem: 'face-text',
-              content: [
-                {
-                  elem: 'github',
-                  tag: 'a',
-                  attrs: {
-                    href: 'https://github.com/bemdesign'
-                  },
-                  content: 'BEM Design на Github'
-                },
-                {
-                  elem: 'slogan',
-                  content: 'Масштабируемая дизайн-система на основе БЭМ'
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+				{
+					elem: 'description',
+					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					content: [
+					{
+						elem: 'header',
+						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+						content: 'Media Content'
+					},
+					{
+						block: 'text',
+						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+						mods: { size: 'xl' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'list',
+					content: [
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
+							content: 'Video'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							content: 'Text'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							content: 'Music'
+						}
+					}]
+				}]
+			},
+			{
+				elem: 'controls',
+				content: [
+				{
+					block: 'icon',
+					mods: { 'arrow-up-2': 'xl-primary' },
+					mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+				},
+				{
+					block: 'icon',
+					mods: { 'arrow-down-2': 'xl-primary' }
+				}]
+			},
+			]
+		}]
+	}]
 };

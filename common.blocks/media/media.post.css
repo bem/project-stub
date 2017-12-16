@@ -1,0 +1,44 @@
+.media {
+	overflow: hidden;
+	&__video {
+		height: 342px;
+		position: relative;
+		background: url('dock.png');
+	}
+	&__title {
+		position: relative;
+		z-index: 99;
+		margin-top: -$space-xxl;
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__play {
+		width: 32px;
+		height: 32px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -$space-l ;
+		margin-top: -$space-l ;
+		width: 0; 
+		height: 0; 
+		border-top: $space-l solid transparent;
+		border-bottom: $space-l solid transparent; 
+		border-left: $space-xxl solid var(--color-default);
+		cursor: pointer;
+		&:hover {
+			border-left: var(--space-xxl) solid var(--color-action);
+		}
+	}
+	&__channel-logo {
+		width: 24px;
+		height: 24px;
+		background: red;
+		border-radius: 50%;
+	}
+}
+
+ 
