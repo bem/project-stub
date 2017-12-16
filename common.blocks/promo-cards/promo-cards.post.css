@@ -20,7 +20,7 @@
 			}
 
 			.promo-cards__theme-name {
-				
+
 			}
 		}
 		&_second {
@@ -125,9 +125,9 @@
 		border-radius: 12px;
 		background: white;
 		z-index: 1;
-		transition: .3s ease;
+		transition: transform .4s .3s;
 
-		&:before {
+		/*&:before {
 			content: '';
 			position: absolute;
 			bottom: 0;
@@ -137,14 +137,19 @@
 			pointer-events: none;
 			box-shadow: 0 0px 10px rgba(0, 0, 0, .8);
 			transition: .3s ease;
-		}
+		}*/
+
+
+	}
+
+	&__hover {
+		transition: transform .3s, box-shadow .3s;
+		box-shadow: 0 4px 10px -4px rgba(0, 0, 0, .6);
 
 		&:hover {
-			top: -2px;
-
-			&:before {
-				box-shadow: 0 12px 40px rgba(0, 0, 0, .8);
-			}
+			transform: translateY(-6px);
+			box-shadow: 0 30px 40px -20px rgba(0, 0, 0, .4);
+			transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.9);
 		}
 	}
 	&__description {
@@ -155,5 +160,68 @@
 		font-family: 'IBM Plex Mono' !important;
 		z-index: 1;
 		transition: .3s ease;
+	}
+
+
+	/*///// OFFER //////////////////////// */
+
+	&__offer {
+
+		&_type {
+			&_goods {
+				& .promo-cards__offer {
+
+					&-background {
+						transform: scale(1);
+						transition: transform .4s cubic-bezier(0.75,-0.5, 0.25, 1);
+					}
+				}
+
+			}
+		}
+
+		&_type {
+			&_brand {
+				& .promo-cards__offer {
+
+					&-background {
+						transform: scale(0);
+						opacity: 0;
+						transition: transform .6s cubic-bezier(0.75,-0.7, 0.25, 1), opacity .1s .6s;
+					}
+
+					&-goods-price {
+						transform: translateX(100%);
+						opacity: 0;
+						transition: transform .4s .2s, opacity .3s .3s;
+					}
+
+					&-item {
+						transform: translateX(150%);
+						opacity: 0;
+						transition: transform .4s .25s, opacity .3s .35s;
+					}
+
+					&-title {
+						transform: translateX(150%);
+						opacity: 0;
+						transition: transform .4s .3s, opacity .3s .4s;
+					}
+					&-desc {
+						transform: translateX(150%);
+						opacity: 0;
+						transition: transform .4s .35s, opacity .3s .45s;
+					}
+
+					&-action {
+						transform: translateY(200%);
+						transition: transform .4s .05s;
+					}
+				}
+
+			}
+		}
+
+
 	}
 }

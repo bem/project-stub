@@ -67,7 +67,66 @@ module.exports = {
 		// 	}]
 		// },
 		{
+			elem: 'plug',
+			content: [
+				{
+					elem: 'plug-header',
+					content: [
+						{
+							elem: 'plug-bem-logo',
+							content: {
+								html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158 50"><g fill-rule="evenodd"><rect width="49" height="23"/><rect width="49" height="14" x="54"/><rect width="14" height="50" x="108"/><rect width="14" height="50" x="126"/><rect width="14" height="50" x="144"/><rect width="49" height="14" x="54" y="18"/><rect width="49" height="14" x="54" y="36"/><rect width="49" height="23" y="27"/></g></svg>'
+							}
+						},
+						{
+							elem: 'plug-slogan',
+							tag: 'h1',
+							content: 'Масштабируемая дизайн-система на основе БЭМ'
+						},
+					]
+				},
+				{
+					elem: 'plug-content',
+					content: [
+
+						{
+							elem: 'plug-description',
+							tag: 'p',
+							content: 'Для использования системы зайдите на сайт с компьютера. Почитать документацию можно на Github. Задать вопросы можно в соцсетях'
+						},
+						{
+							elem: 'plug-action',
+							content: [
+								{
+									elem: 'plug-button',
+									tag: 'a',
+									attrs: { 'href': 'https://github.com/bemdesign'},
+									content: 'Репозиторий на Github'
+								},
+								{
+									elem: 'plug-soclink',
+									elemMods: { icon: 'telegram'},
+									tag: 'a',
+									attrs: { 'href': 'https://t.me/dotmus'},
+									content: 'Телеграм'
+								},
+								{
+									elem: 'plug-soclink',
+									elemMods: { icon: 'twitter'},
+									tag: 'a',
+									attrs: { 'href': 'https://twitter.com/bem_design'},
+									content: 'Твиттер'
+								},
+							]
+						}
+					]
+				},
+
+			]
+		},
+		{
 			block: 'promo-cards',
+			mix: { block: 'promo-cards', elem: 'offer-section' },
 			mods: { view: 'ghost', slide: 'first' },
 			content: [
 			{
@@ -82,75 +141,66 @@ module.exports = {
 					elem: 'card',
 					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
 					content: [
-					{
-						block: 'media',
-						attrs: {
-							style: 'width: 296px; height: 456px; border-radius: 12px;'
-						},
-						mix: { block: 'pt-card', mods: { view: 'inverse' } },
-						content: [
 						{
-							elem: 'video',
+							block: 'offer',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+							],
+							mods: { view: 'nike' },
 							content: [
 								{
-									elem: 'play'
-								}
-							]
-						},
-						{
-							elem: 'title',
-							mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } },
-							content: [
-								{
-									block: 'text',
-									mods: { view: 'inverse', size: 'xxl' },
-									content: 'Mad Lib Theater with John Cena'
-								}
-							]
-						},
-						{
-							elem: 'footer',
-							mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } },
-							content: [
-								{
-									block: 'pt-icon-plus',
-									mods: { 'vertical-align': 'center' }, 
+									elem: 'show',
+									mix: { block: 'pt-card', elem: 'header' },
 									content: [
 										{
-											elem: 'icon',
-											elemMods: { 'indent-right': 'xs' },
-											content: [
-												{
-													block: 'media',
-													elem: 'channel-logo'
-												}
-											]
+											elem: 'background',
+											mix: { block: 'promo-cards', elem: 'offer-background'}
 										},
 										{
-											elem: 'block',
-											content: [
-												{
-													block: 'text',
-													mods: { view: 'inverse', size: 's' },
-													content: 'The Tonight Show…'
-												}
-											]
+											elem: 'goods-price',
+											mix: { block: 'promo-cards', elem: 'offer-goods-price'},
+											content: '$299'
+										},
+				            {
+				              elem: 'item',
+											mix: { block: 'promo-cards', elem: 'offer-item'}
+				            }
+									]
+								},
+								{
+									elem: 'goods-info',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									content: [
+										{
+											block: 'text',
+											mix: { block: 'decorator', mods: { 'indent-b': 'xs' } },
+											mix: { block: 'promo-cards', elem: 'offer-title'},
+											mods: { view: 'primary', size: 'xl', align: 'center', transform: 'uppercase', spacing: 's' },
+											content: 'Nike Gyakusou Gaiter Boot'
+										},
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 's', align: 'center' },
+											mix: { block: 'promo-cards', elem: 'offer-desc'},
+											content: 'You have the goal. We have a gift'
 										}
 									]
 								},
 								{
-									elem: 'view',
+									elem: 'action',
+									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
 									content: [
 										{
 											block: 'text',
-											mods: { view: 'inverse', size: 's' },
-											content: '512K views'
+											mods: { view: 'secondary', size: 'm', align: 'center', weight: 'semibold' },
+											content: 'Shop Now'
 										}
 									]
 								}
 							]
-						}]
-					}]
+						}
+					]
 				},
 				{
 					elem: 'description',
@@ -177,6 +227,7 @@ module.exports = {
 						content: {
 							block: 'text',
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'offer-tab-1' },
 							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
 							content: 'Video'
 						}
@@ -187,6 +238,7 @@ module.exports = {
 						content: {
 							block: 'text',
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'offer-tab-2' },
 							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
 							content: 'Text'
 						}
@@ -197,6 +249,7 @@ module.exports = {
 						content: {
 							block: 'text',
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'offer-tab-3' },
 							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
 							content: 'Music'
 						}
