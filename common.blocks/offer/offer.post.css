@@ -88,7 +88,7 @@
 
   &__action {
     position: relative;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -115,9 +115,8 @@
     z-index: 1;
   }
 
-  &__brand-info {
+  &__service-info {
     z-index: 1;
   }
 
 }
-

@@ -103,7 +103,7 @@ module.exports = {
           ]
         },
         {
-          elem: 'brand-info',
+          elem: 'service-info',
           mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
           content: [
             {
