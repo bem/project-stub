@@ -24,7 +24,7 @@
     left: 50%;
     text-align: center;
   }
-  &__price {
+  &__goods-price {
     font-size: 160px;
     line-height: 195px;
     z-index: 2;
