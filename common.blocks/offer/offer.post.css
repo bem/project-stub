@@ -1,0 +1,40 @@
+.offer {
+  width: 296px;
+  overflow: hidden;
+  &__show {
+    overflow: hidden;
+    position: relative;
+    height: 280px;
+    margin-bottom: var(--space-l);
+  }
+  &__background {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 999em;
+    background: var(--color-inverse);
+  }
+  &__price-centralized {
+    width: 480px;
+    position: absolute;
+    margin-left: -112px;
+    text-align: center;
+  }
+  &__price {
+    font-size: 160px;
+    line-height: 195px;
+    z-index: 2;
+    -webkit-text-stroke: 2px var(--color-typo-letter);
+    -webkit-text-fill-color: transparent;
+  }
+  &__item {
+    position: absolute;
+    left: 12px;
+    top: 133px;
+    width: 264px;
+    height: 150px;
+    background-size: 264px;
+    background-image: url('nike.png');
+    background-repeat: no-repeat;
+  }
+}
