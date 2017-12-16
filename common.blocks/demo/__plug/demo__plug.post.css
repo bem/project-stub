@@ -1,4 +1,4 @@
-/*@media screen and (max-width: 1199px) {*/
+@media screen and (max-width: 1199px) {
 	.demo__plug {
 		display: block;
 		position: absolute;
@@ -95,4 +95,8 @@
 			}
 		}
 	}
-/*}*/
+}
+
+@media screen and (min-width: 1200px) {
+	.demo__plug { display: none; }
+}
