@@ -5,9 +5,7 @@ block('demo')(
 				elem: 'header'
 			},
 			{
-				elem: 'menu',
-				section: ctx.params.menusection,
-				active: ctx.params.pagename
+				elem: 'menu'
 			},
 			ctx.content
 		]
