@@ -47,6 +47,32 @@
     -webkit-text-stroke: 2px var(--color-typo-letter);
     -webkit-text-fill-color: transparent;
   }
+  &__action {
+    position: relative;
+
+    &::after {
+     content: '';
+     position: absolute;
+     bottom: 16px;
+     left: 50%;
+     transform: translateX(-50%) scaleX(1);
+       width: 50px;
+       height: 2px;
+       margin: var(--space-xxs) auto 0;
+       background-color: var(--color-ghost);
+     transition: transform .2s, background-color .2s;
+     }
+   }
+
+   &:hover {
+    & .offer__action::after {
+     background-color: var(--color-typo-letter);
+     transform: translateX(-50%) scaleX(1.3);
+     transition: transform .35s cubic-bezier(0.25, 0.1, 0, 3), background-color .2s;
+    }
+   }
+
+
   &__item {
     position: absolute;
     left: 12px;
