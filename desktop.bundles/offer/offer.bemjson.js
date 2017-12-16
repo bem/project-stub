@@ -84,12 +84,16 @@ module.exports = {
 
     {
       block: 'offer',
+      mods: { view: 'brabus'},
       attrs: { style: 'height: 456px; margin: 100px auto;' },
       mix: { block: 'pt-card', mods: { view: 'inverse' } },
       content: [
+        // {
+        //   elem: 'fade'
+        // },
         {
           elem: 'title',
-          mix: { block: 'pt-card', elem: 'header', mods: { 'space-h': 'xxl' } },
+          mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-v': 'xxl' } },
           content: [
             {
               block: 'text',
@@ -100,24 +104,28 @@ module.exports = {
         },
         {
           elem: 'brand-info',
-          mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-v': 'xxl' } },
+          mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
           content: [
             {
               block: 'text',
-              mix: { block: 'decorator', mods: { 'indent-b': 'xs' } },
-              mods: { view: 'inverse', size: 'xl' },
-              content: 'Luxury and comfort never comprised. The BRABUS GLE 700 Coupe will lead to an unforgettable journey'
-            }
-          ]
-        },
-        {
-          elem: 'price',
-          mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
-          content: [
-            {
-              block: 'text',
+              mix: { block: 'decorator', mods: { 'indent-b': 'xl'} },
               mods: { view: 'inverse', size: 'm', weight: 'semibold' },
-              content: 'Shop Now'
+              content: 'Luxury and comfort never comprised. The BRABUS GLE 700 Coupe will lead to an unforgettable journey'
+            },
+            {
+              elem: 'price',
+              content: [
+                {
+                  block: 'text',
+                  mods: { view: 'inverse', size: 's', style: 'italic' },
+                  content: 'from'
+                },
+                {
+                  block: 'text',
+                  mods: { view: 'inverse', size: 'xxxl', weight: 'semibold' },
+                  content: '$299'
+                }
+              ]
             }
           ]
         }

@@ -2,6 +2,22 @@
   width: 296px;
   overflow: hidden;
   border-radius: 12px;
+  position: relative;
+  &_view {
+    &_brabus {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        height: 100%;
+        width: 100%;
+        opacity: 0.3;
+        background: var(--color-inverse);
+       }
+      background-image: url('brabus.png') !important;
+      background-size: 296px !important;
+    }
+  }
   &__show {
     overflow: hidden;
     position: relative;
@@ -46,5 +62,11 @@
     height: 2px;
     margin: var(--space-xxs) auto 0;
     background-color: var(--color-ghost);
+  }
+  &__title {
+    z-index: 1;
+  }
+  &__brand-info {
+    z-index: 1;
   }
 }
