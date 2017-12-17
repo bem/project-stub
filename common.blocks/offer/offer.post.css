@@ -68,7 +68,7 @@
     font-size: 160px;
     line-height: 195px;
     z-index: 2;
-    -webkit-text-stroke: 2px var(--color-typo-letter);
+    -webkit-text-stroke: 1px var(--color-typo-letter);
     -webkit-text-fill-color: transparent;
   }
 
