@@ -46,12 +46,8 @@
 		&-button {
 			display: block;
 			-webkit-font-smoothing: antialiased;
-			/*font-size: var(--size-typo-m);*/
 			font-size: 0.8em;
 			width: 100%;
-			/*margin: 0 auto;*/
-			/*height: 44px;*/
-			/*line-height: 44px;*/
 			line-height: 3.33em;
 			text-align: center;
 			background-color: #c20303;
