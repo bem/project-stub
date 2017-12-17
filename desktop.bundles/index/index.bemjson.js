@@ -138,13 +138,17 @@ module.exports = {
 				content: [
 				{
 					elem: 'card',
-					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					mix: [
+						{ elem: 'offer', elemMods: { type: 'goods' } },
+						{ block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					],
 					content: [
 						{
 							block: 'offer',
 							mix: [
 								{ block: 'pt-card', mods: { view: 'default' } },
 								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'offer-goods' },
 							],
 							mods: { view: 'nike' },
 							content: [
@@ -210,6 +214,7 @@ module.exports = {
 							mix: [
 								{ block: 'pt-card', mods: { view: 'default' } },
 								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'offer-service' },
 							],
 							content: [
 								{
