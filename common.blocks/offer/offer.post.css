@@ -6,20 +6,42 @@
 
   &_view {
     &_brabus {
-      &:after {
+      /*&:after {
         content: '';
         position: absolute;
         bottom: 0px;
         height: 100%;
         width: 100%;
         opacity: 0.3;
-        background: var(--color-inverse);
-       }
-      background-image: url('brabus.png') !important;
-      background-size: 100% !important;
-      background-position: 0 center !important;
+       }*/
+
     }
   }
+
+	&__background-wrapper {
+		content: '';
+		position: absolute;
+		display: block;
+		overflow: hidden;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 12px;
+	}
+
+	&__bg-photo {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: block;
+		width: 316px;
+		height: 100%;
+		background-color: var(--color-inverse);
+		background-image: url('brabus.png');
+		background-size: 100%;
+		background-position: center;
+	}
 
   &__show {
     overflow: hidden;
@@ -120,23 +142,4 @@
     z-index: 1;
   }
 
-  &__brand-image-wrapper {
-    /* width: 248px;
-    height: 248px; */
-    overflow: hidden;
-  }
-  &__brand-image {
-    background-image: url('uniqlo-photo.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 280px;
-    height: 248px;
-  }
-  &__brand-logo {
-    background-image: url('uniqlo-logo.png');
-    background-size: 70px;
-    margin: 0 auto;
-    width: 70px;
-    height: 32px;
-  }
 }

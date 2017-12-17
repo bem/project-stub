@@ -1,4 +1,5 @@
 var offerSection = document.querySelectorAll('.promo-cards__offer-section')[0],
+	offerCard = document.querySelectorAll('.promo-cards__offer')[0],
 	offerTab1 = document.querySelectorAll('.promo-cards__offer-tab-1')[0],
 	offerTab2 = document.querySelectorAll('.promo-cards__offer-tab-2')[0],
 	offerTab3 = document.querySelectorAll('.promo-cards__offer-tab-3')[0];
@@ -12,9 +13,9 @@ offerTab1.addEventListener('click', function() {
 	offerSection.classList.remove('promo-cards_slide_second');
 	offerSection.classList.remove('promo-cards_slide_third');
 
-	offerSection.classList.add('promo-cards__offer_type_goods');
-	offerSection.classList.remove('promo-cards__offer_type_brand');
-	offerSection.classList.remove('promo-cards__offer_type_service');
+	offerCard.classList.add('promo-cards__offer_type_goods');
+	offerCard.classList.remove('promo-cards__offer_type_brand');
+	offerCard.classList.remove('promo-cards__offer_type_service');
 });
 offerTab2.addEventListener('click', function() {
 	offerTab1.classList.remove('text_view_letter');
@@ -25,9 +26,9 @@ offerTab2.addEventListener('click', function() {
 	offerSection.classList.add('promo-cards_slide_second');
 	offerSection.classList.remove('promo-cards_slide_third');
 
-	offerSection.classList.remove('promo-cards__offer_type_goods');
-	offerSection.classList.add('promo-cards__offer_type_brand');
-	offerSection.classList.remove('promo-cards__offer_type_service');
+	offerCard.classList.remove('promo-cards__offer_type_goods');
+	offerCard.classList.add('promo-cards__offer_type_brand');
+	offerCard.classList.remove('promo-cards__offer_type_service');
 });
 offerTab3.addEventListener('click', function() {
 	offerTab1.classList.remove('text_view_letter');
@@ -38,9 +39,9 @@ offerTab3.addEventListener('click', function() {
 	offerSection.classList.remove('promo-cards_slide_second');
 	offerSection.classList.add('promo-cards_slide_third');
 
-	offerSection.classList.remove('promo-cards__offer_type_goods');
-	offerSection.classList.remove('promo-cards__offer_type_brand');
-	offerSection.classList.add('promo-cards__offer_type_service');
+	offerCard.classList.remove('promo-cards__offer_type_goods');
+	offerCard.classList.remove('promo-cards__offer_type_brand');
+	offerCard.classList.add('promo-cards__offer_type_service');
 });
 
 
@@ -59,7 +60,7 @@ mediaTab1.addEventListener('click', function() {
 	mediaSection.classList.add('promo-cards_slide_first');
 	mediaSection.classList.remove('promo-cards_slide_second');
 	mediaSection.classList.remove('promo-cards_slide_third');
-	
+
 	mediaCard.classList.add('promo-cards__media_type_video');
 	mediaCard.classList.remove('promo-cards__media_type_text');
 	mediaCard.classList.remove('promo-cards__media_type_music');
@@ -72,7 +73,7 @@ mediaTab2.addEventListener('click', function() {
 	mediaSection.classList.remove('promo-cards_slide_first');
 	mediaSection.classList.add('promo-cards_slide_second');
 	mediaSection.classList.remove('promo-cards_slide_third');
-	
+
 	mediaCard.classList.remove('promo-cards__media_type_video');
 	mediaCard.classList.add('promo-cards__media_type_text');
 	mediaCard.classList.remove('promo-cards__media_type_music');
@@ -85,7 +86,7 @@ mediaTab3.addEventListener('click', function() {
 	mediaSection.classList.remove('promo-cards_slide_first');
 	mediaSection.classList.remove('promo-cards_slide_second');
 	mediaSection.classList.add('promo-cards_slide_third');
-	
+
 	mediaCard.classList.remove('promo-cards__media_type_video');
 	mediaCard.classList.remove('promo-cards__media_type_text');
 	mediaCard.classList.add('promo-cards__media_type_music');
