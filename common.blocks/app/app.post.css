@@ -1,5 +1,6 @@
 .app {
 	overflow: hidden;
+	width: 100%;
 
 	&_view {
 		&_monument {
@@ -15,6 +16,9 @@
 				left: 0;
 				background: linear-gradient(to bottom, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 1) 70%, rgba(26, 26, 26, 1) 100%);
 			}
+		}
+		&_monument-hypnotic {
+			background: linear-gradient(to bottom, rgba(102,51,130,1) 0%,rgba(18,4,49,1) 100%);
 		}
 	}
 	&__good-item {
@@ -46,11 +50,6 @@
 		border-radius: 14px;
 		padding: var(--space-xxs) var(--space-s);
 	}
-	&__good-price {
-		background: rgba(255,255,255,0.2);
-		border-radius: 14px;
-		padding: var(--space-xxs) var(--space-s);
-	}
 
 	&__recommendation-developer {
 		width: 74px;
@@ -61,6 +60,7 @@
 	&__recommendation-logo {
 		width: 37px;
 		height: 37px;
+		background-size: cover;
 		background-image: url('mzl.png');
 	}
 	&__recommendation-item {
@@ -78,5 +78,32 @@
 		background: rgba(255,255,255,0.2);
 		border-radius: 14px;
 		padding: var(--space-xxs) var(--space-s);
+	}
+	&__recommendation-price {
+		background: rgba(255,255,255,0.2);
+		border-radius: 14px;
+		padding: var(--space-xxs) var(--space-s);
+	}
+	&__developer-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__developer-cover {
+		width: 100px;
+		height: 100px;
+		margin: calc(var(--space-xl) + var(--space-xxl)) auto;
+
+		background: url('mzl.png');
+		background-size: cover;
+	}
+	&__developer-bage {
+		background: #F26634;
+		width: 135px;
+		padding: var(--space-xs) var(--space-l);
+		margin: auto;
+		border-radius: 24px;
+		box-sizing: border-box;
+		text-align: center;
 	}
 }

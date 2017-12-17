@@ -754,8 +754,145 @@ module.exports = {
 				content: [
 				{
 					elem: 'card',
-					mix: [{ elem: 'apps', elemMods: { type: 'recommendation' } }, { block: 'decorator', mods: { 'indent-b': 'xxxxl' } }],
+					mix: [{ elem: 'apps', elemMods: { type: 'developer' } }, { block: 'decorator', mods: { 'indent-b': 'xxxxl' } }],
 					content: [
+					{
+						block: 'app',
+						mods: { view: 'monument-hypnotic' },
+						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'apps-developer-back' }, { block: 'promo-cards', elem: 'hover' }],
+						content: [
+						{
+							elem: 'developer-preview',
+							mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'l' } },
+							content: [
+							{
+								block: 'text',
+								mods: { size: 'm', transform: 'uppercase', align: 'center', spacing: 'm' },
+								mix: { block: 'promo-cards', elem: 'apps-developer-name' },
+								content: 'Bundle'
+							},
+							{
+								elem: 'developer-cover',
+								mix: { block: 'promo-cards', elem: 'apps-developer-app-cover' }
+							},
+							{
+								elem: 'developer-bage',
+								mix: { block: 'promo-cards', elem: 'apps-developer-btn' },
+								content: [
+								{
+									block: 'text',
+									mods: { size: 'm', view: 'inverse' },
+									content: '$299'
+								}]
+							}]
+						},
+						{
+							elem: 'developer-goods',
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-developer-list' }],
+							content: [
+							{
+								elem: 'developer-list',
+								mix: { block: 'pt-list' },
+								content: [
+								{
+									elem: 'developer-item',
+									mix: { block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'l' } },
+									content: [
+									{
+										block: 'pt-icon-plus',
+										mods: { 'vertical-align': 'center' },
+										content: [
+										{
+											elem: 'icon',
+											elemMods: { 'indent-right': 's' },
+											content: [
+											{
+												block: 'app',
+												elem: 'recommendation-logo',
+
+											}]
+										},
+										{
+											elem: 'block',
+											content: [
+											{
+												block: 'text',
+												mods: { size: 's', view: 'inverse' },
+												content: 'Monument Vallet'
+											},
+											{
+												elem: 'recommendation-game',
+												block: 'app',
+												content: [
+												{
+													block: 'text',
+													mods: { size: 's', view: 'inverse' },
+													content: 'by ustwo games'
+												}]
+											}]
+										}]
+									},
+									{
+										elem: 'recommendation-price',
+										content: [
+										{
+											block: 'text',
+											mods: { size: 's', view: 'inverse' },
+											content: '$99'
+										}]
+									}]
+								},
+								{
+									elem: 'developer-item',
+									mix: { block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'l' } },
+									content: [
+									{
+										block: 'pt-icon-plus',
+										mods: { 'vertical-align': 'center' },
+										content: [
+										{
+											elem: 'icon',
+											elemMods: { 'indent-right': 's' },
+											content: [
+											{
+												block: 'app',
+												elem: 'recommendation-logo',
+
+											}]
+										},
+										{
+											elem: 'block',
+											content: [
+											{
+												block: 'text',
+												mods: { size: 's', view: 'inverse' },
+												content: 'Monument Valley 2'
+											},
+											{
+												elem: 'recommendation-game',
+												block: 'app',
+												content: [
+												{
+													block: 'text',
+													mods: { size: 's', view: 'inverse' },
+													content: 'by ustwo games'
+												}]
+											}]
+										}]
+									},
+									{
+										elem: 'recommendation-price',
+										content: [
+										{
+											block: 'text',
+											mods: { size: 's', view: 'inverse' },
+											content: '$99'
+										}]
+									}]
+								}]
+							}]
+						}]
+					},
 					{
 						block: 'app',
 						mods: { view: 'monument' },
@@ -773,69 +910,68 @@ module.exports = {
 							elem: 'recommendation-info',
 							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-recommendation-info' }],
 							content: [
+							{
+								block: 'text',
+								mods: { size: 'xxxl', view: 'inverse', align: 'center' },
+								mix: { block: 'decorator', mods: { 'space-b': 'l' } },
+								content: 'From our Bafta award winning hit'
+							},
+							{
+								elem: 'recommendation-description',
+								content: [
 								{
 									block: 'text',
-									mods: { size: 'xxxl', view: 'inverse', align: 'center' },
-									mix: { block: 'decorator', mods: { 'space-b': 'l' } },
-									content: 'From our Bafta award winning hit'
-								},
+									mods: { size: 'm', view: 'inverse', align: 'center'  },
+									mix: { block: 'decorator', mods: { 'space-b': 'xxxl' } },
+									content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
+								}]
+							},
+							{
+								elem: 'recommendation-item',
+								content: [
 								{
-									elem: 'recommendation-description',
+									block: 'pt-icon-plus',
+									mods: { 'vertical-align': 'center' },
 									content: [
+									{
+										elem: 'icon',
+										elemMods: { 'indent-right': 's' },
+										content: [
+										{
+											block: 'apps',
+											elem: 'recommendation-logo',
+										}]
+									},
+									{
+										elem: 'block',
+										content: [
 										{
 											block: 'text',
-											mods: { size: 'm', view: 'inverse', align: 'center'  },
-											mix: { block: 'decorator', mods: { 'space-b': 'xxxl' } },
-											content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
-										}]
-								},
-								{
-									elem: 'recommendation-item',
-									content: [
-										{
-											block: 'pt-icon-plus',
-											mods: { 'vertical-align': 'center' },
-											content: [
-												{
-													elem: 'icon',
-													elemMods: { 'indent-right': 's' },
-													content: [
-														{
-															block: 'apps',
-															elem: 'recommendation-logo',
-
-														}]
-												},
-												{
-													elem: 'block',
-													content: [
-														{
-															block: 'text',
-															mods: { size: 's', view: 'inverse' },
-															content: 'Monument Vallet'
-														},
-														{
-															elem: 'recommendation-game',
-															block: 'apps',
-															content: [
-																{
-																	block: 'text',
-																	mods: { size: 's', view: 'inverse' },
-																	content: 'by ustwo games'
-																}]
-														}]
-												}]
+											mods: { size: 's', view: 'inverse' },
+											content: 'Monument Vallet'
 										},
 										{
-											elem: 'recommendation-price',
+											elem: 'recommendation-game',
+											block: 'apps',
 											content: [
-												{
-													block: 'text',
-													mods: { size: 's', view: 'inverse' },
-													content: '$99'
-												}]
+											{
+												block: 'text',
+												mods: { size: 's', view: 'inverse' },
+												content: 'by ustwo games'
+											}]
 										}]
+									}]
+								},
+								{
+									elem: 'recommendation-price',
+									content: [
+									{
+										block: 'text',
+										mods: { size: 's', view: 'inverse' },
+										content: '$99'
+									}]
 								}]
+							}]
 						}]
 					},
 					{
@@ -925,15 +1061,13 @@ module.exports = {
 					content: [
 					{
 						elem: 'header',
-						mix: [
-							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
-							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
-						],
+						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
 						content: 'Applications'
 					},
 					{
 						block: 'text',
-						mods: { size: 'xl', font: 'mono' },
+						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+						mods: { size: 'xl' },
 						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
 					}]
 				},
@@ -970,11 +1104,11 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-3' },
-							content: 'Developer'
+							content: 'developer'
 						}
 					}]
 				}]
-			},
+			// },
 			// {
 			// 	elem: 'controls',
 			// 	content: [
@@ -997,8 +1131,7 @@ module.exports = {
 			// 			mods: { 'arrow-down-2': 'xl-primary' }
 			// 		}
 			// 	}]
-			// }
-			]
+			}]
 		},
 		{
 			block: 'promo-cards',

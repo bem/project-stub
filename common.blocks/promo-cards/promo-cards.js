@@ -109,9 +109,9 @@ appsTab1.addEventListener('click', function() {
 	appsSection.classList.remove('promo-cards_slide_second');
 	appsSection.classList.remove('promo-cards_slide_third');
 	
-	appsCard.classList.add('promo-cards__apps_type_recommendation');
+	appsCard.classList.add('promo-cards__apps_type_developer');
+	appsCard.classList.remove('promo-cards__apps_type_recommendation');
 	appsCard.classList.remove('promo-cards__apps_type_good');
-	appsCard.classList.remove('promo-cards__apps_type_music');
 });
 appsTab2.addEventListener('click', function() {
 	appsTab1.classList.remove('text_view_letter');
@@ -122,9 +122,9 @@ appsTab2.addEventListener('click', function() {
 	appsSection.classList.add('promo-cards_slide_second');
 	appsSection.classList.remove('promo-cards_slide_third');
 	
-	appsCard.classList.remove('promo-cards__apps_type_recommendation');
-	appsCard.classList.add('promo-cards__apps_type_good');
-	appsCard.classList.remove('promo-cards__apps_type_music');
+	appsCard.classList.remove('promo-cards__apps_type_developer');
+	appsCard.classList.add('promo-cards__apps_type_recommendation');
+	appsCard.classList.remove('promo-cards__apps_type_good');
 });
 appsTab3.addEventListener('click', function() {
 	appsTab1.classList.remove('text_view_letter');
@@ -135,7 +135,7 @@ appsTab3.addEventListener('click', function() {
 	appsSection.classList.remove('promo-cards_slide_second');
 	appsSection.classList.add('promo-cards_slide_third');
 	
+	appsCard.classList.remove('promo-cards__apps_type_developer');
 	appsCard.classList.remove('promo-cards__apps_type_recommendation');
-	appsCard.classList.remove('promo-cards__apps_type_good');
-	appsCard.classList.add('promo-cards__apps_type_music');
+	appsCard.classList.add('promo-cards__apps_type_good');
 });
