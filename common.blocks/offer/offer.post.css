@@ -2,7 +2,7 @@
   width: 296px;
   overflow: hidden;
   border-radius: 12px;
-  position: relative;
+  /*position: relative;*/
 
   &_view {
     &_brabus {
