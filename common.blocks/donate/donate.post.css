@@ -19,4 +19,31 @@
     width: 56px;
     height: 56px;
   }
+
+  &__project-image {
+    background-image: url('project-image.png');
+    background-size: 100%;
+    width: 100%;
+    height: 153px;
+  }
+  &__project-progress-bar {
+    background-color: rgba(0,165,255,.3);
+    width: 100%;
+    height: 8px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 2px;
+      margin-top: 6px;
+      background-color: #00A5FF;
+    }
+  }
+  &__amount-wrapper {
+    display: inline-block;
+  }
+  &__days-wrapper {
+    display: inline-block;
+  }
 }
