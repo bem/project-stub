@@ -634,16 +634,427 @@ module.exports = {
 				elem: 'controls',
 				content: [
 				{
-					block: 'icon',
-					mods: { 'arrow-up-2': 'xl-primary' },
-					mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+					tag: 'a',
+					elem: 'controls-item',
+					attrs: { href: '#' },
+					content: {
+						block: 'icon',
+						mods: { 'arrow-up-2': 'xl-primary' },
+						mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+					}
 				},
 				{
-					block: 'icon',
-					mods: { 'arrow-down-2': 'xl-primary' }
+					tag: 'a',
+					elem: 'controls-item',
+					attrs: { href: '#' },
+					content: {
+						block: 'icon',
+						mods: { 'arrow-down-2': 'xl-primary' }
+					}
+				}]
+			}]
+		},
+		{
+			block: 'promo-cards',
+			mods: { view: 'inverse', slide: 'first' },
+			mix: { block: 'promo-cards', elem: 'apps-section' },
+			content: [
+			{
+				elem: 'theme-name',
+				content: 'Applications'
+			},
+			{
+				elem: 'content',
+				content: [
+				{
+					elem: 'card',
+					mix: [{ elem: 'apps', elemMods: { type: 'recommendation' } }, { block: 'decorator', mods: { 'indent-b': 'xxxxl' } }],
+					content: [
+					{
+						block: 'app',
+						mods: { view: 'monument' },
+						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'apps-recommendation-back' }, { block: 'promo-cards', elem: 'hover' }],
+						content: [
+						{
+							elem: 'recommendation-preview',
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-recommendation-photo' }],
+							content: [
+								{
+									elem: 'recommendation-developer',
+								}]
+						},
+						{
+							elem: 'recommendation-info',
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-recommendation-info' }],
+							content: [
+								{
+									block: 'text',
+									mods: { size: 'xxxl', view: 'inverse', align: 'center' },
+									mix: { block: 'decorator', mods: { 'space-b': 'l' } },
+									content: 'From our Bafta award winning hit'
+								},
+								{
+									elem: 'recommendation-description',
+									content: [
+										{
+											block: 'text',
+											mods: { size: 'm', view: 'inverse', align: 'center'  },
+											mix: { block: 'decorator', mods: { 'space-b': 'xxxl' } },
+											content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
+										}]
+								},
+								{
+									elem: 'recommendation-item',
+									content: [
+										{
+											block: 'pt-icon-plus',
+											mods: { 'vertical-align': 'center' },
+											content: [
+												{
+													elem: 'icon',
+													elemMods: { 'indent-right': 's' },
+													content: [
+														{
+															block: 'apps',
+															elem: 'recommendation-logo',
+
+														}]
+												},
+												{
+													elem: 'block',
+													content: [
+														{
+															block: 'text',
+															mods: { size: 's', view: 'inverse' },
+															content: 'Monument Vallet'
+														},
+														{
+															elem: 'recommendation-game',
+															block: 'apps',
+															content: [
+																{
+																	block: 'text',
+																	mods: { size: 's', view: 'inverse' },
+																	content: 'by ustwo games'
+																}]
+														}]
+												}]
+										},
+										{
+											elem: 'recommendation-price',
+											content: [
+												{
+													block: 'text',
+													mods: { size: 's', view: 'inverse' },
+													content: '$99'
+												}]
+										}]
+								}]
+						}]
+					},
+					{
+						block: 'app',
+						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'apps-good-back' }, { block: 'promo-cards', elem: 'hover' }],
+						content: [
+						{
+							elem: 'good-preview',
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-good-photo' }],
+							content: [
+							{
+								elem: 'good-cover',
+							}]
+						},
+						{
+							elem: 'good-info',
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-good-info' }],
+							content: [
+							{
+								block: 'text',
+								mods: { size: 'xxxl', view: 'inverse' },
+								mix: { block: 'decorator', mods: { 'space-b': 'l' } },
+								content: 'From our Bafta award winning hit'
+							},
+							{
+								elem: 'good-description',
+								content: [
+								{
+									block: 'text',
+									mods: { size: 'm', view: 'inverse' },
+									mix: { block: 'decorator', mods: { 'space-b': 'xxxl' } },
+									content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
+								}]
+							},
+							{
+								elem: 'good-item',
+								content: [
+								{
+									block: 'pt-icon-plus',
+									mods: { 'vertical-align': 'center' },
+									content: [
+									{
+										elem: 'icon',
+										elemMods: { 'indent-right': 's' },
+										content: [
+										{
+											block: 'apps',
+											mods: { size: 's', view: 'inverse' },
+											elem: 'good-logo',
+										}]
+									},
+									{
+										elem: 'block',
+										content: [
+										{
+											block: 'text',
+											content: 'Monument Vallet'
+										},
+										{
+											elem: 'good-developer',
+											block: 'apps',
+											content: [
+											{
+												block: 'text',
+												mods: { size: 's', view: 'inverse' },
+												content: 'by ustwo games'
+											}]
+										}]
+									}]
+								},
+								{
+									elem: 'good-price',
+									content: [
+									{
+										block: 'text',
+										mods: { size: 's', view: 'inverse' },
+										content: '$99'
+									}]
+								}]
+							}]
+						}]
+					}]
+				},
+				{
+					elem: 'description',
+					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					content: [
+					{
+						elem: 'header',
+						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+						content: 'Applications'
+					},
+					{
+						block: 'text',
+						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+						mods: { size: 'xl' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'list',
+					content: [
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
+							mix: { block: 'promo-cards', elem: 'apps-tab-1' },
+							content: 'Recommendation'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
+							mix: { block: 'promo-cards', elem: 'apps-tab-2' },
+							content: 'Good'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
+							mix: { block: 'promo-cards', elem: 'apps-tab-3' },
+							content: 'что-то'
+						}
+					}]
 				}]
 			},
-			]
+			{
+				elem: 'controls',
+				content: [
+				{
+					tag: 'a',
+					elem: 'controls-item',
+					attrs: { href: '#' },
+					content: {
+						block: 'icon',
+						mods: { 'arrow-up-2': 'xl-primary' },
+						mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+					}
+				},
+				{
+					tag: 'a',
+					elem: 'controls-item',
+					attrs: { href: '#' },
+					content: {
+						block: 'icon',
+						mods: { 'arrow-down-2': 'xl-primary' }
+					}
+				}]
+			}]
+		},
+		{
+			block: 'promo-cards',
+			mods: { view: 'inverse' },
+			content: [
+			{
+				elem: 'content',
+				elemMods: { align: 'center' },
+				content: [
+				{
+					block: 'pt-list',
+					content: [
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://github.com/Miocene' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Julia Muzafarova'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'http://instagram.com/sntx_error' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Leonid Motorin'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://www.facebook.com/kirill.back' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Kirill Fedotov'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://twitter.com/fooontic_' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Vadim Matveev'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://sava.work' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Saveliy Bobov'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://www.facebook.com/sergibysergi' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Sergi Matveev'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://github.com/joshuan' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Evgeniy Shershnev'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://github.com/koloskof' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Misha Koloskof'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xl' },
+						content: [
+						{
+							tag: 'a',
+							attrs: { href: 'https://github.com/bemdesign/bem-design' },
+							block: 'promo-cards',
+							elem: 'new-team-member',
+							content: 'JOIN TO Our TEAM'
+						}]
+					}]
+				}]
+			},
+			{
+				elem: 'controls',
+				content: [
+				{
+					tag: 'a',
+					elem: 'controls-item',
+					attrs: { href: '#' },
+					content: {
+						block: 'icon',
+						mods: { 'arrow-up-2': 'xl-primary' },
+						mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+					}
+				},
+				{
+					tag: 'a',
+					elem: 'controls-item',
+					attrs: { href: '#' },
+					content: {
+						block: 'icon',
+						mods: { 'arrow-down-2': 'xl-primary' }
+					}
+				}]
+			}]
 		}]
 	}]
 };

@@ -1,7 +1,7 @@
 .promo-cards {
 	position: relative;
-	height: 100vh;
-	min-height: calc(524px + 40px + 40px);
+	min-height: 100vh;
+	padding: 40px;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
@@ -79,12 +79,63 @@
 	}
 
 
+	&__team-member {
+		position: relative;
+		color: white;
+		text-transform: uppercase;
+		font-size: 56px;
+		font-family: 'IBM Plex Mono';
+		font-weight: bold;
+		text-decoration: none;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 4px;
+			background: #FD4D68;
+			transform: scaleX(0);
+			transform-origin: 0 center;
+			transition: .3s ease;
+		}
+		&:hover {
+			color: #FD4D68;
+
+			&:after {
+				transform: scaleX(1);
+			}
+		}
+	}
+	&__new-team-member {
+		color: #FD4D68;
+		text-transform: uppercase;
+		font-size: 24px;
+		font-family: 'IBM Plex Mono';
+		font-weight: 500;
+		text-decoration: none;
+		margin-left: -72px;
+		transition: .3s ease;
+
+		&:hover {
+			color: white;
+		}
+	}
+
 	&__content {
 		margin: auto;
-		width: 1022px;
+		width: 1016px;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+
+		&_align_center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	&__theme-name {
 		position: absolute;
@@ -100,6 +151,15 @@
 		position: absolute;
 		bottom: var(--space-xl);
 		left: var(--space-xxxl);
+
+		&-item {
+			opacity: 1;
+			transition: .3s ease;
+
+			&:hover {
+				opacity: .6;
+			}
+		}
 	}
 	&__list {
 		flex-basis: 100%;
@@ -120,7 +180,7 @@
 			height: 456px;
 			box-sizing: border-box;
 			border-radius: 12px;
-			border: 1px solid rgba(0, 0, 0, .08);
+			border: 1px solid var(--color-disable);
 		}
 
 		& > div {
@@ -138,9 +198,9 @@
 		top: 0px;
 		width: 296px;
 		height: 456px;
-		margin-left: 35px;
-		margin-right: 96px;
-		border-radius: 12px;
+		margin-left: var(--space-xxl);
+		margin-right: var(--space-xxxxxxl);
+		border-radius: var(--space-s);
 		z-index: 1;
 		transition: transform .4s .3s;
 	}
@@ -473,7 +533,7 @@
 					pointer-events: none;
 				}
 				.promo-cards__media-video {
-					transform: translateY(-500px) scale(1.5);
+					transform: translateY(-500px) scale(3);
 				}
 				.promo-cards__media-video-title {
 					transform: translateY(500px);
@@ -519,7 +579,7 @@
 					pointer-events: none;
 				}
 				.promo-cards__media-video {
-					transform: translateY(-500px) scale(1.5);
+					transform: translateY(-500px) scale(3);
 				}
 				.promo-cards__media-video-title {
 					transform: translateY(500px);
@@ -559,6 +619,148 @@
 					transform: translateY(0);
 				}
 			}
+		}
+	}
+
+	/* APPS */
+	&__apps {
+		&-recommendation-back, &-good-back/*, &-music-back*/ {
+			transition: opacity .7s .3s ease, transform .5s, box-shadow .3s;
+		}
+		&-recommendation-photo, &-recommendation-info, &-recommendation-footer {
+			transition: .7s ease;
+			transition-delay: .3s;
+		}
+		&-good-photo, &-good-info {
+			transition: .7s ease;
+			transition-delay: .3s;
+		}
+		/*&-music-cover, &-playlist {
+			transition: .7s ease;
+			transition-delay: .3s;
+		}*/
+
+		&_type {
+			&_recommendation {
+				.promo-cards__apps-recommendation-back {
+					opacity: 1;
+					pointer-events: all;
+				}
+				.promo-cards__apps-recommendation-photo {
+					transform: translateY(0) scale(1);
+				}
+				.promo-cards__apps-recommendation-info {
+					transform: translateY(0);
+				}
+				.promo-cards__apps-recommendation-footer {
+					transform: translateY(0);
+				}
+
+				.promo-cards__apps-good-back {
+					opacity: 0;
+					pointer-events: none;
+				}
+				.promo-cards__apps-good-photo {
+					transform: translateY(-300px) scale(2);
+				}
+				.promo-cards__apps-good-info {
+					transform: translateY(500px);
+				}
+
+				.promo-cards__apps-music-back {
+					opacity: 0;
+					pointer-events: none;
+				}
+				.promo-cards__apps-music-cover {
+					transform: translateY(-500px) scale(1.5);
+				}
+				.promo-cards__apps-playlist {
+					transform: translateY(500px);
+				}
+			}
+			&_good {
+				.promo-cards__apps-recommendation-back {
+					opacity: 0;
+					pointer-events: none;
+				}
+				.promo-cards__apps-recommendation-photo {
+					transform: translateY(-600px) scale(3);
+				}
+				.promo-cards__apps-recommendation-info {
+					transform: translateY(500px);
+				}
+				.promo-cards__apps-recommendation-footer {
+					transform: translateY(100px);
+				}
+
+				.promo-cards__apps-good-back {
+					opacity: 1;
+					pointer-events: all;
+				}
+				.promo-cards__apps-good-photo {
+					transform: translateY(0) scale(1);
+				}
+				.promo-cards__apps-good-info {
+					transform: translateY(0);
+				}
+
+				.promo-cards__apps-music-back {
+					opacity: 0;
+					pointer-events: none;
+				}
+				.promo-cards__apps-music-cover {
+					transform: translateY(-500px) scale(1.5);
+				}
+				.promo-cards__apps-playlist {
+					transform: translateY(500px);
+				}
+			}
+			/*&_music {
+				.promo-cards__media-video-back {
+					opacity: 0;
+					pointer-events: none;
+				}
+				.promo-cards__media-video {
+					transform: translateY(-500px) scale(1.5);
+				}
+				.promo-cards__media-video-title {
+					transform: translateY(500px);
+				}
+				.promo-cards__media-video-footer {
+					transform: translateY(100px);
+					transition-delay: .5s;
+				}
+
+				.promo-cards__media-text-back {
+					opacity: 0;
+					pointer-events: none;
+				}
+				.promo-cards__media-cover {
+					transform: translateY(-200px) scale(1.5);
+				}
+				.promo-cards__media-author-top {
+					transform: translateY(-200px);
+					transition-delay: .5s;
+				}
+				.promo-cards__media-article {
+					transform: translateY(500px);
+				}
+				.promo-cards__media-text-footer {
+					transform: translateY(100px);
+					transition-delay: .5s;
+				}
+
+				.promo-cards__media-music-back {
+					opacity: 1;
+					pointer-events: all;
+				}
+				.promo-cards__media-music-cover {
+					transform: translateY(0) scale(1);
+				}
+				.promo-cards__media-playlist {
+					transform: translateY(0);
+				}
+			}*/
 		}
 	}
 }

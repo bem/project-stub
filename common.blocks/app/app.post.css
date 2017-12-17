@@ -1,0 +1,82 @@
+.app {
+	overflow: hidden;
+
+	&_view {
+		&_monument {
+			background-image: url('monument.png');
+			background-position: 50% 50%;
+
+			&:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: linear-gradient(to bottom, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 1) 70%, rgba(26, 26, 26, 1) 100%);
+			}
+		}
+	}
+	&__good-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__good-cover {
+		width: 102px;
+		height: 102px;
+		border-radius: 50%;
+		background-size: cover;
+		background-image: url('mzl.png');
+		box-shadow: 72px 0 0 0 rgba(92, 92, 92, .2), 48px 0 0 0 rgba(92, 92, 92, .3), 24px 0 0 0 rgba(92, 92, 92, .3);
+	}
+	&__good-logo {
+		width: 45px;
+		height: 20px;
+		background-image: url('neto.png');
+	}
+	&__good-developer {
+		opacity: 0.4;
+	}
+	&__good-description {
+		opacity: 0.4;
+	}
+	&__good-price {
+		background: rgba(255,255,255,0.2);
+		border-radius: 14px;
+		padding: var(--space-xxs) var(--space-s);
+	}
+	&__good-price {
+		background: rgba(255,255,255,0.2);
+		border-radius: 14px;
+		padding: var(--space-xxs) var(--space-s);
+	}
+
+	&__recommendation-developer {
+		width: 74px;
+		height: 32px;
+		background-image: url('ustwo.svg');
+		margin: auto;
+	}
+	&__recommendation-logo {
+		width: 37px;
+		height: 37px;
+		background-image: url('mzl.png');
+	}
+	&__recommendation-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__recommendation-game {
+		opacity: 0.4;
+	}
+	&__recommendation-description {
+		opacity: 0.4;
+	}
+	&__recommendation-price {
+		background: rgba(255,255,255,0.2);
+		border-radius: 14px;
+		padding: var(--space-xxs) var(--space-s);
+	}
+}
