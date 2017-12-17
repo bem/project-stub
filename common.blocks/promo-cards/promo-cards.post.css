@@ -33,7 +33,8 @@
 
 
 			.promo-cards__description {
-				transform: translate(-428px);
+				transform: translate(-468px);
+				flex-basis: 360px;
 			}
 
 			.promo-cards__theme-name {
@@ -230,8 +231,8 @@
 		flex-wrap: wrap;
 		align-items: center;
 		font-family: 'IBM Plex Mono' !important;
-		z-index: 1;
-		transition: transform .4s .3s;
+		z-index: 0;
+		transition: transform .4s .3s, flex-basis .4s .3s;
 	}
 
 	&__card > * {
@@ -296,6 +297,7 @@
 				& .promo-cards__offer-service {
 					background-color: transparent;
 					box-shadow: none;
+					transition: transform .5s, box-shadow .3s, background-color .1s;
 
 					&-photo {
 						background-size: 130%;
@@ -405,6 +407,7 @@
 				}
 
 				& .promo-cards__offer-brand {
+					transition: transform .5s, box-shadow .3s, background-color .1s .5s;
 
 					&-image {
 						transform: translateX(0);
@@ -476,6 +479,7 @@
 				& .promo-cards__offer-goods {
 					background-color: transparent;
 					box-shadow: none;
+					transition: transform .5s, box-shadow .3s, background-color .1s .8s;
 
 
 					&-background {

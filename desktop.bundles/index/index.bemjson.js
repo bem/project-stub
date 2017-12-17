@@ -292,13 +292,15 @@ module.exports = {
 					content: [
 					{
 						elem: 'header',
-						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-						content: 'Media Content'
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Offers'
 					},
 					{
 						block: 'text',
-						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-						mods: { size: 'xl' },
+						mods: { size: 'xl', font: 'mono' },
 						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
 					}]
 				},
@@ -313,7 +315,7 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mix: { block: 'promo-cards', elem: 'offer-tab-1' },
 							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
-							content: 'Video'
+							content: 'Goods'
 						}
 					},
 					{
@@ -324,7 +326,7 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mix: { block: 'promo-cards', elem: 'offer-tab-2' },
 							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
-							content: 'Text'
+							content: 'Brand'
 						}
 					},
 					{
@@ -335,7 +337,7 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mix: { block: 'promo-cards', elem: 'offer-tab-3' },
 							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
-							content: 'Music'
+							content: 'Service'
 						}
 					}]
 				}]
@@ -649,13 +651,15 @@ module.exports = {
 					content: [
 					{
 						elem: 'header',
-						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-						content: 'Media Content'
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Media'
 					},
 					{
 						block: 'text',
-						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-						mods: { size: 'xl' },
+						mods: { size: 'xl', font: 'mono' },
 						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
 					}]
 				},
@@ -906,13 +910,15 @@ module.exports = {
 					content: [
 					{
 						elem: 'header',
-						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
 						content: 'Applications'
 					},
 					{
 						block: 'text',
-						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-						mods: { size: 'xl' },
+						mods: { size: 'xl', font: 'mono' },
 						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
 					}]
 				},
