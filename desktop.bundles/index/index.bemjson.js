@@ -202,10 +202,15 @@ module.exports = {
 								}
 							]
 						},
+
+
 						{
 							block: 'offer',
 							mods: { view: 'brabus'},
-							mix: { block: 'pt-card', mods: { view: 'inverse' } },
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+							],
 							content: [
 								{
 									elem: 'title',
@@ -249,6 +254,9 @@ module.exports = {
 						}
 					]
 				},
+
+
+
 				{
 					elem: 'description',
 					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
@@ -362,7 +370,7 @@ module.exports = {
 							content: [
 							{
 								block: 'pt-icon-plus',
-								mods: { 'vertical-align': 'center' }, 
+								mods: { 'vertical-align': 'center' },
 								content: [
 								{
 									elem: 'icon',
