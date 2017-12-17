@@ -104,7 +104,10 @@ module.exports = {
 										},
 										{
 											elem: 'goods-price',
-											mix: { block: 'promo-cards', elem: 'offer-goods-price'},
+											mix: [
+												{ block: 'promo-cards', elem: 'offer-goods-price'},
+												{ block: 'text', mods: {font: 'serif', style: 'italic', weight: 'bold'} }
+											],
 											content: '$299'
 										},
 										{
@@ -119,9 +122,11 @@ module.exports = {
 									content: [
 										{
 											block: 'text',
-											mix: { block: 'decorator', mods: { 'indent-b': 'xs' } },
-											mix: { block: 'promo-cards', elem: 'offer-goods-title'},
-											mods: { view: 'primary', size: 'xl', align: 'center', transform: 'uppercase', spacing: 's' },
+											mix: [
+												{ block: 'decorator', mods: { 'indent-b': 'xs' } },
+												{ block: 'promo-cards', elem: 'offer-goods-title'},
+											],
+											mods: { view: 'primary', font: 'mono', weight: 'bold', size: 'xl', align: 'center', transform: 'uppercase', spacing: 's' },
 											content: 'Nike Gyakusou Gaiter Boot'
 										},
 										{
@@ -141,8 +146,68 @@ module.exports = {
 									content: [
 										{
 											block: 'text',
-											mods: { view: 'secondary', size: 'm', align: 'center', weight: 'semibold' },
+											mods: { view: 'secondary', size: 'm', weight: 'bold', align: 'center', },
 											content: 'Shop Now'
+										}
+									]
+								}
+							]
+						},
+
+
+						{
+							block: 'offer',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'offer-brand' },
+							],
+							content: [
+								{
+									elem: 'brand-show',
+									mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } },
+									content: [
+										{
+											elem: 'brand-image-wrapper',
+											mix: { block: 'promo-cards', elem: 'brand-image-wrapper' },
+											content: [
+												{
+													elem: 'brand-image',
+													mix: { block: 'promo-cards', elem: 'offer-brand-image' }
+												}
+											]
+										}
+									]
+								},
+								{
+									elem: 'brand-info',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
+											mix: [{ block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } }],
+											content: 'Magic For All'
+										},
+										{
+											elem: 'brand-logo',
+											mix: [
+												{ block: 'promo-cards', elem: 'offer-brand-logo' },
+											]
+										}
+									]
+								},
+								{
+									elem: 'brand-action',
+									mix: [
+										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+										{ block: 'promo-cards', elem: 'offer-brand-action' },
+									],
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 'm', align: 'center', weight: 'bold' },
+											content: 'Learn More'
 										}
 									]
 								}
@@ -213,7 +278,9 @@ module.exports = {
 									]
 								}
 							]
-						}
+						},
+
+
 					]
 				},
 
