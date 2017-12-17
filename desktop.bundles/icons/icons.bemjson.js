@@ -43,6 +43,12 @@ module.exports = {
               content: 'Для того, чтобы централизованно менять библиотеки иконок и избегать такой ситуации, когда повторяющиеся иконки лежат по разным мы вынесли все иконки в блок .icon'
             },
             {
+              block: 'filter',
+              mods: {
+                target: 'icons'
+              }
+            },
+            {
                block: 'icon-list',
                mix: { block: 'decorator', mods: { 'indent-b': 'xxxl' } },
                content: [

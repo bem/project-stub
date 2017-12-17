@@ -1,9 +1,9 @@
 ([
-	{
+	{	
 		shouldDeps: [
-			{ block: 'search2' },
 			{ block: 'input' },
-			{ block: 'button2' }
+			{ elem: 'color' },
+			{ elem: 'size' }
 		]
 	}
 ])
