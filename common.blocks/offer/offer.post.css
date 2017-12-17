@@ -16,7 +16,8 @@
         background: var(--color-inverse);
        }
       background-image: url('brabus.png') !important;
-      background-size: 296px !important;
+      background-size: 100% !important;
+      background-position: 0 center !important;
     }
   }
 
@@ -119,4 +120,23 @@
     z-index: 1;
   }
 
+  &__brand-image-wrapper {
+    /* width: 248px;
+    height: 248px; */
+    overflow: hidden;
+  }
+  &__brand-image {
+    background-image: url('uniqlo-photo.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 280px;
+    height: 248px;
+  }
+  &__brand-logo {
+    background-image: url('uniqlo-logo.png');
+    background-size: 70px;
+    margin: 0 auto;
+    width: 70px;
+    height: 32px;
+  }
 }

@@ -133,17 +133,22 @@ module.exports = {
       mix: { block: 'pt-card', mods: { view: 'default' } },
       content: [
         {
-          elem: 'show',
-          mix: { block: 'pt-card', elem: 'header' },
+          elem: 'brand-show',
+          mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } },
           content: [
             {
-              elem: 'item'
+              elem: 'brand-image-wrapper',
+              content: [
+                {
+                  elem: 'brand-image'
+                }
+              ]
             }
           ]
         },
         {
-          elem: 'goods-info',
-          mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-v': 'xxl' } },
+          elem: 'brand-info',
+          mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
           content: [
             {
               block: 'text',
@@ -151,22 +156,20 @@ module.exports = {
               content: 'Magic For All'
             },
             {
-              elem: 'logo',
-              content: [
-
-              ]
+              elem: 'brand-logo',
+              mix: { block: 'decorator', mods: { 'indent-t': 'xl' } }
             }
           ]
         },
         {
-          elem: 'action',
-          mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
+          elem: 'brand-action',
+          mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
           content: [
             {
               block: 'text',
-              mods: { view: 'secondary', size: 'm', align: 'center', weight: 'semibold' },
-              content: 'Shop Now'
-            },
+              mods: { view: 'primary', size: 'm', align: 'center', weight: 'bold' },
+              content: 'Learn More'
+            }
           ]
         }
       ]
