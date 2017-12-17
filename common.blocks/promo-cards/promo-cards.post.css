@@ -298,6 +298,9 @@
 					background-color: transparent;
 					box-shadow: none;
 					transition: transform .5s, box-shadow .3s, background-color .1s;
+					&:hover {
+						transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.9);
+					}
 
 					&-photo {
 						background-size: 130%;
@@ -370,6 +373,9 @@
 					background-color: transparent;
 					box-shadow: none;
 					transition: transform .5s, box-shadow .3s, background-color .1s .8s;
+					&:hover {
+						transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.9);
+					}
 
 					&-background {
 						transform: scale(0);
@@ -408,6 +414,9 @@
 
 				& .promo-cards__offer-brand {
 					transition: transform .5s, box-shadow .3s, background-color .1s .5s;
+					&:hover {
+						transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.9);
+					}
 
 					&-image {
 						transform: translateX(0);
@@ -480,6 +489,9 @@
 					background-color: transparent;
 					box-shadow: none;
 					transition: transform .5s, box-shadow .3s, background-color .1s .8s;
+					&:hover {
+						transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.9);
+					}
 
 
 					&-background {
@@ -521,6 +533,9 @@
 					background-color: transparent;
 					box-shadow: none;
 					transition: transform .5s, box-shadow .3s, background-color .1s .8s;
+					&:hover {
+						transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.9);
+					}
 
 					&-image {
 						transform: translateX(100%);
@@ -548,6 +563,9 @@
 
 				& .promo-cards__offer-service {
 					transition: transform .5s, box-shadow .3s, background-color .1s .8s;
+					&:hover {
+						transition-timing-function: cubic-bezier(0.25, 0.1, 0, 1.9);
+					}
 
 					&-photo {
 						background-size: 100%;
