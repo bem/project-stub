@@ -180,26 +180,23 @@
 		&_type {
 			&_goods {
 				& .promo-cards__offer-goods {
-					opacity: 1;
-					z-index: 1;
+					pointer-events: all;
 				}
 				& .promo-cards__offer-brand {
-					opacity: 0;
-					z-index: 0;
+					pointer-events: none;
 				}
 				& .promo-cards__offer-service {
-					opacity: 0;
-					z-index: 0;
+					pointer-events: none;
 				}
 
-				& .promo-cards__offer {
+				& .promo-cards__offer-goods {
 
 					&-background {
 						transform: scale(1);
 						opacity: 1;
 						transition: transform .4s cubic-bezier(0.75,-0.5, 0.25, 1) .2s;
 					}
-					&-goods-price {
+					&-price {
 						transform: translateX(-50%);
 						opacity: 1;
 						transition: transform .4s .2s, opacity .3s .3s;
@@ -228,12 +225,55 @@
 					}
 				}
 
+				& .promo-cards__offer-service {
+					background-color: transparent;
+
+					/*&-background {
+						transform: scaleX(0);
+						transform-origin: right center;
+						transition: transform .4s .4s ease;
+					}*/
+
+					&-photo {
+						background-size: 130%;
+						transform: translateX(100%);
+						transition: transform .4s .4s, background-size .6s;
+					}
+
+					&-title {
+						transform: translateX(100%);
+						opacity: 0;
+						transition: transform .4s .3s, opacity .3s .4s;
+					}
+
+					&-desc {
+						transform: translateX(100%);
+						opacity: 0;
+						transition: transform .4s .35s, opacity .3s .45s;
+					}
+
+					&-price {
+						transform: translateY(100%);
+						opacity: 0;
+						transition: transform .7s cubic-bezier(0.75,-0.5, 0.25, 1), opacity .4s .3s;
+					}
+				}
 			}
 		}
 
 		&_type {
-			&_service {
-				& .promo-cards__offer {
+			&_brand {
+				& .promo-cards__offer-goods {
+					pointer-events: none;
+				}
+				& .promo-cards__offer-brand {
+					pointer-events: all;
+				}
+				& .promo-cards__offer-service {
+					pointer-events: none;
+				}
+
+				& .promo-cards__offer-goods {
 
 					&-background {
 						transform: scale(0);
@@ -241,7 +281,58 @@
 						transition: transform .6s cubic-bezier(0.75,-0.7, 0.25, 1), opacity .1s .6s;
 					}
 
-					&-goods-price {
+					&-price {
+						transform: translateX(100%);
+						opacity: 0;
+						transition: transform .4s .2s, opacity .3s .3s;
+					}
+
+					&-item {
+						transform: translateX(150%);
+						opacity: 0;
+						transition: transform .4s .25s, opacity .3s .35s;
+					}
+
+					&-title {
+						transform: translateX(150%);
+						opacity: 0;
+						transition: transform .4s .3s, opacity .3s .4s;
+					}
+					&-desc {
+						transform: translateX(150%);
+						opacity: 0;
+						transition: transform .4s .35s, opacity .3s .45s;
+					}
+
+					&-action {
+						transform: translateY(200%);
+						transition: transform .4s .05s;
+					}
+				}
+			}
+		}
+
+		&_type {
+			&_service {
+				& .promo-cards__offer-goods {
+					pointer-events: none;
+				}
+				& .promo-cards__offer-brand {
+					pointer-events: none;
+				}
+				& .promo-cards__offer-service {
+					pointer-events: all;
+				}
+
+				& .promo-cards__offer-goods {
+
+					&-background {
+						transform: scale(0);
+						opacity: 0;
+						transition: transform .6s cubic-bezier(0.75,-0.7, 0.25, 1), opacity .1s .6s;
+					}
+
+					&-price {
 						transform: translateX(100%);
 						opacity: 0;
 						transition: transform .4s .2s, opacity .3s .3s;
@@ -270,9 +361,47 @@
 					}
 				}
 
+				& .promo-cards__offer-service {
+					background-color: transparent;
+
+					/*&-background {
+						transform: scaleX(1);
+						transform-origin: right center;
+						transition: transform .6s .4s ease;
+					}*/
+
+					&-photo {
+						background-size: 100%;
+						transform: translateX(0);
+						transition: transform .5s .25s;
+					}
+
+					&-title {
+						transform: translateX(0);
+						opacity: 1;
+						transition: transform .4s .35s, opacity .3s .45s;
+					}
+
+					&-desc {
+						transform: translateX(0);
+						opacity: 1;
+						transition: transform .4s .4s, opacity .3s .5s;
+					}
+
+					&-price {
+						transform: translateY(0);
+						opacity: 1;
+						transition: transform .4s .6s, opacity .3s .6s;
+					}
+				}
+
 			}
 		}
 	}
+
+
+
+
 
 	/* MEDIA */
 	&__media-video-back, &__media-video, &__media-video-title, &__media-video-footer {
