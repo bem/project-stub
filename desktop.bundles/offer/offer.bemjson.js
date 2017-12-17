@@ -86,6 +86,14 @@ module.exports = {
       attrs: { style: 'height: 456px; margin: 100px auto;' },
       mix: { block: 'pt-card', mods: { view: 'inverse' } },
       content: [
+          {
+            elem: 'background-wrapper',
+            mix: { block: 'promo-cards', elem: 'offer-service-background'},
+            content: {
+              elem: 'bg-photo',
+              mix: { block: 'promo-cards', elem: 'offer-service-photo'}
+            }
+        },
         {
           elem: 'title',
           mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-v': 'xxl' } },

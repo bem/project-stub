@@ -1,0 +1,23 @@
+.button {
+  &_width {
+    &_full {
+      width: 100%;
+    }
+  }
+  &_view {
+    &_donate {
+      background-color: #FD8D46 !important;
+      color: var(--color-default) !important;
+
+      box-shadow: 0 6px 14px 0 rgba(0,0,0,0.12);
+      border-radius: 12px;
+    }
+  }
+  &_theme {
+    &_islands {
+      &::before {
+        background: none !important;
+      }
+    }
+  }
+}
