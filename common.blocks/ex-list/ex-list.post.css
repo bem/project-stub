@@ -1,0 +1,36 @@
+.ex-list {
+  &__item {
+    align-items: center;
+    &_display {
+      &_flex {
+        display: flex;
+      }
+    }
+    &_align {
+      &_space-between {
+        justify-content: space-between;
+      }
+    }
+  }
+  &__section {
+	/*
+    &:hover {
+      background: var(--color-hover);
+    }
+    */
+  }
+  &__transaction {
+    width: 320px;
+  }
+  &__show {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__hide {
+    margin-top: -var(--space-m);
+  }
+  &__label {
+    width: 160px;
+    flex-wrap:
+  }
+}

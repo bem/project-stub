@@ -1,0 +1,16 @@
+.page {
+  &_vertical-align {
+    &_center {
+      flex-direction: column;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &_type {
+  	&_full-screen {
+  		min-height: 100vh !important;
+  	}
+  }
+}

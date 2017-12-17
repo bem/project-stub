@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Luxury</title>
+  <desc>A line styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="3" d="M2 22h60M10 9l9 13L32 9l13 13 9-13M19 22l13 33 13-33"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+  <path data-name="layer1" fill="none" stroke="#000000" stroke-linecap="round"
+  stroke-linejoin="round" stroke-width="3" d="M32 55L2 22l8-13h44l8 13-30 33z"></path>
+</svg>

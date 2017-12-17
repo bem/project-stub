@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Play Movie</title>
+  <desc>A line styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  d="M62 19v-8a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v8M22 7L10 19M38 7L26 19M54 7L42 19"
+  fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" fill="none" stroke="#000000" stroke-miterlimit="10"
+  stroke-width="3" d="M24 27v20l20-10-20-10z" stroke-linejoin="round" stroke-linecap="round"></path>
+  <path data-name="layer1" d="M2 19v34a4 4 0 0 0 4 4h52a4 4 0 0 0 4-4V19z"
+  fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+</svg>

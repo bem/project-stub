@@ -1,0 +1,18 @@
+.p-payment-cases {
+  &__title {
+    margin-bottom: 32px;
+  }
+  &__subtitle {
+    margin-bottom: 12px;
+  }
+  &__section {
+    margin-bottom: 48px;
+  }
+  &__item {
+    margin-bottom: 24px;
+  }
+  &__link {
+    margin-bottom: 4px;
+    line-height: 1.4em;
+  }
+}

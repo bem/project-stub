@@ -1,0 +1,12 @@
+.b-page {
+  &_theme {
+    &_dark {
+      background: #0e0e0e;
+    }
+  }
+  &_overflow {
+    &_hidden {
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.demo {
+	&__example {
+		background-color: #fcfcfc;
+		padding: $space-xxl;
+
+		&_view {
+			&_inverse {
+				background-color: var(--color-inverse);
+			}
+		}
+	}
+}

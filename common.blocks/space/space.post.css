@@ -1,0 +1,8 @@
+.space {
+  position: relative;
+  height: 124px;
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}

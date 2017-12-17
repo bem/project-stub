@@ -1,0 +1,6 @@
+.demo__pattern {
+	margin-bottom: calc($space-xxxl * 3	);
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}

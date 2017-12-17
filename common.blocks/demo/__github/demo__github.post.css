@@ -1,0 +1,14 @@
+.demo__github {
+	margin-bottom: 92px;
+	font-size: 24px;
+	font-weight: bold;
+	opacity: 0.3;
+	color: var(--color-typo-primary);
+	display: block;
+	text-decoration: none;
+	transition-duration: 0.3s;
+	&:hover {
+		color: #0366d6;
+		opacity: 1;
+	}
+}

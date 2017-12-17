@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Paint Bucket</title>
+  <desc>A line styled icon from Orion Icon Library.</desc>
+  <path data-name="layer1"
+  fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="3" d="M12 62V18m40 0v44M9 18h46M9 62h46"
+  stroke-linejoin="round" stroke-linecap="round"></path>
+  <path data-name="layer2" d="M12 27h27a2 2 0 0 1 2 2v22a2 2 0 0 1-2 2H12"
+  fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <path data-name="layer1" d="M17.5 18v-5a11 11 0 0 1 11-11h7a11 11 0 0 1 11 11v9"
+  fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round"
+  stroke-linecap="round"></path>
+  <circle data-name="layer1" cx="46.5" cy="24" r="2" fill="none"
+  stroke="#000000" stroke-miterlimit="10" stroke-width="3" stroke-linejoin="round"
+  stroke-linecap="round"></circle>
+</svg>

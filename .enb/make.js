@@ -13,6 +13,7 @@ const techs = {
             require('postcss-each'),
             require('postcss-for'),
             require('postcss-simple-vars')(),
+            require('postcss-color-function')(),
             require('postcss-calc')(),
             require('postcss-nested'),
             require('rebem-css'),
@@ -39,6 +40,14 @@ const techs = {
         { path: 'node_modules/bem-components/desktop.blocks', check: false },
         { path: 'node_modules/bem-components/design/common.blocks', check: false },
         { path: 'node_modules/bem-components/design/desktop.blocks', check: false },
+        { path: 'node_modules/bem-themes/common.blocks', check: false },
+        { path: 'node_modules/bem-animations/common.blocks', check: false },
+        { path: 'node_modules/bem-icons/common.blocks', check: false },
+        { path: 'node_modules/bem-layouts/common.blocks', check: false },
+        { path: 'node_modules/bem-logos/common.blocks', check: false },
+        { path: 'node_modules/bem-patterns/common.blocks', check: false },
+        { path: 'node_modules/bem-typo/common.blocks', check: false },
+        { path: 'node_modules/bem-vectors/common.blocks', check: false },
         'common.blocks',
         'desktop.blocks'
     ];

@@ -1,0 +1,14 @@
+.demo__item {
+	&_type {
+		&_soon {
+			color: #999;
+			.prototype-demo__platform {
+				color: #999;
+				background:
+			}
+			.prototype-demo__jira {
+				color: #999;
+			}
+		}
+	}
+}
