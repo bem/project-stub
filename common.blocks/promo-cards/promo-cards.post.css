@@ -90,7 +90,7 @@
 
 	&__team-member {
 		position: relative;
-		color: white;
+		color: var(--color-typo-primary);
 		text-transform: uppercase;
 		font-size: 56px;
 		font-family: 'IBM Plex Mono';

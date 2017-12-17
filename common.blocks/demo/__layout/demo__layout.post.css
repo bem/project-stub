@@ -1,7 +1,10 @@
 .demo__layout {
-	height: 100vh;
-	min-height: 500px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+ height: 100vh;
+ min-height: 500px;
+ display: flex;
+ justify-content: center;
+ background-image: url('bill.png');
+ background-size: 1342px;
+ background-position: 100% 120%;
+ background-repeat: no-repeat;
 }

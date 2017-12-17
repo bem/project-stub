@@ -23,339 +23,61 @@ module.exports = {
 		mods: { color: 'default', space: 'default', size: 'default' }
 		},
 		content: [
-		// {
-		// 	elem: 'layout',
-		// 	elemMods: { view: 'default' },
-		// 	content: [
-		// 	{
-		// 		elem: 'content',
-		// 		content: [
-		// 		{
-		// 			block: 'text',
-		// 			mods: { size: 'xxl', view: 'ghost', weight: 'bold' },
-		// 			content: [
-		// 			'Yamoney Design',
-		// 			{
-		// 				tag: 'a',
-		// 				block: 'text',
-		// 				mods: { view: 'link' },
-		// 				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
-		// 				attrs: { href: 'https://bitbucket-public.yamoney.ru/users/meeq/repos/prototype/browse' },
-		// 				content: 'на Bitbucket'
-		// 			},
-		// 			{
-		// 				tag: 'a',
-		// 				block: 'text',
-		// 				mods: { view: 'link' },
-		// 				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
-		// 				attrs: { href: 'https://t.me/bemdesign' },
-		// 				content: 'в Telegram'
-		// 			}]
-		// 		},
-		// 		{
-		// 			elem: 'slogan',
-		// 			content: 'Масштабируемая'
-		// 		},
-		// 		{
-		// 			elem: 'slogan',
-		// 			content: 'дизайн-система'
-		// 		},
-		// 		{
-		// 			elem: 'slogan',
-		// 			content: 'на основе БЭМ'
-		// 		}]
-		// 	}]
-		// },
-		{
-			block: 'promo-cards',
-			mix: { block: 'promo-cards', elem: 'offer-section' },
-			mods: { view: 'ghost', slide: 'first' },
+			{
+		 elem: 'layout',
+		 elemMods: { view: 'default' },
+		 content: [
+		 {
+			elem: 'content',
+			mix: { block: 'decorator', mods: { 'space-t': 'xxxs' } },
 			content: [
 			{
-				elem: 'theme-name',
-				content: 'Product'
+			 block: 'text',
+			 mods: { font: 'mono' },
+			 content: [
+				{
+				 block: 'demo',
+				 elem: 'slogan',
+				 content: 'Scalable design'
+				},
+				{
+				 block: 'demo',
+				 elem: 'slogan',
+				 content: 'system based '
+				},
+				{
+				 block: 'demo',
+				 elem: 'slogan',
+				 content: 'on BEM'
+				}
+
+			 ]
 			},
 			{
-				elem: 'content',
-				content: [
-				{
-					elem: 'card',
-					mix: [
-						{ elem: 'offer', elemMods: { type: 'goods' } },
-						{ block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-					],
-					content: [
-						{
-							block: 'offer',
-							mix: [
-								{ block: 'pt-card', mods: { view: 'default' } },
-								{ block: 'promo-cards', elem: 'hover' },
-								{ block: 'promo-cards', elem: 'offer-goods' },
-							],
-							mods: { view: 'nike' },
-							content: [
-								{
-									elem: 'show',
-									mix: { block: 'pt-card', elem: 'header' },
-									content: [
-										{
-											elem: 'background',
-											mix: { block: 'promo-cards', elem: 'offer-goods-background'}
-										},
-										{
-											elem: 'goods-price',
-											mix: [
-												{ block: 'promo-cards', elem: 'offer-goods-price'},
-												{ block: 'text', mods: {font: 'serif', style: 'italic', weight: 'bold'} }
-											],
-											content: '$299'
-										},
-										{
-											elem: 'item',
-											mix: { block: 'promo-cards', elem: 'offer-goods-item'}
-										}
-									]
-								},
-								{
-									elem: 'goods-info',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
-									content: [
-										{
-											block: 'text',
-											mix: [
-												{ block: 'decorator', mods: { 'indent-b': 'xs' } },
-												{ block: 'promo-cards', elem: 'offer-goods-title'},
-											],
-											mods: { view: 'primary', font: 'mono', weight: 'bold', size: 'xl', align: 'center', transform: 'uppercase', spacing: 's' },
-											content: 'Nike Gyakusou Gaiter Boot'
-										},
-										{
-											block: 'text',
-											mods: { view: 'primary', size: 's', align: 'center' },
-											mix: { block: 'promo-cards', elem: 'offer-goods-desc'},
-											content: 'You have the goal. We have a gift'
-										}
-									]
-								},
-								{
-									elem: 'action',
-									mix: [
-										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
-										{ block: 'promo-cards', elem: 'offer-goods-action'},
-									],
-									content: [
-										{
-											block: 'text',
-											mods: { view: 'secondary', size: 'm', weight: 'bold', align: 'center', },
-											content: 'Shop Now'
-										}
-									]
-								}
-							]
-						},
+			 block: 'text',
+			 mods: { size: 'xxl', view: 'ghost', weight: 'bold' },
+			 mix: { block: 'decorator', mods: { 'indent-t': 'xxxl' } },
+			 content: [
+			 'BEM Design',
+			 {
+				tag: 'a',
+				block: 'text',
 
-
-						{
-							block: 'offer',
-							mix: [
-								{ block: 'pt-card', mods: { view: 'default' } },
-								{ block: 'promo-cards', elem: 'hover' },
-								{ block: 'promo-cards', elem: 'offer-brand' },
-							],
-							content: [
-								{
-									elem: 'brand-show',
-									mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } },
-									content: [
-										{
-											elem: 'brand-image-wrapper',
-											mix: { block: 'promo-cards', elem: 'brand-image-wrapper' },
-											content: [
-												{
-													elem: 'brand-image',
-													mix: { block: 'promo-cards', elem: 'offer-brand-image' }
-												}
-											]
-										}
-									]
-								},
-								{
-									elem: 'brand-info',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
-									content: [
-										{
-											block: 'text',
-											mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
-											mix: [{ block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } }],
-											content: 'Magic For All'
-										},
-										{
-											elem: 'brand-logo',
-											mix: [
-												{ block: 'promo-cards', elem: 'offer-brand-logo' },
-											]
-										}
-									]
-								},
-								{
-									elem: 'brand-action',
-									mix: [
-										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
-										{ block: 'promo-cards', elem: 'offer-brand-action' },
-									],
-									content: [
-										{
-											block: 'text',
-											mods: { view: 'primary', size: 'm', align: 'center', weight: 'bold' },
-											content: 'Learn More'
-										}
-									]
-								}
-							]
-						},
-
-
-						{
-							block: 'offer',
-							mods: { view: 'brabus'},
-							mix: [
-								{ block: 'pt-card', mods: { view: 'default' } },
-								{ block: 'promo-cards', elem: 'hover' },
-								{ block: 'promo-cards', elem: 'offer-service' },
-							],
-							content: [
-								{
-									elem: 'background-wrapper',
-									mix: { block: 'promo-cards', elem: 'offer-service-background'},
-									content: {
-										elem: 'bg-photo',
-										mix: { block: 'promo-cards', elem: 'offer-service-photo'}
-									}
-								},
-								{
-									elem: 'title',
-									mix: [
-										{ block: 'pt-card', elem: 'header', elemMods: { 'space-v': 'xxl' } },
-										{ block: 'promo-cards', elem: 'offer-service-title'},
-									],
-									content: [
-										{
-											block: 'text',
-											mods: { view: 'inverse', size: 'l', transform: 'uppercase', align: 'center' },
-											content: 'Brabus'
-										}
-									]
-								},
-								{
-									elem: 'service-info',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
-									content: [
-										{
-											block: 'text',
-											mix: [
-												{ block: 'decorator', mods: { 'indent-b': 'xl'} },
-												{ block: 'promo-cards', elem: 'offer-service-desc'},
-											],
-											mods: { view: 'inverse', size: 'm', weight: 'semibold' },
-											content: 'Luxury and comfort never comprised. The BRABUS GLE 700 Coupe will lead to an unforgettable journey'
-										},
-										{
-											elem: 'price',
-											mix: { block: 'promo-cards', elem: 'offer-service-price'},
-											content: [
-												{
-													block: 'text',
-													mods: { view: 'inverse', size: 's', style: 'italic' },
-													content: 'from'
-												},
-												{
-													block: 'text',
-													mods: { view: 'inverse', size: 'xxxl', weight: 'semibold' },
-													content: '$299'
-												}
-											]
-										}
-									]
-								}
-							]
-						},
-
-
-					]
-				},
-
-
-
-				{
-					elem: 'description',
-					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-					content: [
-					{
-						elem: 'header',
-						mix: [
-							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
-							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
-						],
-						content: 'Offers'
-					},
-					{
-						block: 'text',
-						mods: { size: 'xl', font: 'mono' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
-					}]
-				},
-				{
-					elem: 'list',
-					content: [
-					{
-						elem: 'item',
-						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
-						content: {
-							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mix: { block: 'promo-cards', elem: 'offer-tab-1' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
-							content: 'Goods'
-						}
-					},
-					{
-						elem: 'item',
-						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
-						content: {
-							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mix: { block: 'promo-cards', elem: 'offer-tab-2' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
-							content: 'Brand'
-						}
-					},
-					{
-						elem: 'item',
-						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
-						content: {
-							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mix: { block: 'promo-cards', elem: 'offer-tab-3' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
-							content: 'Service'
-						}
-					}]
-				}]
-			},
-			{
-				elem: 'controls',
-				content: [
-				{
-					block: 'icon',
-					mods: { 'arrow-up-2': 'xl-primary' },
-					mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
-				},
-				{
-					block: 'icon',
-					mods: { 'arrow-down-2': 'xl-primary' }
-				}]
-			},
-			]
+				mods: { view: 'letter' },
+				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
+				attrs: { href: 'https://bitbucket-public.yamoney.ru/users/meeq/repos/prototype/browse', style: 'text-decoration: none' },
+				content: 'на GitHub'
+			 },
+			 {
+				tag: 'a',
+				block: 'text',
+				mods: { view: 'letter' },
+				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
+				attrs: { href: 'https://t.me/bemdesign', style: 'text-decoration: none' },
+				content: 'в Telegram'
+			 }]
+			}]
+		 }]
 		},
 		{
 			block: 'promo-cards',
@@ -701,30 +423,323 @@ module.exports = {
 					}]
 				}]
 			},
+			// {
+			// 	elem: 'controls',
+			// 	content: [
+			// 	{
+			// 		tag: 'a',
+			// 		elem: 'controls-item',
+			// 		attrs: { href: '#' },
+			// 		content: {
+			// 			block: 'icon',
+			// 			mods: { 'arrow-up-2': 'xl-primary' },
+			// 			mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+			// 		}
+			// 	},
+			// 	{
+			// 		tag: 'a',
+			// 		elem: 'controls-item',
+			// 		attrs: { href: '#' },
+			// 		content: {
+			// 			block: 'icon',
+			// 			mods: { 'arrow-down-2': 'xl-primary' }
+			// 		}
+			// 	}]
+			// }
+			]
+		},
+		{
+			block: 'promo-cards',
+			mix: { block: 'promo-cards', elem: 'offer-section' },
+			mods: { view: 'ghost', slide: 'first' },
+			content: [
 			{
-				elem: 'controls',
+				elem: 'theme-name',
+				content: 'Product'
+			},
+			{
+				elem: 'content',
 				content: [
 				{
-					tag: 'a',
-					elem: 'controls-item',
-					attrs: { href: '#' },
-					content: {
-						block: 'icon',
-						mods: { 'arrow-up-2': 'xl-primary' },
-						mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
-					}
+					elem: 'card',
+					mix: [
+						{ elem: 'offer', elemMods: { type: 'goods' } },
+						{ block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					],
+					content: [
+						{
+							block: 'offer',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'offer-goods' },
+							],
+							mods: { view: 'nike' },
+							content: [
+								{
+									elem: 'show',
+									mix: { block: 'pt-card', elem: 'header' },
+									content: [
+										{
+											elem: 'background',
+											mix: { block: 'promo-cards', elem: 'offer-goods-background'}
+										},
+										{
+											elem: 'goods-price',
+											mix: [
+												{ block: 'promo-cards', elem: 'offer-goods-price'},
+												{ block: 'text', mods: {font: 'serif', style: 'italic', weight: 'bold'} }
+											],
+											content: '$299'
+										},
+										{
+											elem: 'item',
+											mix: { block: 'promo-cards', elem: 'offer-goods-item'}
+										}
+									]
+								},
+								{
+									elem: 'goods-info',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									content: [
+										{
+											block: 'text',
+											mix: [
+												{ block: 'decorator', mods: { 'indent-b': 'xs' } },
+												{ block: 'promo-cards', elem: 'offer-goods-title'},
+											],
+											mods: { view: 'primary', font: 'mono', weight: 'bold', size: 'xl', align: 'center', transform: 'uppercase', spacing: 's' },
+											content: 'Nike Gyakusou Gaiter Boot'
+										},
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 's', align: 'center' },
+											mix: { block: 'promo-cards', elem: 'offer-goods-desc'},
+											content: 'You have the goal. We have a gift'
+										}
+									]
+								},
+								{
+									elem: 'action',
+									mix: [
+										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-v': 'xl' } },
+										{ block: 'promo-cards', elem: 'offer-goods-action'},
+									],
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'secondary', size: 'm', weight: 'bold', align: 'center', },
+											content: 'Shop Now'
+										}
+									]
+								}
+							]
+						},
+
+
+						{
+							block: 'offer',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'offer-brand' },
+							],
+							content: [
+								{
+									elem: 'brand-show',
+									mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } },
+									content: [
+										{
+											elem: 'brand-image-wrapper',
+											mix: { block: 'promo-cards', elem: 'brand-image-wrapper' },
+											content: [
+												{
+													elem: 'brand-image',
+													mix: { block: 'promo-cards', elem: 'offer-brand-image' }
+												}
+											]
+										}
+									]
+								},
+								{
+									elem: 'brand-info',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
+											mix: [{ block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } }],
+											content: 'Magic For All'
+										},
+										{
+											elem: 'brand-logo',
+											mix: [
+												{ block: 'promo-cards', elem: 'offer-brand-logo' },
+											]
+										}
+									]
+								},
+								{
+									elem: 'brand-action',
+									mix: [
+										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+										{ block: 'promo-cards', elem: 'offer-brand-action' },
+									],
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 'm', align: 'center', weight: 'bold' },
+											content: 'Learn More'
+										}
+									]
+								}
+							]
+						},
+
+
+						{
+							block: 'offer',
+							mods: { view: 'brabus'},
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'offer-service' },
+							],
+							content: [
+								{
+									elem: 'background-wrapper',
+									mix: { block: 'promo-cards', elem: 'offer-service-background'},
+									content: {
+										elem: 'bg-photo',
+										mix: { block: 'promo-cards', elem: 'offer-service-photo'}
+									}
+								},
+								{
+									elem: 'title',
+									mix: [
+										{ block: 'pt-card', elem: 'header', elemMods: { 'space-v': 'xxl' } },
+										{ block: 'promo-cards', elem: 'offer-service-title'},
+									],
+									content: [
+										{
+											block: 'text',
+											mods: { view: 'inverse', size: 'l', transform: 'uppercase', align: 'center' },
+											content: 'Brabus'
+										}
+									]
+								},
+								{
+									elem: 'service-info',
+									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
+									content: [
+										{
+											block: 'text',
+											mix: [
+												{ block: 'decorator', mods: { 'indent-b': 'xl'} },
+												{ block: 'promo-cards', elem: 'offer-service-desc'},
+											],
+											mods: { view: 'inverse', size: 'm', weight: 'semibold' },
+											content: 'Luxury and comfort never comprised. The BRABUS GLE 700 Coupe will lead to an unforgettable journey'
+										},
+										{
+											elem: 'price',
+											mix: { block: 'promo-cards', elem: 'offer-service-price'},
+											content: [
+												{
+													block: 'text',
+													mods: { view: 'inverse', size: 's', style: 'italic' },
+													content: 'from'
+												},
+												{
+													block: 'text',
+													mods: { view: 'inverse', size: 'xxxl', weight: 'semibold' },
+													content: '$299'
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+
+
+					]
+				},
+
+
+
+				{
+					elem: 'description',
+					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Offers'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
 				},
 				{
-					tag: 'a',
-					elem: 'controls-item',
-					attrs: { href: '#' },
-					content: {
-						block: 'icon',
-						mods: { 'arrow-down-2': 'xl-primary' }
-					}
+					elem: 'list',
+					content: [
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'offer-tab-1' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
+							content: 'Goods'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'offer-tab-2' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							content: 'Brand'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'offer-tab-3' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							content: 'Service'
+						}
+					}]
 				}]
-			}]
+			},
+			// {
+			// 	elem: 'controls',
+			// 	content: [
+			// 	{
+			// 		block: 'icon',
+			// 		mods: { 'arrow-up-2': 'xl-primary' },
+			// 		mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+			// 	},
+			// 	{
+			// 		block: 'icon',
+			// 		mods: { 'arrow-down-2': 'xl-primary' }
+			// 	}]
+			// },
+			]
 		},
+
 		{
 			block: 'promo-cards',
 			mods: { view: 'inverse', slide: 'first' },
@@ -955,38 +970,39 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-3' },
-							content: 'что-то'
+							content: 'Developer'
 						}
 					}]
 				}]
 			},
-			{
-				elem: 'controls',
-				content: [
-				{
-					tag: 'a',
-					elem: 'controls-item',
-					attrs: { href: '#' },
-					content: {
-						block: 'icon',
-						mods: { 'arrow-up-2': 'xl-primary' },
-						mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
-					}
-				},
-				{
-					tag: 'a',
-					elem: 'controls-item',
-					attrs: { href: '#' },
-					content: {
-						block: 'icon',
-						mods: { 'arrow-down-2': 'xl-primary' }
-					}
-				}]
-			}]
+			// {
+			// 	elem: 'controls',
+			// 	content: [
+			// 	{
+			// 		tag: 'a',
+			// 		elem: 'controls-item',
+			// 		attrs: { href: '#' },
+			// 		content: {
+			// 			block: 'icon',
+			// 			mods: { 'arrow-up-2': 'xl-primary' },
+			// 			mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+			// 		}
+			// 	},
+			// 	{
+			// 		tag: 'a',
+			// 		elem: 'controls-item',
+			// 		attrs: { href: '#' },
+			// 		content: {
+			// 			block: 'icon',
+			// 			mods: { 'arrow-down-2': 'xl-primary' }
+			// 		}
+			// 	}]
+			// }
+			]
 		},
 		{
 			block: 'promo-cards',
-			mods: { view: 'inverse' },
+			// mods: { view: 'inverse' },
 			content: [
 			{
 				elem: 'content',
@@ -1105,29 +1121,30 @@ module.exports = {
 					}]
 				}]
 			},
-			{
-				elem: 'controls',
-				content: [
-				{
-					tag: 'a',
-					elem: 'controls-item',
-					attrs: { href: '#' },
-					content: {
-						block: 'icon',
-						mods: { 'arrow-up-2': 'xl-primary' },
-						mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
-					}
-				},
-				{
-					tag: 'a',
-					elem: 'controls-item',
-					attrs: { href: '#' },
-					content: {
-						block: 'icon',
-						mods: { 'arrow-down-2': 'xl-primary' }
-					}
-				}]
-			}]
+			// {
+			// 	elem: 'controls',
+			// 	content: [
+			// 	{
+			// 		tag: 'a',
+			// 		elem: 'controls-item',
+			// 		attrs: { href: '#' },
+			// 		content: {
+			// 			block: 'icon',
+			// 			mods: { 'arrow-up-2': 'xl-primary' },
+			// 			mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+			// 		}
+			// 	},
+			// 	{
+			// 		tag: 'a',
+			// 		elem: 'controls-item',
+			// 		attrs: { href: '#' },
+			// 		content: {
+			// 			block: 'icon',
+			// 			mods: { 'arrow-down-2': 'xl-primary' }
+			// 		}
+			// 	}]
+			// }
+			]
 		}]
 	}]
 };
