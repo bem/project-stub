@@ -4,7 +4,7 @@
  display: flex;
  justify-content: center;
  background-image: url('bill.png');
- background-size: 1342px;
+ background-size: auto 75vh;
  background-position: 100% 140%;
  background-repeat: no-repeat;
 }

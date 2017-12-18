@@ -2,4 +2,5 @@
 	font-size: 82px;
 	font-weight: bold;
 	color: var(--color-inverse);
+	text-shadow: 1px 2px 0px #fff, -.6px -.6px 0 #fff;
 }
