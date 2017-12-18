@@ -129,7 +129,7 @@
 		transition: .3s ease;
 
 		&:hover {
-			color: white;
+			color: var(--color-typo-primary);
 		}
 	}
 
