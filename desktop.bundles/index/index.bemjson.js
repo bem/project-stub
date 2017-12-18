@@ -1186,6 +1186,18 @@ module.exports = {
 						content: [
 						{
 							tag: 'a',
+							attrs: { href: 'https://dribbble.com/lerazhelezova' },
+							block: 'promo-cards',
+							elem: 'team-member',
+							content: 'Lera Zhelezova'
+						}]
+					},
+					{
+						elem: 'item',
+						elemMods: { 'space-v': 'xxs' },
+						content: [
+						{
+							tag: 'a',
 							attrs: { href: 'https://twitter.com/fooontic_' },
 							block: 'promo-cards',
 							elem: 'team-member',
