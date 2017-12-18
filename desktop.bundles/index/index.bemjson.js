@@ -58,23 +58,21 @@ module.exports = {
 			 mods: { size: 'xxl', view: 'ghost', weight: 'bold' },
 			 mix: { block: 'decorator', mods: { 'indent-t': 'xxxl' } },
 			 content: [
-			 'BEM Design',
+			 'BEM Design на ',
 			 {
 				tag: 'a',
 				block: 'text',
-
 				mods: { view: 'letter' },
-				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
 				attrs: { href: 'https://bitbucket-public.yamoney.ru/users/meeq/repos/prototype/browse', style: 'text-decoration: none' },
-				content: 'на GitHub'
+				content: 'GitHub'
 			 },
+			 ' в ',
 			 {
 				tag: 'a',
 				block: 'text',
 				mods: { view: 'letter' },
-				mix: { block: 'decorator', mods: { 'indent-l': 's' } },
 				attrs: { href: 'https://t.me/bemdesign', style: 'text-decoration: none' },
-				content: 'в Telegram'
+				content: 'Telegram'
 			 }]
 			}]
 		 }]
