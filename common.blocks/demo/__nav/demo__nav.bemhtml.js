@@ -2,19 +2,10 @@ block('demo').elem('nav')(
 	content()(function(n, ctx) {
 		return [
 			{
-				tag: 'a',
-				elem: 'nav-control',
-				attrs: { href: 'https://bitbucket-public.yamoney.ru/pages/~MEEQ/prototype/master/browse/bundles/desktop/demo/prototype/prototype.ru.html' },
-				content: {
-					elem: 'nav-icon',
-					elemMods: { type: 'logo' }
-				}
-			},
-			{
 				elem: 'nav-item',
-				attrs: { 'data-name': 'projects' },
+				attrs: { 'data-name': 'tools' },
 				mix: [{ block: 'text', mods: { size: 'm', transform: 'uppercase', view: 'primary', spacing: 'xs' } }, { block: 'link', url: '#' }],
-				content: 'Projects'
+				content: 'Tools'
 			},
 			{
 				elem: 'nav-item',
@@ -24,9 +15,9 @@ block('demo').elem('nav')(
 			},
 			{
 				elem: 'nav-item',
-				attrs: { 'data-name': 'tools' },
+				attrs: { 'data-name': 'projects' },
 				mix: [{ block: 'text', mods: { size: 'm', transform: 'uppercase', view: 'primary', spacing: 'xs' } }, { block: 'link', url: '#' }],
-				content: 'Tools'
+				content: 'projects'
 			},
 			{
 				elem: 'nav-chat'
