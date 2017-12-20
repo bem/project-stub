@@ -1,0 +1,185 @@
+.demo__nav {
+	width: 70px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	z-index: 10;
+
+	&-item {
+		writing-mode: vertical-lr;
+		margin: var(--space-s) 0;
+	}
+	&-social {
+		position: absolute;
+		bottom: 50px;
+	}
+	&-control {
+		position: absolute;
+		top: 20px;
+		width: 31px;
+		height: 31px;
+	}
+	&-chat {
+		position: absolute;
+		bottom: 20px;
+		width: 33px;
+		height: 33px;
+		background: black;
+		border-radius: 50%;
+	}
+
+
+	&-icon {
+		&_type {
+			&_logo {
+				position: absolute;
+				left: 0;
+				top: 11px;
+
+				width: 31px;
+				height: 9px;
+				box-sizing: border-box;
+				background: black;
+				transition: .3s ease;
+				animation: navLogoStripe2 3s ease infinite;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 11px;
+					background: black;
+					width: 31px;
+					height: 9px;
+					transition: .3s ease;
+					animation: navLogoStripe3 3s ease infinite;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: -11px;
+					background: black;
+					width: 31px;
+					height: 9px;
+					transition: .3s ease;
+					animation: navLogoStripe1 3s ease infinite;
+				}
+			}
+			&_close {
+				position: absolute;
+				top: 11px;
+				left: 0px;
+
+				width: 31px;
+				height: 9px;
+				box-sizing: border-box;
+				background: white;
+				transition: .3s ease;
+				transform: rotate(0deg);
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					background: black;
+					width: 31px;
+					height: 9px;
+					transform: rotate(-45deg);
+					transition: .3s ease;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					background: black;
+					width: 31px;
+					height: 9px;
+					transform: rotate(45deg);
+					transition: .3s ease;
+				}
+			}
+		}
+	}
+}
+
+@keyframes navLogoStripe1 {
+	0% {
+		top: -2px;
+		transform: scaleY(1.5); 
+	}
+	20% {
+		top: -2px;
+		transform: scaleY(1.5); 
+	}
+	25% {
+		top: -12px;
+		transform: scaleY(1);
+	}
+	95% {
+		top: -12px;
+		transform: scaleY(1);
+	}
+	100% {
+		top: -2px;
+		transform: scaleY(1.5); 
+	}
+}
+
+@keyframes navLogoStripe2 {
+	0% {
+		transform: rotate(0deg);
+		top: 4px;
+	}
+	20% {
+		transform: rotate(0deg);
+		top: 4px;
+	}
+	25% {
+		transform: rotate(0deg);
+		top: 11px;
+	}
+	45% {
+		transform: rotate(0deg);
+		top: 11px;
+	}
+	50% {
+		transform: rotate(90deg);
+		top: 11px;
+	}
+	95% {
+		transform: rotate(90deg);
+		top: 11px;
+	}
+	100% {
+		transform: rotate(0deg);
+		top: 4px;
+	}
+}
+
+@keyframes navLogoStripe3 {
+	0% {
+		transform: scaleY(1.5);
+		top: 16px;
+	}
+	20% {
+		transform: scaleY(1.5);
+		top: 16px;
+	}
+	25% {
+		top: 11px;
+		transform: scaleY(1);
+	}
+	95% {
+		top: 11px;
+		transform: scaleY(1);
+	}
+	100% {
+		transform: scaleY(1.5);
+		top: 16px;
+	}
+}
