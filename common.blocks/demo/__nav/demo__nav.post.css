@@ -1,19 +1,21 @@
 .demo__nav {
 	width: 70px;
 	height: 100%;
+	padding-top: var(--space-xxl);
+	box-sizing: border-box;
 	right: 0;
 	top: 0;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	background: white;
 	z-index: 10;
 
 	&-item {
 		writing-mode: vertical-lr;
 		margin: var(--space-s) 0;
+		cursor: pointer;
 	}
 	&-social {
 		position: absolute;

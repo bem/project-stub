@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	var nav = $('.demo__nav'),
 		menu = $('.demo__menu'),
-		control = nav.find('.demo__nav-control');
+		control = $('.demo__logo');
 
 	nav.find('.link').click(function(){
 		var section = $(this).attr('data-name');
@@ -15,20 +15,18 @@ $(document).ready(function(){
 		$('.demo__menu-sections-col[data-name='+ section +']').show();
 		
 		menu.addClass('demo__menu_open');
-		$('.demo__nav-icon_type_logo').toggleClass('demo__nav-icon_type_logo').toggleClass('demo__nav-icon_type_close');
+		$('.demo__logo-icon').removeClass('demo__logo-icon_type_logo').addClass('demo__logo-icon_type_close');
 	}
 
-	control.click(function(){
-		var type = control.find('.demo__nav-icon');
+	control.on('click', function(){
+		var type = control.find('.demo__logo-icon');
 
-		if(type.hasClass('demo__nav-icon_type_close')) {
+		if(type.hasClass('demo__logo-icon_type_close')) {
 			$('.demo').attr('style', '');
 			menu.removeClass('demo__menu_open');
-			$('.demo__nav-icon_type_close').toggleClass('demo__nav-icon_type_logo').toggleClass('demo__nav-icon_type_close');
+			type.addClass('demo__logo-icon_type_logo').removeClass('demo__logo-icon_type_close');
 
 			return false;
-		} else if(type.hasClass('demo__nav-icon_type_logo')) {
-
 		}
 	});
 });
