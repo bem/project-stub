@@ -906,16 +906,17 @@ module.exports = {
 						},
 						{
 							elem: 'recommendation-info',
-							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-recommendation-info' }],
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
 								block: 'text',
 								mods: { size: 'xxxl', view: 'inverse', align: 'center' },
-								mix: { block: 'decorator', mods: { 'space-b': 'l' } },
+								mix: [{ block: 'decorator', mods: { 'space-b': 'l' } }, { block: 'promo-cards', elem: 'apps-recommendation-info' }],
 								content: 'From our Bafta award winning hit'
 							},
 							{
 								elem: 'recommendation-description',
+								mix: { block: 'promo-cards', elem: 'apps-recommendation-info' },
 								content: [
 								{
 									block: 'text',
@@ -926,6 +927,7 @@ module.exports = {
 							},
 							{
 								elem: 'recommendation-item',
+								mix: { block: 'promo-cards', elem: 'apps-recommendation-footer' },
 								content: [
 								{
 									block: 'pt-icon-plus',
@@ -986,16 +988,17 @@ module.exports = {
 						},
 						{
 							elem: 'good-info',
-							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-good-info' }],
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
 								block: 'text',
 								mods: { size: 'xxxl', view: 'inverse' },
-								mix: { block: 'decorator', mods: { 'space-b': 'l' } },
+								mix: [{ block: 'decorator', mods: { 'space-b': 'l' } }, { block: 'promo-cards', elem: 'apps-good-info' }],
 								content: 'From our Bafta award winning hit'
 							},
 							{
 								elem: 'good-description',
+								mix: { block: 'promo-cards', elem: 'apps-good-info' },
 								content: [
 								{
 									block: 'text',
@@ -1006,6 +1009,7 @@ module.exports = {
 							},
 							{
 								elem: 'good-item',
+								mix: { block: 'promo-cards', elem: 'apps-good-footer' },
 								content: [
 								{
 									block: 'pt-icon-plus',

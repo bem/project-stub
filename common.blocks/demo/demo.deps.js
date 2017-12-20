@@ -2,7 +2,7 @@
 	{
 		shouldDeps: [
 			{ elem: 'plug' },
-			{ elem: 'header' },
+			{ elem: 'nav' },
 			{ elem: 'menu' },
 			{ elem: 'control-panel' },
 			{ elem: 'content' }

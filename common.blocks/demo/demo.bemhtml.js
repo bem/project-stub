@@ -5,10 +5,10 @@ block('demo')(
 				elem: 'plug'
 			},
 			{
-				elem: 'header'
+				elem: 'menu'
 			},
 			{
-				elem: 'menu'
+				elem: 'nav'
 			},
 			ctx.content
 		]

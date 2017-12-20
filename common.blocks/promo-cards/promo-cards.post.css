@@ -625,44 +625,46 @@
 					pointer-events: all;
 				}
 				.promo-cards__media-video {
-					transform: translateY(0) scale(1);
+					transform: scale(1);
 				}
 				.promo-cards__media-video-title {
-					transform: translateY(0);
+					transform: translateX(0);
 				}
 				.promo-cards__media-video-footer {
 					transform: translateY(0);
 					transition-delay: .5s;
 				}
 
+
 				.promo-cards__media-text-back {
 					opacity: 0;
 					pointer-events: none;
 				}
 				.promo-cards__media-cover {
-					transform: translateY(-200px) scale(1.5);
+					transform: scale(1.5);
 				}
 				.promo-cards__media-author-top {
-					transform: translateY(-200px);
+					transform: translateY(-100px);
 					transition-delay: .5s;
 				}
 				.promo-cards__media-article {
-					transform: translateY(500px);
+					transform: translateX(500px);
 				}
 				.promo-cards__media-text-footer {
 					transform: translateY(100px);
 					transition-delay: .5s;
 				}
 
+
 				.promo-cards__media-music-back {
 					opacity: 0;
 					pointer-events: none;
 				}
 				.promo-cards__media-music-cover {
-					transform: translateY(-500px) scale(1.5);
+					transform: scale(1.5);
 				}
 				.promo-cards__media-playlist {
-					transform: translateY(500px);
+					transform: translateX(500px);
 				}
 			}
 			&_text {
@@ -671,15 +673,16 @@
 					pointer-events: none;
 				}
 				.promo-cards__media-video {
-					transform: translateY(-500px) scale(3);
+					transform: scale(1.5);
 				}
 				.promo-cards__media-video-title {
-					transform: translateY(500px);
+					transform: translateX(500px);
 				}
 				.promo-cards__media-video-footer {
 					transform: translateY(100px);
 					transition-delay: .5s;
 				}
+
 
 				.promo-cards__media-text-back {
 					opacity: 1;
@@ -690,25 +693,26 @@
 					transition-delay: .5s;
 				}
 				.promo-cards__media-cover {
-					transform: translateY(0) scale(1);
+					transform: translateX(0) scale(1);
 				}
 				.promo-cards__media-article {
-					transform: translateY(0);
+					transform: translateX(0);
 				}
 				.promo-cards__media-text-footer {
-					transform: translateY(0);
+					transform: translateX(0);
 					transition-delay: .5s;
 				}
+
 
 				.promo-cards__media-music-back {
 					opacity: 0;
 					pointer-events: none;
 				}
 				.promo-cards__media-music-cover {
-					transform: translateY(-500px) scale(1.5);
+					transform: scale(1.5);
 				}
 				.promo-cards__media-playlist {
-					transform: translateY(500px);
+					transform: translateX(500px);
 				}
 			}
 			&_music {
@@ -717,44 +721,46 @@
 					pointer-events: none;
 				}
 				.promo-cards__media-video {
-					transform: translateY(-500px) scale(3);
+					transform: scale(1.5);
 				}
 				.promo-cards__media-video-title {
-					transform: translateY(500px);
+					transform: translateX(500px);
 				}
 				.promo-cards__media-video-footer {
 					transform: translateY(100px);
 					transition-delay: .5s;
 				}
 
+
 				.promo-cards__media-text-back {
 					opacity: 0;
 					pointer-events: none;
 				}
 				.promo-cards__media-cover {
-					transform: translateY(-200px) scale(1.5);
+					transform: scale(1.5);
 				}
 				.promo-cards__media-author-top {
-					transform: translateY(-200px);
+					transform: translateY(-100px);
 					transition-delay: .5s;
 				}
 				.promo-cards__media-article {
-					transform: translateY(500px);
+					transform: translateX(500px);
 				}
 				.promo-cards__media-text-footer {
 					transform: translateY(100px);
 					transition-delay: .5s;
 				}
 
+
 				.promo-cards__media-music-back {
 					opacity: 1;
 					pointer-events: all;
 				}
 				.promo-cards__media-music-cover {
-					transform: translateY(0) scale(1);
+					transform: scale(1);
 				}
 				.promo-cards__media-playlist {
-					transform: translateY(0);
+					transform: translateX(0);
 				}
 			}
 		}
@@ -769,7 +775,7 @@
 			transition: .7s ease;
 			transition-delay: .3s;
 		}
-		&-good-photo, &-good-info {
+		&-good-photo, &-good-info, &-good-footer {
 			transition: .7s ease;
 			transition-delay: .3s;
 		}
@@ -792,7 +798,9 @@
 				}
 				.promo-cards__apps-recommendation-footer {
 					transform: translateY(100px);
+					transition-delay: .5s;
 				}
+
 
 				.promo-cards__apps-good-back {
 					opacity: 0;
@@ -804,6 +812,11 @@
 				.promo-cards__apps-good-info {
 					transform: translateY(0);
 				}
+				.promo-cards__apps-good-footer {
+					transform: translateY(100px);
+					transition-delay: .5s;
+				}
+
 
 				.promo-cards__apps-developer-back {
 					opacity: 1;
@@ -821,6 +834,7 @@
 				}
 				.promo-cards__apps-developer-list {
 					transform: translateY(0);
+					transition-delay: .5s;
 				}
 			}
 			&_recommendation {
@@ -836,7 +850,9 @@
 				}
 				.promo-cards__apps-recommendation-footer {
 					transform: translateY(0);
+					transition-delay: .5s;
 				}
+
 
 				.promo-cards__apps-good-back {
 					opacity: 0;
@@ -848,6 +864,11 @@
 				.promo-cards__apps-good-info {
 					transform: translateY(500px);
 				}
+				.promo-cards__apps-good-footer {
+					transform: translateY(100px);
+					transition-delay: .5s;
+				}
+
 
 				.promo-cards__apps-developer-back {
 					opacity: 0;
@@ -865,6 +886,7 @@
 				}
 				.promo-cards__apps-developer-list {
 					transform: translateY(500px);
+					transition-delay: .5s;
 				}
 			}
 			&_good {
@@ -880,7 +902,9 @@
 				}
 				.promo-cards__apps-recommendation-footer {
 					transform: translateY(100px);
+					transition-delay: .6s;
 				}
+
 
 				.promo-cards__apps-good-back {
 					opacity: 1;
@@ -892,6 +916,11 @@
 				.promo-cards__apps-good-info {
 					transform: translateY(0);
 				}
+				.promo-cards__apps-good-footer {
+					transform: translateY(0);
+					transition-delay: .5s;
+				}
+
 
 				.promo-cards__apps-developer-back {
 					opacity: 0;
@@ -909,6 +938,7 @@
 				}
 				.promo-cards__apps-developer-list {
 					transform: translateY(500px);
+					transition-delay: .5s;
 				}
 			}
 		}
