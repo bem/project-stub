@@ -46,4 +46,20 @@
   &__days-wrapper {
     display: inline-block;
   }
+
+  &__event-avatar {
+    width: 124px;
+    height: 124px;
+    background-position: 100%;
+    background-image: url();
+    background-repeat: no-repeat;
+  }
+}
+
+.text {
+  &_size {
+    &_4xl {
+      font-size: 52px;
+    }
+  }
 }
