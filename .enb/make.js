@@ -36,6 +36,8 @@ const techs = {
     levels = [
         { path: 'node_modules/bem-core/common.blocks', check: false },
         { path: 'node_modules/bem-core/desktop.blocks', check: false },
+        'common.blocks',
+        'desktop.blocks',
         { path: 'node_modules/bem-components/common.blocks', check: false },
         { path: 'node_modules/bem-components/desktop.blocks', check: false },
         { path: 'node_modules/bem-components/design/common.blocks', check: false },
@@ -47,9 +49,7 @@ const techs = {
         { path: 'node_modules/bem-logos/common.blocks', check: false },
         { path: 'node_modules/bem-patterns/common.blocks', check: false },
         { path: 'node_modules/bem-typo/common.blocks', check: false },
-        { path: 'node_modules/bem-vectors/common.blocks', check: false },
-        'common.blocks',
-        'desktop.blocks'
+        { path: 'node_modules/bem-vectors/common.blocks', check: false }
     ];
 
 module.exports = function(config) {
