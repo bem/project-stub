@@ -23,7 +23,7 @@ module.exports = {
 		mods: { color: 'default', space: 'default', size: 'default' }
 		},
 		content: [
-			{
+		{
 		 elem: 'layout',
 		 elemMods: { view: 'default' },
 		 content: [
@@ -84,7 +84,18 @@ module.exports = {
 			content: [
 			{
 				elem: 'theme-name',
-				content: 'Video'
+				elemMods: { slide: 'first' },
+				content: 'video'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'second' },
+				content: 'text'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'third' },
+				content: 'music'
 			},
 			{
 				elem: 'content',
@@ -367,7 +378,7 @@ module.exports = {
 				},
 				{
 					elem: 'description',
-					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					elemMods: { view: 'inverse', slide: 'first' },
 					content: [
 					{
 						elem: 'header',
@@ -375,7 +386,43 @@ module.exports = {
 							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
 							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
 						],
-						content: 'Media'
+						content: 'Video'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { view: 'inverse', slide: 'second' },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Text'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { view: 'inverse', slide: 'third' },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Audio'
 					},
 					{
 						block: 'text',
@@ -453,7 +500,18 @@ module.exports = {
 			content: [
 			{
 				elem: 'theme-name',
-				content: 'Product'
+				elemMods: { slide: 'first' },
+				content: 'goods'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'second' },
+				content: 'brand'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'third' },
+				content: 'service'
 			},
 			{
 				elem: 'content',
@@ -498,7 +556,7 @@ module.exports = {
 								},
 								{
 									elem: 'goods-info',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl', 'space-v': 'l' } },
 									content: [
 										{
 											block: 'text',
@@ -545,15 +603,15 @@ module.exports = {
 							content: [
 								{
 									elem: 'brand-show',
-									mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } },
+									mix: { block: 'pt-card', elem: 'img', elemMods: { 'space-a': 'xl' } },
 									content: [
 										{
 											elem: 'brand-image-wrapper',
-											mix: { block: 'promo-cards', elem: 'brand-image-wrapper' },
+											mix: [{ block: 'promo-cards', elem: 'brand-image-wrapper' }, { block: 'decorator', mods: { 'space-a': 'xl' } }],
 											content: [
 												{
 													elem: 'brand-image',
-													mix: { block: 'promo-cards', elem: 'offer-brand-image' }
+													mix: [{ block: 'promo-cards', elem: 'offer-brand-image' }]
 												}
 											]
 										}
@@ -561,7 +619,7 @@ module.exports = {
 								},
 								{
 									elem: 'brand-info',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl', 'space-v': 'l' } },
 									content: [
 										{
 											block: 'text',
@@ -663,12 +721,27 @@ module.exports = {
 
 					]
 				},
-
-
-
 				{
 					elem: 'description',
-					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					elemMods: { slide: 'first' },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Goods'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { slide: 'second' },
 					content: [
 					{
 						elem: 'header',
@@ -677,6 +750,24 @@ module.exports = {
 							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
 						],
 						content: 'Offers'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { slide: 'third' },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Service'
 					},
 					{
 						block: 'text',
@@ -745,7 +836,18 @@ module.exports = {
 			content: [
 			{
 				elem: 'theme-name',
-				content: 'Applications'
+				elemMods: { slide: 'first' },
+				content: 'recommendation'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'second' },
+				content: 'good'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'third' },
+				content: 'developer'
 			},
 			{
 				elem: 'content',
@@ -786,7 +888,7 @@ module.exports = {
 						},
 						{
 							elem: 'developer-goods',
-							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-developer-list' }],
+							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-developer-list' }],
 							content: [
 							{
 								elem: 'developer-list',
@@ -900,13 +1002,13 @@ module.exports = {
 							elem: 'recommendation-preview',
 							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-recommendation-photo' }],
 							content: [
-								{
-									elem: 'recommendation-developer',
-								}]
+							{
+								elem: 'recommendation-developer',
+							}]
 						},
 						{
 							elem: 'recommendation-info',
-							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }],
+							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
 								block: 'text',
@@ -988,7 +1090,7 @@ module.exports = {
 						},
 						{
 							elem: 'good-info',
-							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }],
+							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
 								block: 'text',
@@ -1059,12 +1161,47 @@ module.exports = {
 				},
 				{
 					elem: 'description',
+					elemMods: { slide: 'first' },
 					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
 					content: [
 					{
 						elem: 'header',
 						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-						content: 'Applications'
+						content: 'Recommendation'
+					},
+					{
+						block: 'text',
+						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+						mods: { size: 'xl' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { slide: 'second' },
+					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					content: [
+					{
+						elem: 'header',
+						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+						content: 'Good'
+					},
+					{
+						block: 'text',
+						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+						mods: { size: 'xl' },
+						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { slide: 'third' },
+					mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					content: [
+					{
+						elem: 'header',
+						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+						content: 'Developer'
 					},
 					{
 						block: 'text',

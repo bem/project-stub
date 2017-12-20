@@ -24,7 +24,7 @@
 	&__video-title {
 		position: relative;
 		z-index: 99;
-		margin-top: -$space-xxl;
+		margin-top: -$space-xxxxl;
 	}
 	&__footer {
 		display: flex;
