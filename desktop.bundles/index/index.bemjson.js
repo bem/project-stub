@@ -883,7 +883,7 @@ module.exports = {
 						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'apps-developer-back' }, { block: 'promo-cards', elem: 'hover' }],
 						content: [
 						{
-							elem: 'preview',
+							elem: 'info',
 							mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'l' } },
 							content: [
 							{
@@ -911,7 +911,7 @@ module.exports = {
 						},
 						{
 							elem: 'developer-list',
-							mix: [{ block: 'pt-list' }, { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }],
+							mix: [  { block: 'promo-cards', elem: 'apps-developer-list' }, { block: 'pt-list' }, { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
 								elem: 'item',
@@ -1017,29 +1017,36 @@ module.exports = {
 							]
 						},
 						{
-							elem: 'recommendation-info',
-							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } }],
+							elem: 'preview',
+							mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } },
 							content: [
 							{
-								elem: 'preview',
-								mix: [{ block: 'promo-cards', elem: 'apps-recommendation-photo' }],
+								block: 'brand-logo',
+								mix: { block: 'promo-cards', elem: 'apps-recommendation-photo' }, /* Посмотреть с Юлей */
+								attrs: {
+									style: 'position: relative'
+								},
+								mods: { 'view': 'yota', size: 'm'}
+							},
+
+							{
+								elem: 'about',
+								mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' }},
 								content: [
-								{
-									elem: 'recommendation-developer',
-								}]
-							},
-							{
-								block: 'text',
-								mods: { size: 'xxxl', view: 'inverse', align: 'center', weight: 'bold' },
-								mix: [{ block: 'decorator', mods: { 'space-b': 'l' } }, { block: 'promo-cards', elem: 'apps-recommendation-info' }],
-								content: 'From our Bafta award winning hit'
-							},
-							{
-								block: 'text',
-								mix: { block: 'promo-cards', elem: 'apps-recommendation-info' },
-								mods: { size: 'm', view: 'ghost-inverse', align: 'center' },
-								content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
-							}]
+									{
+										block: 'text',
+										mods: { size: 'xxxl', view: 'inverse', align: 'center', weight: 'bold' },
+										mix: [{ block: 'decorator', mods: { 'space-b': 'l' }}, { block: 'promo-cards', elem: 'apps-recommendation-info' }],
+										content: 'From our Bafta award winning hit!'
+									},
+									{
+										block: 'text',
+										mix: { block: 'promo-cards', elem: 'apps-recommendation-info' },
+										mods: { size: 'm', view: 'ghost-inverse', align: 'center' },
+										content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
+									}
+								]
+							}]	
 						},
 						{
 							elem: 'item',
@@ -1382,7 +1389,7 @@ module.exports = {
 						content: [
 						{
 							tag: 'a',
-							attrs: { href: 'https://github.com/koloskof' },
+							attrs: { href: 'https://www.facebook.com/koloskof' },
 							block: 'promo-cards',
 							elem: 'team-member',
 							content: 'Misha Koloskof'

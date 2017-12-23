@@ -1,0 +1,6 @@
+.logotype-item {
+  display: block;
+  margin-bottom: var(--space-xxxl);
+  text-align: center;
+  width: 260px;
+}
