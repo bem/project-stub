@@ -63,7 +63,7 @@ module.exports = {
 				tag: 'a',
 				block: 'text',
 				mods: { view: 'letter' },
-				attrs: { href: 'https://bitbucket-public.yamoney.ru/users/meeq/repos/prototype/browse', style: 'text-decoration: none' },
+				attrs: { href: 'https://github.com/bemdesign', style: 'text-decoration: none' },
 				content: 'GitHub'
 			 },
 			 ' в ',
@@ -110,25 +110,27 @@ module.exports = {
 						content: [
 						{
 							elem: 'video',
-							mix: { block: 'promo-cards', elem: 'media-video' },
+							mix: [{ block: 'pt-card', elem: 'image', elemMods: { shadow: 'inverse' } }, { block: 'promo-cards', elem: 'media-video' }],
 							content: [
-							{
-								elem: 'play'
-							}]
+								{
+									block: 'image',
+									url: '../../assets/i/fallon.png',
+								},
+								{
+									elem: 'play',
+									mix: { block: 'pt-card', elem: 'play' }
+								}
+							]
 						},
 						{
-							elem: 'video-title',
-							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } }, { block: 'promo-cards', elem: 'media-video-title' }],
-							content: [
-							{
-								block: 'text',
-								mods: { view: 'inverse', size: 'xxl' },
-								content: 'Mad Lib Theater with John Cena'
-							}]
+							block: 'text',
+							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'l' } }, { block: 'promo-cards', elem: 'media-video-title' }],
+							mods: { view: 'inverse', size: 'xxxl', weight: 'bold' },
+							content: 'Mad Lib Theater with John Cena'
 						},
 						{
 							elem: 'footer',
-							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } }, { block: 'promo-cards', elem: 'media-video-footer' }],
+							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l', align: 'between' } }, { block: 'promo-cards', elem: 'media-video-footer' }],
 							content: [
 							{
 								block: 'pt-icon-plus',
@@ -139,8 +141,8 @@ module.exports = {
 									elemMods: { 'indent-right': 'xs' },
 									content: [
 									{
-										block: 'media',
-										elem: 'channel-logo'
+										block: 'brand-logo',
+										mods: { 'view': 'itunes', size: 'xxs'}
 									}]
 								},
 								{
@@ -165,36 +167,47 @@ module.exports = {
 						mix: [{ block: 'pt-card', mods: { view: 'default' } }, { block: 'promo-cards', elem: 'media-text-back' }, { block: 'promo-cards', elem: 'hover' }],
 						content: [
 						{
-							elem: 'article-cover',
-							mix: { block: 'promo-cards', elem: 'media-cover' },
+							elem: 'article-author',
+							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'l' } }],
 							content: [
 							{
-								elem: 'article-author',
+								block: 'pt-icon-plus',
+								mods: { 'vertical-align': 'center' },
+								mix: { block: 'promo-cards', elem: 'media-author-top' },
 								content: [
 								{
-									block: 'pt-icon-plus',
-									mods: { 'vertical-align': 'center' },
-									mix: { block: 'promo-cards', elem: 'media-author-top' },
+									elem: 'icon',
+									elemMods: { 'indent-right': 'xs' },
 									content: [
 									{
-										elem: 'icon',
-										elemMods: { 'indent-right': 'xs' },
+										block: 'pt-avatar',
 										content: [
-										{
-											block: 'media',
-											elem: 'avatar'
-										}]
-									},
+											{
+												elem: 'photo',
+												elemMods: { size: 'xxs', view: 'example' },
+											}
+										]
+									}]
+								},
+								{
+									elem: 'block',
+									content: [
 									{
-										elem: 'block',
-										content: [
-										{
-											block: 'text',
-											mods: { view: 'inverse', size: 's' },
-											content: 'James Bridle'
-										}]
+										block: 'text',
+										mods: { view: 'inverse', size: 's' },
+										content: 'James Bridle'
 									}]
 								}]
+							}]
+						},
+						{
+							elem: 'screenshot',
+							/* mix: { block: 'promo-cards', elem: 'media-cover' },  Что-то ломает класс анимации, глянуть вместе с Юлей  */
+							mix: [{ block: 'pt-card', elem: 'image' } ], 
+							content: [
+							{
+								block: 'image',
+								url: '../../assets/i/heroes.png',
 							}]
 						},
 						{
@@ -203,28 +216,28 @@ module.exports = {
 							content: [
 							{
 								block: 'text',
-								mods: { view: 'primary', size: 'xxl' },
+								mods: { view: 'primary', size: 'xxxl', weight: 'bold', font: 'serif' },
 								mix: { block: 'decorator', mods: { 'indent-b': 's' } },
 								content: 'Something is wrong on the internet'
 							},
 							{
 								block: 'text',
-								mods: { view: 'primary', size: 'm' },
-								content: 'I’m James Bridle. I’m a writer and artist concerned with technology and culture. I usually write on my own blog…'
+								mods: { view: 'primary', size: 'm', font: 'mono'  },
+								content: 'I’m James Bridle. I’m a writer and artist concerned with…'
 							}]
 						},
 						{
 							elem: 'footer',
-							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } }, { block: 'promo-cards', elem: 'media-text-footer' }],
+							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l', align: 'between' } }, { block: 'promo-cards', elem: 'media-text-footer' }],
 							content: [
 							{
 								block: 'text',
-								mods: { view: 'secondary', size: 's' },
+								mods: { view: 'secondary', size: 's', font: 'mono'  },
 								content: 'Nov 6 / 21 min read'
 							},
 							{
 								block: 'text',
-								mods: { view: 'primary', size: 's' },
+								mods: { view: 'primary', size: 's', font: 'mono'  },
 								content: '512K views'
 							}]
 						}]
@@ -234,55 +247,60 @@ module.exports = {
 						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'media-music-back' }, { block: 'promo-cards', elem: 'hover' }],
 						content: [
 						{
-							elem: 'music-cover',
-							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } }, { block: 'promo-cards', elem: 'media-music-cover' }],
+							elem: 'cover',
+							mix: [{ block: 'pt-card', elem: 'image', elemMods: { shadow: 'inverse' } }, { block: 'promo-cards', elem: 'media-music-cover' }],
 							content: [
 							{
-								elem: 'music-info',
+								block: 'image',
+								url: '../../assets/i/london.png',
+							},
+							{
+								elem: 'name',
+								mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } }],
 								content: [
 								{
 									block: 'text',
-									mods: { view: 'inverse', size: 'xxl', align: 'center' },
-									mix: { block: 'decorator', mods: { 'indent-b': 'm' } },
-									content: 'Pitchfork Best New Music',
+									mods: { view: 'inverse', size: 'xxxl', align: 'center', weight: 'bold' },
+									mix: { block: 'decorator', mods: { 'indent-b': 's' } },
+									content: 'Pitchfork\'s Best New Music',
 								},
 								{
 									block: 'text',
-									mods: { view: 'inverse', size: 'm', align: 'center' },
+									mods: { view: 'inverse', size: 'm', align: 'center', font: 'mono', style: 'italic' },
 									content: 'Pitchfork',
 								}]
 							}]
 						},
 						{
 							block: 'playlist',
-							mix: [{ block: 'pt-list', elem: 'item', elemMods: { 'space-a': 'm' } }, { block: 'promo-cards', elem: 'media-playlist' }],
+							mix: [{ block: 'pt-list', elem: 'item', elemMods: { 'space-h': 'l' } }, { block: 'promo-cards', elem: 'media-playlist' }],
 							content: [
 							{
 								elem: 'item',
-								mix: { block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'xs' } },
+								mix: { block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'm' } },
 								content: [
 								{
 									elem: 'track',
 									content: [
 									{
 										block: 'text',
-										mods: { view: 'inverse', size: 's' },
-										mix: { block: 'decorator', mods: { 'indent-b': 's' } },
-										content: 'Pitchfork Best New Music',
+										mods: { view: 'inverse', size: 's', weight: 'bold' },
+										mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
+										content: 'London',
 									},
 									{
 										elem: 'description',
 										content: [
 										{
 											block: 'text',
-											mods: { view: 'inverse', size: 'xs', weight: 'light' },
-											content: 'Benjamin Clementine • At Least for Now',
+											mods: { view: 'inverse', size: 'xs', weight: 'light', font: 'mono' },
+											content: 'Benjamin Clementine • At Least',
 										}]
 									}]
 								},
 								{
 									block: 'text',
-									mods: { view: 'inverse', size: 's' },
+									mods: { view: 'inverse', size: 's', weight: 'bold' },
 									content: '7:25'
 								}]
 							},
@@ -295,23 +313,23 @@ module.exports = {
 									content: [
 									{
 										block: 'text',
-										mods: { view: 'inverse', size: 's' },
+										mods: { view: 'inverse', size: 's', weight: 'bold' },
 										mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
-										content: 'Pitchfork Best New Music',
+										content: 'London',
 									},
 									{
 										elem: 'description',
 										content: [
 										{
 											block: 'text',
-											mods: { view: 'inverse', size: 'xs', weight: 'light' },
-											content: 'Benjamin Clementine • At Least for Now',
+											mods: { view: 'inverse', size: 'xs', weight: 'light', font: 'mono' },
+											content: 'Benjamin Clementine • At Least',
 										}]
 									}]
 								},
 								{
 									block: 'text',
-									mods: { view: 'inverse', size: 's' },
+									mods: { view: 'inverse', size: 's', weight: 'bold' },
 									content: '7:25'
 								}]
 							},
@@ -324,23 +342,23 @@ module.exports = {
 									content: [
 									{
 										block: 'text',
-										mods: { view: 'inverse', size: 's' },
+										mods: { view: 'inverse', size: 's', weight: 'bold' },
 										mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
-										content: 'Pitchfork Best New Music',
+										content: 'London',
 									},
 									{
 										elem: 'description',
 										content: [
 										{
 											block: 'text',
-											mods: { view: 'inverse', size: 'xs', weight: 'light'  },
-											content: 'Benjamin Clementine • At Least for Now',
+											mods: { view: 'inverse', size: 'xs', weight: 'light', font: 'mono' },
+											content: 'Benjamin Clementine • At Least',
 										}]
 									}]
 								},
 								{
 									block: 'text',
-									mods: { view: 'inverse', size: 's' },
+									mods: { view: 'inverse', size: 's', weight: 'bold' },
 									content: '7:25'
 								}]
 							},
@@ -353,23 +371,23 @@ module.exports = {
 									content: [
 									{
 										block: 'text',
-										mods: { view: 'inverse', size: 's' },
+										mods: { view: 'inverse', size: 's', weight: 'bold' },
 										mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
-										content: 'Pitchfork Best New Music',
+										content: 'London',
 									},
 									{
 										elem: 'description',
 										content: [
 										{
 											block: 'text',
-											mods: { view: 'inverse', size: 'xs', weight: 'light' },
-											content: 'Benjamin Clementine • At Least for Now',
+											mods: { view: 'inverse', size: 'xs', weight: 'light', font: 'mono' },
+											content: 'Benjamin Clementine • At Least',
 										}]
 									}]
 								},
 								{
 									block: 'text',
-									mods: { view: 'inverse', size: 's' },
+									mods: { view: 'inverse', size: 's', weight: 'bold' },
 									content: '7:25'
 								}]
 							}]
@@ -391,7 +409,7 @@ module.exports = {
 					{
 						block: 'text',
 						mods: { size: 'xl', font: 'mono' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For online services providing videos and movies, for media services, and other YouTube-like sites'
 					}]
 				},
 				{
@@ -404,12 +422,12 @@ module.exports = {
 							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
 							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
 						],
-						content: 'Text'
+						content: 'Copy'
 					},
 					{
 						block: 'text',
 						mods: { size: 'xl', font: 'mono' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For media services, blogs, social networks, or any platforms with text contents'
 					}]
 				},
 				{
@@ -422,12 +440,12 @@ module.exports = {
 							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
 							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
 						],
-						content: 'Audio'
+						content: 'Music'
 					},
 					{
 						block: 'text',
 						mods: { size: 'xl', font: 'mono' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For audio libraries, musical services, online radio stations, and social networks.'
 					}]
 				},
 				{
@@ -452,7 +470,7 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
 							mix: { block: 'promo-cards', elem: 'media-tab-2' },
-							content: 'Text'
+							content: 'Copy'
 						}
 					},
 					{
@@ -493,6 +511,8 @@ module.exports = {
 			// }
 			]
 		},
+
+
 		{
 			block: 'promo-cards',
 			mix: { block: 'promo-cards', elem: 'offer-section' },
@@ -829,6 +849,7 @@ module.exports = {
 			]
 		},
 
+
 		{
 			block: 'promo-cards',
 			mods: { view: 'inverse', slide: 'first' },
@@ -862,7 +883,7 @@ module.exports = {
 						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'apps-developer-back' }, { block: 'promo-cards', elem: 'hover' }],
 						content: [
 						{
-							elem: 'developer-preview',
+							elem: 'preview',
 							mix: { block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'l' } },
 							content: [
 							{
@@ -872,11 +893,13 @@ module.exports = {
 								content: 'Bundle'
 							},
 							{
-								elem: 'developer-cover',
-								mix: { block: 'promo-cards', elem: 'apps-developer-app-cover' }
+								block: 'image',
+								mix: [{ block: 'decorator', mods: { 'indent-v': 'xl' } }, { block: 'promo-cards', elem: 'apps-developer-app-cover' }],
+								url: '../../assets/i/group.png',
 							},
 							{
-								elem: 'developer-bage',
+								block: 'pt-badge',
+								mods: { view: 'alert' },
 								mix: { block: 'promo-cards', elem: 'apps-developer-btn' },
 								content: [
 								{
@@ -887,107 +910,92 @@ module.exports = {
 							}]
 						},
 						{
-							elem: 'developer-goods',
-							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-developer-list' }],
+							elem: 'developer-list',
+							mix: [{ block: 'pt-list' }, { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
-								elem: 'developer-list',
-								mix: { block: 'pt-list' },
+								elem: 'item',
+								mix: [{ block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'l' }}, { block: 'pt-card', elem: 'item' }],
 								content: [
 								{
-									elem: 'developer-item',
-									mix: { block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'l' } },
+									block: 'pt-icon-plus',
+									mods: { 'vertical-align': 'center' },
 									content: [
 									{
-										block: 'pt-icon-plus',
-										mods: { 'vertical-align': 'center' },
+										elem: 'icon',
+										elemMods: { 'indent-right': 's' },
 										content: [
 										{
-											elem: 'icon',
-											elemMods: { 'indent-right': 's' },
-											content: [
-											{
-												block: 'app',
-												elem: 'recommendation-logo',
-
-											}]
-										},
-										{
-											elem: 'block',
-											content: [
-											{
-												block: 'text',
-												mods: { size: 's', view: 'inverse' },
-												content: 'Monument Vallet'
-											},
-											{
-												elem: 'recommendation-game',
-												block: 'app',
-												content: [
-												{
-													block: 'text',
-													mods: { size: 's', view: 'inverse' },
-													content: 'by ustwo games'
-												}]
-											}]
+											block: 'brand-logo',
+											mods: { 'view': 'itunes', size: 'xxs'}
 										}]
 									},
 									{
-										elem: 'recommendation-price',
+										elem: 'block',
 										content: [
 										{
 											block: 'text',
 											mods: { size: 's', view: 'inverse' },
-											content: '$99'
+											content: 'Monument Vallet'
+										},
+										{
+											block: 'text',
+											mods: { size: 's', view: 'ghost-inverse' },
+											content: 'by ustwo games'
 										}]
 									}]
 								},
 								{
-									elem: 'developer-item',
-									mix: { block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'l' } },
+									block: 'pt-badge',
+									mods: { view: 'ghost-inverse' },
 									content: [
 									{
-										block: 'pt-icon-plus',
-										mods: { 'vertical-align': 'center' },
+										block: 'text',
+										mods: { size: 's', view: 'inverse' },
+										content: '$99'
+									}]
+								}]
+							},
+							{
+								elem: 'item',
+								mix: [{ block: 'pt-list', elem: 'item', elemMods: { 'space-b': 'l' }}, { block: 'pt-card', elem: 'item' }],
+								content: [
+								{
+									block: 'pt-icon-plus',
+									mods: { 'vertical-align': 'center' },
+									content: [
+									{
+										elem: 'icon',
+										elemMods: { 'indent-right': 's' },
 										content: [
 										{
-											elem: 'icon',
-											elemMods: { 'indent-right': 's' },
-											content: [
-											{
-												block: 'app',
-												elem: 'recommendation-logo',
-
-											}]
-										},
-										{
-											elem: 'block',
-											content: [
-											{
-												block: 'text',
-												mods: { size: 's', view: 'inverse' },
-												content: 'Monument Valley 2'
-											},
-											{
-												elem: 'recommendation-game',
-												block: 'app',
-												content: [
-												{
-													block: 'text',
-													mods: { size: 's', view: 'inverse' },
-													content: 'by ustwo games'
-												}]
-											}]
+											block: 'brand-logo',
+											mods: { 'view': 'itunes', size: 'xxs'}
 										}]
 									},
 									{
-										elem: 'recommendation-price',
+										elem: 'block',
 										content: [
 										{
 											block: 'text',
 											mods: { size: 's', view: 'inverse' },
-											content: '$99'
+											content: 'Monument Valley 2'
+										},
+										{
+											block: 'text',
+											mods: { size: 's', view: 'ghost-inverse' },
+											content: 'by ustwo games'
 										}]
+									}]
+								},
+								{
+									block: 'pt-badge',
+									mods: { view: 'ghost-inverse' },
+									content: [
+									{
+										block: 'text',
+										mods: { size: 's', view: 'inverse' },
+										content: '$99'
 									}]
 								}]
 							}]
@@ -999,79 +1007,80 @@ module.exports = {
 						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'apps-recommendation-back' }, { block: 'promo-cards', elem: 'hover' }],
 						content: [
 						{
-							elem: 'recommendation-preview',
-							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-recommendation-photo' }],
+							elem: 'cover',
+							mix: [{ block: 'pt-card', elem: 'image', elemMods: { shadow: 'inverse', size: 'cover' } }, { block: 'promo-cards', elem: 'media-video' }],
 							content: [
-							{
-								elem: 'recommendation-developer',
-							}]
+								{
+									block: 'image',
+									url: '../../assets/i/monument.png',
+								}
+							]
 						},
 						{
 							elem: 'recommendation-info',
-							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }],
+							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
+								elem: 'preview',
+								mix: [{ block: 'promo-cards', elem: 'apps-recommendation-photo' }],
+								content: [
+								{
+									elem: 'recommendation-developer',
+								}]
+							},
+							{
 								block: 'text',
-								mods: { size: 'xxxl', view: 'inverse', align: 'center' },
+								mods: { size: 'xxxl', view: 'inverse', align: 'center', weight: 'bold' },
 								mix: [{ block: 'decorator', mods: { 'space-b': 'l' } }, { block: 'promo-cards', elem: 'apps-recommendation-info' }],
 								content: 'From our Bafta award winning hit'
 							},
 							{
-								elem: 'recommendation-description',
+								block: 'text',
 								mix: { block: 'promo-cards', elem: 'apps-recommendation-info' },
-								content: [
-								{
-									block: 'text',
-									mods: { size: 'm', view: 'inverse', align: 'center'  },
-									mix: { block: 'decorator', mods: { 'space-b': 'xxxl' } },
-									content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
-								}]
-							},
+								mods: { size: 'm', view: 'ghost-inverse', align: 'center' },
+								content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
+							}]
+						},
+						{
+							elem: 'item',
+							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } },  { block: 'promo-cards', elem: 'apps-recommendation-footer' }, { block: 'pt-card', elem: 'item' }],
+							content: [
 							{
-								elem: 'recommendation-item',
-								mix: { block: 'promo-cards', elem: 'apps-recommendation-footer' },
+								block: 'pt-icon-plus',
+								mods: { 'vertical-align': 'center' },
 								content: [
 								{
-									block: 'pt-icon-plus',
-									mods: { 'vertical-align': 'center' },
+									elem: 'icon',
+									elemMods: { 'indent-right': 's' },
 									content: [
 									{
-										elem: 'icon',
-										elemMods: { 'indent-right': 's' },
-										content: [
-										{
-											block: 'apps',
-											elem: 'recommendation-logo',
-										}]
-									},
-									{
-										elem: 'block',
-										content: [
-										{
-											block: 'text',
-											mods: { size: 's', view: 'inverse' },
-											content: 'Monument Vallet'
-										},
-										{
-											elem: 'recommendation-game',
-											block: 'apps',
-											content: [
-											{
-												block: 'text',
-												mods: { size: 's', view: 'inverse' },
-												content: 'by ustwo games'
-											}]
-										}]
+										block: 'brand-logo',
+										mods: { 'view': 'itunes', size: 'xxs'}
 									}]
 								},
 								{
-									elem: 'recommendation-price',
+									elem: 'block',
 									content: [
 									{
 										block: 'text',
 										mods: { size: 's', view: 'inverse' },
-										content: '$99'
+										content: 'Monument Vallet'
+									},
+									{
+										block: 'text',
+										mods: { size: 's', view: 'ghost-inverse' },
+										content: 'by ustwo games'
 									}]
+								}]
+							},
+							{
+								block: 'pt-badge',
+								mods: { view: 'ghost-inverse' },
+								content: [
+								{
+									block: 'text',
+									mods: { size: 's', view: 'inverse' },
+									content: '$99'
 								}]
 							}]
 						}]
@@ -1081,79 +1090,66 @@ module.exports = {
 						mix: [{ block: 'pt-card', mods: { view: 'inverse' } }, { block: 'promo-cards', elem: 'apps-good-back' }, { block: 'promo-cards', elem: 'hover' }],
 						content: [
 						{
-							elem: 'good-preview',
-							mix: [{ block: 'pt-card', elem: 'header', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-good-photo' }],
+							elem: 'good-info',
+							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } }],
 							content: [
 							{
-								elem: 'good-cover',
-							}]
-						},
-						{
-							elem: 'good-info',
-							mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' } }],
-							content: [
+								block: 'image',
+								mix: [{ block: 'promo-cards', elem: 'apps-good-photo' }, { block: 'decorator', mods: { 'indent-b': 'xxl' } }],
+								url: '../../assets/i/good-cover.png',
+							},
 							{
 								block: 'text',
-								mods: { size: 'xxxl', view: 'inverse' },
+								mods: { size: 'xxxl', view: 'inverse', weight: 'bold' },
 								mix: [{ block: 'decorator', mods: { 'space-b': 'l' } }, { block: 'promo-cards', elem: 'apps-good-info' }],
 								content: 'From our Bafta award winning hit'
 							},
 							{
-								elem: 'good-description',
+								block: 'text',
 								mix: { block: 'promo-cards', elem: 'apps-good-info' },
-								content: [
-								{
-									block: 'text',
-									mods: { size: 'm', view: 'inverse' },
-									mix: { block: 'decorator', mods: { 'space-b': 'xxxl' } },
-									content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
-								}]
-							},
+								mods: { size: 'm', view: 'ghost-inverse' },
+								content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
+							}]
+						},
+						{
+							elem: 'item',
+							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } }, { block: 'promo-cards', elem: 'apps-good-footer' }, { block: 'pt-card', elem: 'item' }],
+							content: [
 							{
-								elem: 'good-item',
-								mix: { block: 'promo-cards', elem: 'apps-good-footer' },
+								block: 'pt-icon-plus',
+								mods: { 'vertical-align': 'center' },
 								content: [
 								{
-									block: 'pt-icon-plus',
-									mods: { 'vertical-align': 'center' },
+									elem: 'icon',
+									elemMods: { 'indent-right': 's' },
 									content: [
 									{
-										elem: 'icon',
-										elemMods: { 'indent-right': 's' },
-										content: [
-										{
-											block: 'apps',
-											mods: { size: 's', view: 'inverse' },
-											elem: 'good-logo',
-										}]
-									},
-									{
-										elem: 'block',
-										content: [
-										{
-											block: 'text',
-											content: 'Monument Vallet'
-										},
-										{
-											elem: 'good-developer',
-											block: 'apps',
-											content: [
-											{
-												block: 'text',
-												mods: { size: 's', view: 'inverse' },
-												content: 'by ustwo games'
-											}]
-										}]
+										block: 'brand-logo',
+										mods: { 'view': 'itunes', size: 'xxs'}
 									}]
 								},
 								{
-									elem: 'good-price',
+									elem: 'block',
 									content: [
 									{
 										block: 'text',
-										mods: { size: 's', view: 'inverse' },
-										content: '$99'
+										content: 'Monument Vallet'
+									},
+									{
+										block: 'text',
+										mods: { size: 's', view: 'ghost-inverse' },
+										content: 'by ustwo games'
 									}]
+								}]
+							},
+							{
+								block: 'pt-badge',
+								mods: { view: 'ghost-inverse' },
+								content: [
+								{
+									block: 'text',
+									mods: { size: 's', view: 'inverse' },
+									content: '$99'
 								}]
 							}]
 						}]
@@ -1167,13 +1163,13 @@ module.exports = {
 					{
 						elem: 'header',
 						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-						content: 'Recommendation'
+						content: 'Collection'
 					},
 					{
 						block: 'text',
 						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 						mods: { size: 'xl' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For selections and collections made for blogs, social networks, stores, and media. For instance, \‘Ten computer games about zombies\’ or \‘Best alarm clock applications\’   '
 					}]
 				},
 				{
@@ -1184,13 +1180,13 @@ module.exports = {
 					{
 						elem: 'header',
 						mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-						content: 'Good'
+						content: 'Application'
 					},
 					{
 						block: 'text',
 						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 						mods: { size: 'xl' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For sites and blogs about games, services, and applications.'
 					}]
 				},
 				{
@@ -1207,7 +1203,7 @@ module.exports = {
 						block: 'text',
 						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 						mods: { size: 'xl' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For all sorts of stores providing games, applications, and services.'
 					}]
 				},
 				{
@@ -1221,7 +1217,7 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-1' },
-							content: 'Recommendation'
+							content: 'Collection'
 						}
 					},
 					{
@@ -1232,7 +1228,7 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-2' },
-							content: 'Good'
+							content: 'Application'
 						}
 					},
 					{
@@ -1243,7 +1239,7 @@ module.exports = {
 							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-3' },
-							content: 'developer'
+							content: 'Developer'
 						}
 					}]
 				}]
@@ -1272,6 +1268,7 @@ module.exports = {
 			// 	}]
 			}]
 		},
+		
 		{
 			block: 'promo-cards',
 			// mods: { view: 'inverse' },
