@@ -57,14 +57,12 @@ module.exports = {
 								{ block: 'promo-cards', elem: 'hover' },
 								{ block: 'promo-cards', elem: 'offer-goods' },
 							],
-							mods: { view: 'nike' },
 							content: [
 								{
-									elem: 'show',
-									mix: { block: 'pt-card', elem: 'header' },
+									elem: 'goods-header',
 									content: [
 										{
-											elem: 'background',
+											elem: 'goods-background',
 											mix: { block: 'promo-cards', elem: 'offer-goods-background'}
 										},
 										{
@@ -74,16 +72,31 @@ module.exports = {
 												{ block: 'text', mods: {font: 'serif', style: 'italic', weight: 'bold'} }
 											],
 											content: '$299'
-										},
-										{
-											elem: 'item',
-											mix: { block: 'promo-cards', elem: 'offer-goods-item'}
 										}
 									]
 								},
+                {
+                  elem: 'goods-item',
+                  mix: [
+                    { block: 'pt-card', elem: 'header' },
+                    { block: 'promo-cards', elem: 'offer-goods-item'}
+                  ],
+                  content: [
+                    {
+                      elem: 'goods-image-wrapper',
+                      mix: { block: 'pt-card', elem: 'image' },
+                      content: [
+                        {
+                          block: 'image',
+                          url: '../../assets/i/offer-goods-image.png'
+                        }
+                      ]
+                    }
+                  ]
+                },
 								{
 									elem: 'goods-info',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl', 'space-v': 'l' } },
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl', 'space-h': 'l', 'space-t': 'xxs' } },
 									content: [
 										{
 											block: 'text',
@@ -119,7 +132,6 @@ module.exports = {
 							]
 						},
 
-
 						{
 							block: 'offer',
 							mix: [
@@ -128,27 +140,31 @@ module.exports = {
 								{ block: 'promo-cards', elem: 'offer-brand' },
 							],
 							content: [
-
                 {
                   elem: 'brand-content',
                   mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } },
                   content: [
                     {
   										elem: 'brand-image-wrapper',
-  										mix: { block: 'promo-cards', elem: 'offer-brand-image' },
+  										mix: [
+                        { block: 'promo-cards', elem: 'offer-brand-image' },
+                        { block: 'pt-card', elem: 'image' }
+                      ],
                       content: [
                         {
-													elem: 'brand-image',
-                          attrs: { src: ''},
-													mix: [{ block: 'pt-card', elem: 'image' }]
-												}
+													block: 'image',
+                          url: '../../assets/i/offer-brand-image.png'
+                        }
                       ]
 										},
                     {
 											block: 'text',
 											mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
-											mix: [{ block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } }],
-											content: 'Magic For All'
+											mix: [
+                        { block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } },
+                        { block: 'decorator', mods: { 'indent-t': 's'} }
+                      ],
+											content: 'Ape shall never kill ape'
 										},
 										{
 											elem: 'brand-logo',
@@ -158,41 +174,6 @@ module.exports = {
 										}
                   ]
                 },
-
-								// {
-								// 	elem: 'brand-show',
-								// 	mix: { block: 'pt-card', elem: 'img', elemMods: { 'space-a': 'xl' } },
-								// 	content: [
-								// 		{
-								// 			elem: 'brand-image-wrapper',
-								// 			mix: [{ block: 'promo-cards', elem: 'brand-image-wrapper' }, { block: 'decorator', mods: { 'space-a': 'xl' } }],
-								// 			content: [
-								// 				{
-								// 					elem: 'brand-image',
-								// 					mix: [{ block: 'promo-cards', elem: 'offer-brand-image' }]
-								// 				}
-								// 			]
-								// 		}
-								// 	]
-								// },
-								// {
-								// 	elem: 'brand-info',
-								// 	mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl', 'space-v': 'l' } },
-								// 	content: [
-								// 		{
-								// 			block: 'text',
-								// 			mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
-								// 			mix: [{ block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } }],
-								// 			content: 'Magic For All'
-								// 		},
-								// 		{
-								// 			elem: 'brand-logo',
-								// 			mix: [
-								// 				{ block: 'promo-cards', elem: 'offer-brand-logo' },
-								// 			]
-								// 		}
-								// 	]
-								// },
 								{
 									elem: 'brand-action',
 									mix: [
@@ -210,24 +191,36 @@ module.exports = {
 							]
 						},
 
-
 						{
 							block: 'offer',
-							mods: { view: 'brabus'},
 							mix: [
-								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'pt-card', mods: { view: 'inverse' } },
 								{ block: 'promo-cards', elem: 'hover' },
 								{ block: 'promo-cards', elem: 'offer-service' },
 							],
 							content: [
-								{
-									elem: 'background-wrapper',
-									mix: { block: 'promo-cards', elem: 'offer-service-background'},
-									content: {
-										elem: 'bg-photo',
-										mix: { block: 'promo-cards', elem: 'offer-service-photo'}
-									}
-								},
+                {
+                  elem: 'service-image-wrapper',
+                  mix: [
+                    { block: 'pt-card', elem: 'image', elemMods: { size: 'cover' } },
+                    { block: 'promo-cards', elem: 'offer-service-background'},
+                  ],
+                  content: [
+                    {
+                      block: 'image',
+                      mix: { block: 'promo-cards', elem: 'offer-service-photo'},
+                      url: '../../assets/i/offer-service-image.png'
+                    }
+                  ]
+                },
+								// {
+								// 	elem: 'background-wrapper',
+								// 	mix: { block: 'promo-cards', elem: 'offer-service-background'},
+								// 	content: {
+								// 		elem: 'bg-photo',
+								// 		mix: { block: 'promo-cards', elem: 'offer-service-photo'}
+								// 	}
+								// },
 								{
 									elem: 'title',
 									mix: [
@@ -237,14 +230,14 @@ module.exports = {
 									content: [
 										{
 											block: 'text',
-											mods: { view: 'inverse', size: 'l', transform: 'uppercase', align: 'center' },
+											mods: { view: 'inverse', size: 'xl', font: 'serif', weight: 'bold', transform: 'uppercase', align: 'center' },
 											content: 'Brabus'
 										}
 									]
 								},
 								{
 									elem: 'service-info',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } },
 									content: [
 										{
 											block: 'text',
@@ -261,13 +254,13 @@ module.exports = {
 											content: [
 												{
 													block: 'text',
-													mods: { view: 'inverse', size: 's', style: 'italic' },
+													mods: { view: 'inverse', size: 's', weight: 'semibold' },
 													content: 'from'
 												},
 												{
 													block: 'text',
 													mods: { view: 'inverse', size: 'xxxl', weight: 'semibold' },
-													content: '$299'
+													content: '$1200'
 												}
 											]
 										}
@@ -275,8 +268,6 @@ module.exports = {
 								}
 							]
 						},
-
-
 					]
 				},
 				{
