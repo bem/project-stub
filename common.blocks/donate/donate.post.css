@@ -3,34 +3,26 @@
   overflow: hidden;
   border-radius: 12px;
 
+  /* Person-donate */
   &__person-image {
-    background-image: url('person-image.png');
-    background-size: 100%;
-    width: 100%;
     height: 114px;
   }
   &__person-avatar {
     border: 2px solid var(--color-default);
-    border-radius: 999em;
     margin-left: var(--space-m);
-    margin-top: -28px;
+    margin-top: 82px;
     background-image: url('person-avatar.png');
     background-size: 100%;
-    width: 56px;
-    height: 56px;
   }
 
+  /* Project-donate */
   &__project-image {
-    background-image: url('project-image.png');
-    background-size: 100%;
-    width: 100%;
-    height: 153px;
+    height: 152px;
   }
   &__project-progress-bar {
     background-color: rgba(0,165,255,.3);
     width: 100%;
     height: 8px;
-
     &::after {
       content: '';
       position: absolute;
@@ -46,4 +38,92 @@
   &__days-wrapper {
     display: inline-block;
   }
+
+  /* Event-donate */
+  &__event-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__event-image-wrapper {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 264px;
+      background-image: linear-gradient(0deg, #fff 0%, rgba(105,205,149,0.5) 100%), linear-gradient(0deg, #fff 10%, rgba(0,0,0,0.5) 100%);
+    }
+  }
+  &__event-avatar {
+    width: 88px;
+    height: 88px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    margin: calc(18px + var(--space-xxl)) auto calc(18px + var(--space-l));
+    box-shadow: -2px 2px 14px 0 rgba(25,28,26,0.31);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 130px;
+      height: 130px;
+      transform: rotate(-45deg);
+      background-size: 100%;
+      background-image: url('event-avatar.png');
+      background-repeat: no-repeat;
+    }
+  }
+  &__event-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+  }
+  &__control {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    width: 32px;
+    text-align: center;
+    color: #69CD95;
+    padding-bottom: 4px;
+    background-color: rgba(105,205,149,.22);
+    border-radius: 999em;
+  }
+  &__event-avatar-group {
+    display: inline-flex;
+  }
+  &__event-mini-avatar {
+    background-size: 100%;
+    margin-left: -$space-s;
+
+    &_view {
+      &_1 {
+        background-image: url('person-avatar.png');
+        margin-left: 0;
+      }
+      &_2 {
+        background-image: url('event-mini-avatar-2.png');
+      }
+      &_3 {
+        background-image: url('event-mini-avatar-3.png');
+      }
+      &_4 {
+        background-image: url('event-mini-avatar-4.png');
+      }
+    }
+  }
+}
+
+.text {
+  &_size {
+    &_4xl {
+      font-size: 52px;
+    }
+  }
+
 }
