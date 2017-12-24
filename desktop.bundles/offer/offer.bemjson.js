@@ -213,14 +213,6 @@ module.exports = {
                     }
                   ]
                 },
-								// {
-								// 	elem: 'background-wrapper',
-								// 	mix: { block: 'promo-cards', elem: 'offer-service-background'},
-								// 	content: {
-								// 		elem: 'bg-photo',
-								// 		mix: { block: 'promo-cards', elem: 'offer-service-photo'}
-								// 	}
-								// },
 								{
 									elem: 'title',
 									mix: [
@@ -237,7 +229,7 @@ module.exports = {
 								},
 								{
 									elem: 'service-info',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'l' } },
+									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'l' } },
 									content: [
 										{
 											block: 'text',

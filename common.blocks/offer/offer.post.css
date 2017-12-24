@@ -61,25 +61,11 @@
   }
 
   /* Brand-offer */
-	&__brand-image-wrapper {
-		width: 248px;
+	/* &__brand-image-wrapper {
 		height: 248px;
 		overflow: hidden;
-	}
-	&__brand-logo {
-		background-image: url('uniqlo-logo.png');
-		background-size: 70px;
-		margin: 0 auto;
-		width: 70px;
-		height: 32px;
-	}
-
+	} */
+  
   /* Service-offer */
 
-  &__title {
-    z-index: 1;
-  }
-  &__service-info {
-    z-index: 1;
-  }
 }
