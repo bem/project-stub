@@ -161,17 +161,22 @@ module.exports = {
 											block: 'text',
 											mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
 											mix: [
-                        { block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } },
-                        { block: 'decorator', mods: { 'indent-t': 's'} }
+                        { block: 'promo-cards', elem: 'offer-brand-title' },
+                        { block: 'decorator', mods: { 'indent-t': 's', 'indent-b': 'xxs' } }
                       ],
 											content: 'Ape shall never kill ape'
 										},
-										{
-											elem: 'brand-logo',
-											mix: [
-												{ block: 'promo-cards', elem: 'offer-brand-logo' },
-											]
-										}
+                    {
+                      elem: 'brand-logo-wrapper',
+                      mix: { block: 'text', mods: { align: 'center' } },
+                      content: [
+                        {
+    											block: 'brand-logo',
+                          mods: { view: 'bape', size: 's' },
+    											mix: { block: 'promo-cards', elem: 'offer-brand-logo' },
+    										}
+                      ]
+                    }
                   ]
                 },
 								{
