@@ -2,6 +2,7 @@
 	scroll-snap-points-y: repeat(100%);
 	scroll-snap-type: mandatory;
 	scroll-snap-destination: 100% 0%;
+	padding-right: 70px;
 }
 
 @media screen and (max-width: 1199px) {
