@@ -32,7 +32,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -64,7 +64,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -96,7 +96,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -128,7 +128,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -155,12 +155,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/layouts/layouts.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Grids'
+							content: 'Layouts'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -192,7 +192,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -224,7 +224,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -256,7 +256,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Russian version'
+							content: 'Library'
 						}]
 					},
 					{
@@ -398,7 +398,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Документация'
+							content: 'Russian version'
 						}]
 					},
 					{
