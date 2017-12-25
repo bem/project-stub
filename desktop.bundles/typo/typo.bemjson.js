@@ -34,16 +34,16 @@ module.exports = {
           content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Типографика'
+              mods: { size: 'xxxxl', weight: 'bold', align: 'center' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxxl' } },
+              content: 'Typography'
             },
-            {
-              block: 'text',
-              mods: { size: 'xxl', view: 'primary', width: 'default' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Мы вынесли блок .text модификаторами на цвет размер, регистр, жирность и межбуквенный интервал. Их можно использовать в различных комбинациях. Манипулируя достаточно небольшим количеством комбинаций мы получаем все необходимые вариации текста.'
-            },
+            // {
+            //   block: 'text',
+            //   mods: { size: 'xxl', view: 'primary', width: 'default' },
+            //   mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+            //   content: 'Мы вынесли блок .text модификаторами на цвет размер, регистр, жирность и межбуквенный интервал. Их можно использовать в различных комбинациях. Манипулируя достаточно небольшим количеством комбинаций мы получаем все необходимые вариации текста.'
+            // },
             {
               elem : 'section',
               content : [

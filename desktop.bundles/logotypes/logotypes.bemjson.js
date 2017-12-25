@@ -32,16 +32,16 @@ module.exports = {
           content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Логотипы'
+              mods: { size: 'xxxxl', weight: 'bold', align: 'center' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxxl' } },
+              content: 'Logotypes'
             },
-            {
-              block: 'text',
-              mods: { size: 'xxl', view: 'primary', width: 'default' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Бренды, ...'
-            },
+            // {
+            //   block: 'text',
+            //   mods: { size: 'xxl', view: 'primary', width: 'default' },
+            //   mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+            //   content: 'Бренды, ...'
+            // },
             {
               block : 'logotype-list',
               content : [

@@ -32,22 +32,22 @@ module.exports = {
       content: [
       {
         block: 'text',
-        mods: { size: 'xxxl', weight: 'bold', width: 'default' },
-        mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-        content: 'Анимация'
+        mods: { size: 'xxxxl', weight: 'bold', align: 'center' },
+        mix: { block: 'decorator', mods: { 'indent-b': 'xxxxxl' } },
+        content: 'Animations'
       },
-      {
-        block: 'text',
-        mods: { size: 'xxl', view: 'primary', width: 'default' },
-        mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-        content: 'Анимация — последовательное изменение свойств блока по какому-либо событию. Она мотивирует к действию, вовлекает в процесс, вызвает восторг'
-      },
-      {
-        block: 'text',
-        mods: { size: 'xl', view: 'primary', weight: 'bold' },
-        mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-        content: 'Появление'
-      },
+      // {
+      //   block: 'text',
+      //   mods: { size: 'xxl', view: 'primary', width: 'default' },
+      //   mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+      //   content: 'Анимация — последовательное изменение свойств блока по какому-либо событию. Она мотивирует к действию, вовлекает в процесс, вызвает восторг'
+      // },
+      // {
+      //   block: 'text',
+      //   mods: { size: 'xl', view: 'primary', weight: 'bold' },
+      //   mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
+      //   content: 'Появление'
+      // },
       {
         block: 'animation-list',
         content: [

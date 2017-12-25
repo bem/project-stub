@@ -1,7 +1,7 @@
 ([
 	{
 		shouldDeps: [
-			{ block: 'text', mods: { size: 'm', transform: 'uppercase', view: 'primary', spacing: 'xs' } }
+			{ block: 'text', mods: { size: 'xl', transform: 'uppercase', view: 'primary', spacing: 'xs', font: 'mono' } }
 		]
 	}
 ])

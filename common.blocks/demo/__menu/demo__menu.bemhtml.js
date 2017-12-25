@@ -27,12 +27,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/themes/themes.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Темы'
+							content: 'Themes'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -59,12 +59,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/typo/typo.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Типографика'
+							content: 'Typography'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -91,12 +91,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/icons/icons.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Иконки'
+							content: 'Icons'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -123,12 +123,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/patterns/patterns.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Паттерны'
+							content: 'Patterns'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -155,12 +155,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/layouts/layouts.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Сетки'
+							content: 'Grids'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -187,12 +187,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/animations/animations.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Анимация'
+							content: 'Animations'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -219,12 +219,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/illustations/illustations.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Иллюстрации'
+							content: 'Illustrations'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -251,12 +251,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/vectors/vectors.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Векторы'
+							content: 'Vectors'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Библиотека'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -297,12 +297,12 @@ block('demo').elem('menu')(
 								'href': 'https://habrahabr.ru/company/yamoney/blog/341028/'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Процес прототипирования'
+							content: 'Prototyping process'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Документация'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -329,12 +329,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/opensource/opensource.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Вступить в БЭМ Дизайн'
+							content: 'Join BEM Design'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Документация'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -361,12 +361,12 @@ block('demo').elem('menu')(
 								'href': 'https://bemdesign.github.io/bem-design/desktop.bundles/article-icons/article-icons.html'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Как рисовать иконки'
+							content: 'How to design icons'
 						},
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: 'Документация'
+							content: 'Russian version'
 						}]
 					},
 					{
@@ -393,7 +393,7 @@ block('demo').elem('menu')(
 								'href': 'https://@koloskof.github.io/bemxjstdemo/'
 							},
 							mix: { block: 'demo', elem: 'menu-item-link' },
-							content: 'Шаблонизация'
+							content: 'Templates'
 						},
 						{
 							block: 'text',
@@ -407,7 +407,7 @@ block('demo').elem('menu')(
 						{
 							block: 'text',
 							mods: { 'view': 'inverse', 'size': 'm' },
-							content: '@mirioiruni'
+							content: '@miripiruni'
 						}]
 					}]
 				}]

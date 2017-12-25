@@ -66,14 +66,15 @@ module.exports = {
 				attrs: { href: 'https://github.com/bemdesign', style: 'text-decoration: none' },
 				content: 'GitHub'
 			 },
-			 ' в ',
-			 {
-				tag: 'a',
-				block: 'text',
-				mods: { view: 'letter' },
-				attrs: { href: 'https://t.me/bemdesign', style: 'text-decoration: none' },
-				content: 'Telegram'
-			 }]
+			 // ' в ',
+			 // {
+				// tag: 'a',
+				// block: 'text',
+				// mods: { view: 'letter' },
+				// attrs: { href: 'https://t.me/bemdesign', style: 'text-decoration: none' },
+				// content: 'Telegram'
+			 // }
+			 ]
 			}]
 		 }]
 		},
@@ -142,7 +143,7 @@ module.exports = {
 									content: [
 									{
 										block: 'brand-logo',
-										mods: { 'view': 'itunes', size: 'xxs'}
+										mods: { 'view': 'fallon', size: 's' }
 									}]
 								},
 								{
@@ -184,7 +185,7 @@ module.exports = {
 										content: [
 											{
 												elem: 'photo',
-												elemMods: { size: 'xxs', view: 'example' },
+												elemMods: { size: 'xs', view: 'example' },
 											}
 										]
 									}]
@@ -194,7 +195,7 @@ module.exports = {
 									content: [
 									{
 										block: 'text',
-										mods: { view: 'inverse', size: 's' },
+										mods: { view: 'inverse', size: 'm' },
 										content: 'James Bridle'
 									}]
 								}]
@@ -456,8 +457,7 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center', font: 'mono' },
 							mix: { block: 'promo-cards', elem: 'media-tab-1' },
 							content: 'Video'
 						}
@@ -467,8 +467,7 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', align: 'center', font: 'mono' },
 							mix: { block: 'promo-cards', elem: 'media-tab-2' },
 							content: 'Copy'
 						}
@@ -478,8 +477,7 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', align: 'center', font: 'mono' },
 							mix: { block: 'promo-cards', elem: 'media-tab-3' },
 							content: 'Music'
 						}
@@ -511,8 +509,6 @@ module.exports = {
 			// }
 			]
 		},
-
-
 		{
 			block: 'promo-cards',
 			mix: { block: 'promo-cards', elem: 'offer-section' },
@@ -803,9 +799,8 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mix: { block: 'promo-cards', elem: 'offer-tab-1' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center', font: 'mono' },
 							content: 'Goods'
 						}
 					},
@@ -814,9 +809,8 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mix: { block: 'promo-cards', elem: 'offer-tab-2' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center', font: 'mono' },
 							content: 'Brand'
 						}
 					},
@@ -825,9 +819,8 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
 							mix: { block: 'promo-cards', elem: 'offer-tab-3' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center', font: 'mono' },
 							content: 'Service'
 						}
 					}]
@@ -848,8 +841,6 @@ module.exports = {
 			// },
 			]
 		},
-
-
 		{
 			block: 'promo-cards',
 			mods: { view: 'inverse', slide: 'first' },
@@ -899,7 +890,9 @@ module.exports = {
 							},
 							{
 								block: 'pt-badge',
-								mods: { view: 'alert' },
+								attrs: {
+									'style': 'background: #F26634'
+								},
 								mix: { block: 'promo-cards', elem: 'apps-developer-btn' },
 								content: [
 								{
@@ -927,7 +920,7 @@ module.exports = {
 										content: [
 										{
 											block: 'brand-logo',
-											mods: { 'view': 'itunes', size: 'xxs'}
+											mods: { 'view': 'monument-valley', size: 's', form: 'mask' }
 										}]
 									},
 									{
@@ -970,7 +963,7 @@ module.exports = {
 										content: [
 										{
 											block: 'brand-logo',
-											mods: { 'view': 'itunes', size: 'xxs'}
+											mods: { 'view': 'monument-valley-2', size: 's', form: 'mask'}
 										}]
 									},
 									{
@@ -1021,18 +1014,15 @@ module.exports = {
 							mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } },
 							content: [
 							{
-								block: 'brand-logo',
-								mix: { block: 'promo-cards', elem: 'apps-recommendation-photo' }, /* Посмотреть с Юлей */
-								attrs: {
-									style: 'position: relative'
-								},
-								mods: { 'view': 'yota', size: 'm'}
+								block: 'image',
+								mix: { block: 'promo-cards', elem: 'apps-recommendation-photo' },
+								url: '../../assets/i/ustwo.svg',
 							},
-
 							{
 								elem: 'about',
 								mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl' }},
 								content: [
+
 									{
 										block: 'text',
 										mods: { size: 'xxxl', view: 'inverse', align: 'center', weight: 'bold' },
@@ -1062,7 +1052,7 @@ module.exports = {
 									content: [
 									{
 										block: 'brand-logo',
-										mods: { 'view': 'itunes', size: 'xxs'}
+										mods: { 'view': 'monument-valley-2', size: 's', form: 'mask' }
 									}]
 								},
 								{
@@ -1132,7 +1122,7 @@ module.exports = {
 									content: [
 									{
 										block: 'brand-logo',
-										mods: { 'view': 'itunes', size: 'xxs'}
+										mods: { 'view': 'ustwo', size: 's'}
 									}]
 								},
 								{
@@ -1174,8 +1164,7 @@ module.exports = {
 					},
 					{
 						block: 'text',
-						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-						mods: { size: 'xl' },
+						mods: { size: 'xl', font: 'mono' },
 						content: 'For selections and collections made for blogs, social networks, stores, and media. For instance, \‘Ten computer games about zombies\’ or \‘Best alarm clock applications\’   '
 					}]
 				},
@@ -1191,8 +1180,7 @@ module.exports = {
 					},
 					{
 						block: 'text',
-						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-						mods: { size: 'xl' },
+						mods: { size: 'xl', font: 'mono' },
 						content: 'For sites and blogs about games, services, and applications.'
 					}]
 				},
@@ -1208,8 +1196,7 @@ module.exports = {
 					},
 					{
 						block: 'text',
-						attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-						mods: { size: 'xl' },
+						mods: { size: 'xl', font: 'mono' },
 						content: 'For all sorts of stores providing games, applications, and services.'
 					}]
 				},
@@ -1221,8 +1208,7 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center', font: 'mono' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-1' },
 							content: 'Collection'
 						}
@@ -1232,8 +1218,7 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', align: 'center', font: 'mono' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-2' },
 							content: 'Application'
 						}
@@ -1243,8 +1228,7 @@ module.exports = {
 						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
 						content: {
 							block: 'text',
-							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
-							mods: { size: 'xl', transform: 'uppercase', align: 'center' },
+							mods: { size: 'xl', transform: 'uppercase', align: 'center', font: 'mono' },
 							mix: { block: 'promo-cards', elem: 'apps-tab-3' },
 							content: 'Developer'
 						}
@@ -1275,7 +1259,6 @@ module.exports = {
 			// 	}]
 			}]
 		},
-		
 		{
 			block: 'promo-cards',
 			// mods: { view: 'inverse' },

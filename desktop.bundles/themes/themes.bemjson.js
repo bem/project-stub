@@ -33,16 +33,16 @@ module.exports = {
           content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Переменные'
+              mods: { size: 'xxxxl', weight: 'bold', align: 'center' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxxl' } },
+              content: 'Variables'
             },
-            {
-              block: 'text',
-              mods: { size: 'xxl', view: 'primary', width: 'default' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Переменные позволяют гибко кастомизировать и масштабировать интерфейс, сохраняя консистентность блоков'
-            },
+            // {
+            //   block: 'text',
+            //   mods: { size: 'xxl', view: 'primary', width: 'default' },
+            //   mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+            //   content: 'Переменные позволяют гибко кастомизировать и масштабировать интерфейс, сохраняя консистентность блоков'
+            // },
             {
               elem : 'section',
               content : [

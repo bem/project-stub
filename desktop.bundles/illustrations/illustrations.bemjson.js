@@ -32,16 +32,16 @@ module.exports = {
           content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Иллюстрации'
+              mods: { size: 'xxxxl', weight: 'bold', align: 'center' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxxl' } },
+              content: 'Illustrations'
             },
-            {
-              block: 'text',
-              mods: { size: 'xxl', view: 'primary', width: 'default' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Иллюстрации используются для передачи эмоциональной атмосферы, визуализации персонажей, демонстрации объектов'
-            },
+            // {
+            //   block: 'text',
+            //   mods: { size: 'xxl', view: 'primary', width: 'default' },
+            //   mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+            //   content: 'Иллюстрации используются для передачи эмоциональной атмосферы, визуализации персонажей, демонстрации объектов'
+            // },
             {
               block : 'illustration-list',
               content : [

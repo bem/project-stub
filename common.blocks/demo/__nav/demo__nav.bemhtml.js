@@ -4,23 +4,25 @@ block('demo').elem('nav')(
 			{
 				elem: 'nav-item',
 				attrs: { 'data-name': 'tools' },
-				mix: [{ block: 'text', mods: { size: 'm', transform: 'uppercase', view: 'primary', spacing: 'xs' } }, { block: 'link', url: '#' }],
+				mix: [{ block: 'text', mods: { size: 'xl', transform: 'uppercase', view: 'primary', spacing: 'xs', font: 'mono' } }, { block: 'link', url: '#' }],
 				content: 'Tools'
 			},
 			{
 				elem: 'nav-item',
 				attrs: { 'data-name': 'documents' },
-				mix: [{ block: 'text', mods: { size: 'm', transform: 'uppercase', view: 'primary', spacing: 'xs' } }, { block: 'link', url: '#' }],
+				mix: [{ block: 'text', mods: { size: 'xl', transform: 'uppercase', view: 'primary', spacing: 'xs', font: 'mono'  } }, { block: 'link', url: '#' }],
 				content: 'Docs'
 			},
 			{
 				elem: 'nav-item',
 				attrs: { 'data-name': 'projects' },
-				mix: [{ block: 'text', mods: { size: 'm', transform: 'uppercase', view: 'primary', spacing: 'xs' } }, { block: 'link', url: '#' }],
-				content: 'projects'
+				mix: [{ block: 'text', mods: { size: 'xl', transform: 'uppercase', view: 'primary', spacing: 'xs', font: 'mono' } }, { block: 'link', url: '#' }],
+				content: 'Projects'
 			},
 			{
-				elem: 'nav-chat'
+				elem: 'nav-chat',
+				tag: 'a',
+				attrs: { href: 'https://t.me/bemdesign', target: '_blank' },
 			}
 		]
 	})

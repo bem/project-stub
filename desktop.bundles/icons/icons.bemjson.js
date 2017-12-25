@@ -32,16 +32,16 @@ module.exports = {
           content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Иконки'
+              mods: { size: 'xxxxl', weight: 'bold', align: 'center' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxxl' } },
+              content: 'Icons'
             },
-            {
-              block: 'text',
-              mods: { size: 'xxl', view: 'primary', width: 'default' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Для того, чтобы централизованно менять библиотеки иконок и избегать такой ситуации, когда повторяющиеся иконки лежат по разным мы вынесли все иконки в блок .icon'
-            },
+            // {
+            //   block: 'text',
+            //   mods: { size: 'xxl', view: 'primary', width: 'default' },
+            //   mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+            //   content: 'Для того, чтобы централизованно менять библиотеки иконок и избегать такой ситуации, когда повторяющиеся иконки лежат по разным мы вынесли все иконки в блок .icon'
+            // },
             {
                block: 'icon-list',
                mix: { block: 'decorator', mods: { 'indent-b': 'xxxl' } },

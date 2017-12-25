@@ -32,16 +32,16 @@ module.exports = {
           content: [
             {
               block: 'text',
-              mods: { size: 'xxxl', weight: 'bold', width: 'default' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xl' } },
-              content: 'Шаблоны'
+              mods: { size: 'xxxxl', weight: 'bold', align: 'center' },
+              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxxl' } },
+              content: 'Layouts'
             },
-            {
-              block: 'text',
-              mods: { size: 'xxl', view: 'primary', width: 'default' },
-              mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
-              content: 'Шаблоны помогают структурировать пространство и подготовить каркас для интеграции блоков. «Структурируя при помощи модульной сетки плоскости и пространство, дизайнер получает возможность организовать тексты и графические изображения по принципам объективности и функциональности»'
-            },
+            // {
+            //   block: 'text',
+            //   mods: { size: 'xxl', view: 'primary', width: 'default' },
+            //   mix: { block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+            //   content: 'Шаблоны помогают структурировать пространство и подготовить каркас для интеграции блоков. «Структурируя при помощи модульной сетки плоскости и пространство, дизайнер получает возможность организовать тексты и графические изображения по принципам объективности и функциональности»'
+            // },
             /* 32-8-4 */
             {
               block : 'layout-list',

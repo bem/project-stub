@@ -43,9 +43,9 @@
 		padding: 60px 0;
 	}
 	&__menu-section-name {
-		letter-spacing: 1.5px;
+		letter-spacing: 2px;
 		margin-bottom: $space-l;
-		font-size: 24px;
+		font-size: 56px;
 		font-weight: 500;
 		text-transform: uppercase;
 		color: var(--color-typo-inverse);

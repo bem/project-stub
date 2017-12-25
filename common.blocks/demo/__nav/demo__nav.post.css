@@ -30,13 +30,14 @@
 	&-chat {
 		position: absolute;
 		bottom: 20px;
-		width: 33px;
-		height: 33px;
-		background: black;
+		width: 48px;
+		height: 48px;
+		background-color: black;
+		background-image: url('telegram.svg');
 		border-radius: 50%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
 	}
-
-
 	&-icon {
 		&_type {
 			&_logo {
