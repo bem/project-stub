@@ -204,7 +204,7 @@ module.exports = {
 						{
 							elem: 'screenshot',
 							/* mix: { block: 'promo-cards', elem: 'media-cover' },  Что-то ломает класс анимации, глянуть вместе с Юлей  */
-							mix: [{ block: 'pt-card', elem: 'image' } ], 
+							mix: [{ block: 'pt-card', elem: 'image' } ],
 							content: [
 							{
 								block: 'image',
@@ -656,11 +656,16 @@ module.exports = {
 											content: 'Ape shall never kill ape'
 										},
 										{
-											elem: 'brand-logo',
-											mix: [
-												{ block: 'promo-cards', elem: 'offer-brand-logo' },
-											]
-										}
+                      elem: 'brand-logo-wrapper',
+                      mix: { block: 'text', mods: { align: 'center' } },
+                      content: [
+                        {
+    											block: 'brand-logo',
+                          mods: { view: 'bape', size: 's' },
+    											mix: { block: 'promo-cards', elem: 'offer-brand-logo' },
+    										}
+                      ]
+                    }
                   ]
                 },
 								{
@@ -1053,7 +1058,7 @@ module.exports = {
 										content: 'Enjoy beautiful levels filled with illusory, meditative puzzles'
 									}
 								]
-							}]	
+							}]
 						},
 						{
 							elem: 'item',

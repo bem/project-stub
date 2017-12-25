@@ -4,6 +4,11 @@
       width: 100%;
     }
   }
+  &_border-radius {
+    &_full {
+      border-radius: 999em !important;
+    }
+  }
   &_view {
     &_person-donate {
       background-color: #FD8D46 !important;
@@ -15,7 +20,12 @@
     &_project-donate {
       background-color: #00A5FF !important;
       color: var(--color-default) !important;
-      border-radius: 999em !important;
+    }
+    &_event-donate {
+      font-size: 11px !important;
+      line-height: 32px!important;
+      background-color: #69CD95 !important;
+      color: var(--color-default) !important;
     }
   }
   &_theme {
