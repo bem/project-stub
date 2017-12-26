@@ -78,6 +78,10 @@ module.exports = {
 			}]
 		 }]
 		},
+
+
+
+		// MEDIA ///////////////////////
 		{
 			block: 'promo-cards',
 			mods: { view: 'inverse', slide: 'first' },
@@ -536,7 +540,11 @@ module.exports = {
 			// }
 			]
 		},
-    	{
+		/////////////////////// MEDIA //
+
+
+		// OFFER ///////////////////////
+		{
 			block: 'promo-cards',
 			mix: { block: 'promo-cards', elem: 'offer-section' },
 			mods: { view: 'ghost', slide: 'first' },
@@ -591,25 +599,25 @@ module.exports = {
 										}
 									]
 								},
-                {
-                  elem: 'goods-item',
-                  mix: [
-                    { block: 'pt-card', elem: 'header' },
-                    { block: 'promo-cards', elem: 'offer-goods-item'}
-                  ],
-                  content: [
-                    {
-                      elem: 'goods-image-wrapper',
-                      mix: { block: 'pt-card', elem: 'image' },
-                      content: [
-                        {
-                          block: 'image',
-                          url: '../../assets/i/offer-goods-image.png'
-                        }
-                      ]
-                    }
-                  ]
-                },
+								{
+									elem: 'goods-item',
+									mix: [
+										{ block: 'pt-card', elem: 'header' },
+										{ block: 'promo-cards', elem: 'offer-goods-item'}
+									],
+									content: [
+										{
+											elem: 'goods-image-wrapper',
+											mix: { block: 'pt-card', elem: 'image' },
+											content: [
+												{
+													block: 'image',
+													url: '../../assets/i/offer-goods-image.png'
+												}
+											]
+										}
+									]
+								},
 								{
 									elem: 'goods-info',
 									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl', 'space-h': 'l', 'space-t': 'xxs' } },
@@ -656,45 +664,45 @@ module.exports = {
 								{ block: 'promo-cards', elem: 'offer-brand' },
 							],
 							content: [
-                {
-                  elem: 'brand-content',
-                  mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } },
-                  content: [
-                    {
-  										elem: 'brand-image-wrapper',
-  										mix: [
-                        { block: 'promo-cards', elem: 'offer-brand-image' },
-                        { block: 'pt-card', elem: 'image' }
-                      ],
-                      content: [
-                        {
+								{
+									elem: 'brand-content',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' } },
+									content: [
+										{
+											elem: 'brand-image-wrapper',
+											mix: [
+												{ block: 'promo-cards', elem: 'offer-brand-image' },
+												{ block: 'pt-card', elem: 'image' }
+											],
+											content: [
+												{
 													block: 'image',
-                          url: '../../assets/i/offer-brand-image.png'
-                        }
-                      ]
+													url: '../../assets/i/offer-brand-image.png'
+												}
+											]
 										},
-                    {
+										{
 											block: 'text',
 											mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
-					mix: [
-                        { block: 'promo-cards', elem: 'offer-brand-title' },
-                        { block: 'decorator', mods: { 'indent-t': 's', 'indent-b': 'xs' } }
-                      ],
+											mix: [
+												{ block: 'promo-cards', elem: 'offer-brand-title' },
+												{ block: 'decorator', mods: { 'indent-t': 's', 'indent-b': 'xs' } }
+											],
 											content: 'Ape shall never kill ape'
 										},
 										{
-                      elem: 'brand-logo-wrapper',
-                      mix: { block: 'text', mods: { align: 'center' } },
-                      content: [
-                        {
-    											block: 'brand-logo',
-                          mods: { view: 'bape', size: 's' },
-    											mix: { block: 'promo-cards', elem: 'offer-brand-logo' },
-    										}
-                      ]
-                    }
-                  ]
-                },
+											elem: 'brand-logo-wrapper',
+											mix: { block: 'text', mods: { align: 'center' } },
+											content: [
+												{
+													block: 'brand-logo',
+													mods: { view: 'bape', size: 's' },
+													mix: { block: 'promo-cards', elem: 'offer-brand-logo' },
+												}
+											]
+										}
+									]
+								},
 								{
 									elem: 'brand-action',
 									mix: [
@@ -712,28 +720,28 @@ module.exports = {
 							]
 						},
 
-			{
-				block: 'offer',
-				mix: [
-					{ block: 'pt-card', mods: { view: 'inverse' } },
-					{ block: 'promo-cards', elem: 'hover' },
-					{ block: 'promo-cards', elem: 'offer-service' },
-				],
-				content: [
-                {
-                  elem: 'service-image-wrapper',
-                  mix: [
-                    { block: 'pt-card', elem: 'image', elemMods: { size: 'cover' } },
-                    { block: 'promo-cards', elem: 'offer-service-background'},
-                  ],
-                  content: [
-                    {
-                      block: 'image',
-                      mix: { block: 'promo-cards', elem: 'offer-service-photo'},
-                      url: '../../assets/i/offer-service-image.png'
-                    }
-                  ]
-                },
+						{
+							block: 'offer',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'inverse' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'offer-service' },
+							],
+							content: [
+								{
+									elem: 'service-image-wrapper',
+									mix: [
+										{ block: 'pt-card', elem: 'image', elemMods: { size: 'cover' } },
+										{ block: 'promo-cards', elem: 'offer-service-background'},
+									],
+									content: [
+										{
+											block: 'image',
+											mix: { block: 'promo-cards', elem: 'offer-service-photo'},
+											url: '../../assets/i/offer-service-image.png'
+										}
+									]
+								},
 								{
 									elem: 'title',
 									mix: [
@@ -798,7 +806,7 @@ module.exports = {
 					{
 						block: 'text',
 						mods: { size: 'xl', font: 'mono' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For hypermarkets and stores working online. Additionally serves as a banner ad.'
 					}]
 				},
 				{
@@ -816,7 +824,7 @@ module.exports = {
 					{
 						block: 'text',
 						mods: { size: 'xl', font: 'mono' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For clothing collections, lines of cosmetics, lookbooks, and other collections of products.'
 					}]
 				},
 				{
@@ -834,7 +842,7 @@ module.exports = {
 					{
 						block: 'text',
 						mods: { size: 'xl', font: 'mono' },
-						content: 'Exclusive member-only offers in the run up to Black Friday, plus the best of Nike direct to your inbox. Don\'t miss out'
+						content: 'For subscription services, pricing plans, and services ordered online. This will do for all from a hairdressing saloon to a cloud hosting.'
 					}]
 				},
 				{
@@ -890,6 +898,9 @@ module.exports = {
 			// },
 			]
 		},
+		/////////////////////// OFFER //
+
+		// APPS ////////////////////////
 		{
 			block: 'promo-cards',
 			mods: { view: 'inverse', slide: 'first' },
@@ -1305,6 +1316,459 @@ module.exports = {
 			// 	}]
 			}]
 		},
+		//////////////////////// APPS //
+
+
+		// DONATE //////////////////////
+		{
+			block: 'promo-cards',
+			mix: { block: 'promo-cards', elem: 'donate-section' },
+			mods: { view: 'ghost', slide: 'first' },
+			content: [
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'first' },
+				content: 'person'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'second' },
+				content: 'project'
+			},
+			{
+				elem: 'theme-name',
+				elemMods: { slide: 'third' },
+				content: 'event'
+			},
+			{
+				elem: 'content',
+				content: [
+				{
+					elem: 'card',
+					mix: [
+						{ elem: 'offer', elemMods: { type: 'goods' } },
+						{ block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
+					],
+					content: [
+						{
+							block: 'donate',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'donate-person' },
+							],
+							content: [
+								{
+									elem: 'person-image-wrapper',
+									mix: { block: 'pt-card', elem: 'image' },
+									content: [
+										{
+											block: 'image',
+											url: '../../assets/i/donate-person-image.png'
+										},
+										{
+											elem: 'person-avatar-wrapper',
+											mix: { block: 'pt-card', elem: 'header' },
+											content: [
+												{
+													elem: 'person-avatar',
+													mix: { block: 'pt-avatar', elem: 'photo', elemMods: { size: 'm' } },
+												}
+											]
+										}
+									]
+								},
+								{
+									elem: 'person-info',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'l', 'space-t': 'xxxl' } },
+									content: [
+										{
+											block: 'text',
+											mix: { block: 'decorator', mods: { 'indent-b': 's' } },
+											mods: { view: 'primary', size: 'xxl', weight: 'bold' },
+											content: [
+												'Sam Harris ',
+												{
+													block: 'text',
+													mods: { view: 'primary', size: 'xxl', weight: 'regular', style: 'italic', display: 'inline' },
+													content: 'is creating The Waking Up Podcast'
+												}
+											]
+										},
+										{
+											block: 'text',
+											mods: { view: 'secondary', size: 'm' },
+											content: 'I launched Waking Up in 2015, and it regularly ranks among the top 100 podcasts in the US, ' +
+											'UK, Canada, and Australia. It has been selected by Apple as one of "iTunes Best" and has won a Webby ' +
+											'Award for best podcas…'
+										}
+									]
+								},
+								{
+									elem: 'person-action',
+									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'm', 'space-v': 'xl' } },
+									content: [
+										{
+											block: 'button',
+											mix: { block: 'text', mods: { view: 'inverse', size: 's', transform: 'uppercase' } },
+											mods: { theme: 'islands', size: 'xl', type: 'submit', view: 'person-donate', width: 'full' },
+											text: 'Send $10'
+										}
+									]
+								}
+							]
+						},
+
+						{
+							block: 'donate',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'donate-project' },
+							],
+							content: [
+								{
+									elem: 'project-image-wrapper',
+									mix: { block: 'pt-card', elem: 'image' },
+									content: [
+										{
+											block: 'image',
+											url: '../../assets/i/donate-project-image.png'
+										},
+										{
+											elem: 'project-play',
+										},
+										{
+											elem: 'project-progress-bar',
+										}
+									]
+								},
+								{
+									elem: 'project-info',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'l' } },
+									content: [
+										{
+											elem: 'project-countdowns',
+											mix: { block: 'decorator', mods: { 'indent-v': 'xs' } },
+											content: [
+												{
+													elem: 'amount-wrapper',
+													mix: { block: 'decorator', mods: { 'indent-r': 'xxxxl' } },
+													content: [
+														{
+															elem: 'amount',
+															content: [
+																{
+																	block: 'text',
+																	mods: { view: 'primary', size: 'l', weight: 'bold' },
+																	content: '$4,464'
+																}
+															]
+														},
+														{
+															elem: 'description',
+															content: [
+																{
+																	block: 'text',
+																	mods: { view: 'secondary', size: 'xs' },
+																	content: 'pledged of 6,217 goal'
+																}
+															]
+														},
+													]
+												},
+												{
+													elem: 'days-wrapper',
+													content: [
+														{
+															elem: 'days',
+															content: [
+																{
+																	block: 'text',
+																	mods: { view: 'primary', size: 'l', weight: 'bold' },
+																	content: '32'
+																}
+															]
+														},
+														{
+															elem: 'description',
+															content: [
+																{
+																	block: 'text',
+																	mods: { view: 'secondary', size: 'xs' },
+																	content: 'days to go'
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 'xxl', weight: 'bold' },
+											content: [
+												{
+													block: 'text',
+													mods: { view: 'primary', size: 'xl', weight: 'bold' },
+													mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
+													content: 'MIRAGE: A Feature-Packed Delay Pedal by RedShift Effects'
+												}
+											]
+										},
+										{
+											block: 'text',
+											mods: { view: 'secondary', size: 'm' },
+											content: 'A high-quality, hand-built tap tempo delay pedal with ' +
+											'modulated filtering, plenty of delay time, and a handful …'
+										}
+									]
+								},
+								{
+									elem: 'project-action',
+									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'm', 'space-v': 'l' } },
+									content: [
+										{
+											block: 'button',
+											mix: { block: 'text', mods: { view: 'inverse', size: 'm' } },
+											mods: { theme: 'islands', size: 'xl', type: 'submit', view: 'project-donate', width: 'full', 'border-radius': 'full' },
+											text: 'Back this project'
+										}
+									]
+								}
+							]
+						},
+
+						{
+							block: 'donate',
+							mix: [
+								{ block: 'pt-card', mods: { view: 'default' } },
+								{ block: 'promo-cards', elem: 'hover' },
+								{ block: 'promo-cards', elem: 'donate-event' },
+							],
+							content: [
+								{
+									elem: 'event-image-wrapper',
+									mix: { block: 'pt-card', elem: 'image' },
+									content: [
+										{
+											block: 'image',
+											url: '../../assets/i/donate-event-image.png'
+										}
+									]
+								},
+								{
+									elem: 'event-header',
+									mix: { block: 'pt-card', elem: 'header' },
+									content: [
+										{
+											elem: 'event-avatar'
+										},
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 'xxxl', weight: 'bold', style: 'italic', align: 'center', transform: 'uppercase' },
+											mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
+											content: 'Ann’s B-day'
+										},
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 's', align: 'center' },
+											content: [
+												{
+													block: 'text',
+													mods: { view: 'primary', size: 's', weight: 'bold', display: 'inline' },
+													content: '25:12:08:43 '
+												},
+												{
+													block: 'text',
+													mods: { view: 'primary', size: 's', display: 'inline' },
+													content: 'until the end'
+												}
+											]
+										}
+									]
+								},
+								{
+									elem: 'event-info',
+									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									content: [
+										{
+											elem: 'control',
+											content: '-'
+										},
+										{
+											block: 'text',
+											mods: { view: 'primary', size: '4xl', weight: 'semibold', align: 'center' },
+											mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
+											content: '$10'
+										},
+										{
+											elem: 'control',
+											content: '+'
+										}
+									]
+								},
+								{
+									elem: 'event-action',
+									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 'xl' } },
+									content: [
+										{
+											elem: 'event-avatar-group',
+											content: [
+												{
+													elem: 'event-mini-avatar',
+													elemMods: { view: '1' },
+													mix: { block: 'pt-avatar', elem: 'photo', elemMods: { size: 'xs' } },
+												},
+												{
+													elem: 'event-mini-avatar',
+													elemMods: { view: '2' },
+													mix: { block: 'pt-avatar', elem: 'photo', elemMods: { size: 'xs' } },
+												},
+												{
+													elem: 'event-mini-avatar',
+													elemMods: { view: '3' },
+													mix: { block: 'pt-avatar', elem: 'photo', elemMods: { size: 'xs' } },
+												},
+												{
+													elem: 'event-mini-avatar',
+													elemMods: { view: '4' },
+													mix: { block: 'pt-avatar', elem: 'photo', elemMods: { size: 'xs' } },
+												}
+											]
+										},
+										{
+											block: 'text',
+											mods: { view: 'primary', size: 'm', weight: 'semibold' },
+											content: '+6'
+										},
+										{
+											block: 'button',
+											mix: [
+												{ block: 'text', mods: { view: 'inverse', weight: 'bold', transform: 'uppercase', style: 'italic' } },
+												{ block: 'decorator', mods: { 'indent-l': 'xl' } }
+											],
+											mods: { theme: 'islands', size: 'xl', type: 'submit', view: 'event-donate', 'border-radius': 'full' },
+											text: 'Make a party'
+										}
+									]
+								}
+							]
+						},
+					]
+				},
+
+				{
+					elem: 'description',
+					elemMods: { slide: 'first' },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Person'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'For bloggers and streamers, charity sites and crowdfunding projects'
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { slide: 'second' },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Project'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'For crowdfunding projects and charity sites '
+					}]
+				},
+				{
+					elem: 'description',
+					elemMods: { slide: 'third' },
+					content: [
+					{
+						elem: 'header',
+						mix: [
+							{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+							{ block: 'text', mods: { font: 'sans', weight: 'bold' }, }
+						],
+						content: 'Event'
+					},
+					{
+						block: 'text',
+						mods: { size: 'xl', font: 'mono' },
+						content: 'For social networks, crowdfunding platforms, online banking systems, payment services, and applications. This will do for raising money for a joint gift or all sorts of things.'
+					}]
+				},
+				{
+					elem: 'list',
+					content: [
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'donate-tab-1' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'letter', align: 'center' },
+							content: 'Person'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'donate-tab-2' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							content: 'Project'
+						}
+					},
+					{
+						elem: 'item',
+						mix: [{ block: 'decorator', mods: { 'indent-h': 'm' } }],
+						content: {
+							block: 'text',
+							attrs: { style: 'font-family: \'IBM Plex Mono\' !important;' },
+							mix: { block: 'promo-cards', elem: 'donate-tab-3' },
+							mods: { size: 'xl', transform: 'uppercase', view: 'primary', align: 'center' },
+							content: 'Event'
+						}
+					}]
+				}]
+			},
+			// {
+			// 	elem: 'controls',
+			// 	content: [
+			// 	{
+			// 		block: 'icon',
+			// 		mods: { 'arrow-up-2': 'xl-primary' },
+			// 		mix: { block: 'decorator', mods: { 'indent-r': 'xxl' } }
+			// 	},
+			// 	{
+			// 		block: 'icon',
+			// 		mods: { 'arrow-down-2': 'xl-primary' }
+			// 	}]
+			// },
+			]
+		},
+		////////////////////// DONATE //
+
+
+		// TEAM ////////////////////////
 		{
 			block: 'promo-cards',
 			// mods: { view: 'inverse' },
@@ -1463,5 +1927,6 @@ module.exports = {
 			// }
 			]
 		}]
+		//////////////////////// TEAM //
 	}]
 };
