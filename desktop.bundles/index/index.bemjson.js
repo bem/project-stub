@@ -1346,7 +1346,7 @@ module.exports = {
 				{
 					elem: 'card',
 					mix: [
-						{ elem: 'offer', elemMods: { type: 'goods' } },
+						{ elem: 'donate', elemMods: { type: 'person' } },
 						{ block: 'decorator', mods: { 'indent-b': 'xxxxl' } },
 					],
 					content: [
@@ -1360,19 +1360,28 @@ module.exports = {
 							content: [
 								{
 									elem: 'person-image-wrapper',
-									mix: { block: 'pt-card', elem: 'image' },
+									mix: [
+										{ block: 'pt-card', elem: 'image' },
+										{ block: 'promo-cards', elem: 'donate-person-image-wrapper'}
+									],
 									content: [
 										{
 											block: 'image',
+											mix: { block: 'promo-cards', elem: 'donate-person-image'},
 											url: '../../assets/i/donate-person-image.png'
 										},
 										{
 											elem: 'person-avatar-wrapper',
-											mix: { block: 'pt-card', elem: 'header' },
+											mix: [
+												{ block: 'pt-card', elem: 'header' },
+											],
 											content: [
 												{
 													elem: 'person-avatar',
-													mix: { block: 'pt-avatar', elem: 'photo', elemMods: { size: 'm' } },
+													mix: [
+														{ block: 'pt-avatar', elem: 'photo', elemMods: { size: 'm' } },
+														{ block: 'promo-cards', elem: 'donate-person-avatar'},
+													]
 												}
 											]
 										}
@@ -1384,7 +1393,10 @@ module.exports = {
 									content: [
 										{
 											block: 'text',
-											mix: { block: 'decorator', mods: { 'indent-b': 's' } },
+											mix: [
+												{ block: 'decorator', mods: { 'indent-b': 's' } },
+												{ block: 'promo-cards', elem: 'donate-person-title'}
+											],
 											mods: { view: 'primary', size: 'xxl', weight: 'bold' },
 											content: [
 												'Sam Harris ',
@@ -1398,6 +1410,7 @@ module.exports = {
 										{
 											block: 'text',
 											mods: { view: 'secondary', size: 'm' },
+											mix: { block: 'promo-cards', elem: 'donate-person-desc'},
 											content: 'I launched Waking Up in 2015, and it regularly ranks among the top 100 podcasts in the US, ' +
 											'UK, Canada, and Australia. It has been selected by Apple as one of "iTunes Best" and has won a Webby ' +
 											'Award for best podcas…'
@@ -1406,7 +1419,10 @@ module.exports = {
 								},
 								{
 									elem: 'person-action',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'm', 'space-v': 'xl' } },
+									mix: [
+										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'm', 'space-v': 'xl' } },
+										{ block: 'promo-cards', elem: 'donate-person-action'}
+									],
 									content: [
 										{
 											block: 'button',
@@ -1429,10 +1445,14 @@ module.exports = {
 							content: [
 								{
 									elem: 'project-image-wrapper',
-									mix: { block: 'pt-card', elem: 'image' },
+									mix: [
+										{ block: 'pt-card', elem: 'image' },
+										{ block: 'promo-cards', elem: 'donate-project-header'}
+									],
 									content: [
 										{
 											block: 'image',
+											mix: { block: 'promo-cards', elem: 'donate-project-image'},
 											url: '../../assets/i/donate-project-image.png'
 										},
 										{
@@ -1453,7 +1473,10 @@ module.exports = {
 											content: [
 												{
 													elem: 'amount-wrapper',
-													mix: { block: 'decorator', mods: { 'indent-r': 'xxxxl' } },
+													mix: [
+														{ block: 'promo-cards', elem: 'donate-project-amount'},
+														{ block: 'decorator', mods: { 'indent-r': 'xxxxl' } },
+													],
 													content: [
 														{
 															elem: 'amount',
@@ -1479,6 +1502,7 @@ module.exports = {
 												},
 												{
 													elem: 'days-wrapper',
+													mix: { block: 'promo-cards', elem: 'donate-project-days'},
 													content: [
 														{
 															elem: 'days',
@@ -1507,6 +1531,7 @@ module.exports = {
 										{
 											block: 'text',
 											mods: { view: 'primary', size: 'xxl', weight: 'bold' },
+											mix: { block: 'promo-cards', elem: 'donate-project-title'},
 											content: [
 												{
 													block: 'text',
@@ -1519,6 +1544,7 @@ module.exports = {
 										{
 											block: 'text',
 											mods: { view: 'secondary', size: 'm' },
+											mix: { block: 'promo-cards', elem: 'donate-project-desc'},
 											content: 'A high-quality, hand-built tap tempo delay pedal with ' +
 											'modulated filtering, plenty of delay time, and a handful …'
 										}
@@ -1526,7 +1552,10 @@ module.exports = {
 								},
 								{
 									elem: 'project-action',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'm', 'space-v': 'l' } },
+									mix: [
+										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'm', 'space-v': 'l' } },
+										{ block: 'promo-cards', elem: 'donate-project-action'},
+									],
 									content: [
 										{
 											block: 'button',
@@ -1549,7 +1578,10 @@ module.exports = {
 							content: [
 								{
 									elem: 'event-image-wrapper',
-									mix: { block: 'pt-card', elem: 'image' },
+									mix: [
+										{ block: 'pt-card', elem: 'image' },
+										{ block: 'promo-cards', elem: 'donate-event-image'},
+									],
 									content: [
 										{
 											block: 'image',
@@ -1562,17 +1594,25 @@ module.exports = {
 									mix: { block: 'pt-card', elem: 'header' },
 									content: [
 										{
-											elem: 'event-avatar'
+											elem: 'event-avatar-wrapper',
+											mix: { block: 'promo-cards', elem: 'donate-event-avatar', },
+											content: {
+												elem: 'event-avatar',
+											}
 										},
 										{
 											block: 'text',
 											mods: { view: 'primary', size: 'xxxl', weight: 'bold', style: 'italic', align: 'center', transform: 'uppercase' },
-											mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
+											mix: [
+												{ block: 'decorator', mods: { 'indent-b': 'xxs' } },
+												{ block: 'promo-cards', elem: 'donate-event-title'},
+											],
 											content: 'Ann’s B-day'
 										},
 										{
 											block: 'text',
 											mods: { view: 'primary', size: 's', align: 'center' },
+											mix: { block: 'promo-cards', elem: 'donate-event-subtitle'},
 											content: [
 												{
 													block: 'text',
@@ -1590,7 +1630,10 @@ module.exports = {
 								},
 								{
 									elem: 'event-info',
-									mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+									mix: [
+										{ block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'xxl' } },
+										{ block: 'promo-cards', elem: 'donate-event-info'},
+									],
 									content: [
 										{
 											elem: 'control',
@@ -1610,7 +1653,10 @@ module.exports = {
 								},
 								{
 									elem: 'event-action',
-									mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 'xl' } },
+									mix: [
+										{ block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l', 'space-v': 'xl' } },
+										{ block: 'promo-cards', elem: 'donate-event-action'}
+									],
 									content: [
 										{
 											elem: 'event-avatar-group',
@@ -1634,13 +1680,14 @@ module.exports = {
 													elem: 'event-mini-avatar',
 													elemMods: { view: '4' },
 													mix: { block: 'pt-avatar', elem: 'photo', elemMods: { size: 'xs' } },
-												}
+												},
+												{
+													block: 'text',
+													mix: { block: 'decorator', mods: { 'indent-l': 'xxs' } },
+													mods: { view: 'primary', size: 'm', weight: 'semibold' },
+													content: '+6'
+												},
 											]
-										},
-										{
-											block: 'text',
-											mods: { view: 'primary', size: 'm', weight: 'semibold' },
-											content: '+6'
 										},
 										{
 											block: 'button',

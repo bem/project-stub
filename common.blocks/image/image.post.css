@@ -1,4 +1,5 @@
 .image {
+	display: block;
   &_view {
     &_block-scheme {
       background-image: url('block-scheme.png');

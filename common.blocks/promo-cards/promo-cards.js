@@ -60,7 +60,7 @@ mediaTab1.addEventListener('click', function() {
 	mediaSection.classList.add('promo-cards_slide_first');
 	mediaSection.classList.remove('promo-cards_slide_second');
 	mediaSection.classList.remove('promo-cards_slide_third');
-	
+
 	mediaCard.classList.add('promo-cards__media_type_video');
 	mediaCard.classList.remove('promo-cards__media_type_text');
 	mediaCard.classList.remove('promo-cards__media_type_music');
@@ -73,7 +73,7 @@ mediaTab2.addEventListener('click', function() {
 	mediaSection.classList.remove('promo-cards_slide_first');
 	mediaSection.classList.add('promo-cards_slide_second');
 	mediaSection.classList.remove('promo-cards_slide_third');
-	
+
 	mediaCard.classList.remove('promo-cards__media_type_video');
 	mediaCard.classList.add('promo-cards__media_type_text');
 	mediaCard.classList.remove('promo-cards__media_type_music');
@@ -86,7 +86,7 @@ mediaTab3.addEventListener('click', function() {
 	mediaSection.classList.remove('promo-cards_slide_first');
 	mediaSection.classList.remove('promo-cards_slide_second');
 	mediaSection.classList.add('promo-cards_slide_third');
-	
+
 	mediaCard.classList.remove('promo-cards__media_type_video');
 	mediaCard.classList.remove('promo-cards__media_type_text');
 	mediaCard.classList.add('promo-cards__media_type_music');
@@ -108,7 +108,7 @@ appsTab1.addEventListener('click', function() {
 	appsSection.classList.add('promo-cards_slide_first');
 	appsSection.classList.remove('promo-cards_slide_second');
 	appsSection.classList.remove('promo-cards_slide_third');
-	
+
 	appsCard.classList.add('promo-cards__apps_type_developer');
 	appsCard.classList.remove('promo-cards__apps_type_recommendation');
 	appsCard.classList.remove('promo-cards__apps_type_good');
@@ -121,7 +121,7 @@ appsTab2.addEventListener('click', function() {
 	appsSection.classList.remove('promo-cards_slide_first');
 	appsSection.classList.add('promo-cards_slide_second');
 	appsSection.classList.remove('promo-cards_slide_third');
-	
+
 	appsCard.classList.remove('promo-cards__apps_type_developer');
 	appsCard.classList.add('promo-cards__apps_type_recommendation');
 	appsCard.classList.remove('promo-cards__apps_type_good');
@@ -134,8 +134,54 @@ appsTab3.addEventListener('click', function() {
 	appsSection.classList.remove('promo-cards_slide_first');
 	appsSection.classList.remove('promo-cards_slide_second');
 	appsSection.classList.add('promo-cards_slide_third');
-	
+
 	appsCard.classList.remove('promo-cards__apps_type_developer');
 	appsCard.classList.remove('promo-cards__apps_type_recommendation');
 	appsCard.classList.add('promo-cards__apps_type_good');
+});
+
+var donateSection = document.querySelectorAll('.promo-cards__donate-section')[0],
+	donateCard = document.querySelectorAll('.promo-cards__donate')[0],
+	donateTab1 = document.querySelectorAll('.promo-cards__donate-tab-1')[0],
+	donateTab2 = document.querySelectorAll('.promo-cards__donate-tab-2')[0],
+	donateTab3 = document.querySelectorAll('.promo-cards__donate-tab-3')[0];
+
+donateTab1.addEventListener('click', function() {
+	donateTab1.classList.add('text_view_letter');
+	donateTab2.classList.remove('text_view_letter');
+	donateTab3.classList.remove('text_view_letter');
+
+	donateSection.classList.add('promo-cards_slide_first');
+	donateSection.classList.remove('promo-cards_slide_second');
+	donateSection.classList.remove('promo-cards_slide_third');
+
+	donateCard.classList.add('promo-cards__donate_type_person');
+	donateCard.classList.remove('promo-cards__donate_type_project');
+	donateCard.classList.remove('promo-cards__donate_type_event');
+});
+donateTab2.addEventListener('click', function() {
+	donateTab1.classList.remove('text_view_letter');
+	donateTab2.classList.add('text_view_letter');
+	donateTab3.classList.remove('text_view_letter');
+
+	donateSection.classList.remove('promo-cards_slide_first');
+	donateSection.classList.add('promo-cards_slide_second');
+	donateSection.classList.remove('promo-cards_slide_third');
+
+	donateCard.classList.remove('promo-cards__donate_type_person');
+	donateCard.classList.add('promo-cards__donate_type_project');
+	donateCard.classList.remove('promo-cards__donate_type_event');
+});
+donateTab3.addEventListener('click', function() {
+	donateTab1.classList.remove('text_view_letter');
+	donateTab2.classList.remove('text_view_letter');
+	donateTab3.classList.add('text_view_letter');
+
+	donateSection.classList.remove('promo-cards_slide_first');
+	donateSection.classList.remove('promo-cards_slide_second');
+	donateSection.classList.add('promo-cards_slide_third');
+
+	donateCard.classList.remove('promo-cards__donate_type_person');
+	donateCard.classList.remove('promo-cards__donate_type_project');
+	donateCard.classList.add('promo-cards__donate_type_event');
 });
