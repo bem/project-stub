@@ -27,6 +27,7 @@ const rebemCss = require('rebem-css');
 const postcssUrl = require('postcss-url');
 const autoprefixer = require('autoprefixer');
 const postcssReporter = require('postcss-reporter');
+const base64 = require('postcss-inline-base64');
 const csso = require('gulp-csso');
 
 const YENV = process.env.YENV || 'development';
@@ -74,7 +75,8 @@ gulp.task('build', () => {
                         rebemCss,
                         postcssUrl({ url: 'rebase' }),
                         autoprefixer(),
-                        postcssReporter()
+                        postcssReporter(),
+                        base64()
                     ]))
                     .pipe(concat(bundle.name + '.min.css'))
                     .pipe(gulpif(isProd, csso())),
