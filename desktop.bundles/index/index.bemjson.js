@@ -1460,6 +1460,7 @@ module.exports = {
 										},
 										{
 											elem: 'project-progress-bar',
+											mix: { block: 'promo-cards', elem: 'donate-project-progressbar'},
 										}
 									]
 								},

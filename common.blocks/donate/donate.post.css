@@ -23,6 +23,7 @@
     background-color: rgba(0,165,255,.3);
     width: 100%;
     height: 7px;
+    position: relative;
     &::after {
       content: '';
       position: absolute;
