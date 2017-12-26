@@ -53,7 +53,6 @@
     "postcss-each": "^0.10.0",
     "postcss-for": "^2.1.1",
     "postcss-import": "^10.0.0",
-    "postcss-inline-base64": "^2.2.1",
     "postcss-nested": "^2.0.2",
     "postcss-reporter": "^4.0.0",
     "postcss-simple-vars": "^4.0.0",
