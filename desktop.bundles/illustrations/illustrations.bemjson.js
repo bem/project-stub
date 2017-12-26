@@ -50,7 +50,7 @@ module.exports = {
                   content : [
                     {
                       elem : 'view',
-                      elemMods: { view: 'default' },
+                      elemMods: { view: 'inverse' },
                       content : [
                         {
                           block : 'illustration',
@@ -90,6 +90,31 @@ module.exports = {
                           block: 'text',
                           mods: { size: 'm', view: 'primary', weight: 'bold', align: 'center' },
                           content: "BEM Show"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  block : 'illustration-item',
+                  content : [
+                    {
+                      elem : 'view',
+                      elemMods: { view: 'inverse' },
+                      content : [
+                        {
+                          block : 'illustration',
+                          mods: { view: 'bem-hackathon' }
+                        }
+                      ]
+                    },
+                    {
+                      elem : 'name',
+                      content : [
+                        {
+                          block: 'text',
+                          mods: { size: 'm', view: 'primary', weight: 'bold', align: 'center' },
+                          content: "BEM Hackathon"
                         }
                       ]
                     }

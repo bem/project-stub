@@ -15,4 +15,9 @@
 		text-align: center;
 		position: relative;
 	}
+	&__price {
+		background: #F26634;
+		padding: var(--space-xxs) var(--space-xxl);
+		border-radius: 48px;
+	}
 }

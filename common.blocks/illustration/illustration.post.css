@@ -5,7 +5,13 @@
 	background-size: 400px;
 	&_view {
 		&_bem-team {
-			background-image: url('bem-team.svg');
+			background-image: url('bem-team.png');
+		}
+		&_bem-show {
+			background-image: url('bem-show.png');
+		}
+		&_bem-hackathon {
+			background-image: url('bem-hackathon.png');
 		}
 		&_bem-channel {
 			background-image: url('bem-channel.svg');
@@ -13,9 +19,7 @@
 		&_bem-night {
 			background-image: url('bem-night.svg');
 		}
-		&_bem-show {
-			background-image: url('bem-show.svg');
-		}
+
 		&_bem-magazine {
 			background-image: url('bem-magazine.svg');
 		}

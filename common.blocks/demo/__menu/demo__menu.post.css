@@ -45,12 +45,12 @@
 	&__menu-section-name {
 		letter-spacing: 2px;
 		margin-bottom: $space-l;
-		font-size: 56px;
+		font-size: 48px;
 		font-weight: 500;
-		text-transform: uppercase;
 		color: var(--color-typo-inverse);
 		transition: 0.3s;
 		font-weight: bold;
+		font-family: 'ibm-plex-sans';
 	}
 	&__menu-item {
 		margin-bottom: 16px;

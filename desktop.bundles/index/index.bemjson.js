@@ -120,14 +120,27 @@ module.exports = {
 								{
 									elem: 'play',
 									mix: { block: 'pt-card', elem: 'play' }
+								},
+								{
+									block: 'text',
+									mix: [{ block: 'pt-card', elem: 'footer', elemMods: { 'space-h': 'l' } }, { block: 'promo-cards', elem: 'media-video-title' }],
+									mods: { view: 'inverse', size: 'xxxl', weight: 'bold' },
+									content: [
+										{
+											elem: 'row',
+											content: 'Mad Lib'
+										},
+										{
+											elem: 'row',
+											content: 'Theater with'
+										},
+										{
+											elem: 'row',
+											content: 'John Cena'
+										}
+									]
 								}
 							]
-						},
-						{
-							block: 'text',
-							mix: [{ block: 'pt-card', elem: 'content', elemMods: { 'space-h': 'l' } }, { block: 'promo-cards', elem: 'media-video-title' }],
-							mods: { view: 'inverse', size: 'xxxl', weight: 'bold' },
-							content: 'Mad Lib Theater with John Cena'
 						},
 						{
 							elem: 'footer',
@@ -158,8 +171,15 @@ module.exports = {
 							},
 							{
 								block: 'text',
-								mods: { view: 'inverse', size: 's' },
-								content: '512K views'
+								mods: { view: 'inverse', size: 's', font: 'mono' },
+								content: [
+									{
+										block: 'text',
+										mods: { weight: 'bold', display: 'inline' },
+										content: '512K '
+									},
+									'views'
+								]
 							}]
 						}]
 					},
@@ -238,8 +258,15 @@ module.exports = {
 							},
 							{
 								block: 'text',
-								mods: { view: 'primary', size: 's', font: 'mono'  },
-								content: '512K views'
+								mods: { view: 'primary', size: 's', font: 'mono' },
+								content: [
+									{
+										block: 'text',
+										mods: { weight: 'bold', display: 'inline' },
+										content: '512K '
+									},
+									'views'
+								]
 							}]
 						}]
 					},
@@ -649,9 +676,9 @@ module.exports = {
                     {
 											block: 'text',
 											mods: { view: 'primary', size: 'xxl', align: 'center', transform: 'uppercase', weight: 'bold', spacing: 's' },
-											mix: [
-                        { block: 'promo-cards', elem: 'offer-brand-title' }, { block: 'decorator', mods: { 'indent-b': 'xl' } },
-                        { block: 'decorator', mods: { 'indent-t': 's'} }
+					mix: [
+                        { block: 'promo-cards', elem: 'offer-brand-title' },
+                        { block: 'decorator', mods: { 'indent-t': 's', 'indent-b': 'xs' } }
                       ],
 											content: 'Ape shall never kill ape'
 										},
@@ -911,15 +938,12 @@ module.exports = {
 								url: '../../assets/i/group.png',
 							},
 							{
-								block: 'pt-badge',
-								attrs: {
-									'style': 'background: #F26634'
-								},
+								elem: 'price',
 								mix: { block: 'promo-cards', elem: 'apps-developer-btn' },
 								content: [
 								{
 									block: 'text',
-									mods: { size: 'm', view: 'inverse' },
+									mods: { size: 'l', view: 'inverse', font: 'mono', with: 'semibold' },
 									content: '$299'
 								}]
 							}]
