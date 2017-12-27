@@ -53,8 +53,6 @@ const techs = {
     ];
 
 module.exports = function(config) {
-    const isProd = process.env.YENV === 'production';
-
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
             // essential
@@ -114,8 +112,8 @@ module.exports = function(config) {
             }],
 
             // borschik
-            [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
-            [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }]
+            [techs.borschik, { source: '?.js', target: '?.min.js', minify: true }],
+            [techs.borschik, { source: '?.css', target: '?.min.css', minify: true }]
         ]);
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
