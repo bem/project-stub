@@ -1,0 +1,19 @@
+.icon-item {
+  padding: 20px 0;
+  width: 210px;
+  margin-right: $space-l;
+  margin-bottom: $space-xxxxl;
+  /*background-color: var(--color-ghost);*/
+  /*border: 1px solid var(--color-border);*/
+  &:nth-child(5n) {
+    margin-right: 0px;
+  }
+  &__view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 56px;
+    height: 24px;
+    margin: 0 auto var(--space-m);
+  }
+}

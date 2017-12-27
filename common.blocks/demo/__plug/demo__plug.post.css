@@ -1,0 +1,98 @@
+@media screen and (max-width: 1199px) {
+	.demo__plug {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: var(--color-default);
+		z-index: 9999;
+		font-size: 5vmin;
+
+		&-header {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			min-height: 62%;
+			box-sizing: border-box;
+			background-color: #c20303;
+			margin-bottom: 4vh;
+			padding: 6vh 6vw;
+		}
+
+		&-bem-logo {
+			width: 38%;
+		}
+
+		&-content {
+			padding: 0 6vw;
+		}
+
+		&-slogan {
+			font-size: 2em;
+			line-height: 1.3em;
+			font-weight: bold;
+			margin: 0;
+		}
+
+		&-description {
+			font-size: 0.8em;
+			line-height: 1.5em;
+			color: var(--color-typo-promo);
+			margin-bottom: 4vh;
+		}
+
+		&-button {
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			font-size: 0.8em;
+			width: 100%;
+			line-height: 3.33em;
+			text-align: center;
+			background-color: #c20303;
+			text-decoration: none;
+			color: var(--color-typo-inverse);
+			margin-bottom: 2vh;
+			border-radius: 3px;
+		}
+
+		&-action {
+			display: flex;
+			flex-flow: row wrap;
+		}
+
+		&-soclink {
+			font-size: 0.8em;
+			position: relative;
+			text-decoration: none;
+			color: var(--color-typo-primary);
+			padding: .8em .6em .8em 1.6em;
+			flex: 1 1 auto;
+			text-align: center;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: .1em;
+				transform: translateX(-160%);
+				height: 100%;
+				width: 1em;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+			&_icon_twitter::before {
+				background-image: url('/assets/i/twitter.svg');
+			}
+
+			&_icon_telegram::before {
+				background-image: url('/assets/i/telegram.svg');
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.demo__plug { display: none; }
+}

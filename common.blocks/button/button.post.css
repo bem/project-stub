@@ -1,0 +1,38 @@
+.button {
+  &_width {
+    &_full {
+      width: 100%;
+    }
+  }
+  &_border-radius {
+    &_full {
+      border-radius: 999em !important;
+    }
+  }
+  &_view {
+    &_person-donate {
+      background-color: #FD8D46 !important;
+      color: var(--color-default) !important;
+
+      box-shadow: 0 6px 14px 0 rgba(0,0,0,0.12);
+      border-radius: 12px;
+    }
+    &_project-donate {
+      background-color: #00A5FF !important;
+      color: var(--color-default) !important;
+    }
+    &_event-donate {
+      font-size: 11px !important;
+      line-height: 32px!important;
+      background-color: #69CD95 !important;
+      color: var(--color-default) !important;
+    }
+  }
+  &_theme {
+    &_islands {
+      &::before {
+        background: none !important;
+      }
+    }
+  }
+}

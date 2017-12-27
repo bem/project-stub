@@ -1,0 +1,10 @@
+.color__text {
+  display: table-cell;
+  vertical-align: middle;
+  .text {
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}

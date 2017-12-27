@@ -1,0 +1,5 @@
+.demo__content {
+	font-size: 82px;
+	font-weight: bold;
+	color: var(--color-inverse);
+}

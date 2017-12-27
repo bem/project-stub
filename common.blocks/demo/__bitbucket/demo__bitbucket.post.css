@@ -1,0 +1,19 @@
+.demo__bitbucket {
+	margin-bottom: 92px;
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--color-typo-ghost);
+	display: block;
+	text-decoration: none;
+	transition-duration: 0.3s;
+
+	& > a {
+		text-decoration: none;
+		color: var(--color-typo-ghost);
+		transition: .3s ease;
+
+		&:hover {
+			color: var(--color-typo-alert);
+		}
+	}
+}

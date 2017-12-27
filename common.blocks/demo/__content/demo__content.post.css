@@ -1,0 +1,28 @@
+.demo__content {
+	display: block;
+	padding-top: calc($space-xxl + $space-xxxl);
+	margin: auto;
+	width: 1140px;
+	&_size {
+		&_l {
+			width: 1140px;
+		}
+		&_m {
+			width: 960px;
+		}
+		&_s {
+			width: 740px;
+		}
+	}
+	&_display {
+		&_flex {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.demo__content { display: none; }
+}

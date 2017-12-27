@@ -1,0 +1,12 @@
+.space__text {
+  padding-left: 112px;
+  height: 96px;
+  display: table-cell;
+  vertical-align: middle;
+  .text {
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}

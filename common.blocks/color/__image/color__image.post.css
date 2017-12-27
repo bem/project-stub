@@ -1,0 +1,229 @@
+.color__image {
+  width: 120px;
+  height: 72px;
+  margin-bottom: 8px;
+  &_color {
+
+    /* Базовые цвета */
+    &_base {
+      background: var(--color-base);
+    }
+    &_essential {
+      background: var(--color-essential);
+      border: 1px solid var(--color-border);
+    }
+    &_project {
+      background: var(--color-project);
+    }
+    &_phantom {
+      background: var(--color-phantom);
+    }
+    &_radical {
+      background: var(--color-radical);
+    }
+    &_path {
+      background: var(--color-path);
+    }
+    &_source {
+      background: var(--color-source);
+    }
+    /* Базовые цвета */
+
+    /* Цвета блоков */
+    &_brand {
+      background: var(--color-brand);
+    }
+    &_action {
+      background: var(--color-action);
+    }
+    &_selection {
+      background: var(--color-selection);
+    }
+    &_hover {
+      background: var(--color-hover);
+    }
+    &_inverse {
+      background: var(--color-inverse);
+    }
+    &_border {
+      background: var(--color-border);
+    }
+    &_border-control {
+      background: var(--color-border-control);
+    }
+    &_success {
+      background: var(--color-success);
+    }
+    &_alert {
+      background: var(--color-alert);
+    }
+    &_normal {
+      background: var(--color-normal);
+    }
+    &_ghost {
+      background: var(--color-ghost);
+    }
+    &_default {
+      background: var(--color-default);
+      box-sizing: border-box;
+      border: 1px solid var(--color-border);
+    }
+    &_default-android {
+      background: var(--color-default-android);
+      box-sizing: border-box;
+    }
+    &_tone {
+      background: var(--color-tone);
+      box-sizing: border-box;
+    }
+    &_disable {
+      background: var(--color-disable);
+      box-sizing: border-box;
+    }
+
+    &_typo-primary {
+      background: var(--color-typo-primary);
+    }
+    &_typo-secondary {
+      background: var(--color-typo-secondary);
+    }
+    &_typo-success {
+      background: var(--color-typo-success);
+    }
+    &_typo-alert {
+      background: var(--color-typo-alert);
+    }
+    &_typo-promo {
+      background: var(--color-typo-promo);
+    }
+    &_typo-inverse {
+      background: var(--color-typo-inverse);
+      box-sizing: border-box;
+      border: 1px solid $color-border;
+    }
+    &_typo-disable {
+      background: var(--color-typo-disable);
+    }
+    &_typo-ghost {
+      background: var(--color-typo-ghost);
+    }
+    &_typo-income {
+      background: var(--color-typo-income);
+    }
+    &_typo-letter {
+      background: var(--color-typo-letter);
+    }
+
+    &_link {
+      background: var(--color-link);
+    }
+    &_link-external {
+      background: var(--color-link-external);
+    }
+    &_link-hover {
+      background: var(--color-link-hover);
+    }
+    &_link-minor {
+      background: var(--color-link-minor);
+    }
+
+    /* Цвета проектов */
+    /*
+    &_default {
+      background: $color-default;
+    }
+    &_inverse {
+      background: $color-inverse;
+    }
+    &_hover {
+      background: $color-hover;
+    }
+    &_press {
+      background: $color-press;
+    }
+    &_action {
+      background: $color-action;
+    }
+    &_action-hover {
+      background: $color-action-hover;
+    }
+    &_action-focus {
+      background: $color-action-focus;
+    }
+    &_action-press {
+      background: $color-action-press;
+    }
+    &_check {
+      background: $color-check;
+    }
+    &_check-press {
+      background: $color-check-press;
+    }
+    &_disable {
+      background: $color-disable;
+    }
+    &_disable-check {
+      background: $color-disable-check;
+    }
+    &_border-disable {
+      background: $color-border-disable;
+    }
+    &_border {
+      background: $color-border;
+    }
+    &_border-hover {
+      background: $color-border-hover;
+    }
+    &_border-press {
+      background: $color-border-press;
+    }
+    &_border-focus {
+      background: $color-border-focus;
+    }
+    &_border-check {
+      background: $color-border-check;
+    }
+
+    &_border-check-press {
+      background: $color-border-check-press;
+    }
+    &_border-check-hover {
+      background: $color-border-check-hover;
+    }
+    &_border-focus {
+      background: $color-border-focus;
+    }
+    &_color-typo-primary {
+      background: $color-typo-primary;
+    }
+    &_typo-inverse {
+      background: $color-typo-inverse;
+    }
+    &_typo-placeholder {
+      background: $color-typo-placeholder;
+    }
+
+    &_link {
+      background: $color-link;
+    }
+    &_link-hover {
+      background: $color-link-hover;
+    }
+    &_link-ghost {
+      background: $color-link-ghost;
+    }
+    &_link-ghost-hover {
+      background: $color-link-ghost-hover;
+    }
+    &_link-visited {
+      background: $color-link-visited;
+    }
+    &_typo-disable {
+      background: $color-typo-disable;
+    }
+    &_typo-inverse-disable {
+      background: $color-typo-inverse-disable;
+    }
+    */
+  }
+}

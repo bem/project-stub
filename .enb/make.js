@@ -13,10 +13,11 @@ const techs = {
             require('postcss-each'),
             require('postcss-for'),
             require('postcss-simple-vars')(),
+            require('postcss-color-function')(),
             require('postcss-calc')(),
             require('postcss-nested'),
             require('rebem-css'),
-            require('postcss-url')({ url: 'rebase' }),
+            require('postcss-url')({ url: 'inline' }),
             require('autoprefixer')(),
             require('postcss-reporter')()
         ],
@@ -35,17 +36,23 @@ const techs = {
     levels = [
         { path: 'node_modules/bem-core/common.blocks', check: false },
         { path: 'node_modules/bem-core/desktop.blocks', check: false },
+        'common.blocks',
+        'desktop.blocks',
         { path: 'node_modules/bem-components/common.blocks', check: false },
         { path: 'node_modules/bem-components/desktop.blocks', check: false },
         { path: 'node_modules/bem-components/design/common.blocks', check: false },
         { path: 'node_modules/bem-components/design/desktop.blocks', check: false },
-        'common.blocks',
-        'desktop.blocks'
+        { path: 'node_modules/bem-themes/common.blocks', check: false },
+        { path: 'node_modules/bem-animations/common.blocks', check: false },
+        { path: 'node_modules/bem-icons/common.blocks', check: false },
+        { path: 'node_modules/bem-layouts/common.blocks', check: false },
+        { path: 'node_modules/bem-logos/common.blocks', check: false },
+        { path: 'node_modules/bem-patterns/common.blocks', check: false },
+        { path: 'node_modules/bem-typo/common.blocks', check: false },
+        { path: 'node_modules/bem-vectors/common.blocks', check: false }
     ];
 
 module.exports = function(config) {
-    const isProd = process.env.YENV === 'production';
-
     config.nodes('*.bundles/*', function(nodeConfig) {
         nodeConfig.addTechs([
             // essential
@@ -105,8 +112,8 @@ module.exports = function(config) {
             }],
 
             // borschik
-            [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
-            [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }]
+            [techs.borschik, { source: '?.js', target: '?.min.js', minify: true }],
+            [techs.borschik, { source: '?.css', target: '?.min.css', minify: true }]
         ]);
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);

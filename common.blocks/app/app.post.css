@@ -1,0 +1,23 @@
+.app {
+	overflow: hidden;
+	&_view {
+		&_monument-hypnotic {
+			background: linear-gradient(to bottom, rgba(102,51,130,1) 0%,rgba(18,4,49,1) 100%);
+		}
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__preview {
+		height: 311px;
+		text-align: center;
+		position: relative;
+	}
+	&__price {
+		background: #F26634;
+		padding: var(--space-xxs) var(--space-xxl);
+		border-radius: 48px;
+	}
+}

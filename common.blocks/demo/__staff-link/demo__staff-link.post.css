@@ -1,0 +1,12 @@
+.demo__staff-link {
+	display: inline-block;
+	color: var(--color-typo-primary) !important;
+	transition: .3s ease;
+	text-decoration: none;
+	&:first-letter {
+		color: var(--color-typo-letter) !important;
+	}
+	&:hover {
+		color: var(--color-typo-letter) !important;
+	}
+}
