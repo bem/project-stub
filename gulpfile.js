@@ -83,7 +83,7 @@ gulp.task('build', () => {
                     gulp.src(pathToYm),
                     bundle.src('js').pipe(filter(f => ~['vanilla.js', 'browser.js', 'js'].indexOf(f.tech))),
                     bundle.src('js').pipe(filter(file => file.tech === 'bemhtml.js'))
-                        .pipe(concat('browser.bemhtml.js')).pipe(bemhtml({ elemJsInstances: true }))
+                        .pipe(concat('browser.bemhtml.js')).pipe(bemhtml({ elemJsInstances: true, exportName: 'BEMHTML' }))
                 )
                     .pipe(concat(bundle.name + '.min.js'))
                     .pipe(gulpif(isProd, uglify())),
