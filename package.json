@@ -13,7 +13,7 @@
     "url": "git://github.com/bem/project-stub.git"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
