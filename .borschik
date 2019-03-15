@@ -1,0 +1,12 @@
+{
+	"paths": {
+        "./public/images": "../images/"
+    },
+	"freeze_paths" : {
+	   "node_modules/**": "./public/images/",
+       "*.blocks/**": "./public/images/",
+       "i/**": "./public/images/",
+       "*.blocks/**": ":base64:",
+        "*.blocks/**/*.svg": ":encodeURIComponent:"
+    }
+}

@@ -13,7 +13,13 @@ module.exports = {
         {
             block: 'header',
             content: [
-                'header content goes here'
+                'header content goes here',
+                {
+                    tag: 'img',
+                    attrs: {
+                        src: '../../common.blocks/bla/bla.svg'
+                    }
+                }
             ]
         },
         {

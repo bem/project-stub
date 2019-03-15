@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version = "1.1"
+     baseProfile="full"
+     xmlns = "http://www.w3.org/2000/svg"
+     xmlns:xlink = "http://www.w3.org/1999/xlink"
+     xmlns:ev = "http://www.w3.org/2001/xml-events"
+     height = "400px"  width = "400px">
+     <rect x="0" y="0" width="400" height="400"
+          fill="none" stroke="black" stroke-width="5px" stroke-opacity="0.5"/>
+     <g fill-opacity="0.6" stroke="black" stroke-width="0.5px">
+        <circle cx="200px" cy="200px" r="104px" fill="red"   transform="translate(  0,-52)" />
+        <circle cx="200px" cy="200px" r="104px" fill="blue"  transform="translate( 60, 52)" />
+        <circle cx="200px" cy="200px" r="104px" fill="green" transform="translate(-60, 52)" />
+     </g>
+</svg>

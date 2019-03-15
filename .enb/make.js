@@ -73,7 +73,9 @@ module.exports = function(config) {
             }],
 
             // html
-            [techs.bemjsonToHtml],
+            [techs.bemjsonToHtml, {
+                target: '?.pre.html'
+            }],
 
             // client bemhtml
             [enbBemTechs.depsByTechToBemdecl, {
@@ -106,7 +108,8 @@ module.exports = function(config) {
 
             // borschik
             [techs.borschik, { source: '?.js', target: '?.min.js', minify: isProd }],
-            [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }]
+            [techs.borschik, { source: '?.css', target: '?.min.css', minify: isProd }],
+            [techs.borschik, { source: '?.pre.html', target: '?.html', freeze: true }]
         ]);
 
         nodeConfig.addTargets([/* '?.bemtree.js', */ '?.html', '?.min.css', '?.min.js']);
